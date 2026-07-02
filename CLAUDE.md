@@ -46,10 +46,19 @@ config `sessions_per_day`, default 1, cap 3).
 
 ## Never-do guardrails
 
-- NEVER serve, drill, or test a word whose `certified` flag is false. The app
-  reads only certified words; certification is done by human editors in the
-  editor app, never here.
-- NEVER touch certification status from this codebase.
+- NEVER serve, drill, or test a word whose `certified` flag is false. The
+  learner side reads only certified words; certification is done by human
+  editors at the Certification Desk (`/desk`) inside this app.
+- NEVER certify a word from anywhere but the desk endpoints. The importer,
+  the learner app, and any script never set `certified`.
+- NEVER change a gloss without writing a `gloss_revisions` row. Nothing is
+  edited in place without its audit row.
+- NEVER let a learner session reach a `/desk` route or certification
+  endpoint. Every desk route checks the staff role server-side.
+- NEVER bulk-certify above pasuk granularity. No certify-aliyah,
+  certify-parsha, or certify-all, ever.
+- NEVER delete revision or flag rows. Audit history is permanent, like
+  attempts.
 - NEVER relax a gate: promotion thresholds (zero fails, zero hesitations),
   the two-different-days graduation rule, and the rung order are load-bearing.
 - NEVER let self-marks promote a rung or graduate via any path other than the
@@ -66,12 +75,21 @@ config `sessions_per_day`, default 1, cap 3).
 
 - Flask + SQLAlchemy. SQLite for development/tests; PostgreSQL (Railway) in
   production via `DATABASE_URL`.
-- The interlinear store (Ezer L'mevakshim editor app) is the master corpus
-  source; this app holds a read-only projection of words, imported by
-  `scripts/import_corpus.py`. This app writes ONLY learner-progress data
-  (learners, sessions, attempts, word_state, promotions).
+- The interlinear workbook is the corpus source; words arrive as DRAFTS via
+  `scripts/import_corpus.py` and become servable only when certified at the
+  desk. This app writes learner-progress data (learners, sessions, attempts,
+  word_state, promotions) and the desk's editorial data (staff,
+  gloss_revisions, word_flags, and the `certified` flags — desk endpoints
+  only).
+- Two kinds of accounts, one app: learners (email-only for the pilot) and
+  staff (editor/admin) with bcrypt passwords — editors are writers, so they
+  get real credentials even in the pilot. Correction semantics: editing a
+  draft just updates it; editing a certified word logs a revision and stays
+  certified; decertify is admin-only, needs a reason, and pulls the owning
+  pasuk off the servable frontier.
 - Tables: learners · tracks · units · words · sessions · attempts ·
-  word_state · promotions. `attempts` is the permanent per-answer history —
+  word_state · promotions · staff · gloss_revisions · word_flags.
+  `attempts` is the permanent per-answer history —
   the core value of the backend. Marks are computed server-side from
   `revealed`, `correct`, and `response_ms`; never trust a client-sent mark
   except from an authenticated tester in a verified test.
