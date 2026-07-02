@@ -1,3 +1,4 @@
+import os
 import sys
 from pathlib import Path
 
@@ -8,11 +9,15 @@ sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 from app import create_app, db
 from app.models import Learner, Session, Track, Unit, Word
 
+# CI runs the same suite twice: SQLite (default) and Postgres (service
+# container, via TEST_DATABASE_URL) — migrations must run clean on both.
+TEST_DB = os.environ.get("TEST_DATABASE_URL", "sqlite:///:memory:")
+
 
 @pytest.fixture()
 def app():
     app = create_app({
-        "SQLALCHEMY_DATABASE_URI": "sqlite:///:memory:",
+        "SQLALCHEMY_DATABASE_URI": TEST_DB,
         "TESTING": True,
     })
     with app.app_context():
