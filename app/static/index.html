@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Zillim of Action</title>
+<style>
+  :root {
+    --ink: #1f2937; --soft: #6b7280; --line: #e5e7eb;
+    --accent: #1d4ed8; --good: #15803d; --warn: #b45309; --bad: #b91c1c;
+    --bg: #f8fafc; --card: #ffffff;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--bg); color: var(--ink);
+    font: 16px/1.5 Georgia, "Times New Roman", serif;
+  }
+  header { text-align: center; padding: 1.5rem 1rem 0.5rem; }
+  header h1 { margin: 0; font-size: 1.6rem; letter-spacing: 0.02em; }
+  header p { margin: 0.25rem 0 0; color: var(--soft); font-style: italic; }
+  main { max-width: 34rem; margin: 0 auto; padding: 1rem; }
+  .card {
+    background: var(--card); border: 1px solid var(--line);
+    border-radius: 12px; padding: 1.25rem; margin-bottom: 1rem;
+  }
+  h2 { margin: 0 0 0.75rem; font-size: 1.15rem; }
+  label { display: block; margin: 0.5rem 0 0.15rem; color: var(--soft); font-size: 0.9rem; }
+  input {
+    width: 100%; padding: 0.55rem 0.7rem; border: 1px solid var(--line);
+    border-radius: 8px; font: inherit;
+  }
+  button {
+    font: inherit; border: 0; border-radius: 8px; cursor: pointer;
+    padding: 0.6rem 1.1rem; background: var(--accent); color: #fff;
+    margin-top: 0.75rem;
+  }
+  button.quiet { background: #e5e7eb; color: var(--ink); }
+  button.good { background: var(--good); }
+  button.bad { background: var(--bad); }
+  button:disabled { opacity: 0.5; cursor: default; }
+  .rung { display: flex; align-items: center; gap: 0.6rem; padding: 0.5rem 0; border-bottom: 1px solid var(--line); }
+  .rung:last-child { border-bottom: 0; }
+  .rung .dot { width: 0.8rem; height: 0.8rem; border-radius: 50%; background: var(--line); flex: none; }
+  .rung.current .dot { background: var(--accent); }
+  .rung.completed .dot { background: var(--good); }
+  .rung.locked { color: var(--soft); }
+  .hebrew { font-size: 2.2rem; direction: rtl; text-align: center; margin: 0.75rem 0 0.25rem; }
+  .lesson-word { display: inline-block; margin: 0.15rem 0.25rem; padding: 0.3rem 0.5rem;
+    border-radius: 8px; cursor: pointer; direction: rtl; font-size: 1.5rem; }
+  .lesson-word:hover { background: #eef2ff; }
+  .lesson-word .gloss { display: block; font-size: 0.75rem; direction: ltr;
+    text-align: center; color: var(--warn); font-family: Georgia, serif; }
+  .lesson { direction: rtl; text-align: right; }
+  .ref { color: var(--soft); font-size: 0.85rem; text-align: center; }
+  .gloss-big { text-align: center; font-size: 1.2rem; color: var(--accent); min-height: 1.6rem; }
+  .tally { text-align: center; color: var(--soft); font-size: 0.9rem; margin-top: 0.5rem; }
+  .weak-row { padding: 0.3rem 0; border-bottom: 1px solid var(--line); display: flex; justify-content: space-between; }
+  .hidden { display: none; }
+  .row { display: flex; gap: 0.5rem; justify-content: center; }
+  .note { color: var(--soft); font-size: 0.85rem; }
+</style>
+</head>
+<body>
+<header>
+  <h1>Zillim of Action</h1>
+  <p>"Nobody has to be a failure in learning."</p>
+</header>
+<main>
+
+  <section id="auth" class="card">
+    <h2>Sign in</h2>
+    <label>Email</label><input id="si-email" type="email" autocomplete="email">
+    <button onclick="signin()">Sign in</button>
+    <h2 style="margin-top:1.25rem">New? Register</h2>
+    <label>First name</label><input id="r-first">
+    <label>Last name</label><input id="r-last">
+    <label>Cell</label><input id="r-cell" type="tel">
+    <label>Email</label><input id="r-email" type="email">
+    <button onclick="register()">Register &amp; begin</button>
+    <p id="auth-msg" class="note"></p>
+  </section>
+
+  <section id="home" class="card hidden">
+    <h2 id="greeting"></h2>
+    <div id="ladder"></div>
+    <div class="row">
+      <button onclick="startLearn()">Learn — today's pesukim</button>
+      <button class="quiet" onclick="startDrill()">Drill — my words</button>
+    </div>
+    <p class="note">Ten minutes a day. Rungs unlock only by a verified test
+    with a real tester — zero fails, zero hesitations.</p>
+  </section>
+
+  <section id="learn" class="card hidden">
+    <h2>Learn — tap a word to reveal it</h2>
+    <p class="note">Revealing a word adds it to your drill pool. No undo —
+    that's the point.</p>
+    <div id="lesson" class="lesson"></div>
+    <div class="row"><button class="quiet" onclick="finishSession()">Finish session</button></div>
+  </section>
+
+  <section id="drill" class="card hidden">
+    <h2>Drill</h2>
+    <div class="ref" id="d-ref"></div>
+    <div class="hebrew" id="d-hebrew"></div>
+    <div class="gloss-big" id="d-gloss"></div>
+    <div class="row" id="d-claim">
+      <button onclick="claimKnow()">I know it</button>
+      <button class="quiet" onclick="revealDrill()">Show me</button>
+    </div>
+    <div class="row hidden" id="d-confirm">
+      <button class="good" onclick="confirmDrill(true)">I was right</button>
+      <button class="bad" onclick="confirmDrill(false)">I was wrong</button>
+    </div>
+    <div class="tally" id="d-tally"></div>
+  </section>
+
+  <section id="results" class="card hidden">
+    <h2>Today's tally</h2>
+    <p id="res-line"></p>
+    <div id="res-weak"></div>
+    <div class="row">
+      <button onclick="startDrill()">Drill the weak words</button>
+      <button class="quiet" onclick="goHome()">Done for today</button>
+    </div>
+  </section>
+
+</main>
+<script>
+const $ = id => document.getElementById(id);
+const state = { learner: null, session: null, unit: null, deck: [], i: 0,
+                shownAt: 0, claimed: false, tally: { know: 0, weak: 0 } };
+
+async function api(path, opts) {
+  const res = await fetch('/api' + path, opts ? {
+    method: 'POST', headers: {'Content-Type': 'application/json'},
+    body: JSON.stringify(opts)
+  } : undefined);
+  const data = await res.json();
+  if (!res.ok) throw new Error(data.error || res.statusText);
+  return data;
+}
+
+function show(id) {
+  for (const s of ['auth','home','learn','drill','results']) $(s).classList.add('hidden');
+  $(id).classList.remove('hidden');
+}
+
+async function register() {
+  try {
+    const data = await api('/register', {
+      first_name: $('r-first').value, last_name: $('r-last').value,
+      cell: $('r-cell').value, email: $('r-email').value });
+    state.learner = { id: data.learner_id, first_name: $('r-first').value };
+    await goHome();
+  } catch (e) { $('auth-msg').textContent = e.message; }
+}
+
+async function signin() {
+  try {
+    const data = await api('/signin', { email: $('si-email').value });
+    state.learner = { id: data.learner_id, first_name: data.first_name };
+    await goHome();
+  } catch (e) { $('auth-msg').textContent = e.message; }
+}
+
+async function goHome() {
+  const { ladder } = await api(`/learners/${state.learner.id}/ladder`);
+  $('greeting').textContent = `Shalom, ${state.learner.first_name}`;
+  $('ladder').innerHTML = ladder.map(r =>
+    `<div class="rung ${r.status}"><span class="dot"></span>
+     <span>${r.rung}. ${r.name}</span>
+     <span style="margin-left:auto" class="note">${r.status}</span></div>`).join('');
+  const u = await api(`/learners/${state.learner.id}/units`);
+  state.unit = u.units.length ? u.units[0] : null;
+  show('home');
+}
+
+async function startLearn() {
+  if (!state.unit) return alert('No unit available yet.');
+  const s = await api(`/learners/${state.learner.id}/sessions`,
+                      { mode: 'learn', unit_id: state.unit.id });
+  state.session = s.session_id;
+  state.tally = { know: 0, weak: 0 };
+  const { words } = await api(`/learners/${state.learner.id}/lesson?unit_id=${state.unit.id}`);
+  if (!words.length) { alert('No new certified words — drill instead.'); return startDrill(); }
+  $('lesson').innerHTML = words.map(w =>
+    `<span class="lesson-word" id="w${w.id}" onclick="revealLearn(${w.id})">${w.hebrew}<span class="gloss"></span></span>`
+  ).join(' ');
+  show('learn');
+}
+
+async function revealLearn(wordId) {
+  const el = $('w' + wordId);
+  if (el.dataset.done) return;
+  el.dataset.done = '1';
+  const { translation } = await api(`/learners/${state.learner.id}/reveal`,
+    { word_id: wordId, session_id: state.session });
+  el.querySelector('.gloss').textContent = translation;
+  state.tally.weak++;
+}
+
+async function startDrill() {
+  if (!state.unit) return alert('No unit available yet.');
+  const s = await api(`/learners/${state.learner.id}/sessions`,
+                      { mode: 'drill', unit_id: state.unit.id });
+  state.session = s.session_id;
+  state.tally = { know: 0, weak: 0 };
+  const { words } = await api(`/learners/${state.learner.id}/drill?unit_id=${state.unit.id}`);
+  if (!words.length) return alert('Nothing to drill yet — learn first.');
+  state.deck = words; state.i = 0;
+  show('drill'); dealCard();
+}
+
+function dealCard() {
+  if (state.i >= state.deck.length) return finishSession();
+  const w = state.deck[state.i];
+  $('d-ref').textContent = `${w.ref} · card ${state.i + 1} of ${state.deck.length}`;
+  $('d-hebrew').textContent = w.hebrew;
+  $('d-gloss').textContent = '';
+  $('d-claim').classList.remove('hidden');
+  $('d-confirm').classList.add('hidden');
+  $('d-tally').textContent = `known ${state.tally.know} · to work on ${state.tally.weak}`;
+  state.shownAt = performance.now();
+  state.claimed = false;
+}
+
+function claimKnow() {
+  // Claim first — the clock stops here. The translation appears with the
+  // confirm buttons so the learner checks themselves honestly.
+  state.claimed = true;
+  state.claimMs = Math.round(performance.now() - state.shownAt);
+  $('d-gloss').textContent = state.deck[state.i].translation;
+  $('d-claim').classList.add('hidden');
+  $('d-confirm').classList.remove('hidden');
+}
+
+async function confirmDrill(right) {
+  const w = state.deck[state.i];
+  const data = await api(`/learners/${state.learner.id}/attempts`,
+    { word_id: w.id, session_id: state.session,
+      correct: right, response_ms: state.claimMs });
+  $('d-gloss').textContent = data.translation;
+  if (data.mark === 'know') state.tally.know++; else state.tally.weak++;
+  state.i++;
+  setTimeout(dealCard, 700);
+}
+
+async function revealDrill() {
+  const w = state.deck[state.i];
+  const data = await api(`/learners/${state.learner.id}/attempts`,
+    { word_id: w.id, session_id: state.session, revealed: true,
+      response_ms: Math.round(performance.now() - state.shownAt) });
+  $('d-gloss').textContent = data.translation;
+  state.tally.weak++;
+  state.i++;
+  setTimeout(dealCard, 900);
+}
+
+async function finishSession() {
+  const data = await api(`/learners/${state.learner.id}/results?session_id=${state.session}`);
+  $('res-line').textContent =
+    `${data.total} words · ${data.known} known · ${data.weak.length} to come back to.`;
+  $('res-weak').innerHTML = data.weak.map(w =>
+    `<div class="weak-row"><span dir="rtl">${w.hebrew}</span><span>${w.translation}</span></div>`
+  ).join('');
+  show('results');
+}
+</script>
+</body>
+</html>

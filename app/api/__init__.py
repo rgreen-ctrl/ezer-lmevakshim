@@ -129,7 +129,9 @@ def drill(learner_id):
     if not unit_id:
         return jsonify({"error": "unit_id required"}), 400
     deck = lessons.build_drill_deck(learner_id, unit_id, size=size)
-    return jsonify({"words": [word_json(w) for w in deck]})
+    # Translations ride along for the claim-then-confirm card; the UI keeps
+    # them hidden until the learner claims or reveals.
+    return jsonify({"words": [word_json(w, include_translation=True) for w in deck]})
 
 
 @api.post("/learners/<int:learner_id>/attempts")
