@@ -179,6 +179,7 @@ class WordFlag(db.Model):
     status = db.Column(db.String(10), nullable=False, default="open")  # open | resolved
     resolved_by = db.Column(db.Integer, db.ForeignKey("staff.id"))
     resolved_at = db.Column(db.DateTime)
+    resolution_note = db.Column(db.Text)
     created_at = db.Column(db.DateTime, nullable=False, default=utcnow)
 
     word = db.relationship("Word")
