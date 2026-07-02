@@ -23,6 +23,21 @@ class Learner(db.Model):
     attempts = db.relationship("Attempt", backref="learner", lazy="dynamic")
 
 
+class Staff(db.Model):
+    """Editor/admin accounts. Editors are writers — they change what every
+    learner will be taught — so they carry real credentials (bcrypt) even in
+    the pilot. Learners never get rows here."""
+
+    __tablename__ = "staff"
+
+    id = db.Column(db.Integer, primary_key=True)
+    name = db.Column(db.String(120), nullable=False)
+    email = db.Column(db.String(255), nullable=False, unique=True)
+    password_hash = db.Column(db.String(128), nullable=False)
+    role = db.Column(db.String(10), nullable=False)  # editor | admin
+    created_at = db.Column(db.DateTime, nullable=False, default=utcnow)
+
+
 class Track(db.Model):
     """A rung of the ladder: Chumash, Pirkei Avos, Eilu Metzios."""
 
@@ -68,7 +83,11 @@ class Word(db.Model):
     hebrew = db.Column(db.String(120), nullable=False)
     translation = db.Column(db.String(255), nullable=False)
     shoresh = db.Column(db.String(60))
+    # draft -> certified moves ONLY through the desk endpoints; the importer
+    # and the learner app never touch these three columns.
     certified = db.Column(db.Boolean, nullable=False, default=False)
+    certified_by = db.Column(db.Integer, db.ForeignKey("staff.id"))
+    certified_at = db.Column(db.DateTime)
 
     __table_args__ = (db.UniqueConstraint("unit_id", "position"),)
 
@@ -126,6 +145,43 @@ class WordState(db.Model):
     word = db.relationship("Word")
 
     __table_args__ = (db.UniqueConstraint("learner_id", "word_id"),)
+
+
+class GlossRevision(db.Model):
+    """Permanent audit trail of gloss edits. Every change to a word's gloss
+    writes a row here — nothing is edited in place without one, and rows are
+    never deleted."""
+
+    __tablename__ = "gloss_revisions"
+
+    id = db.Column(db.Integer, primary_key=True)
+    word_id = db.Column(db.Integer, db.ForeignKey("words.id"), nullable=False)
+    old_gloss = db.Column(db.String(255), nullable=False)
+    new_gloss = db.Column(db.String(255), nullable=False)
+    editor_id = db.Column(db.Integer, db.ForeignKey("staff.id"), nullable=False)
+    created_at = db.Column(db.DateTime, nullable=False, default=utcnow)
+
+    word = db.relationship("Word")
+    editor = db.relationship("Staff")
+
+
+class WordFlag(db.Model):
+    """The reader-flag healing loop: a questioned gloss awaiting a second
+    opinion. Rows are never deleted — resolution is a status change."""
+
+    __tablename__ = "word_flags"
+
+    id = db.Column(db.Integer, primary_key=True)
+    word_id = db.Column(db.Integer, db.ForeignKey("words.id"), nullable=False)
+    raised_by_kind = db.Column(db.String(10), nullable=False)  # learner | editor
+    raised_by_id = db.Column(db.Integer, nullable=False)
+    note = db.Column(db.Text, nullable=False)
+    status = db.Column(db.String(10), nullable=False, default="open")  # open | resolved
+    resolved_by = db.Column(db.Integer, db.ForeignKey("staff.id"))
+    resolved_at = db.Column(db.DateTime)
+    created_at = db.Column(db.DateTime, nullable=False, default=utcnow)
+
+    word = db.relationship("Word")
 
 
 class Promotion(db.Model):
