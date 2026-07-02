@@ -80,6 +80,7 @@ class Word(db.Model):
     ref = db.Column(db.String(60), nullable=False)  # e.g. "Bereishis 6:9"
     pasuk_index = db.Column(db.Integer, nullable=False)  # ordinal pasuk in unit
     position = db.Column(db.Integer, nullable=False)  # ordinal word in unit
+    aliyah = db.Column(db.Integer)  # milestone level within the parsha (1-7)
     hebrew = db.Column(db.String(120), nullable=False)
     translation = db.Column(db.String(255), nullable=False)
     shoresh = db.Column(db.String(60))

@@ -18,6 +18,10 @@ from app.services.pool import utcnow
 
 
 def approve_word(word, staff, now=None):
+    if not (word.translation or "").strip():
+        raise ValueError(
+            f"{word.ref} word #{word.position}: the draft gloss is empty — "
+            "write the gloss before certifying")
     if not word.certified:
         word.certified = True
         word.certified_by = staff.id
@@ -48,10 +52,17 @@ def edit_gloss(word, staff, new_gloss, now=None):
 
 def certify_pasuk(unit_id, pasuk_index, staff, now=None):
     """Certify every remaining word of ONE pasuk — the only bulk approval
-    that exists. Returns the number of words certified."""
+    that exists. Refuses the whole pasuk if any word still has an empty
+    gloss, so a blank can never ride a bulk approval into the corpus.
+    Returns the number of words certified."""
     words = Word.query.filter_by(
         unit_id=unit_id, pasuk_index=pasuk_index, certified=False
-    ).all()
+    ).order_by(Word.position).all()
+    empty = [w for w in words if not (w.translation or "").strip()]
+    if empty:
+        raise ValueError(
+            f"pasuk has {len(empty)} word(s) with empty glosses — write them "
+            f"first: " + ", ".join(f"#{w.position}" for w in empty))
     for w in words:
         approve_word(w, staff, now)
     db.session.flush()
