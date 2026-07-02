@@ -29,8 +29,12 @@ def create_app(config=None):
     db.init_app(app)
 
     from app.api import api
+    from app.auth import auth
+    from app.desk import desk
 
     app.register_blueprint(api, url_prefix="/api")
+    app.register_blueprint(auth, url_prefix="/api/staff")
+    app.register_blueprint(desk, url_prefix="/desk")
 
     @app.route("/")
     def index():
