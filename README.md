@@ -32,9 +32,14 @@ the Ezer L'mevakshim interlinear store.
 ```bash
 pip install -r requirements.txt
 pytest                      # run the test suite
-python3 scripts/import_corpus.py --sample   # seed a small demo corpus
-flask --app app run         # http://127.0.0.1:5000
+python3 scripts/import_corpus.py            # import data/noach_interlinear.xlsx as drafts
+python3 scripts/create_staff.py --name "..." --email ... --role admin
+flask --app app run         # learner app at /, Certification Desk at /desk.html
 ```
+
+Words import as **drafts** and are served to learners only after a human
+editor certifies them at the Certification Desk — see
+`docs/CERTIFICATION_DESK.md`.
 
 See `CLAUDE.md` for the program rules, locked design decisions, and the
 never-do guardrails.
