@@ -1,17 +1,16 @@
 """Seed the ladder and import corpus words.
 
-The interlinear store (Ezer L'mevakshim editor app) is the master; this app
-holds a read-only projection. Import accepts a CSV export of the interlinear
+The interlinear workbook is the corpus source. Import accepts a CSV export
 (one row per word) with columns:
 
-    unit,kind,ref,pasuk_index,position,hebrew,translation,shoresh,certified
+    unit,kind,ref,pasuk_index,position,hebrew,translation,shoresh
 
 Usage:
     python3 scripts/import_corpus.py --csv path/to/noach.csv --track chumash
     python3 scripts/import_corpus.py --sample     # small demo corpus (dev only)
 
-Words are imported with their certification status as exported; this script
-never flips a certified flag on its own.
+Every imported word is a DRAFT. This script NEVER sets certified —
+certification happens only at the Certification Desk, by a human editor.
 """
 
 import argparse
@@ -30,8 +29,8 @@ LADDER = [
     ("eilu_metzios", "Eilu Metzios (Bava Metzia 21a–33b)", 3),
 ]
 
-# A tiny certified demo set (Bereishis 6:9) for development only — real
-# corpus comes from the interlinear export.
+# A tiny demo set (Bereishis 6:9-10) for development only — imported as
+# drafts like everything else; certify it at the desk to serve it.
 SAMPLE = [
     ("Noach", "parsha", "Bereishis 6:9", 1, 1, "אֵלֶּה", "these", "אלה"),
     ("Noach", "parsha", "Bereishis 6:9", 1, 2, "תּוֹלְדֹת", "the generations of", "ילד"),
@@ -93,8 +92,7 @@ def import_csv(path, track_key):
                 hebrew=row["hebrew"],
                 translation=row["translation"],
                 shoresh=row.get("shoresh") or None,
-                certified=str(row.get("certified", "")).lower()
-                in ("1", "true", "yes"),
+                # Always a draft — only the desk certifies.
             ))
             added += 1
     db.session.commit()
@@ -111,7 +109,6 @@ def import_sample():
         db.session.add(Word(
             unit_id=unit.id, ref=ref, pasuk_index=pasuk, position=pos,
             hebrew=hebrew, translation=translation, shoresh=shoresh,
-            certified=True,
         ))
         added += 1
     db.session.commit()

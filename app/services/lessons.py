@@ -10,6 +10,7 @@ from flask import current_app
 
 from app import db
 from app.models import Attempt, Word
+from app.services.frontier import servable_pasuk_indexes
 from app.services.pool import due_pool_words, graduated_states
 
 
@@ -25,19 +26,22 @@ def seen_word_ids(learner_id, unit_id=None):
 
 
 def next_lesson_words(learner_id, unit_id):
-    """New ground: the next unseen certified words, whole pesukim, sized to
+    """New ground: the next unseen servable words, whole pesukim, sized to
     the 18-30 word window (never splitting a pasuk; a single long pasuk may
-    exceed the max on its own)."""
+    exceed the max on its own). A pasuk is servable only when EVERY word in
+    it is certified — the certified frontier."""
     lo = current_app.config["LESSON_MIN_NEW_WORDS"]
     hi = current_app.config["LESSON_MAX_NEW_WORDS"]
     seen = seen_word_ids(learner_id, unit_id)
+    servable = servable_pasuk_indexes(unit_id)
 
     words = (
         Word.query.filter_by(unit_id=unit_id, certified=True)
         .order_by(Word.position)
         .all()
     )
-    unseen = [w for w in words if w.id not in seen]
+    unseen = [w for w in words
+              if w.id not in seen and w.pasuk_index in servable]
     if not unseen:
         return []
 
@@ -70,12 +74,14 @@ def build_drill_deck(learner_id, unit_id, size=20, now=None, rng=None):
     weak_words = [s.word for s in weak_states if s.word.certified]
 
     seen = seen_word_ids(learner_id)
+    servable = servable_pasuk_indexes(unit_id)
     new_words = (
         Word.query.filter_by(unit_id=unit_id, certified=True)
         .order_by(Word.position)
         .all()
     )
-    new_words = [w for w in new_words if w.id not in seen]
+    new_words = [w for w in new_words
+                 if w.id not in seen and w.pasuk_index in servable]
 
     maint_words = [
         s.word
