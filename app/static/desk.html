@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Certification Desk — Ezer L'mevakshim</title>
+<style>
+  :root { --ink:#1f2937; --soft:#6b7280; --line:#e5e7eb; --accent:#1d4ed8;
+          --good:#15803d; --warn:#b45309; --bad:#b91c1c; --bg:#f8fafc; }
+  * { box-sizing: border-box; }
+  body { margin:0; background:var(--bg); color:var(--ink);
+         font:16px/1.5 Georgia, "Times New Roman", serif; }
+  header { display:flex; align-items:baseline; gap:1rem; padding:1rem 1.25rem;
+           border-bottom:1px solid var(--line); background:#fff; }
+  header h1 { margin:0; font-size:1.2rem; }
+  header .who { margin-left:auto; color:var(--soft); font-size:.9rem; }
+  main { max-width:44rem; margin:0 auto; padding:1rem; }
+  .card { background:#fff; border:1px solid var(--line); border-radius:12px;
+          padding:1.25rem; margin-bottom:1rem; }
+  h2 { margin:0 0 .75rem; font-size:1.1rem; }
+  label { display:block; margin:.5rem 0 .15rem; color:var(--soft); font-size:.9rem; }
+  input, textarea { width:100%; padding:.55rem .7rem; border:1px solid var(--line);
+          border-radius:8px; font:inherit; }
+  button { font:inherit; border:0; border-radius:8px; cursor:pointer;
+           padding:.5rem 1rem; background:var(--accent); color:#fff; margin-top:.5rem; }
+  button.quiet { background:#e5e7eb; color:var(--ink); }
+  button.good { background:var(--good); }
+  button.bad { background:var(--bad); }
+  .meter { background:#eef2f7; border-radius:6px; height:.6rem; overflow:hidden; }
+  .meter > div { background:var(--good); height:100%; }
+  .row-item { display:flex; align-items:center; gap:.75rem; padding:.5rem 0;
+              border-bottom:1px solid var(--line); cursor:pointer; }
+  .row-item:last-child { border-bottom:0; }
+  .row-item:hover { background:#f1f5f9; }
+  .row-item .grow { flex:1; }
+  .note { color:var(--soft); font-size:.85rem; }
+  .pill { font-size:.75rem; border-radius:999px; padding:.1rem .55rem; }
+  .pill.done { background:#dcfce7; color:var(--good); }
+  .pill.partial { background:#fef3c7; color:var(--warn); }
+  .pill.draft { background:#e5e7eb; color:var(--soft); }
+  .interlinear { direction:rtl; text-align:right; }
+  .iw { display:inline-block; margin:.3rem .25rem; padding:.35rem .5rem;
+        border-radius:8px; cursor:pointer; text-align:center;
+        border:1px solid transparent; }
+  .iw:hover { border-color:var(--accent); }
+  .iw .he { font-size:1.6rem; display:block; }
+  .iw .gl { font-size:.75rem; direction:ltr; display:block; color:var(--soft);
+            font-family:Georgia, serif; }
+  .iw.certified { background:#f0fdf4; }
+  .iw.certified .gl { color:var(--good); }
+  .iw.flagged { border-color:var(--warn); }
+  .crumbs { color:var(--soft); font-size:.9rem; margin-bottom:.75rem; }
+  .crumbs a { color:var(--accent); cursor:pointer; text-decoration:none; }
+  .actions { display:flex; gap:.5rem; flex-wrap:wrap; }
+  .hidden { display:none; }
+  .flagrow { padding:.6rem 0; border-bottom:1px solid var(--line); }
+  .msg { color:var(--bad); font-size:.9rem; }
+</style>
+</head>
+<body>
+<header>
+  <h1>The Certification Desk</h1>
+  <span class="who" id="who"></span>
+</header>
+<main>
+
+  <section id="login" class="card">
+    <h2>Editor sign-in</h2>
+    <label>Email</label><input id="l-email" type="email" autocomplete="username">
+    <label>Password</label><input id="l-pass" type="password" autocomplete="current-password">
+    <button onclick="login()">Sign in</button>
+    <p class="msg" id="l-msg"></p>
+  </section>
+
+  <section id="home" class="card hidden">
+    <h2>Units</h2>
+    <div id="units"></div>
+    <button class="quiet" onclick="showFlags()">Flag queue (<span id="flagcount">0</span>)</button>
+  </section>
+
+  <section id="unit" class="card hidden">
+    <div class="crumbs"><a onclick="loadHome()">Desk</a> › <span id="u-name"></span></div>
+    <div id="u-progress"></div>
+    <div id="pesukim"></div>
+  </section>
+
+  <section id="pasuk" class="card hidden">
+    <div class="crumbs"><a onclick="loadHome()">Desk</a> ›
+      <a id="p-back"></a> › <span id="p-ref"></span></div>
+    <p class="note">Read the pasuk through. Tap a word to approve, correct, or
+    flag it. Certify-pasuk approves whatever remains — one pasuk, never more.</p>
+    <div class="interlinear" id="p-words"></div>
+    <div class="actions">
+      <button class="good" onclick="certifyPasuk()">Certify pasuk</button>
+    </div>
+    <div id="word-panel" class="hidden">
+      <h2 id="wp-title"></h2>
+      <label>Gloss</label><input id="wp-gloss">
+      <div class="actions">
+        <button class="good" onclick="approveWord()">Approve</button>
+        <button onclick="saveGloss()">Save gloss</button>
+        <button class="quiet" onclick="flagWord()">Flag</button>
+        <button class="bad hidden" id="wp-decert" onclick="decertifyWord()">Decertify</button>
+      </div>
+      <p class="note" id="wp-status"></p>
+    </div>
+  </section>
+
+  <section id="flags" class="card hidden">
+    <div class="crumbs"><a onclick="loadHome()">Desk</a> › Flag queue</div>
+    <div id="flaglist"></div>
+  </section>
+
+</main>
+<script>
+const $ = id => document.getElementById(id);
+const S = { staff:null, unit:null, unitName:'', pasuk:null, word:null };
+
+async function api(path, body) {
+  const res = await fetch(path, body === undefined ? undefined : {
+    method:'POST', headers:{'Content-Type':'application/json'},
+    body: JSON.stringify(body) });
+  const data = await res.json().catch(() => ({}));
+  if (!res.ok) throw new Error(data.error || res.statusText);
+  return data;
+}
+function show(id) {
+  for (const s of ['login','home','unit','pasuk','flags']) $(s).classList.add('hidden');
+  $(id).classList.remove('hidden');
+}
+
+async function login() {
+  try {
+    S.staff = await api('/api/staff/login',
+      { email:$('l-email').value, password:$('l-pass').value });
+    $('who').textContent = `${S.staff.name} · ${S.staff.role}`;
+    loadHome();
+  } catch (e) { $('l-msg').textContent = e.message; }
+}
+
+async function loadHome() {
+  const data = await api('/desk/');
+  $('flagcount').textContent = data.open_flags;
+  $('units').innerHTML = data.tracks.map(t => t.units.map(u => {
+    const pct = u.words_total ? Math.round(100*u.words_certified/u.words_total) : 0;
+    return `<div class="row-item" onclick="loadUnit(${u.id}, '${u.name}')">
+      <div class="grow"><strong>${t.name}</strong> — ${u.name}
+        <div class="meter"><div style="width:${pct}%"></div></div>
+        <span class="note">${u.words_certified}/${u.words_total} words ·
+          ${u.pesukim_complete}/${u.pesukim_total} pesukim ·
+          frontier at pasuk ${u.frontier_pasuk}</span></div>
+      </div>`;
+  }).join('')).join('') || '<p class="note">No units yet — run the corpus import.</p>';
+  show('home');
+}
+
+async function loadUnit(id, name) {
+  S.unit = id; S.unitName = name || S.unitName;
+  const data = await api(`/desk/units/${id}`);
+  const p = data.progress;
+  $('u-name').textContent = data.unit.name;
+  $('u-progress').innerHTML =
+    `<span class="note">${p.words_certified}/${p.words_total} words ·
+     ${p.pesukim_complete}/${p.pesukim_total} pesukim complete ·
+     certified frontier: pasuk ${p.frontier_pasuk}</span>`;
+  $('pesukim').innerHTML = data.pesukim.map(x => {
+    const state = x.words_certified === x.words_total ? 'done'
+                : x.words_certified ? 'partial' : 'draft';
+    const label = state === 'done' ? 'servable'
+                : state === 'partial' ? `${x.words_certified}/${x.words_total}` : 'draft';
+    return `<div class="row-item" onclick="loadPasuk(${x.pasuk_index})">
+      <span class="grow">${x.ref}</span>
+      <span class="pill ${state}">${label}</span></div>`;
+  }).join('');
+  show('unit');
+}
+
+async function loadPasuk(idx) {
+  S.pasuk = idx; S.word = null;
+  const data = await api(`/desk/units/${S.unit}/pasuk/${idx}`);
+  $('p-ref').textContent = data.ref + (data.servable ? ' · servable' : '');
+  $('p-back').textContent = S.unitName;
+  $('p-back').onclick = () => loadUnit(S.unit);
+  $('p-words').innerHTML = data.words.map(w =>
+    `<span class="iw ${w.certified ? 'certified' : ''} ${w.open_flags ? 'flagged' : ''}"
+       onclick="pickWord(${w.id}, this)" data-gloss="${w.gloss.replace(/"/g,'&quot;')}"
+       data-certified="${w.certified}">
+       <span class="he">${w.hebrew}</span><span class="gl">${w.gloss}</span></span>`
+  ).join('');
+  $('word-panel').classList.add('hidden');
+  show('pasuk');
+}
+
+function pickWord(id, el) {
+  S.word = id;
+  $('wp-title').textContent = el.querySelector('.he').textContent;
+  $('wp-gloss').value = el.dataset.gloss;
+  $('wp-decert').classList.toggle('hidden',
+    !(S.staff.role === 'admin' && el.dataset.certified === 'true'));
+  $('wp-status').textContent = '';
+  $('word-panel').classList.remove('hidden');
+}
+
+async function approveWord() {
+  await api(`/desk/words/${S.word}/approve`, {});
+  loadPasuk(S.pasuk);
+}
+async function saveGloss() {
+  try {
+    await api(`/desk/words/${S.word}/gloss`, { new_gloss: $('wp-gloss').value });
+    loadPasuk(S.pasuk);
+  } catch (e) { $('wp-status').textContent = e.message; }
+}
+async function flagWord() {
+  const note = prompt('Flag note — what needs a second opinion?');
+  if (!note) return;
+  await api(`/desk/words/${S.word}/flag`, { note });
+  loadPasuk(S.pasuk);
+}
+async function decertifyWord() {
+  const reason = prompt('Decertify — reason (required). This pulls the pasuk off the servable frontier.');
+  if (!reason) return;
+  await api(`/desk/words/${S.word}/decertify`, { reason });
+  loadPasuk(S.pasuk);
+}
+async function certifyPasuk() {
+  await api(`/desk/units/${S.unit}/pasuk/${S.pasuk}/certify`, {});
+  loadPasuk(S.pasuk);
+}
+
+async function showFlags() {
+  const data = await api('/desk/flags');
+  $('flaglist').innerHTML = data.flags.map(f =>
+    `<div class="flagrow">
+       <strong dir="rtl">${f.word.hebrew}</strong> — “${f.word.gloss}”
+       <span class="note">(${f.word.ref})</span><br>
+       <span class="note">${f.note}</span><br>
+       <span class="note" dir="rtl">${f.pasuk.map(w => w.hebrew).join(' ')}</span>
+       <div class="actions">
+         <button class="good" onclick="resolveFix(${f.id}, '${f.word.gloss.replace(/'/g,"\\'")}')">Fix gloss &amp; certify</button>
+         <button class="quiet" onclick="resolveDismiss(${f.id})">Dismiss with note</button>
+       </div>
+     </div>`).join('') || '<p class="note">No open flags.</p>';
+  show('flags');
+}
+async function resolveFix(id, current) {
+  const g = prompt('Corrected gloss:', current);
+  if (!g) return;
+  await api(`/desk/flags/${id}/resolve`, { new_gloss: g });
+  showFlags();
+}
+async function resolveDismiss(id) {
+  const note = prompt('Dismissal note (required):');
+  if (!note) return;
+  await api(`/desk/flags/${id}/resolve`, { note });
+  showFlags();
+}
+
+// Resume an existing staff session on reload.
+api('/api/staff/me').then(s => { S.staff = s;
+  $('who').textContent = `${s.name} · ${s.role}`; loadHome();
+}).catch(() => {});
+</script>
+</body>
+</html>
