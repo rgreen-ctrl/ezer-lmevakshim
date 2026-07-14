@@ -278,3 +278,41 @@ def test_contextual_endpoint_is_staff_gated(client, desk_setup):
     w = desk_setup["words"][0]
     assert client.post(f"/desk/words/{w.id}/contextual",
                        json={"contextual_translation": "x"}).status_code == 403
+
+
+# --- Suggestion picker -------------------------------------------------------
+
+def test_pasuk_view_returns_suggestions(client, desk_setup):
+    import json as _json
+    s = desk_setup
+    w = s["words"][0]
+    w.suggestions = _json.dumps([
+        {"text": "in his generations", "source_label": "Morphology (morphhb)",
+         "recast": False},
+        {"text": "generation", "source_label": "Root gloss", "recast": False}])
+    db.session.commit()
+    view = as_editor(client).get(f"/desk/units/{s['unit'].id}/pasuk/1").get_json()
+    w1 = next(x for x in view["words"] if x["id"] == w.id)
+    assert len(w1["suggestions"]) == 2
+    assert w1["suggestions"][0]["source_label"] == "Morphology (morphhb)"
+
+
+def test_no_suggestions_yields_empty_list(client, desk_setup):
+    s = desk_setup
+    view = as_editor(client).get(f"/desk/units/{s['unit'].id}/pasuk/1").get_json()
+    assert view["words"][1]["suggestions"] == []
+
+
+def test_committed_suggestion_data_has_no_forbidden_sources():
+    """The shipped drafts must never carry a forbidden (in-copyright/NC) source
+    label — guards against ever ingesting Metsudah/Klein/ArtScroll/etc."""
+    import json as _json
+    from pathlib import Path
+    data = _json.loads((Path(__file__).resolve().parent.parent / "data"
+                        / "suggestions_noach.json").read_text(encoding="utf-8"))
+    forbidden = ["metsudah", "sifsei chachomim", "artscroll", "schottenstein",
+                 "kehati", "steinsaltz", "blackman", "klein"]
+    labels = {o["source_label"] for opts in data.values() for o in opts}
+    for lbl in labels:
+        assert not any(f in lbl.lower() for f in forbidden), lbl
+    assert any("Onkelos (Etheridge" in lbl for lbl in labels)  # PD version only

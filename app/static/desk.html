@@ -49,6 +49,13 @@
   .iw .ctx { font-size:.8rem; direction:ltr; display:block; color:var(--accent);
              font-family:Georgia, serif; }
   .iw.ctxflag { border-color:var(--warn); background:#fffbeb; }
+  .sugg { border:1px solid var(--line); border-radius:8px; padding:.4rem .6rem;
+          margin:.35rem 0; cursor:pointer; }
+  .sugg:hover { background:#eef2ff; border-color:var(--accent); }
+  .sugg.recast { border-color:var(--warn); background:#fffbeb; }
+  .sugg-src { display:block; font-size:.68rem; color:var(--soft);
+              text-transform:uppercase; letter-spacing:.03em; }
+  .sugg-text { font-size:.95rem; }
   .iw.certified { background:#f0fdf4; }
   .iw.certified .gl { color:var(--good); }
   .iw.flagged { border-color:var(--warn); }
@@ -101,6 +108,7 @@
       <label>Literal gloss (shoresh)</label><input id="wp-gloss">
       <label>Contextual translation — what the learner reads</label><input id="wp-contextual">
       <p class="note" id="wp-note"></p>
+      <div id="wp-suggestions"></div>
       <div class="actions">
         <button class="good" onclick="approveWord()">Approve</button>
         <button onclick="saveGloss()">Save gloss</button>
@@ -184,6 +192,7 @@ async function loadUnit(id, name) {
 async function loadPasuk(idx) {
   S.pasuk = idx; S.word = null;
   const data = await api(`/desk/units/${S.unit}/pasuk/${idx}`);
+  S.pwords = data.words;
   $('p-ref').textContent = data.ref + (data.servable ? ' · servable' : '');
   $('p-back').textContent = S.unitName;
   $('p-back').onclick = () => loadUnit(S.unit);
@@ -207,10 +216,25 @@ function pickWord(id, el) {
   $('wp-gloss').value = el.dataset.gloss;
   $('wp-contextual').value = el.dataset.contextual || '';
   $('wp-note').textContent = el.dataset.note ? ('⚑ ' + el.dataset.note) : '';
+  const w = (S.pwords || []).find(x => x.id === id) || {};
+  const sugg = w.suggestions || [];
+  $('wp-suggestions').innerHTML = sugg.length
+    ? '<p class="note">Tap a suggestion to fill the field (does not approve):</p>'
+      + sugg.map(sg =>
+        `<div class="sugg${sg.recast ? ' recast' : ''}" onclick="fillContextual(this)" ` +
+        `data-text="${(sg.text || '').replace(/"/g, '&quot;')}">` +
+        `<span class="sugg-src">${sg.source_label}${sg.recast ? ' · recast' : ''}</span>` +
+        `<span class="sugg-text">${sg.text}</span></div>`).join('')
+    : '<p class="note">No grounded suggestions for this word.</p>';
   $('wp-decert').classList.toggle('hidden',
     !(S.staff.role === 'admin' && el.dataset.certified === 'true'));
   $('wp-status').textContent = '';
   $('word-panel').classList.remove('hidden');
+}
+
+function fillContextual(el) {
+  $('wp-contextual').value = el.dataset.text;
+  $('wp-contextual').focus();
 }
 
 async function saveContextual() {

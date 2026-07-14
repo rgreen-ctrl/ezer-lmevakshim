@@ -7,6 +7,8 @@ the learner will get, corrects what needs correcting, and approves word by
 word — or one whole pasuk at a time, never more.
 """
 
+import json
+
 from flask import Blueprint, g, jsonify, request
 
 from app import db
@@ -45,6 +47,7 @@ def _word_json(w, open_flags=None):
         "contextual": w.contextual_translation,
         "contextual_flagged": w.contextual_flagged,
         "contextual_note": w.contextual_note,
+        "suggestions": json.loads(w.suggestions) if w.suggestions else [],
         "certified": w.certified,
         "open_flags": open_flags.get(w.id, 0) if open_flags else 0,
     }
