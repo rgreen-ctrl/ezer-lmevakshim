@@ -21,6 +21,8 @@ COLUMNS = {
     "contextual_flagged": "BOOLEAN NOT NULL DEFAULT FALSE",
     "contextual_note": "VARCHAR(255)",
     "suggestions": "TEXT",
+    "confidence": "VARCHAR(10)",
+    "check_results": "TEXT",
 }
 
 

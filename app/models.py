@@ -96,6 +96,11 @@ class Word(db.Model):
     # {text, source_label, recast}) an editor taps to fill the contextual
     # field. Read-only reference data; tapping never approves/certifies.
     suggestions = db.Column(db.Text)
+    # Three-pass self-check output. `confidence` is high|medium|low and only
+    # ORDERS the review — it never approves anything. `check_results` is a
+    # JSON list of {pass, level, reason, proposed_fix}.
+    confidence = db.Column(db.String(10))
+    check_results = db.Column(db.Text)
     # draft -> certified moves ONLY through the desk endpoints; the importer
     # and the learner app never touch these three columns.
     certified = db.Column(db.Boolean, nullable=False, default=False)
