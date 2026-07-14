@@ -117,9 +117,11 @@ def main():
                 opts.append({"text": clean, "source_label": "Onkelos (Etheridge, per pasuk)",
                              "recast": is_recast})
                 stats["onkelos_words"] += 1
-            # rashi (lemma matched)
+            # rashi (lemma matched) - but never bind a phrase comment to a
+            # proper name (e.g. "NOAH WALKED WITH GOD" must not attach to נח)
             wc = cons(lw["he"])
-            for toks, caps in parsed_rashi:
+            is_np = bool(mw and mw["content"].startswith("Np"))
+            for toks, caps in ([] if is_np else parsed_rashi):
                 if toks and wc in toks:
                     opts.append({"text": caps, "source_label": "Rashi", "recast": False})
                     stats["rashi_words"] += 1
