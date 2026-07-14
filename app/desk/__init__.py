@@ -48,6 +48,8 @@ def _word_json(w, open_flags=None):
         "contextual_flagged": w.contextual_flagged,
         "contextual_note": w.contextual_note,
         "suggestions": json.loads(w.suggestions) if w.suggestions else [],
+        "confidence": w.confidence,
+        "check_results": json.loads(w.check_results) if w.check_results else [],
         "certified": w.certified,
         "open_flags": open_flags.get(w.id, 0) if open_flags else 0,
     }
@@ -97,6 +99,29 @@ def unit_view(unit_id):
         "unit": {"id": unit.id, "name": unit.name, "kind": unit.kind},
         "progress": unit_progress(unit_id),
         "pesukim": [pesukim[k] for k in sorted(pesukim)],
+    })
+
+
+@desk.get("/units/<int:unit_id>/queue")
+def review_queue(unit_id):
+    """Prioritized review order: LOW-confidence words first, then MEDIUM, then
+    HIGH — so the editor spends time where judgment is needed. Confidence only
+    ORDERS; it never approves. Nothing here certifies."""
+    db.get_or_404(Unit, unit_id)
+    words = Word.query.filter_by(unit_id=unit_id).all()
+    rank = {"low": 0, "medium": 1, "high": 2}
+    words.sort(key=lambda w: (rank.get(w.confidence, 3), w.pasuk_index, w.position))
+    counts = {lvl: sum(1 for w in words if w.confidence == lvl)
+              for lvl in ("low", "medium", "high")}
+    return jsonify({
+        "counts": counts,
+        "words": [{
+            "id": w.id, "ref": w.ref, "pasuk_index": w.pasuk_index,
+            "position": w.position, "hebrew": w.hebrew,
+            "confidence": w.confidence, "certified": w.certified,
+            "reasons": [r.get("reason") for r in
+                        (json.loads(w.check_results) if w.check_results else [])],
+        } for w in words],
     })
 
 

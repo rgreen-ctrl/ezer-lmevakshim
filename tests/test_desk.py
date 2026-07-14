@@ -316,3 +316,48 @@ def test_committed_suggestion_data_has_no_forbidden_sources():
     for lbl in labels:
         assert not any(f in lbl.lower() for f in forbidden), lbl
     assert any("Onkelos (Etheridge" in lbl for lbl in labels)  # PD version only
+
+
+# --- Three-pass self-check & prioritized review ------------------------------
+
+def test_review_queue_orders_low_first_with_counts(client, desk_setup):
+    import json as _json
+    s = desk_setup
+    ws = s["words"]
+    ws[0].confidence = "high"
+    ws[1].confidence = "low"
+    ws[1].check_results = _json.dumps([{"pass": 1, "level": "mismatch",
+        "reason": "number: morphhb marks plural", "proposed_fix": "in his generations"}])
+    ws[2].confidence = "medium"
+    db.session.commit()
+    q = as_editor(client).get(f"/desk/units/{s['unit'].id}/queue").get_json()
+    assert q["counts"]["low"] >= 1 and q["counts"]["high"] >= 1
+    order = [w["confidence"] for w in q["words"] if w["confidence"]]
+    assert order.index("low") < order.index("high")  # low reviewed first
+    low = next(w for w in q["words"] if w["confidence"] == "low")
+    assert "number" in (low["reasons"][0] or "")
+
+
+def test_confidence_does_not_auto_approve(client, desk_setup):
+    s = desk_setup
+    w = s["words"][0]
+    w.confidence = "high"
+    db.session.commit()
+    view = as_editor(client).get(f"/desk/units/{s['unit'].id}/pasuk/1").get_json()
+    w1 = next(x for x in view["words"] if x["id"] == w.id)
+    assert w1["confidence"] == "high"
+    assert w1["certified"] is False  # confidence only orders; it never certifies
+
+
+def test_committed_selfcheck_reflects_all_three_passes():
+    import json as _json
+    from pathlib import Path
+    data = _json.loads((Path(__file__).resolve().parent.parent / "data"
+                        / "selfcheck_noach.json").read_text(encoding="utf-8"))
+    assert {"high", "medium", "low"} <= {r["confidence"] for r in data.values()}
+    reasons = [x for r in data.values() for x in r["check_results"]]
+    # Pass 1 caught a plural and proposes a plural fix (the בְּדֹרֹתָיו case)
+    assert any(x["pass"] == 1 and "generations" in (x.get("proposed_fix") or "")
+               for x in reasons)
+    assert any(x["pass"] == 2 for x in reasons)  # cross-source disagreement
+    assert any(x["pass"] == 3 for x in reasons)  # AI raised a concern

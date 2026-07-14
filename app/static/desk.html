@@ -56,6 +56,20 @@
   .sugg-src { display:block; font-size:.68rem; color:var(--soft);
               text-transform:uppercase; letter-spacing:.03em; }
   .sugg-text { font-size:.95rem; }
+  .conf { display:inline-block; width:.55rem; height:.55rem; border-radius:50%;
+          vertical-align:middle; margin-left:.25rem; }
+  .conf-low { background:var(--bad); } .conf-medium { background:var(--warn); }
+  .conf-high { background:var(--good); }
+  .qcounts { font-size:.85rem; margin:.25rem 0 .5rem; }
+  .qcounts b.low { color:var(--bad); } .qcounts b.medium { color:var(--warn); }
+  .qcounts b.high { color:var(--good); }
+  .qrow { display:flex; gap:.6rem; align-items:baseline; padding:.4rem 0;
+          border-bottom:1px solid var(--line); cursor:pointer; }
+  .qrow:hover { background:#f1f5f9; }
+  .qrow .qhe { font-size:1.1rem; }
+  .qrow .qreason { font-size:.78rem; color:var(--warn); flex:1; }
+  .wp-reason { font-size:.82rem; color:var(--warn); margin:.2rem 0; }
+  .wp-reason .fix { color:var(--accent); cursor:pointer; text-decoration:underline; }
   .iw.certified { background:#f0fdf4; }
   .iw.certified .gl { color:var(--good); }
   .iw.flagged { border-color:var(--warn); }
@@ -91,6 +105,8 @@
   <section id="unit" class="card hidden">
     <div class="crumbs"><a onclick="loadHome()">Desk</a> › <span id="u-name"></span></div>
     <div id="u-progress"></div>
+    <div id="u-queue"></div>
+    <h2 style="margin-top:1rem">Pesukim (in order)</h2>
     <div id="pesukim"></div>
   </section>
 
@@ -108,6 +124,7 @@
       <label>Literal gloss (shoresh)</label><input id="wp-gloss">
       <label>Contextual translation — what the learner reads</label><input id="wp-contextual">
       <p class="note" id="wp-note"></p>
+      <div id="wp-reasons"></div>
       <div id="wp-suggestions"></div>
       <div class="actions">
         <button class="good" onclick="approveWord()">Approve</button>
@@ -186,7 +203,26 @@ async function loadUnit(id, name) {
       <span class="grow">${x.ref}</span>
       <span class="pill ${state}">${label}</span></div>`;
   }).join('');
+  await loadQueue(id);
   show('unit');
+}
+
+async function loadQueue(id) {
+  const q = await api(`/desk/units/${id}/queue`);
+  const c = q.counts;
+  const pri = q.words.filter(w => w.confidence === 'low' || w.confidence === 'medium');
+  $('u-queue').innerHTML =
+    '<h2>Priority review — hardest words first</h2>'
+    + `<p class="qcounts"><b class="low">${c.low} low</b> · `
+    + `<b class="medium">${c.medium} medium</b> · <b class="high">${c.high} high</b>`
+    + ' — the low pile is what needs your judgment; high is quick-confirm.</p>'
+    + pri.slice(0, 150).map(w =>
+        `<div class="qrow" onclick="loadPasuk(${w.pasuk_index})">`
+        + `<span class="conf conf-${w.confidence}"></span>`
+        + `<span class="qhe" dir="rtl">${w.hebrew}</span>`
+        + `<span class="note">${w.ref}</span>`
+        + `<span class="qreason">${w.reasons[0] || ''}</span></div>`).join('')
+    + (pri.length > 150 ? `<p class="note">…and ${pri.length - 150} more.</p>` : '');
 }
 
 async function loadPasuk(idx) {
@@ -203,7 +239,7 @@ async function loadPasuk(idx) {
        data-contextual="${(w.contextual||'').replace(/"/g,'&quot;')}"
        data-note="${(w.contextual_note||'').replace(/"/g,'&quot;')}"
        data-certified="${w.certified}">
-       <span class="he">${w.hebrew}</span><span class="gl">${w.gloss}</span>
+       <span class="he">${w.hebrew}</span><span class="conf conf-${w.confidence || 'high'}"></span><span class="gl">${w.gloss}</span>
        <span class="ctx">${w.contextual || '&mdash;'}${w.contextual_flagged ? ' ⚑' : ''}</span></span>`
   ).join('');
   $('word-panel').classList.add('hidden');
@@ -217,6 +253,14 @@ function pickWord(id, el) {
   $('wp-contextual').value = el.dataset.contextual || '';
   $('wp-note').textContent = el.dataset.note ? ('⚑ ' + el.dataset.note) : '';
   const w = (S.pwords || []).find(x => x.id === id) || {};
+  const cr = w.check_results || [];
+  $('wp-reasons').innerHTML = (w.confidence
+      ? `<p class="note">Confidence: <b>${w.confidence.toUpperCase()}</b></p>` : '')
+    + cr.map(r => `<div class="wp-reason">• ${r.reason}`
+        + (r.proposed_fix
+            ? ` <span class="fix" onclick="fillFix(this)" data-fix="${(r.proposed_fix || '').replace(/"/g, '&quot;')}">use “${r.proposed_fix}”</span>`
+            : '')
+        + '</div>').join('');
   const sugg = w.suggestions || [];
   $('wp-suggestions').innerHTML = sugg.length
     ? '<p class="note">Tap a suggestion to fill the field (does not approve):</p>'
@@ -234,6 +278,11 @@ function pickWord(id, el) {
 
 function fillContextual(el) {
   $('wp-contextual').value = el.dataset.text;
+  $('wp-contextual').focus();
+}
+
+function fillFix(el) {
+  $('wp-contextual').value = el.dataset.fix;
   $('wp-contextual').focus();
 }
 
