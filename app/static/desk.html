@@ -70,6 +70,9 @@
   .qrow .qreason { font-size:.78rem; color:var(--warn); flex:1; }
   .wp-reason { font-size:.82rem; color:var(--warn); margin:.2rem 0; }
   .wp-reason .fix { color:var(--accent); cursor:pointer; text-decoration:underline; }
+  [role="button"] { cursor:pointer; }
+  [role="button"]:focus, [role="button"]:focus-visible {
+    outline:2px solid var(--accent); outline-offset:2px; border-radius:6px; }
   .iw.certified { background:#f0fdf4; }
   .iw.certified .gl { color:var(--good); }
   .iw.flagged { border-color:var(--warn); }
@@ -103,7 +106,7 @@
   </section>
 
   <section id="unit" class="card hidden">
-    <div class="crumbs"><a onclick="loadHome()">Desk</a> › <span id="u-name"></span></div>
+    <div class="crumbs"><a role="button" tabindex="0" onclick="loadHome()">Desk</a> › <span id="u-name"></span></div>
     <div id="u-progress"></div>
     <div id="u-queue"></div>
     <h2 style="margin-top:1rem">Pesukim (in order)</h2>
@@ -111,8 +114,8 @@
   </section>
 
   <section id="pasuk" class="card hidden">
-    <div class="crumbs"><a onclick="loadHome()">Desk</a> ›
-      <a id="p-back"></a> › <span id="p-ref"></span></div>
+    <div class="crumbs"><a role="button" tabindex="0" onclick="loadHome()">Desk</a> ›
+      <a id="p-back" role="button" tabindex="0"></a> › <span id="p-ref"></span></div>
     <p class="note">Read the pasuk through. Tap a word to approve, correct, or
     flag it. Certify-pasuk approves whatever remains — one pasuk, never more.</p>
     <div class="interlinear" id="p-words"></div>
@@ -138,7 +141,7 @@
   </section>
 
   <section id="flags" class="card hidden">
-    <div class="crumbs"><a onclick="loadHome()">Desk</a> › Flag queue</div>
+    <div class="crumbs"><a role="button" tabindex="0" onclick="loadHome()">Desk</a> › Flag queue</div>
     <div id="flaglist"></div>
   </section>
 
@@ -174,7 +177,7 @@ async function loadHome() {
   $('flagcount').textContent = data.open_flags;
   $('units').innerHTML = data.tracks.map(t => t.units.map(u => {
     const pct = u.words_total ? Math.round(100*u.words_certified/u.words_total) : 0;
-    return `<div class="row-item" onclick="loadUnit(${u.id}, '${u.name}')">
+    return `<div class="row-item" role="button" tabindex="0" onclick="loadUnit(${u.id}, '${u.name}')">
       <div class="grow"><strong>${t.name}</strong> — ${u.name}
         <div class="meter"><div style="width:${pct}%"></div></div>
         <span class="note">${u.words_certified}/${u.words_total} words ·
@@ -199,7 +202,8 @@ async function loadUnit(id, name) {
                 : x.words_certified ? 'partial' : 'draft';
     const label = state === 'done' ? 'servable'
                 : state === 'partial' ? `${x.words_certified}/${x.words_total}` : 'draft';
-    return `<div class="row-item" onclick="loadPasuk(${x.pasuk_index})">
+    return `<div class="row-item" role="button" tabindex="0" onclick="loadPasuk(${x.pasuk_index})"
+      aria-label="${x.ref}, ${label}">
       <span class="grow">${x.ref}</span>
       <span class="pill ${state}">${label}</span></div>`;
   }).join('');
@@ -217,7 +221,8 @@ async function loadQueue(id) {
     + `<b class="medium">${c.medium} medium</b> · <b class="high">${c.high} high</b>`
     + ' — the low pile is what needs your judgment; high is quick-confirm.</p>'
     + pri.slice(0, 150).map(w =>
-        `<div class="qrow" onclick="loadPasuk(${w.pasuk_index})">`
+        `<div class="qrow" role="button" tabindex="0" onclick="openWord(${w.pasuk_index}, ${w.id})"`
+        + ` aria-label="${w.hebrew} ${w.ref}, ${w.confidence}: ${(w.reasons[0] || '').replace(/"/g, '')}">`
         + `<span class="conf conf-${w.confidence}"></span>`
         + `<span class="qhe" dir="rtl">${w.hebrew}</span>`
         + `<span class="note">${w.ref}</span>`
@@ -234,11 +239,8 @@ async function loadPasuk(idx) {
   $('p-back').onclick = () => loadUnit(S.unit);
   $('p-words').innerHTML = data.words.map(w =>
     `<span class="iw ${w.certified ? 'certified' : ''} ${w.open_flags ? 'flagged' : ''} ${w.contextual_flagged ? 'ctxflag' : ''}"
-       onclick="pickWord(${w.id}, this)"
-       data-gloss="${(w.gloss||'').replace(/"/g,'&quot;')}"
-       data-contextual="${(w.contextual||'').replace(/"/g,'&quot;')}"
-       data-note="${(w.contextual_note||'').replace(/"/g,'&quot;')}"
-       data-certified="${w.certified}">
+       role="button" tabindex="0" onclick="pickWord(${w.id})"
+       aria-label="${(w.hebrew || '')}, ${w.gloss || ''}${w.certified ? ', certified' : ''}${w.confidence ? ', ' + w.confidence + ' confidence' : ''}">
        <span class="he">${w.hebrew}</span><span class="conf conf-${w.confidence || 'high'}"></span><span class="gl">${w.gloss}</span>
        <span class="ctx">${w.contextual || '&mdash;'}${w.contextual_flagged ? ' ⚑' : ''}</span></span>`
   ).join('');
@@ -246,34 +248,41 @@ async function loadPasuk(idx) {
   show('pasuk');
 }
 
-function pickWord(id, el) {
+function pickWord(id) {
   S.word = id;
-  $('wp-title').textContent = el.querySelector('.he').textContent;
-  $('wp-gloss').value = el.dataset.gloss;
-  $('wp-contextual').value = el.dataset.contextual || '';
-  $('wp-note').textContent = el.dataset.note ? ('⚑ ' + el.dataset.note) : '';
   const w = (S.pwords || []).find(x => x.id === id) || {};
+  $('wp-title').textContent = w.hebrew || '';
+  $('wp-gloss').value = w.gloss || '';
+  $('wp-contextual').value = w.contextual || '';
+  $('wp-note').textContent = w.contextual_note ? ('⚑ ' + w.contextual_note) : '';
   const cr = w.check_results || [];
   $('wp-reasons').innerHTML = (w.confidence
       ? `<p class="note">Confidence: <b>${w.confidence.toUpperCase()}</b></p>` : '')
     + cr.map(r => `<div class="wp-reason">• ${r.reason}`
         + (r.proposed_fix
-            ? ` <span class="fix" onclick="fillFix(this)" data-fix="${(r.proposed_fix || '').replace(/"/g, '&quot;')}">use “${r.proposed_fix}”</span>`
+            ? ` <span class="fix" role="button" tabindex="0" onclick="fillFix(this)" data-fix="${(r.proposed_fix || '').replace(/"/g, '&quot;')}">use “${r.proposed_fix}”</span>`
             : '')
         + '</div>').join('');
   const sugg = w.suggestions || [];
   $('wp-suggestions').innerHTML = sugg.length
-    ? '<p class="note">Tap a suggestion to fill the field (does not approve):</p>'
+    ? '<p class="note">Choose a suggestion to fill the field (does not approve):</p>'
       + sugg.map(sg =>
-        `<div class="sugg${sg.recast ? ' recast' : ''}" onclick="fillContextual(this)" ` +
-        `data-text="${(sg.text || '').replace(/"/g, '&quot;')}">` +
+        `<div class="sugg${sg.recast ? ' recast' : ''}" role="button" tabindex="0" onclick="fillContextual(this)" ` +
+        `data-text="${(sg.text || '').replace(/"/g, '&quot;')}" ` +
+        `aria-label="${sg.source_label}${sg.recast ? ' recast' : ''}: ${(sg.text || '').replace(/"/g, '')}">` +
         `<span class="sugg-src">${sg.source_label}${sg.recast ? ' · recast' : ''}</span>` +
         `<span class="sugg-text">${sg.text}</span></div>`).join('')
     : '<p class="note">No grounded suggestions for this word.</p>';
   $('wp-decert').classList.toggle('hidden',
-    !(S.staff.role === 'admin' && el.dataset.certified === 'true'));
+    !(S.staff.role === 'admin' && w.certified));
   $('wp-status').textContent = '';
   $('word-panel').classList.remove('hidden');
+  $('word-panel').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+}
+
+async function openWord(pasukIndex, id) {
+  await loadPasuk(pasukIndex);
+  pickWord(id);
 }
 
 function fillContextual(el) {
@@ -348,6 +357,18 @@ async function resolveDismiss(id) {
   await api(`/desk/flags/${id}/resolve`, { note });
   showFlags();
 }
+
+// Keyboard/screen-reader activation for every role="button" element (the
+// dynamically-rendered rows, words, chips and fixes) — Enter or Space acts
+// like a click, matching how assistive tech expects a button to behave.
+document.addEventListener('keydown', e => {
+  const t = e.target;
+  if ((e.key === 'Enter' || e.key === ' ') &&
+      t && t.getAttribute && t.getAttribute('role') === 'button') {
+    e.preventDefault();
+    t.click();
+  }
+});
 
 // Resume an existing staff session on reload.
 api('/api/staff/me').then(s => { S.staff = s;
