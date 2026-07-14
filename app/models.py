@@ -82,8 +82,16 @@ class Word(db.Model):
     position = db.Column(db.Integer, nullable=False)  # ordinal word in unit
     aliyah = db.Column(db.Integer)  # milestone level within the parsha (1-7)
     hebrew = db.Column(db.String(120), nullable=False)
-    translation = db.Column(db.String(255), nullable=False)
+    translation = db.Column(db.String(255), nullable=False)  # literal/shoresh gloss
     shoresh = db.Column(db.String(60))
+    # Contextual translation: the word rendered in full with its prefix and
+    # suffix folded in (e.g. "in his generations"), a DRAFT for editor review,
+    # distinct from and never overwriting the literal `translation`. Flagged
+    # words are the ones an editor should look at first (verbs, particles,
+    # recasts, proper names, thin coverage).
+    contextual_translation = db.Column(db.String(255))
+    contextual_flagged = db.Column(db.Boolean, nullable=False, default=False)
+    contextual_note = db.Column(db.String(255))  # why flagged / source note
     # draft -> certified moves ONLY through the desk endpoints; the importer
     # and the learner app never touch these three columns.
     certified = db.Column(db.Boolean, nullable=False, default=False)

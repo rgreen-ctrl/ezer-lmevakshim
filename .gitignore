@@ -9,3 +9,4 @@ venv/
 instance/
 dist/
 *.egg-info/
+data/staging/
