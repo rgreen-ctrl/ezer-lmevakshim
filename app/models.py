@@ -92,6 +92,10 @@ class Word(db.Model):
     contextual_translation = db.Column(db.String(255))
     contextual_flagged = db.Column(db.Boolean, nullable=False, default=False)
     contextual_note = db.Column(db.String(255))  # why flagged / source note
+    # Grounded, source-labeled suggestion set (JSON list of
+    # {text, source_label, recast}) an editor taps to fill the contextual
+    # field. Read-only reference data; tapping never approves/certifies.
+    suggestions = db.Column(db.Text)
     # draft -> certified moves ONLY through the desk endpoints; the importer
     # and the learner app never touch these three columns.
     certified = db.Column(db.Boolean, nullable=False, default=False)

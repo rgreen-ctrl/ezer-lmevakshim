@@ -20,6 +20,7 @@ COLUMNS = {
     "contextual_translation": "VARCHAR(255)",
     "contextual_flagged": "BOOLEAN NOT NULL DEFAULT FALSE",
     "contextual_note": "VARCHAR(255)",
+    "suggestions": "TEXT",
 }
 
 
