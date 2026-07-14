@@ -42,6 +42,9 @@ def _word_json(w, open_flags=None):
         "hebrew": w.hebrew,
         "gloss": w.translation,
         "shoresh": w.shoresh,
+        "contextual": w.contextual_translation,
+        "contextual_flagged": w.contextual_flagged,
+        "contextual_note": w.contextual_note,
         "certified": w.certified,
         "open_flags": open_flags.get(w.id, 0) if open_flags else 0,
     }
@@ -135,6 +138,21 @@ def gloss(word_id):
     return jsonify({"gloss": word.translation,
                     "certified": word.certified,
                     "revision_id": revision.id if revision else None})
+
+
+@desk.post("/words/<int:word_id>/contextual")
+def contextual(word_id):
+    """Edit the DRAFT contextual translation (what the learner will eventually
+    read). Editing it clears its review flag. This never touches the literal
+    gloss or the certified state — certification is still the pasuk action."""
+    word = db.get_or_404(Word, word_id)
+    data = request.get_json(force=True)
+    val = (data.get("contextual_translation") or "").strip()
+    word.contextual_translation = val or None
+    word.contextual_flagged = False
+    db.session.commit()
+    return jsonify({"contextual_translation": word.contextual_translation,
+                    "contextual_flagged": word.contextual_flagged})
 
 
 @desk.post("/words/<int:word_id>/flag")

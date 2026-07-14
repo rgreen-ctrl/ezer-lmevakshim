@@ -244,3 +244,37 @@ def test_learner_endpoints_cannot_certify(client, desk_setup):
         "email": "a@b.org", "certified": True})
     after = {w.id: w.certified for w in Word.query.all()}
     assert before == after
+
+
+# --- Contextual translation (draft layer) ------------------------------------
+
+def test_save_contextual_is_a_draft_clears_flag_and_leaves_gloss(client, desk_setup):
+    s = desk_setup
+    w = s["words"][0]
+    w.contextual_flagged = True
+    w.contextual_note = "verb - check tense/person"
+    db.session.commit()
+
+    resp = as_editor(client).post(f"/desk/words/{w.id}/contextual",
+                                  json={"contextual_translation": "in his generations"})
+    assert resp.status_code == 200
+    body = resp.get_json()
+    assert body["contextual_translation"] == "in his generations"
+    assert body["contextual_flagged"] is False
+
+    fresh = db.session.get(Word, w.id)
+    assert fresh.contextual_translation == "in his generations"
+    assert fresh.contextual_flagged is False
+    # literal gloss and certification untouched by a contextual edit
+    assert fresh.translation == "word 1"
+    assert fresh.certified is False
+
+    view = as_editor(client).get(f"/desk/units/{s['unit'].id}/pasuk/1").get_json()
+    w1 = next(x for x in view["words"] if x["id"] == w.id)
+    assert w1["contextual"] == "in his generations"
+
+
+def test_contextual_endpoint_is_staff_gated(client, desk_setup):
+    w = desk_setup["words"][0]
+    assert client.post(f"/desk/words/{w.id}/contextual",
+                       json={"contextual_translation": "x"}).status_code == 403

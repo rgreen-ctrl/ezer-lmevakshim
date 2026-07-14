@@ -46,6 +46,9 @@
   .iw .he { font-size:1.6rem; display:block; }
   .iw .gl { font-size:.75rem; direction:ltr; display:block; color:var(--soft);
             font-family:Georgia, serif; }
+  .iw .ctx { font-size:.8rem; direction:ltr; display:block; color:var(--accent);
+             font-family:Georgia, serif; }
+  .iw.ctxflag { border-color:var(--warn); background:#fffbeb; }
   .iw.certified { background:#f0fdf4; }
   .iw.certified .gl { color:var(--good); }
   .iw.flagged { border-color:var(--warn); }
@@ -95,10 +98,13 @@
     </div>
     <div id="word-panel" class="hidden">
       <h2 id="wp-title"></h2>
-      <label>Gloss</label><input id="wp-gloss">
+      <label>Literal gloss (shoresh)</label><input id="wp-gloss">
+      <label>Contextual translation — what the learner reads</label><input id="wp-contextual">
+      <p class="note" id="wp-note"></p>
       <div class="actions">
         <button class="good" onclick="approveWord()">Approve</button>
         <button onclick="saveGloss()">Save gloss</button>
+        <button onclick="saveContextual()">Save contextual</button>
         <button class="quiet" onclick="flagWord()">Flag</button>
         <button class="bad hidden" id="wp-decert" onclick="decertifyWord()">Decertify</button>
       </div>
@@ -182,10 +188,14 @@ async function loadPasuk(idx) {
   $('p-back').textContent = S.unitName;
   $('p-back').onclick = () => loadUnit(S.unit);
   $('p-words').innerHTML = data.words.map(w =>
-    `<span class="iw ${w.certified ? 'certified' : ''} ${w.open_flags ? 'flagged' : ''}"
-       onclick="pickWord(${w.id}, this)" data-gloss="${w.gloss.replace(/"/g,'&quot;')}"
+    `<span class="iw ${w.certified ? 'certified' : ''} ${w.open_flags ? 'flagged' : ''} ${w.contextual_flagged ? 'ctxflag' : ''}"
+       onclick="pickWord(${w.id}, this)"
+       data-gloss="${(w.gloss||'').replace(/"/g,'&quot;')}"
+       data-contextual="${(w.contextual||'').replace(/"/g,'&quot;')}"
+       data-note="${(w.contextual_note||'').replace(/"/g,'&quot;')}"
        data-certified="${w.certified}">
-       <span class="he">${w.hebrew}</span><span class="gl">${w.gloss}</span></span>`
+       <span class="he">${w.hebrew}</span><span class="gl">${w.gloss}</span>
+       <span class="ctx">${w.contextual || '&mdash;'}${w.contextual_flagged ? ' ⚑' : ''}</span></span>`
   ).join('');
   $('word-panel').classList.add('hidden');
   show('pasuk');
@@ -195,10 +205,20 @@ function pickWord(id, el) {
   S.word = id;
   $('wp-title').textContent = el.querySelector('.he').textContent;
   $('wp-gloss').value = el.dataset.gloss;
+  $('wp-contextual').value = el.dataset.contextual || '';
+  $('wp-note').textContent = el.dataset.note ? ('⚑ ' + el.dataset.note) : '';
   $('wp-decert').classList.toggle('hidden',
     !(S.staff.role === 'admin' && el.dataset.certified === 'true'));
   $('wp-status').textContent = '';
   $('word-panel').classList.remove('hidden');
+}
+
+async function saveContextual() {
+  try {
+    await api(`/desk/words/${S.word}/contextual`,
+      { contextual_translation: $('wp-contextual').value });
+    loadPasuk(S.pasuk);
+  } catch (e) { $('wp-status').textContent = e.message; }
 }
 
 async function approveWord() {
