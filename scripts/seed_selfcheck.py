@@ -27,9 +27,9 @@ def main():
             if w is None:
                 counts["skipped_missing"] += 1
                 continue
-            if w.certified:
-                counts["skipped_certified"] += 1
-                continue
+            # confidence/check_results are REFERENCE (ordering) data, not the
+            # certified content — seed on certified words too so a reopened word
+            # still shows why it was flagged.
             w.confidence = rec["confidence"]
             w.check_results = json.dumps(rec["check_results"], ensure_ascii=False)
             counts["seeded"] += 1

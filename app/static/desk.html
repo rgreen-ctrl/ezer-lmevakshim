@@ -134,9 +134,9 @@
         <button onclick="saveGloss()">Save gloss</button>
         <button onclick="saveContextual()">Save contextual</button>
         <button class="quiet" onclick="flagWord()">Flag</button>
-        <button class="bad hidden" id="wp-decert" onclick="decertifyWord()">Decertify</button>
+        <button class="bad hidden" id="wp-decert" onclick="decertifyWord()">Reopen for editing (decertify)</button>
       </div>
-      <p class="note" id="wp-status"></p>
+      <p class="note" id="wp-status" role="status" aria-live="polite"></p>
     </div>
   </section>
 
@@ -239,7 +239,7 @@ async function loadPasuk(idx) {
   $('p-back').onclick = () => loadUnit(S.unit);
   $('p-words').innerHTML = data.words.map(w =>
     `<span class="iw ${w.certified ? 'certified' : ''} ${w.open_flags ? 'flagged' : ''} ${w.contextual_flagged ? 'ctxflag' : ''}"
-       role="button" tabindex="0" onclick="pickWord(${w.id})"
+       id="iw${w.id}" role="button" tabindex="0" onclick="pickWord(${w.id})"
        aria-label="${(w.hebrew || '')}, ${w.gloss || ''}${w.certified ? ', certified' : ''}${w.confidence ? ', ' + w.confidence + ' confidence' : ''}">
        <span class="he">${w.hebrew}</span><span class="conf conf-${w.confidence || 'high'}"></span><span class="gl">${w.gloss}</span>
        <span class="ctx">${w.contextual || '&mdash;'}${w.contextual_flagged ? ' ⚑' : ''}</span></span>`
@@ -297,21 +297,36 @@ function fillFix(el) {
 
 async function saveContextual() {
   try {
-    await api(`/desk/words/${S.word}/contextual`,
+    const data = await api(`/desk/words/${S.word}/contextual`,
       { contextual_translation: $('wp-contextual').value });
-    loadPasuk(S.pasuk);
-  } catch (e) { $('wp-status').textContent = e.message; }
+    const w = (S.pwords || []).find(x => x.id === S.word);
+    if (w) { w.contextual = data.contextual_translation; w.contextual_flagged = data.contextual_flagged; }
+    const el = document.getElementById('iw' + S.word);
+    if (el) el.querySelector('.ctx').textContent = data.contextual_translation || '—';
+    $('wp-status').textContent = 'Saved ✓ contextual translation.';
+  } catch (e) { $('wp-status').textContent = 'Not saved: ' + e.message; }
 }
 
 async function approveWord() {
-  await api(`/desk/words/${S.word}/approve`, {});
-  loadPasuk(S.pasuk);
+  try {
+    await api(`/desk/words/${S.word}/approve`, {});
+    const w = (S.pwords || []).find(x => x.id === S.word);
+    if (w) w.certified = true;
+    const el = document.getElementById('iw' + S.word);
+    if (el) el.classList.add('certified');
+    $('wp-decert').classList.toggle('hidden', S.staff.role !== 'admin');
+    $('wp-status').textContent = 'Approved ✓ certified. You can Reopen it later to change it.';
+  } catch (e) { $('wp-status').textContent = 'Not approved: ' + e.message; }
 }
 async function saveGloss() {
   try {
-    await api(`/desk/words/${S.word}/gloss`, { new_gloss: $('wp-gloss').value });
-    loadPasuk(S.pasuk);
-  } catch (e) { $('wp-status').textContent = e.message; }
+    const data = await api(`/desk/words/${S.word}/gloss`, { new_gloss: $('wp-gloss').value });
+    const w = (S.pwords || []).find(x => x.id === S.word);
+    if (w) w.gloss = data.gloss;
+    const el = document.getElementById('iw' + S.word);
+    if (el) el.querySelector('.gl').textContent = data.gloss;
+    $('wp-status').textContent = 'Saved ✓ literal gloss.';
+  } catch (e) { $('wp-status').textContent = 'Not saved: ' + e.message; }
 }
 async function flagWord() {
   const note = prompt('Flag note — what needs a second opinion?');
@@ -320,10 +335,16 @@ async function flagWord() {
   loadPasuk(S.pasuk);
 }
 async function decertifyWord() {
-  const reason = prompt('Decertify — reason (required). This pulls the pasuk off the servable frontier.');
+  const reason = prompt('Reopen this certified word for editing — a reason is kept on record:',
+                        'correcting my own certification');
   if (!reason) return;
-  await api(`/desk/words/${S.word}/decertify`, { reason });
-  loadPasuk(S.pasuk);
+  try {
+    const wid = S.word;
+    await api(`/desk/words/${wid}/decertify`, { reason });
+    await loadPasuk(S.pasuk);
+    pickWord(wid);   // reopen the (now-draft) word so its suggestions return
+    $('wp-status').textContent = 'Reopened ✓ now editable; its suggestions are available again.';
+  } catch (e) { $('wp-status').textContent = 'Not reopened: ' + e.message; }
 }
 async function certifyPasuk() {
   await api(`/desk/units/${S.unit}/pasuk/${S.pasuk}/certify`, {});

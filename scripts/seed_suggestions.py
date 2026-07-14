@@ -28,9 +28,9 @@ def main():
             if w is None:
                 counts["skipped_missing"] += 1
                 continue
-            if w.certified:
-                counts["skipped_certified"] += 1
-                continue
+            # Suggestions are REFERENCE data (not the certified gloss/contextual),
+            # so they are seeded on certified words too — the owner needs them if
+            # he reopens a certified word to correct it.
             w.suggestions = json.dumps(opts, ensure_ascii=False)
             counts["seeded"] += 1
         db.session.commit()
