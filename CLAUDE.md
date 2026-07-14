@@ -101,3 +101,29 @@ config `sessions_per_day`, default 1, cap 3).
   "Done when" is the acceptance criterion.
 - Run `pytest` before every commit.
 - Develop on the designated feature branch; never force-push shared history.
+
+## Craft logging protocol (mandatory, automatic)
+
+Craft is the authoritative record: if a step isn't in Craft, it didn't happen
+for the record. After every meaningful step — a decision, a merge, a live
+change, a finding, a blocker, a next-action — append a dated entry to the
+Craft session-log for this project (the "Ezer L'mevakshim — Chumash
+Interlinear: Project Index & Deliverables" doc), and update the Project
+Register row if status changed. Log DURING the work, not only at task end.
+Each entry states: what was done, what changed on live (never secrets), and
+what's next. Logging any step that touches the live database or `main` is
+mandatory. Never ask permission to log — it is automatic.
+
+## Live-command boundary
+
+- Commands against the live environment use `railway ssh` ONLY (runs inside
+  the container; the production `DATABASE_URL` never leaves Railway). NEVER
+  use `railway run` against live — it injects the production secret into the
+  local process.
+- `railway ssh` only works from the linked repo dir (`F:\ezer-lmevakshim`),
+  and needs the `ssh.railway.com` host key accepted once interactively.
+- Quoted `python -c "..."` one-liners break through the remote shell; run
+  remote Python by piping a local `.py` file into `railway ssh python`, or
+  by committing a script and running `railway ssh python scripts/<file>.py`.
+- Railway auto-deploys from `main`. Every PR must target `--base main`
+  explicitly (the repo default branch has caused wrong-base merges).
