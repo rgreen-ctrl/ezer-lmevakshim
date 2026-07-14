@@ -50,6 +50,12 @@
   .lesson-word:hover { background: #eef2ff; }
   .lesson-word .gloss { display: block; font-size: 0.75rem; direction: ltr;
     text-align: center; color: var(--warn); font-family: Georgia, serif; }
+  .spk { background: transparent; color: var(--soft); border: 0; padding: 0 0.1rem;
+    margin: 0 0 0 0.15rem; font-size: 0.95rem; line-height: 1; vertical-align: middle;
+    cursor: pointer; direction: ltr; }
+  .spk:hover:not(:disabled) { color: var(--accent); }
+  .spk:disabled { opacity: 0.3; cursor: default; }
+  .spk .lc { font-size: 0.55rem; vertical-align: super; margin-left: 1px; }
   .lesson { direction: rtl; text-align: right; }
   .ref { color: var(--soft); font-size: 0.85rem; text-align: center; }
   .gloss-big { text-align: center; font-size: 1.2rem; color: var(--accent); min-height: 1.6rem; }
@@ -146,6 +152,62 @@ function show(id) {
   $(id).classList.remove('hidden');
 }
 
+// --- Audio ------------------------------------------------------------------
+// speak(text, lang) is the ONE place speech happens. This v1 uses the browser's
+// built-in Web Speech API (no external service, no key, no stored files). To
+// swap in a recorded/cloned voice later, change only this function's body to
+// play a pre-generated audio source — every caller stays the same.
+const speech = {
+  supported: typeof window !== 'undefined' && 'speechSynthesis' in window,
+  voices: [],
+  refresh() { this.voices = this.supported ? window.speechSynthesis.getVoices() : []; return this.voices; },
+  hasLang(two) { return this.voices.some(v => (v.lang || '').slice(0, 2).toLowerCase() === two); },
+};
+
+function speak(text, lang) {
+  text = (text || '').trim();
+  if (!speech.supported || !text) return false;
+  window.speechSynthesis.cancel();               // never pile up utterances
+  const u = new SpeechSynthesisUtterance(text);
+  u.lang = lang;
+  u.rate = 0.9;
+  const two = lang.slice(0, 2).toLowerCase();
+  const v = speech.refresh().find(x => (x.lang || '').slice(0, 2).toLowerCase() === two);
+  if (v) u.voice = v;
+  window.speechSynthesis.speak(u);
+  return true;
+}
+
+function speakHebrew(wordId) {
+  const el = $('w' + wordId);
+  if (el) speak(el.dataset.hebrew, 'he-IL');
+}
+
+function speakEnglish(wordId) {
+  const g = $('w' + wordId) && $('w' + wordId).querySelector('.gloss');
+  if (g) speak(g.textContent, 'en-US');   // gloss is only present after reveal
+}
+
+// Disable Hebrew buttons (with an honest tooltip) when the device has no
+// Hebrew voice; disable everything if speech is unsupported. Re-run whenever a
+// lesson renders or the voice list loads (Chrome fills getVoices() async).
+function wireAudioButtons() {
+  const heOk = speech.supported && speech.hasLang('he');
+  document.querySelectorAll('#lesson .spk-he').forEach(b => {
+    b.disabled = !heOk;
+    const t = heOk ? 'Hear the Hebrew' : 'Hebrew voice not available on this device';
+    b.title = t; b.setAttribute('aria-label', t);
+  });
+  if (!speech.supported) {
+    document.querySelectorAll('#lesson .spk').forEach(b => { b.disabled = true; });
+  }
+}
+
+if (speech.supported) {
+  speech.refresh();
+  window.speechSynthesis.onvoiceschanged = () => { speech.refresh(); wireAudioButtons(); };
+}
+
 async function register() {
   try {
     const data = await api('/register', {
@@ -185,9 +247,16 @@ async function startLearn() {
   const { words } = await api(`/learners/${state.learner.id}/lesson?unit_id=${state.unit.id}`);
   if (!words.length) { alert('No new certified words — drill instead.'); return startDrill(); }
   $('lesson').innerHTML = words.map(w =>
-    `<span class="lesson-word" id="w${w.id}" onclick="revealLearn(${w.id})">${w.hebrew}<span class="gloss"></span></span>`
+    `<span class="lesson-word" id="w${w.id}" data-hebrew="${w.hebrew}" onclick="revealLearn(${w.id})">` +
+      `${w.hebrew}<span class="gloss"></span>` +
+      `<button type="button" class="spk spk-he" title="Hear the Hebrew" aria-label="Hear the Hebrew" ` +
+        `onclick="event.stopPropagation();speakHebrew(${w.id})">🔊<span class="lc">עב</span></button>` +
+      `<button type="button" class="spk spk-en hidden" title="Hear the English" aria-label="Hear the English" ` +
+        `onclick="event.stopPropagation();speakEnglish(${w.id})">🔊<span class="lc">en</span></button>` +
+    `</span>`
   ).join(' ');
   show('learn');
+  wireAudioButtons();
 }
 
 async function revealLearn(wordId) {
@@ -197,6 +266,8 @@ async function revealLearn(wordId) {
   const { translation } = await api(`/learners/${state.learner.id}/reveal`,
     { word_id: wordId, session_id: state.session });
   el.querySelector('.gloss').textContent = translation;
+  const enBtn = el.querySelector('.spk-en');   // English audio unlocks on reveal
+  if (enBtn) enBtn.classList.remove('hidden');
   state.tally.weak++;
 }
 
