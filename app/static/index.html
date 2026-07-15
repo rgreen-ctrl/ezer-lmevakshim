@@ -38,6 +38,12 @@
   button.good { background: var(--good); }
   button.bad { background: var(--bad); }
   button:disabled { opacity: 0.5; cursor: default; }
+  a.deskbtn { display: inline-block; font: inherit; border-radius: 8px;
+    padding: 0.6rem 1.1rem; margin-top: 0.75rem; background: var(--good);
+    color: #fff; text-decoration: none; cursor: pointer; }
+  a.deskbtn:hover { filter: brightness(0.95); }
+  a.deskbtn:focus, a.deskbtn:focus-visible { outline: 3px solid var(--ink);
+    outline-offset: 2px; }
   .rung { display: flex; align-items: center; gap: 0.6rem; padding: 0.5rem 0; border-bottom: 1px solid var(--line); }
   .rung:last-child { border-bottom: 0; }
   .rung .dot { width: 0.8rem; height: 0.8rem; border-radius: 50%; background: var(--line); flex: none; }
@@ -84,6 +90,8 @@
     <label>Email</label><input id="r-email" type="email">
     <button onclick="register()">Register &amp; begin</button>
     <p id="auth-msg" class="note"></p>
+    <a class="deskbtn hidden" id="desk-auth" href="/desk.html"
+       aria-label="Certification Desk, for editors">Go to the Certification Desk</a>
   </section>
 
   <section id="home" class="card hidden">
@@ -92,6 +100,8 @@
     <div class="row">
       <button onclick="startLearn()">Learn — today's pesukim</button>
       <button class="quiet" onclick="startDrill()">Drill — my words</button>
+      <a class="deskbtn hidden" id="desk-home" href="/desk.html"
+         aria-label="Certification Desk, for editors">Certification Desk</a>
     </div>
     <p class="note">Ten minutes a day. Rungs unlock only by a verified test
     with a real tester — zero fails, zero hesitations.</p>
@@ -206,6 +216,22 @@ function wireAudioButtons() {
 if (speech.supported) {
   speech.refresh();
   window.speechSynthesis.onvoiceschanged = () => { speech.refresh(); wireAudioButtons(); };
+}
+
+// Staff/admin who are signed in (staff session cookie) see a reachable link to
+// the Certification Desk on the learner front page. Learners never see it.
+async function checkStaff() {
+  try {
+    const res = await fetch('/api/staff/me');
+    if (!res.ok) return;
+    const s = await res.json();
+    if (s && s.role) {
+      for (const id of ['desk-home', 'desk-auth']) {
+        const el = $(id);
+        if (el) el.classList.remove('hidden');
+      }
+    }
+  } catch (e) { /* not staff / not signed in — link stays hidden */ }
 }
 
 async function register() {
@@ -337,6 +363,8 @@ async function finishSession() {
   ).join('');
   show('results');
 }
+
+checkStaff();   // reveal the Desk link if a staff session is active
 </script>
 </body>
 </html>

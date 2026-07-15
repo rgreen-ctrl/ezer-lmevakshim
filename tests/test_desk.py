@@ -311,11 +311,12 @@ def test_committed_suggestion_data_has_no_forbidden_sources():
     data = _json.loads((Path(__file__).resolve().parent.parent / "data"
                         / "suggestions_noach.json").read_text(encoding="utf-8"))
     forbidden = ["metsudah", "sifsei chachomim", "artscroll", "schottenstein",
-                 "kehati", "steinsaltz", "blackman", "klein"]
+                 "kehati", "steinsaltz", "blackman", "klein", "etheridge"]
     labels = {o["source_label"] for opts in data.values() for o in opts}
     for lbl in labels:
         assert not any(f in lbl.lower() for f in forbidden), lbl
-    assert any("Onkelos (Etheridge" in lbl for lbl in labels)  # PD version only
+    # Magil (public-domain linear, 1905) is the base contextual source.
+    assert any("Magil" in lbl for lbl in labels)
 
 
 # --- Three-pass self-check & prioritized review ------------------------------
@@ -349,15 +350,23 @@ def test_confidence_does_not_auto_approve(client, desk_setup):
     assert w1["certified"] is False  # confidence only orders; it never certifies
 
 
-def test_committed_selfcheck_reflects_all_three_passes():
+def test_committed_selfcheck_is_magil_rescored():
+    """With Magil as the base contextual source, every word sits on a real
+    published rendering: the LOW pile (dictionary-junk words) is eliminated by
+    design, so confidence is HIGH/MEDIUM only, and MEDIUM carries a concrete
+    reason (grouped span, recast, or untranslated particle)."""
     import json as _json
     from pathlib import Path
-    data = _json.loads((Path(__file__).resolve().parent.parent / "data"
-                        / "selfcheck_noach.json").read_text(encoding="utf-8"))
-    assert {"high", "medium", "low"} <= {r["confidence"] for r in data.values()}
+    root = Path(__file__).resolve().parent.parent
+    data = _json.loads((root / "data" / "selfcheck_noach.json").read_text(encoding="utf-8"))
+    levels = {r["confidence"] for r in data.values()}
+    assert levels <= {"high", "medium", "low"}
+    assert {"high", "medium"} <= levels          # both present
+    assert "low" not in levels                    # Magil removed the junk floor
     reasons = [x for r in data.values() for x in r["check_results"]]
-    # Pass 1 caught a plural and proposes a plural fix (the בְּדֹרֹתָיו case)
-    assert any(x["pass"] == 1 and "generations" in (x.get("proposed_fix") or "")
-               for x in reasons)
-    assert any(x["pass"] == 2 for x in reasons)  # cross-source disagreement
-    assert any(x["pass"] == 3 for x in reasons)  # AI raised a concern
+    assert any(r["confidence"] == "medium" and r["check_results"] for r in data.values())
+    # The בְּדֹרֹתָיו case Rabbi Green flagged: Magil renders it as the plural
+    # "in his generations" at 6:9 — correct at the source, no mechanical patch.
+    ctx = _json.loads((root / "data" / "contextual_noach.json").read_text(encoding="utf-8"))
+    assert any(v.get("ref") == "Bereishis 6:9" and (v.get("contextual") or "") == "in his generations"
+               for v in ctx.values())

@@ -13,6 +13,9 @@
   header { display:flex; align-items:baseline; gap:1rem; padding:1rem 1.25rem;
            border-bottom:1px solid var(--line); background:#fff; }
   header h1 { margin:0; font-size:1.2rem; }
+  header .homelink { color:var(--accent); text-decoration:none; font-size:.9rem; }
+  header .homelink:focus, header .homelink:focus-visible {
+    outline:2px solid var(--accent); outline-offset:2px; border-radius:6px; }
   header .who { margin-left:auto; color:var(--soft); font-size:.9rem; }
   main { max-width:44rem; margin:0 auto; padding:1rem; }
   .card { background:#fff; border:1px solid var(--line); border-radius:12px;
@@ -38,6 +41,27 @@
   .pill.done { background:#dcfce7; color:var(--good); }
   .pill.partial { background:#fef3c7; color:var(--warn); }
   .pill.draft { background:#e5e7eb; color:var(--soft); }
+  .viewtoggle { display:flex; gap:.5rem; align-items:center; flex-wrap:wrap;
+                margin:.25rem 0 .75rem; }
+  .vt { background:#e5e7eb; color:var(--ink); margin-top:0; padding:.35rem .8rem; }
+  .vt[aria-pressed="true"] { background:var(--accent); color:#fff; }
+  .viewtoggle a { color:var(--accent); font-size:.85rem; text-decoration:none; }
+  .viewtoggle a:focus, .viewtoggle a:focus-visible {
+    outline:2px solid var(--accent); outline-offset:2px; border-radius:6px; }
+  .linear { line-height:2; }
+  .linear .lheb { direction:rtl; font-size:1.5rem; margin-bottom:.5rem; }
+  .linear .len { direction:ltr; font-size:1rem; }
+  .linear .sup { color:var(--soft); font-style:italic; }
+  .linear .grp { text-decoration:underline dotted var(--warn); }
+  .grpbox { display:inline-block; vertical-align:top; border:1px dashed var(--warn);
+            border-radius:8px; padding:.15rem .2rem; margin:.3rem .25rem; background:#fffdf5; }
+  .grpbox .grpwords { white-space:nowrap; }
+  .grpbox .grphrase { font-size:.8rem; direction:ltr; color:var(--warn);
+                      font-family:Georgia,serif; text-align:center; display:block;
+                      border-top:1px dashed var(--warn); margin-top:.15rem; padding-top:.1rem; }
+  .iw .ctx .supmark { color:var(--soft); font-style:italic; }
+  figure#p-page { margin:.5rem 0; }
+  figure#p-page img { max-width:100%; border:1px solid var(--line); border-radius:8px; }
   .interlinear { direction:rtl; text-align:right; }
   .iw { display:inline-block; margin:.3rem .25rem; padding:.35rem .5rem;
         border-radius:8px; cursor:pointer; text-align:center;
@@ -87,6 +111,7 @@
 <body>
 <header>
   <h1>The Certification Desk</h1>
+  <a class="homelink" href="/" aria-label="Back to the learner home screen">← Home</a>
   <span class="who" id="who"></span>
 </header>
 <main>
@@ -118,7 +143,19 @@
       <a id="p-back" role="button" tabindex="0"></a> › <span id="p-ref"></span></div>
     <p class="note">Read the pasuk through. Tap a word to approve, correct, or
     flag it. Certify-pasuk approves whatever remains — one pasuk, never more.</p>
+    <div class="viewtoggle" role="group" aria-label="Choose how to view the pasuk">
+      <button id="vt-inter" class="vt" onclick="setView('interlinear')" aria-pressed="true">Interlinear</button>
+      <button id="vt-lin" class="vt" onclick="setView('linear')" aria-pressed="false">Linear (Magil)</button>
+      <button id="vt-page" class="vt" onclick="togglePage()" aria-pressed="false" aria-controls="p-page">Show Magil page</button>
+      <a id="p-pagelink" href="#" target="_blank" rel="noopener"
+         aria-label="Open the Magil 1905 page for this pasuk in a new tab">Magil 1905 page ↗</a>
+    </div>
     <div class="interlinear" id="p-words"></div>
+    <div id="p-linear" class="linear hidden"></div>
+    <figure id="p-page" class="hidden">
+      <img id="p-page-img" alt="" loading="lazy">
+      <figcaption class="note">Magil's Linear School Bible (1905) — the printed page this pasuk is on.</figcaption>
+    </figure>
     <div class="actions">
       <button class="good" onclick="certifyPasuk()">Certify pasuk</button>
     </div>
@@ -148,7 +185,18 @@
 </main>
 <script>
 const $ = id => document.getElementById(id);
-const S = { staff:null, unit:null, unitName:'', pasuk:null, word:null };
+const S = { staff:null, unit:null, unitName:'', pasuk:null, word:null,
+            view:'interlinear', ref:'', spanEntry:null };
+
+// Magil spans + page image, keyed by ref. Loaded once, cached.
+let MAGIL_REF = null;
+async function magilRef() {
+  if (MAGIL_REF === null) {
+    try { MAGIL_REF = await (await fetch('/magil_ref.json')).json(); }
+    catch (e) { MAGIL_REF = {}; }
+  }
+  return MAGIL_REF;
+}
 
 async function api(path, body) {
   const res = await fetch(path, body === undefined ? undefined : {
@@ -234,18 +282,110 @@ async function loadPasuk(idx) {
   S.pasuk = idx; S.word = null;
   const data = await api(`/desk/units/${S.unit}/pasuk/${idx}`);
   S.pwords = data.words;
+  S.ref = data.ref;
   $('p-ref').textContent = data.ref + (data.servable ? ' · servable' : '');
   $('p-back').textContent = S.unitName;
   $('p-back').onclick = () => loadUnit(S.unit);
-  $('p-words').innerHTML = data.words.map(w =>
-    `<span class="iw ${w.certified ? 'certified' : ''} ${w.open_flags ? 'flagged' : ''} ${w.contextual_flagged ? 'ctxflag' : ''}"
-       id="iw${w.id}" role="button" tabindex="0" onclick="pickWord(${w.id})"
-       aria-label="${(w.hebrew || '')}, ${w.gloss || ''}${w.certified ? ', certified' : ''}${w.confidence ? ', ' + w.confidence + ' confidence' : ''}">
-       <span class="he">${w.hebrew}</span><span class="conf conf-${w.confidence || 'high'}"></span><span class="gl">${w.gloss}</span>
-       <span class="ctx">${w.contextual || '&mdash;'}${w.contextual_flagged ? ' ⚑' : ''}</span></span>`
-  ).join('');
+  const ref = await magilRef();
+  S.spanEntry = ref[data.ref] || null;
+  setupPage(S.spanEntry);
+  renderInterlinear();
+  renderLinear();
+  setView(S.view);
   $('word-panel').classList.add('hidden');
   show('pasuk');
+}
+
+function wordCellHTML(w, showCtx) {
+  return `<span class="iw ${w.certified ? 'certified' : ''} ${w.open_flags ? 'flagged' : ''} ${w.contextual_flagged ? 'ctxflag' : ''}"
+       id="iw${w.id}" role="button" tabindex="0" onclick="pickWord(${w.id})"
+       aria-label="${(w.hebrew || '')}, ${w.gloss || ''}${w.certified ? ', certified' : ''}${w.confidence ? ', ' + w.confidence + ' confidence' : ''}">
+       <span class="he">${w.hebrew}</span><span class="conf conf-${w.confidence || 'high'}"></span><span class="gl">${w.gloss}</span>`
+    + (showCtx ? `<span class="ctx">${w.contextual || '&mdash;'}${w.contextual_flagged ? ' ⚑' : ''}</span>` : '')
+    + `</span>`;
+}
+
+// Interlinear: English under each Hebrew word; a grouped Magil phrase is shown
+// once, boxed across the words it covers (supplied words marked). No guessed
+// per-word split — the group is honest about covering N words with one phrase.
+function renderInterlinear() {
+  const words = S.pwords || [];
+  const entry = S.spanEntry;
+  if (!entry || !entry.spans) {
+    $('p-words').innerHTML = words.map(w => wordCellHTML(w, true)).join('');
+    return;
+  }
+  const byPos = {}; words.forEach(w => { byPos[w.position] = w; });
+  let html = '';
+  for (const sp of entry.spans) {
+    const cells = sp.positions.map(p => byPos[p]).filter(Boolean);
+    if (!cells.length) continue;
+    if (sp.kind === 'grouped' && cells.length > 1) {
+      const phrase = sp.en || (sp.en_tokens || []).join(' ') || '—';
+      html += `<span class="grpbox"><span class="grpwords">`
+            + cells.map(w => wordCellHTML(w, false)).join('')
+            + `</span><span class="grphrase">${phrase}`
+            + (sp.supplied ? ' <span class="supmark">(supplied)</span>' : '')
+            + `</span></span>`;
+    } else {
+      for (const w of cells) html += wordCellHTML(w, true);
+    }
+  }
+  $('p-words').innerHTML = html;
+}
+
+// Linear: Magil's running English as printed, with the Hebrew above. Supplied
+// words are italic-grey; grouped phrases dotted-underlined.
+function renderLinear() {
+  const words = S.pwords || [];
+  const entry = S.spanEntry;
+  const heb = words.map(w => w.hebrew).join(' ');
+  let en;
+  if (entry && entry.spans) {
+    en = entry.spans.map(sp => {
+      const t = sp.en || (sp.en_tokens || []).join(' ');
+      if (!t) return '';
+      const cls = ((sp.supplied ? 'sup ' : '') + (sp.kind === 'grouped' ? 'grp' : '')).trim();
+      return cls ? `<span class="${cls}">${t}</span>` : t;
+    }).filter(Boolean).join(' ');
+  } else {
+    en = words.map(w => w.contextual || '').filter(Boolean).join(' ');
+  }
+  $('p-linear').innerHTML = `<div class="lheb">${heb}</div><div class="len">${en || '—'}</div>`;
+}
+
+function setView(v) {
+  S.view = v;
+  const inter = v === 'interlinear';
+  $('p-words').classList.toggle('hidden', !inter);
+  $('p-linear').classList.toggle('hidden', inter);
+  $('vt-inter').setAttribute('aria-pressed', String(inter));
+  $('vt-lin').setAttribute('aria-pressed', String(!inter));
+}
+
+function setupPage(entry) {
+  const link = $('p-pagelink'), img = $('p-page-img'), url = entry && entry.page_url;
+  if (url) {
+    link.href = url; link.classList.remove('hidden');
+    img.dataset.src = url; img.removeAttribute('src');
+    img.alt = `Magil 1905 printed page for ${S.ref}`;
+    $('vt-page').classList.remove('hidden');
+  } else {
+    link.classList.add('hidden'); $('vt-page').classList.add('hidden');
+  }
+  $('p-page').classList.add('hidden');
+  $('vt-page').setAttribute('aria-pressed', 'false');
+}
+
+function togglePage() {
+  const fig = $('p-page'), img = $('p-page-img');
+  const showing = !fig.classList.contains('hidden');
+  if (showing) {
+    fig.classList.add('hidden'); $('vt-page').setAttribute('aria-pressed', 'false');
+  } else {
+    if (!img.getAttribute('src') && img.dataset.src) img.src = img.dataset.src;
+    fig.classList.remove('hidden'); $('vt-page').setAttribute('aria-pressed', 'true');
+  }
 }
 
 function pickWord(id) {
