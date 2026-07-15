@@ -10,3 +10,4 @@ instance/
 dist/
 *.egg-info/
 data/staging/
+local_test.db
