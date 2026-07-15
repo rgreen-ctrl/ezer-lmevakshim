@@ -325,6 +325,12 @@
     "level": "note",
     "reason": "Onkelos recasts this pasuk; Magil gives the literal pshat — compare",
     "proposed_fix": ""
+   },
+   {
+    "pass": 4,
+    "level": "note",
+    "reason": "archaic wording (behold) — a plainer word is your call; meaning unchanged, so nothing is proposed automatically",
+    "proposed_fix": ""
    }
   ]
  },
@@ -577,6 +583,12 @@
     "pass": 2,
     "level": "note",
     "reason": "Onkelos recasts this pasuk; Magil gives the literal pshat — compare",
+    "proposed_fix": ""
+   },
+   {
+    "pass": 4,
+    "level": "note",
+    "reason": "archaic wording (behold) — a plainer word is your call; meaning unchanged, so nothing is proposed automatically",
     "proposed_fix": ""
    }
   ]
@@ -1009,7 +1021,14 @@
  },
  "106": {
   "confidence": "high",
-  "check_results": []
+  "check_results": [
+   {
+    "pass": 4,
+    "level": "note",
+    "reason": "archaic wording (behold) — a plainer word is your call; meaning unchanged, so nothing is proposed automatically",
+    "proposed_fix": ""
+   }
+  ]
  },
  "107": {
   "confidence": "high",
@@ -6490,7 +6509,14 @@
  },
  "659": {
   "confidence": "high",
-  "check_results": []
+  "check_results": [
+   {
+    "pass": 4,
+    "level": "note",
+    "reason": "archaic wording (behold) — a plainer word is your call; meaning unchanged, so nothing is proposed automatically",
+    "proposed_fix": ""
+   }
+  ]
  },
  "660": {
   "confidence": "high",
@@ -6830,7 +6856,14 @@
  },
  "702": {
   "confidence": "high",
-  "check_results": []
+  "check_results": [
+   {
+    "pass": 4,
+    "level": "note",
+    "reason": "archaic wording (behold) — a plainer word is your call; meaning unchanged, so nothing is proposed automatically",
+    "proposed_fix": ""
+   }
+  ]
  },
  "703": {
   "confidence": "high",
@@ -9095,6 +9128,12 @@
     "level": "note",
     "reason": "Magil groups 9 Hebrew words under one phrase: 'And I behold, I establish my covenant with you and with your seed after you' — phrase is correct; per-word split pending",
     "proposed_fix": "split the grouped phrase to individual words (human eye)"
+   },
+   {
+    "pass": 4,
+    "level": "note",
+    "reason": "archaic wording (behold) — a plainer word is your call; meaning unchanged, so nothing is proposed automatically",
+    "proposed_fix": ""
    }
   ]
  },
@@ -9106,6 +9145,12 @@
     "level": "note",
     "reason": "Magil groups 9 Hebrew words under one phrase: 'And I behold, I establish my covenant with you and with your seed after you' — phrase is correct; per-word split pending",
     "proposed_fix": "split the grouped phrase to individual words (human eye)"
+   },
+   {
+    "pass": 4,
+    "level": "note",
+    "reason": "archaic wording (behold) — a plainer word is your call; meaning unchanged, so nothing is proposed automatically",
+    "proposed_fix": ""
    }
   ]
  },
@@ -9117,6 +9162,12 @@
     "level": "note",
     "reason": "Magil groups 9 Hebrew words under one phrase: 'And I behold, I establish my covenant with you and with your seed after you' — phrase is correct; per-word split pending",
     "proposed_fix": "split the grouped phrase to individual words (human eye)"
+   },
+   {
+    "pass": 4,
+    "level": "note",
+    "reason": "archaic wording (behold) — a plainer word is your call; meaning unchanged, so nothing is proposed automatically",
+    "proposed_fix": ""
    }
   ]
  },
@@ -9128,6 +9179,12 @@
     "level": "note",
     "reason": "Magil groups 9 Hebrew words under one phrase: 'And I behold, I establish my covenant with you and with your seed after you' — phrase is correct; per-word split pending",
     "proposed_fix": "split the grouped phrase to individual words (human eye)"
+   },
+   {
+    "pass": 4,
+    "level": "note",
+    "reason": "archaic wording (behold) — a plainer word is your call; meaning unchanged, so nothing is proposed automatically",
+    "proposed_fix": ""
    }
   ]
  },
@@ -9139,6 +9196,12 @@
     "level": "note",
     "reason": "Magil groups 9 Hebrew words under one phrase: 'And I behold, I establish my covenant with you and with your seed after you' — phrase is correct; per-word split pending",
     "proposed_fix": "split the grouped phrase to individual words (human eye)"
+   },
+   {
+    "pass": 4,
+    "level": "note",
+    "reason": "archaic wording (behold) — a plainer word is your call; meaning unchanged, so nothing is proposed automatically",
+    "proposed_fix": ""
    }
   ]
  },
@@ -9150,6 +9213,12 @@
     "level": "note",
     "reason": "Magil groups 9 Hebrew words under one phrase: 'And I behold, I establish my covenant with you and with your seed after you' — phrase is correct; per-word split pending",
     "proposed_fix": "split the grouped phrase to individual words (human eye)"
+   },
+   {
+    "pass": 4,
+    "level": "note",
+    "reason": "archaic wording (behold) — a plainer word is your call; meaning unchanged, so nothing is proposed automatically",
+    "proposed_fix": ""
    }
   ]
  },
@@ -9161,6 +9230,12 @@
     "level": "note",
     "reason": "Magil groups 9 Hebrew words under one phrase: 'And I behold, I establish my covenant with you and with your seed after you' — phrase is correct; per-word split pending",
     "proposed_fix": "split the grouped phrase to individual words (human eye)"
+   },
+   {
+    "pass": 4,
+    "level": "note",
+    "reason": "archaic wording (behold) — a plainer word is your call; meaning unchanged, so nothing is proposed automatically",
+    "proposed_fix": ""
    }
   ]
  },
@@ -9172,6 +9247,12 @@
     "level": "note",
     "reason": "Magil groups 9 Hebrew words under one phrase: 'And I behold, I establish my covenant with you and with your seed after you' — phrase is correct; per-word split pending",
     "proposed_fix": "split the grouped phrase to individual words (human eye)"
+   },
+   {
+    "pass": 4,
+    "level": "note",
+    "reason": "archaic wording (behold) — a plainer word is your call; meaning unchanged, so nothing is proposed automatically",
+    "proposed_fix": ""
    }
   ]
  },
@@ -9183,6 +9264,12 @@
     "level": "note",
     "reason": "Magil groups 9 Hebrew words under one phrase: 'And I behold, I establish my covenant with you and with your seed after you' — phrase is correct; per-word split pending",
     "proposed_fix": "split the grouped phrase to individual words (human eye)"
+   },
+   {
+    "pass": 4,
+    "level": "note",
+    "reason": "archaic wording (behold) — a plainer word is your call; meaning unchanged, so nothing is proposed automatically",
+    "proposed_fix": ""
    }
   ]
  },
@@ -12407,7 +12494,14 @@
  },
  "1342": {
   "confidence": "high",
-  "check_results": []
+  "check_results": [
+   {
+    "pass": 4,
+    "level": "note",
+    "reason": "archaic wording (abroad) — a plainer word is your call; meaning unchanged, so nothing is proposed automatically",
+    "proposed_fix": ""
+   }
+  ]
  },
  "1343": {
   "confidence": "high",
@@ -13320,6 +13414,12 @@
     "level": "note",
     "reason": "Magil groups 17 Hebrew words under one phrase: 'And they said Come, let us build for us a city and a tower that its top [may reach] unto the heaven and let us make for us a name lest we be scattered abroad upon the face of all the earth' — phrase is correct; per-word split pending",
     "proposed_fix": "split the grouped phrase to individual words (human eye)"
+   },
+   {
+    "pass": 4,
+    "level": "note",
+    "reason": "archaic wording (abroad) — a plainer word is your call; meaning unchanged, so nothing is proposed automatically",
+    "proposed_fix": ""
    }
   ]
  },
@@ -13331,6 +13431,12 @@
     "level": "note",
     "reason": "Magil groups 17 Hebrew words under one phrase: 'And they said Come, let us build for us a city and a tower that its top [may reach] unto the heaven and let us make for us a name lest we be scattered abroad upon the face of all the earth' — phrase is correct; per-word split pending",
     "proposed_fix": "split the grouped phrase to individual words (human eye)"
+   },
+   {
+    "pass": 4,
+    "level": "note",
+    "reason": "archaic wording (abroad) — a plainer word is your call; meaning unchanged, so nothing is proposed automatically",
+    "proposed_fix": ""
    }
   ]
  },
@@ -13342,6 +13448,12 @@
     "level": "note",
     "reason": "Magil groups 17 Hebrew words under one phrase: 'And they said Come, let us build for us a city and a tower that its top [may reach] unto the heaven and let us make for us a name lest we be scattered abroad upon the face of all the earth' — phrase is correct; per-word split pending",
     "proposed_fix": "split the grouped phrase to individual words (human eye)"
+   },
+   {
+    "pass": 4,
+    "level": "note",
+    "reason": "archaic wording (abroad) — a plainer word is your call; meaning unchanged, so nothing is proposed automatically",
+    "proposed_fix": ""
    }
   ]
  },
@@ -13353,6 +13465,12 @@
     "level": "note",
     "reason": "Magil groups 17 Hebrew words under one phrase: 'And they said Come, let us build for us a city and a tower that its top [may reach] unto the heaven and let us make for us a name lest we be scattered abroad upon the face of all the earth' — phrase is correct; per-word split pending",
     "proposed_fix": "split the grouped phrase to individual words (human eye)"
+   },
+   {
+    "pass": 4,
+    "level": "note",
+    "reason": "archaic wording (abroad) — a plainer word is your call; meaning unchanged, so nothing is proposed automatically",
+    "proposed_fix": ""
    }
   ]
  },
@@ -13364,6 +13482,12 @@
     "level": "note",
     "reason": "Magil groups 17 Hebrew words under one phrase: 'And they said Come, let us build for us a city and a tower that its top [may reach] unto the heaven and let us make for us a name lest we be scattered abroad upon the face of all the earth' — phrase is correct; per-word split pending",
     "proposed_fix": "split the grouped phrase to individual words (human eye)"
+   },
+   {
+    "pass": 4,
+    "level": "note",
+    "reason": "archaic wording (abroad) — a plainer word is your call; meaning unchanged, so nothing is proposed automatically",
+    "proposed_fix": ""
    }
   ]
  },
@@ -13375,6 +13499,12 @@
     "level": "note",
     "reason": "Magil groups 17 Hebrew words under one phrase: 'And they said Come, let us build for us a city and a tower that its top [may reach] unto the heaven and let us make for us a name lest we be scattered abroad upon the face of all the earth' — phrase is correct; per-word split pending",
     "proposed_fix": "split the grouped phrase to individual words (human eye)"
+   },
+   {
+    "pass": 4,
+    "level": "note",
+    "reason": "archaic wording (abroad) — a plainer word is your call; meaning unchanged, so nothing is proposed automatically",
+    "proposed_fix": ""
    }
   ]
  },
@@ -13386,6 +13516,12 @@
     "level": "note",
     "reason": "Magil groups 17 Hebrew words under one phrase: 'And they said Come, let us build for us a city and a tower that its top [may reach] unto the heaven and let us make for us a name lest we be scattered abroad upon the face of all the earth' — phrase is correct; per-word split pending",
     "proposed_fix": "split the grouped phrase to individual words (human eye)"
+   },
+   {
+    "pass": 4,
+    "level": "note",
+    "reason": "archaic wording (abroad) — a plainer word is your call; meaning unchanged, so nothing is proposed automatically",
+    "proposed_fix": ""
    }
   ]
  },
@@ -13397,6 +13533,12 @@
     "level": "note",
     "reason": "Magil groups 17 Hebrew words under one phrase: 'And they said Come, let us build for us a city and a tower that its top [may reach] unto the heaven and let us make for us a name lest we be scattered abroad upon the face of all the earth' — phrase is correct; per-word split pending",
     "proposed_fix": "split the grouped phrase to individual words (human eye)"
+   },
+   {
+    "pass": 4,
+    "level": "note",
+    "reason": "archaic wording (abroad) — a plainer word is your call; meaning unchanged, so nothing is proposed automatically",
+    "proposed_fix": ""
    }
   ]
  },
@@ -13408,6 +13550,12 @@
     "level": "note",
     "reason": "Magil groups 17 Hebrew words under one phrase: 'And they said Come, let us build for us a city and a tower that its top [may reach] unto the heaven and let us make for us a name lest we be scattered abroad upon the face of all the earth' — phrase is correct; per-word split pending",
     "proposed_fix": "split the grouped phrase to individual words (human eye)"
+   },
+   {
+    "pass": 4,
+    "level": "note",
+    "reason": "archaic wording (abroad) — a plainer word is your call; meaning unchanged, so nothing is proposed automatically",
+    "proposed_fix": ""
    }
   ]
  },
@@ -13419,6 +13567,12 @@
     "level": "note",
     "reason": "Magil groups 17 Hebrew words under one phrase: 'And they said Come, let us build for us a city and a tower that its top [may reach] unto the heaven and let us make for us a name lest we be scattered abroad upon the face of all the earth' — phrase is correct; per-word split pending",
     "proposed_fix": "split the grouped phrase to individual words (human eye)"
+   },
+   {
+    "pass": 4,
+    "level": "note",
+    "reason": "archaic wording (abroad) — a plainer word is your call; meaning unchanged, so nothing is proposed automatically",
+    "proposed_fix": ""
    }
   ]
  },
@@ -13430,6 +13584,12 @@
     "level": "note",
     "reason": "Magil groups 17 Hebrew words under one phrase: 'And they said Come, let us build for us a city and a tower that its top [may reach] unto the heaven and let us make for us a name lest we be scattered abroad upon the face of all the earth' — phrase is correct; per-word split pending",
     "proposed_fix": "split the grouped phrase to individual words (human eye)"
+   },
+   {
+    "pass": 4,
+    "level": "note",
+    "reason": "archaic wording (abroad) — a plainer word is your call; meaning unchanged, so nothing is proposed automatically",
+    "proposed_fix": ""
    }
   ]
  },
@@ -13441,6 +13601,12 @@
     "level": "note",
     "reason": "Magil groups 17 Hebrew words under one phrase: 'And they said Come, let us build for us a city and a tower that its top [may reach] unto the heaven and let us make for us a name lest we be scattered abroad upon the face of all the earth' — phrase is correct; per-word split pending",
     "proposed_fix": "split the grouped phrase to individual words (human eye)"
+   },
+   {
+    "pass": 4,
+    "level": "note",
+    "reason": "archaic wording (abroad) — a plainer word is your call; meaning unchanged, so nothing is proposed automatically",
+    "proposed_fix": ""
    }
   ]
  },
@@ -13452,6 +13618,12 @@
     "level": "note",
     "reason": "Magil groups 17 Hebrew words under one phrase: 'And they said Come, let us build for us a city and a tower that its top [may reach] unto the heaven and let us make for us a name lest we be scattered abroad upon the face of all the earth' — phrase is correct; per-word split pending",
     "proposed_fix": "split the grouped phrase to individual words (human eye)"
+   },
+   {
+    "pass": 4,
+    "level": "note",
+    "reason": "archaic wording (abroad) — a plainer word is your call; meaning unchanged, so nothing is proposed automatically",
+    "proposed_fix": ""
    }
   ]
  },
@@ -13463,6 +13635,12 @@
     "level": "note",
     "reason": "Magil groups 17 Hebrew words under one phrase: 'And they said Come, let us build for us a city and a tower that its top [may reach] unto the heaven and let us make for us a name lest we be scattered abroad upon the face of all the earth' — phrase is correct; per-word split pending",
     "proposed_fix": "split the grouped phrase to individual words (human eye)"
+   },
+   {
+    "pass": 4,
+    "level": "note",
+    "reason": "archaic wording (abroad) — a plainer word is your call; meaning unchanged, so nothing is proposed automatically",
+    "proposed_fix": ""
    }
   ]
  },
@@ -13474,6 +13652,12 @@
     "level": "note",
     "reason": "Magil groups 17 Hebrew words under one phrase: 'And they said Come, let us build for us a city and a tower that its top [may reach] unto the heaven and let us make for us a name lest we be scattered abroad upon the face of all the earth' — phrase is correct; per-word split pending",
     "proposed_fix": "split the grouped phrase to individual words (human eye)"
+   },
+   {
+    "pass": 4,
+    "level": "note",
+    "reason": "archaic wording (abroad) — a plainer word is your call; meaning unchanged, so nothing is proposed automatically",
+    "proposed_fix": ""
    }
   ]
  },
@@ -13485,6 +13669,12 @@
     "level": "note",
     "reason": "Magil groups 17 Hebrew words under one phrase: 'And they said Come, let us build for us a city and a tower that its top [may reach] unto the heaven and let us make for us a name lest we be scattered abroad upon the face of all the earth' — phrase is correct; per-word split pending",
     "proposed_fix": "split the grouped phrase to individual words (human eye)"
+   },
+   {
+    "pass": 4,
+    "level": "note",
+    "reason": "archaic wording (abroad) — a plainer word is your call; meaning unchanged, so nothing is proposed automatically",
+    "proposed_fix": ""
    }
   ]
  },
@@ -13496,6 +13686,12 @@
     "level": "note",
     "reason": "Magil groups 17 Hebrew words under one phrase: 'And they said Come, let us build for us a city and a tower that its top [may reach] unto the heaven and let us make for us a name lest we be scattered abroad upon the face of all the earth' — phrase is correct; per-word split pending",
     "proposed_fix": "split the grouped phrase to individual words (human eye)"
+   },
+   {
+    "pass": 4,
+    "level": "note",
+    "reason": "archaic wording (abroad) — a plainer word is your call; meaning unchanged, so nothing is proposed automatically",
+    "proposed_fix": ""
    }
   ]
  },
@@ -13650,6 +13846,12 @@
     "level": "note",
     "reason": "Magil groups 17 Hebrew words under one phrase: 'Behold [they are] one people and one language [is] to all of them and this [is what] they begin to do and now shall not be restrained from them all which they plan to do' — phrase is correct; per-word split pending",
     "proposed_fix": "split the grouped phrase to individual words (human eye)"
+   },
+   {
+    "pass": 4,
+    "level": "note",
+    "reason": "archaic wording (behold) — a plainer word is your call; meaning unchanged, so nothing is proposed automatically",
+    "proposed_fix": ""
    }
   ]
  },
@@ -13661,6 +13863,12 @@
     "level": "note",
     "reason": "Magil groups 17 Hebrew words under one phrase: 'Behold [they are] one people and one language [is] to all of them and this [is what] they begin to do and now shall not be restrained from them all which they plan to do' — phrase is correct; per-word split pending",
     "proposed_fix": "split the grouped phrase to individual words (human eye)"
+   },
+   {
+    "pass": 4,
+    "level": "note",
+    "reason": "archaic wording (behold) — a plainer word is your call; meaning unchanged, so nothing is proposed automatically",
+    "proposed_fix": ""
    }
   ]
  },
@@ -13672,6 +13880,12 @@
     "level": "note",
     "reason": "Magil groups 17 Hebrew words under one phrase: 'Behold [they are] one people and one language [is] to all of them and this [is what] they begin to do and now shall not be restrained from them all which they plan to do' — phrase is correct; per-word split pending",
     "proposed_fix": "split the grouped phrase to individual words (human eye)"
+   },
+   {
+    "pass": 4,
+    "level": "note",
+    "reason": "archaic wording (behold) — a plainer word is your call; meaning unchanged, so nothing is proposed automatically",
+    "proposed_fix": ""
    }
   ]
  },
@@ -13683,6 +13897,12 @@
     "level": "note",
     "reason": "Magil groups 17 Hebrew words under one phrase: 'Behold [they are] one people and one language [is] to all of them and this [is what] they begin to do and now shall not be restrained from them all which they plan to do' — phrase is correct; per-word split pending",
     "proposed_fix": "split the grouped phrase to individual words (human eye)"
+   },
+   {
+    "pass": 4,
+    "level": "note",
+    "reason": "archaic wording (behold) — a plainer word is your call; meaning unchanged, so nothing is proposed automatically",
+    "proposed_fix": ""
    }
   ]
  },
@@ -13694,6 +13914,12 @@
     "level": "note",
     "reason": "Magil groups 17 Hebrew words under one phrase: 'Behold [they are] one people and one language [is] to all of them and this [is what] they begin to do and now shall not be restrained from them all which they plan to do' — phrase is correct; per-word split pending",
     "proposed_fix": "split the grouped phrase to individual words (human eye)"
+   },
+   {
+    "pass": 4,
+    "level": "note",
+    "reason": "archaic wording (behold) — a plainer word is your call; meaning unchanged, so nothing is proposed automatically",
+    "proposed_fix": ""
    }
   ]
  },
@@ -13705,6 +13931,12 @@
     "level": "note",
     "reason": "Magil groups 17 Hebrew words under one phrase: 'Behold [they are] one people and one language [is] to all of them and this [is what] they begin to do and now shall not be restrained from them all which they plan to do' — phrase is correct; per-word split pending",
     "proposed_fix": "split the grouped phrase to individual words (human eye)"
+   },
+   {
+    "pass": 4,
+    "level": "note",
+    "reason": "archaic wording (behold) — a plainer word is your call; meaning unchanged, so nothing is proposed automatically",
+    "proposed_fix": ""
    }
   ]
  },
@@ -13716,6 +13948,12 @@
     "level": "note",
     "reason": "Magil groups 17 Hebrew words under one phrase: 'Behold [they are] one people and one language [is] to all of them and this [is what] they begin to do and now shall not be restrained from them all which they plan to do' — phrase is correct; per-word split pending",
     "proposed_fix": "split the grouped phrase to individual words (human eye)"
+   },
+   {
+    "pass": 4,
+    "level": "note",
+    "reason": "archaic wording (behold) — a plainer word is your call; meaning unchanged, so nothing is proposed automatically",
+    "proposed_fix": ""
    }
   ]
  },
@@ -13727,6 +13965,12 @@
     "level": "note",
     "reason": "Magil groups 17 Hebrew words under one phrase: 'Behold [they are] one people and one language [is] to all of them and this [is what] they begin to do and now shall not be restrained from them all which they plan to do' — phrase is correct; per-word split pending",
     "proposed_fix": "split the grouped phrase to individual words (human eye)"
+   },
+   {
+    "pass": 4,
+    "level": "note",
+    "reason": "archaic wording (behold) — a plainer word is your call; meaning unchanged, so nothing is proposed automatically",
+    "proposed_fix": ""
    }
   ]
  },
@@ -13738,6 +13982,12 @@
     "level": "note",
     "reason": "Magil groups 17 Hebrew words under one phrase: 'Behold [they are] one people and one language [is] to all of them and this [is what] they begin to do and now shall not be restrained from them all which they plan to do' — phrase is correct; per-word split pending",
     "proposed_fix": "split the grouped phrase to individual words (human eye)"
+   },
+   {
+    "pass": 4,
+    "level": "note",
+    "reason": "archaic wording (behold) — a plainer word is your call; meaning unchanged, so nothing is proposed automatically",
+    "proposed_fix": ""
    }
   ]
  },
@@ -13749,6 +13999,12 @@
     "level": "note",
     "reason": "Magil groups 17 Hebrew words under one phrase: 'Behold [they are] one people and one language [is] to all of them and this [is what] they begin to do and now shall not be restrained from them all which they plan to do' — phrase is correct; per-word split pending",
     "proposed_fix": "split the grouped phrase to individual words (human eye)"
+   },
+   {
+    "pass": 4,
+    "level": "note",
+    "reason": "archaic wording (behold) — a plainer word is your call; meaning unchanged, so nothing is proposed automatically",
+    "proposed_fix": ""
    }
   ]
  },
@@ -13760,6 +14016,12 @@
     "level": "note",
     "reason": "Magil groups 17 Hebrew words under one phrase: 'Behold [they are] one people and one language [is] to all of them and this [is what] they begin to do and now shall not be restrained from them all which they plan to do' — phrase is correct; per-word split pending",
     "proposed_fix": "split the grouped phrase to individual words (human eye)"
+   },
+   {
+    "pass": 4,
+    "level": "note",
+    "reason": "archaic wording (behold) — a plainer word is your call; meaning unchanged, so nothing is proposed automatically",
+    "proposed_fix": ""
    }
   ]
  },
@@ -13771,6 +14033,12 @@
     "level": "note",
     "reason": "Magil groups 17 Hebrew words under one phrase: 'Behold [they are] one people and one language [is] to all of them and this [is what] they begin to do and now shall not be restrained from them all which they plan to do' — phrase is correct; per-word split pending",
     "proposed_fix": "split the grouped phrase to individual words (human eye)"
+   },
+   {
+    "pass": 4,
+    "level": "note",
+    "reason": "archaic wording (behold) — a plainer word is your call; meaning unchanged, so nothing is proposed automatically",
+    "proposed_fix": ""
    }
   ]
  },
@@ -13782,6 +14050,12 @@
     "level": "note",
     "reason": "Magil groups 17 Hebrew words under one phrase: 'Behold [they are] one people and one language [is] to all of them and this [is what] they begin to do and now shall not be restrained from them all which they plan to do' — phrase is correct; per-word split pending",
     "proposed_fix": "split the grouped phrase to individual words (human eye)"
+   },
+   {
+    "pass": 4,
+    "level": "note",
+    "reason": "archaic wording (behold) — a plainer word is your call; meaning unchanged, so nothing is proposed automatically",
+    "proposed_fix": ""
    }
   ]
  },
@@ -13793,6 +14067,12 @@
     "level": "note",
     "reason": "Magil groups 17 Hebrew words under one phrase: 'Behold [they are] one people and one language [is] to all of them and this [is what] they begin to do and now shall not be restrained from them all which they plan to do' — phrase is correct; per-word split pending",
     "proposed_fix": "split the grouped phrase to individual words (human eye)"
+   },
+   {
+    "pass": 4,
+    "level": "note",
+    "reason": "archaic wording (behold) — a plainer word is your call; meaning unchanged, so nothing is proposed automatically",
+    "proposed_fix": ""
    }
   ]
  },
@@ -13804,6 +14084,12 @@
     "level": "note",
     "reason": "Magil groups 17 Hebrew words under one phrase: 'Behold [they are] one people and one language [is] to all of them and this [is what] they begin to do and now shall not be restrained from them all which they plan to do' — phrase is correct; per-word split pending",
     "proposed_fix": "split the grouped phrase to individual words (human eye)"
+   },
+   {
+    "pass": 4,
+    "level": "note",
+    "reason": "archaic wording (behold) — a plainer word is your call; meaning unchanged, so nothing is proposed automatically",
+    "proposed_fix": ""
    }
   ]
  },
@@ -13815,6 +14101,12 @@
     "level": "note",
     "reason": "Magil groups 17 Hebrew words under one phrase: 'Behold [they are] one people and one language [is] to all of them and this [is what] they begin to do and now shall not be restrained from them all which they plan to do' — phrase is correct; per-word split pending",
     "proposed_fix": "split the grouped phrase to individual words (human eye)"
+   },
+   {
+    "pass": 4,
+    "level": "note",
+    "reason": "archaic wording (behold) — a plainer word is your call; meaning unchanged, so nothing is proposed automatically",
+    "proposed_fix": ""
    }
   ]
  },
@@ -13826,6 +14118,12 @@
     "level": "note",
     "reason": "Magil groups 17 Hebrew words under one phrase: 'Behold [they are] one people and one language [is] to all of them and this [is what] they begin to do and now shall not be restrained from them all which they plan to do' — phrase is correct; per-word split pending",
     "proposed_fix": "split the grouped phrase to individual words (human eye)"
+   },
+   {
+    "pass": 4,
+    "level": "note",
+    "reason": "archaic wording (behold) — a plainer word is your call; meaning unchanged, so nothing is proposed automatically",
+    "proposed_fix": ""
    }
   ]
  },
@@ -13957,6 +14255,12 @@
     "pass": 2,
     "level": "note",
     "reason": "Onkelos recasts this pasuk; Magil gives the literal pshat — compare",
+    "proposed_fix": ""
+   },
+   {
+    "pass": 4,
+    "level": "note",
+    "reason": "archaic wording (abroad) — a plainer word is your call; meaning unchanged, so nothing is proposed automatically",
     "proposed_fix": ""
    }
   ]
@@ -14221,6 +14525,12 @@
     "pass": 2,
     "level": "note",
     "reason": "Onkelos recasts this pasuk; Magil gives the literal pshat — compare",
+    "proposed_fix": ""
+   },
+   {
+    "pass": 4,
+    "level": "note",
+    "reason": "archaic wording (abroad) — a plainer word is your call; meaning unchanged, so nothing is proposed automatically",
     "proposed_fix": ""
    }
   ]
