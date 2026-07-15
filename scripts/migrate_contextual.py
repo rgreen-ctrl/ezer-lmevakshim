@@ -23,6 +23,7 @@ COLUMNS = {
     "suggestions": "TEXT",
     "confidence": "VARCHAR(10)",
     "check_results": "TEXT",
+    "root_gloss": "VARCHAR(255)",   # Layer 1 (Shoresh / root meaning)
 }
 
 

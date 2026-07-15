@@ -44,6 +44,7 @@ def _word_json(w, open_flags=None):
         "hebrew": w.hebrew,
         "gloss": w.translation,
         "shoresh": w.shoresh,
+        "root_gloss": w.root_gloss,
         "contextual": w.contextual_translation,
         "contextual_flagged": w.contextual_flagged,
         "contextual_note": w.contextual_note,
@@ -181,6 +182,19 @@ def contextual(word_id):
     db.session.commit()
     return jsonify({"contextual_translation": word.contextual_translation,
                     "contextual_flagged": word.contextual_flagged})
+
+
+@desk.post("/words/<int:word_id>/root")
+def root_gloss(word_id):
+    """Edit the DRAFT Layer-1 root meaning (shoresh). Draft-only, like the
+    contextual field: never touches the literal `translation` or certified
+    state. Certification is still the pasuk/word action."""
+    word = db.get_or_404(Word, word_id)
+    data = request.get_json(force=True)
+    val = (data.get("root_gloss") or "").strip()
+    word.root_gloss = val or None
+    db.session.commit()
+    return jsonify({"root_gloss": word.root_gloss})
 
 
 @desk.post("/words/<int:word_id>/flag")

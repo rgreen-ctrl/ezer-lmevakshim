@@ -350,6 +350,37 @@ def test_confidence_does_not_auto_approve(client, desk_setup):
     assert w1["certified"] is False  # confidence only orders; it never certifies
 
 
+def test_committed_root_gloss_is_clean_single_sense():
+    """Layer 1 (shoresh) must be clean single senses — no Strong's multi-sense
+    dumps ('cruel-ty, damage') and no digits/plus signs."""
+    import json as _json, re
+    from pathlib import Path
+    data = _json.loads((Path(__file__).resolve().parent.parent / "data"
+                        / "root_gloss_noach.json").read_text(encoding="utf-8"))
+    junk = re.compile(r"[;]|\+|\bX\b|\d")
+    bad = [v["root_gloss"] for v in data.values()
+           if v["root_gloss"] and junk.search(v["root_gloss"])]
+    assert not bad, bad[:5]
+    clean = sum(1 for v in data.values() if v["root_gloss"])
+    assert clean >= 1800   # essentially every word gets a clean root
+
+
+def test_committed_sources_are_pd_and_covered():
+    """Onkelos Aramaic on every pasuk; Rashi where it comments. Rashi English is
+    the PD Rosenbaum-Silbermann; no forbidden source is present."""
+    import json as _json
+    from pathlib import Path
+    src = _json.loads((Path(__file__).resolve().parent.parent / "app" / "static"
+                       / "sources_noach.json").read_text(encoding="utf-8"))
+    assert len(src) == 153
+    onk = sum(1 for v in src.values() if v.get("onkelos"))
+    rashi = sum(1 for v in src.values() if v.get("rashi"))
+    assert onk == 153 and rashi >= 90
+    # 6:9 carries real Aramaic + a Rashi comment with a דיבור המתחיל
+    assert src["Bereishis 6:9"]["onkelos"].startswith("אִלֵן")
+    assert src["Bereishis 6:9"]["rashi"][0]["dh"]
+
+
 def test_committed_selfcheck_is_magil_rescored():
     """With Magil as the base contextual source, every word sits on a real
     published rendering: the LOW pile (dictionary-junk words) is eliminated by

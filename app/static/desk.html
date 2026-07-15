@@ -62,6 +62,23 @@
   .iw .ctx .supmark { color:var(--soft); font-style:italic; }
   figure#p-page { margin:.5rem 0; }
   figure#p-page img { max-width:100%; border:1px solid var(--line); border-radius:8px; }
+  .sources { margin:.75rem 0 0; border-top:1px solid var(--line); padding-top:.6rem; }
+  #src-body { margin-top:.5rem; }
+  .src-label { font-size:.72rem; text-transform:uppercase; letter-spacing:.03em;
+               color:var(--soft); display:block; margin:.6rem 0 .2rem; }
+  .src-onk { direction:rtl; text-align:right; font-size:1.2rem; line-height:1.8;
+             background:#f8fafc; border:1px solid var(--line); border-radius:8px;
+             padding:.5rem .7rem; }
+  .rashi-c { border-bottom:1px solid var(--line); padding:.5rem 0; }
+  .rashi-c:last-child { border-bottom:0; }
+  .rashi-he { direction:rtl; text-align:right; font-size:1.1rem; line-height:1.8; }
+  .rashi-he .dh { font-weight:bold; }
+  .rashi-en { direction:ltr; font-size:.9rem; color:var(--ink); margin-top:.3rem; }
+  .src-none { color:var(--soft); font-size:.85rem; }
+  .layer { margin:.5rem 0; }
+  .layer-row { display:flex; gap:.5rem; align-items:center; }
+  .layer-row input { flex:1; }
+  .layer-row button { margin-top:0; white-space:nowrap; }
   .interlinear { direction:rtl; text-align:right; }
   .iw { display:inline-block; margin:.3rem .25rem; padding:.35rem .5rem;
         border-radius:8px; cursor:pointer; text-align:center;
@@ -156,20 +173,39 @@
       <img id="p-page-img" alt="" loading="lazy">
       <figcaption class="note">Magil's Linear School Bible (1905) — the printed page this pasuk is on.</figcaption>
     </figure>
+    <div class="sources" id="p-sources">
+      <button class="vt" id="src-toggle" onclick="toggleSources()"
+              aria-expanded="false" aria-controls="src-body">Sources for this pasuk</button>
+      <div id="src-body" class="hidden">
+        <span class="src-label">Targum Onkelos — Aramaic (public domain)</span>
+        <div id="src-onkelos"></div>
+        <span class="src-label">Rashi — Hebrew, with Rosenbaum-Silbermann English where available</span>
+        <div id="src-rashi"></div>
+      </div>
+    </div>
     <div class="actions">
       <button class="good" onclick="certifyPasuk()">Certify pasuk</button>
     </div>
     <div id="word-panel" class="hidden">
       <h2 id="wp-title"></h2>
-      <label>Literal gloss (shoresh)</label><input id="wp-gloss">
-      <label>Contextual translation — what the learner reads</label><input id="wp-contextual">
+      <p class="note" id="wp-shoresh-he"></p>
+      <div class="layer">
+        <label for="wp-root"><b>Layer 1 — Shoresh (root meaning)</b> · the bare root, vocabulary (e.g. “generation”)</label>
+        <div class="layer-row"><input id="wp-root"><button onclick="saveRoot()">Save shoresh</button></div>
+      </div>
+      <div class="layer">
+        <label for="wp-gloss"><b>Layer 2 — Literal</b> · the word as it appears, affixes included (e.g. “in his generations”)</label>
+        <div class="layer-row"><input id="wp-gloss"><button onclick="saveGloss()">Save literal</button></div>
+      </div>
+      <div class="layer">
+        <label for="wp-contextual"><b>Layer 3 — Flowing</b> · Magil’s readable English for the line</label>
+        <div class="layer-row"><input id="wp-contextual"><button onclick="saveContextual()">Save flowing</button></div>
+      </div>
       <p class="note" id="wp-note"></p>
       <div id="wp-reasons"></div>
       <div id="wp-suggestions"></div>
       <div class="actions">
-        <button class="good" onclick="approveWord()">Approve</button>
-        <button onclick="saveGloss()">Save gloss</button>
-        <button onclick="saveContextual()">Save contextual</button>
+        <button class="good" onclick="approveWord()">Approve word</button>
         <button class="quiet" onclick="flagWord()">Flag</button>
         <button class="bad hidden" id="wp-decert" onclick="decertifyWord()">Reopen for editing (decertify)</button>
       </div>
@@ -196,6 +232,42 @@ async function magilRef() {
     catch (e) { MAGIL_REF = {}; }
   }
   return MAGIL_REF;
+}
+
+// Per-pasuk source texts: Onkelos Aramaic + Rashi Hebrew (+ R-S English).
+// Reference only, shown at pasuk level; never a per-word chip, never certifies.
+let SOURCES = null;
+async function sourcesData() {
+  if (SOURCES === null) {
+    try { SOURCES = await (await fetch('/sources_noach.json')).json(); }
+    catch (e) { SOURCES = {}; }
+  }
+  return SOURCES;
+}
+const esc = s => (s || '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+async function renderSources(ref) {
+  const d = (await sourcesData())[ref] || { onkelos: null, rashi: [] };
+  const nR = (d.rashi || []).length;
+  $('src-toggle').textContent =
+    `Sources for this pasuk — Onkelos${d.onkelos ? '' : ' (none)'} · Rashi (${nR} comment${nR === 1 ? '' : 's'})`;
+  $('src-onkelos').innerHTML = d.onkelos
+    ? `<div class="src-onk" lang="arc" dir="rtl">${esc(d.onkelos)}</div>`
+    : `<div class="src-none">No Targum Onkelos for this pasuk.</div>`;
+  $('src-rashi').innerHTML = nR
+    ? d.rashi.map(c =>
+        `<div class="rashi-c"><div class="rashi-he" lang="he" dir="rtl">`
+        + (c.dh ? `<span class="dh">${esc(c.dh)}</span> ` : '')
+        + `${esc(c.he)}</div>`
+        + (c.en ? `<div class="rashi-en" lang="en">${esc(c.en)}</div>` : '')
+        + `</div>`).join('')
+    : `<div class="src-none">Rashi has no comment on this pasuk.</div>`;
+  $('src-body').classList.add('hidden');
+  $('src-toggle').setAttribute('aria-expanded', 'false');
+}
+function toggleSources() {
+  const body = $('src-body'), open = !body.classList.contains('hidden');
+  body.classList.toggle('hidden', open);
+  $('src-toggle').setAttribute('aria-expanded', String(!open));
 }
 
 async function api(path, body) {
@@ -292,6 +364,7 @@ async function loadPasuk(idx) {
   renderInterlinear();
   renderLinear();
   setView(S.view);
+  renderSources(data.ref);
   $('word-panel').classList.add('hidden');
   show('pasuk');
 }
@@ -392,6 +465,8 @@ function pickWord(id) {
   S.word = id;
   const w = (S.pwords || []).find(x => x.id === id) || {};
   $('wp-title').textContent = w.hebrew || '';
+  $('wp-shoresh-he').textContent = w.shoresh ? ('Hebrew root: ' + w.shoresh) : '';
+  $('wp-root').value = w.root_gloss || '';
   $('wp-gloss').value = w.gloss || '';
   $('wp-contextual').value = w.contextual || '';
   $('wp-note').textContent = w.contextual_note ? ('⚑ ' + w.contextual_note) : '';
@@ -404,14 +479,16 @@ function pickWord(id) {
             : '')
         + '</div>').join('');
   const sugg = w.suggestions || [];
+  const layerName = { 'wp-root': 'shoresh', 'wp-gloss': 'literal', 'wp-contextual': 'flowing' };
   $('wp-suggestions').innerHTML = sugg.length
-    ? '<p class="note">Choose a suggestion to fill the field (does not approve):</p>'
-      + sugg.map(sg =>
-        `<div class="sugg${sg.recast ? ' recast' : ''}" role="button" tabindex="0" onclick="fillContextual(this)" ` +
-        `data-text="${(sg.text || '').replace(/"/g, '&quot;')}" ` +
-        `aria-label="${sg.source_label}${sg.recast ? ' recast' : ''}: ${(sg.text || '').replace(/"/g, '')}">` +
-        `<span class="sugg-src">${sg.source_label}${sg.recast ? ' · recast' : ''}</span>` +
-        `<span class="sugg-text">${sg.text}</span></div>`).join('')
+    ? '<p class="note">Tap a source to fill the layer it belongs to (does not approve):</p>'
+      + sugg.map(sg => {
+        const tgt = chipTarget(sg.source_label || '');
+        return `<div class="sugg${sg.recast ? ' recast' : ''}" role="button" tabindex="0" onclick="fillLayer(this)" ` +
+        `data-target="${tgt}" data-text="${(sg.text || '').replace(/"/g, '&quot;')}" ` +
+        `aria-label="${sg.source_label}${sg.recast ? ' recast' : ''}, fills ${layerName[tgt]}: ${(sg.text || '').replace(/"/g, '')}">` +
+        `<span class="sugg-src">${sg.source_label}${sg.recast ? ' · recast' : ''} → ${layerName[tgt]}</span>` +
+        `<span class="sugg-text">${sg.text}</span></div>`; }).join('')
     : '<p class="note">No grounded suggestions for this word.</p>';
   $('wp-decert').classList.toggle('hidden',
     !(S.staff.role === 'admin' && w.certified));
@@ -425,9 +502,17 @@ async function openWord(pasukIndex, id) {
   pickWord(id);
 }
 
-function fillContextual(el) {
-  $('wp-contextual').value = el.dataset.text;
-  $('wp-contextual').focus();
+// Which layer a source chip belongs to.
+function chipTarget(label) {
+  if (label.startsWith('Shoresh') || label.startsWith('Other sense')) return 'wp-root';
+  if (label.startsWith('Magil literal')) return 'wp-gloss';
+  if (label.startsWith('Magil') || label.startsWith('Plainer English')) return 'wp-contextual';
+  return 'wp-gloss';   // Morphology, Binyan, Rashi, Root -> literal layer
+}
+function fillLayer(el) {
+  const t = $(el.dataset.target);
+  t.value = el.dataset.text;
+  t.focus();
 }
 
 function fillFix(el) {
@@ -457,6 +542,14 @@ async function approveWord() {
     $('wp-decert').classList.toggle('hidden', S.staff.role !== 'admin');
     $('wp-status').textContent = 'Approved ✓ certified. You can Reopen it later to change it.';
   } catch (e) { $('wp-status').textContent = 'Not approved: ' + e.message; }
+}
+async function saveRoot() {
+  try {
+    const data = await api(`/desk/words/${S.word}/root`, { root_gloss: $('wp-root').value });
+    const w = (S.pwords || []).find(x => x.id === S.word);
+    if (w) w.root_gloss = data.root_gloss;
+    $('wp-status').textContent = 'Saved ✓ shoresh (root meaning).';
+  } catch (e) { $('wp-status').textContent = 'Not saved: ' + e.message; }
 }
 async function saveGloss() {
   try {
