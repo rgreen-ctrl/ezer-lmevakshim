@@ -35,6 +35,14 @@ def _permission_error(e):
     return jsonify({"error": str(e)}), 403
 
 
+@desk.errorhandler(403)
+def _forbidden(e):
+    # The staff gate uses abort(403); return JSON (not Flask's HTML page) so the
+    # Desk can tell an ended session apart from real data and prompt re-login,
+    # instead of silently swallowing an HTML body into an empty view.
+    return jsonify({"error": "Staff sign-in required — your session may have ended."}), 403
+
+
 def _word_json(w, open_flags=None):
     return {
         "id": w.id,

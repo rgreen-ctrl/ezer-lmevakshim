@@ -275,6 +275,15 @@ async function api(path, body) {
     method:'POST', headers:{'Content-Type':'application/json'},
     body: JSON.stringify(body) });
   const data = await res.json().catch(() => ({}));
+  if (res.status === 403 && path.startsWith('/desk')) {
+    // Session ended (or never signed in): go back to sign-in with a clear
+    // message instead of leaving a blank Desk with an "undefined" pasuk.
+    S.staff = null;
+    if ($('who')) $('who').textContent = '';
+    show('login');
+    $('l-msg').textContent = data.error || 'Your session ended — please sign in again.';
+    throw new Error('session-ended');
+  }
   if (!res.ok) throw new Error(data.error || res.statusText);
   return data;
 }
