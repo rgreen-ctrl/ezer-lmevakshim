@@ -80,6 +80,14 @@
   .layer-row input { flex:1; }
   .layer-row button { margin-top:0; white-space:nowrap; }
   .interlinear { direction:rtl; text-align:right; }
+  /* One line-grouped view: a Magil printed line = a row of Hebrew words with
+     their per-word literal beneath, plus Magil's flowing English for the line. */
+  .line-group { border-bottom:1px solid var(--line); padding:.4rem 0; }
+  .line-group:last-child { border-bottom:0; }
+  .line-words { direction:rtl; text-align:right; }
+  .line-flow { direction:ltr; font-size:.95rem; color:var(--accent);
+               font-family:Georgia,serif; margin-top:.15rem; }
+  .line-flow .fn { font-size:.7rem; vertical-align:super; color:var(--warn); }
   .iw { display:inline-block; margin:.3rem .25rem; padding:.35rem .5rem;
         border-radius:8px; cursor:pointer; text-align:center;
         border:1px solid transparent; }
@@ -160,9 +168,7 @@
       <a id="p-back" role="button" tabindex="0"></a> › <span id="p-ref"></span></div>
     <p class="note">Read the pasuk through. Tap a word to approve, correct, or
     flag it. Certify-pasuk approves whatever remains — one pasuk, never more.</p>
-    <div class="viewtoggle" role="group" aria-label="Choose how to view the pasuk">
-      <button id="vt-inter" class="vt" onclick="setView('interlinear')" aria-pressed="true">Interlinear</button>
-      <button id="vt-lin" class="vt" onclick="setView('linear')" aria-pressed="false">Linear (Magil)</button>
+    <div class="viewtoggle" role="group" aria-label="Pasuk tools">
       <button id="vt-page" class="vt" onclick="togglePage()" aria-pressed="false" aria-controls="p-page">Show Magil page</button>
       <a id="p-pagelink" href="#" target="_blank" rel="noopener"
          aria-label="Open the Magil 1905 page for this pasuk in a new tab">Magil 1905 page ↗</a>
@@ -232,6 +238,17 @@ async function magilRef() {
     catch (e) { MAGIL_REF = {}; }
   }
   return MAGIL_REF;
+}
+
+// Magil LINE model: each pasuk's printed lines with the Hebrew positions each
+// covers. Drives the one line-grouped view. Cached.
+let MAGIL_LINES = null;
+async function magilLines() {
+  if (MAGIL_LINES === null) {
+    try { MAGIL_LINES = await (await fetch('/magil_lines.json')).json(); }
+    catch (e) { MAGIL_LINES = {}; }
+  }
+  return MAGIL_LINES;
 }
 
 // Per-pasuk source texts: Onkelos Aramaic + Rashi Hebrew (+ R-S English).
@@ -370,9 +387,7 @@ async function loadPasuk(idx) {
   const ref = await magilRef();
   S.spanEntry = ref[data.ref] || null;
   setupPage(S.spanEntry);
-  renderInterlinear();
-  renderLinear();
-  setView(S.view);
+  await renderLines();
   renderSources(data.ref);
   $('word-panel').classList.add('hidden');
   show('pasuk');
@@ -385,6 +400,28 @@ function wordCellHTML(w, showCtx) {
        <span class="he">${w.hebrew}</span><span class="conf conf-${w.confidence || 'high'}"></span><span class="gl">${w.gloss}</span>`
     + (showCtx ? `<span class="ctx">${w.contextual || '&mdash;'}${w.contextual_flagged ? ' ⚑' : ''}</span>` : '')
     + `</span>`;
+}
+
+// THE view: Magil's printed LINES. Each line = the Hebrew words it covers (each
+// with its own literal beneath, for vocabulary) plus Magil's flowing English for
+// that line, exactly as the 1905 page sets it. Falls back to the older span
+// rendering for pesukim whose page hasn't been line-captured yet.
+async function renderLines() {
+  const words = S.pwords || [];
+  const entry = (await magilLines())[S.ref];
+  if (!entry || !entry.lines || !entry.lines.length) { renderInterlinear(); return; }
+  const byPos = {}; words.forEach(w => { byPos[w.position] = w; });
+  let html = '';
+  for (const ln of entry.lines) {
+    const cells = (ln.positions || []).map(p => byPos[p]).filter(Boolean);
+    if (!cells.length) continue;
+    html += `<div class="line-group"><div class="line-words">`
+          + cells.map(w => wordCellHTML(w, false)).join('')
+          + `</div><div class="line-flow">${esc(ln.en)}</div></div>`;
+  }
+  $('p-words').innerHTML = html;
+  $('p-linear').classList.add('hidden');
+  $('p-words').classList.remove('hidden');
 }
 
 // Interlinear: English under each Hebrew word; a grouped Magil phrase is shown
@@ -436,13 +473,11 @@ function renderLinear() {
   $('p-linear').innerHTML = `<div class="lheb">${heb}</div><div class="len">${en || '—'}</div>`;
 }
 
-function setView(v) {
+function setView(v) {   // legacy toggle; the line view is the only view now
   S.view = v;
   const inter = v === 'interlinear';
-  $('p-words').classList.toggle('hidden', !inter);
-  $('p-linear').classList.toggle('hidden', inter);
-  $('vt-inter').setAttribute('aria-pressed', String(inter));
-  $('vt-lin').setAttribute('aria-pressed', String(!inter));
+  if ($('p-words')) $('p-words').classList.toggle('hidden', !inter);
+  if ($('p-linear')) $('p-linear').classList.toggle('hidden', inter);
 }
 
 function setupPage(entry) {
