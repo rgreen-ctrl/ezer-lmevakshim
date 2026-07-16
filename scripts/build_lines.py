@@ -50,9 +50,13 @@ for cv, lines in merged.items():
         result.append({"en": en, "positions": positions[i:i + n]})
         i += n
     leaf = leaf_of.get(cv)
+    # Served from our own origin (app/static/magil_pages), not hotlinked: the
+    # archive.org derivative is unreadably small and a content filter can block
+    # it outright. `source_url` keeps the provenance link for attribution.
     out[f"Bereishis {cv}"] = {
         "leaf": leaf,
-        "page_url": f"https://archive.org/download/{IA}/page/n{leaf}_medium.jpg" if leaf else None,
+        "page_url": f"/magil_pages/n{leaf}.jpg" if leaf else None,
+        "source_url": f"https://archive.org/details/{IA}/page/n{leaf}" if leaf else None,
         "lines": result,
         "footnotes": foots.get(cv, {}),
     }

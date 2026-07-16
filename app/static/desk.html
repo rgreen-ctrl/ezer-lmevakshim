@@ -176,8 +176,14 @@
     <div class="interlinear" id="p-words"></div>
     <div id="p-linear" class="linear hidden"></div>
     <figure id="p-page" class="hidden">
-      <img id="p-page-img" alt="" loading="lazy">
-      <figcaption class="note">Magil's Linear School Bible (1905) — the printed page this pasuk is on.</figcaption>
+      <!-- No loading="lazy": the figure opens below the fold, so a lazy image
+           is deferred and never loads — the caption shows and the scan never
+           appears. It is only fetched when the editor asks for it anyway. -->
+      <a id="p-pagefull" href="#" target="_blank" rel="noopener"
+         aria-label="Open the full-size Magil page scan in a new tab"><img id="p-page-img" alt=""></a>
+      <figcaption class="note">Magil's Linear School Bible (1905) — the printed page this pasuk is on.
+        Tap the scan to open it full size ·
+        <a id="p-pagesrc" href="#" target="_blank" rel="noopener">view on archive.org ↗</a></figcaption>
     </figure>
     <div class="sources" id="p-sources">
       <button class="vt" id="src-toggle" onclick="toggleSources()"
@@ -386,7 +392,8 @@ async function loadPasuk(idx) {
   $('p-back').onclick = () => loadUnit(S.unit);
   const ref = await magilRef();
   S.spanEntry = ref[data.ref] || null;
-  setupPage(S.spanEntry);
+  S.lineEntry = (await magilLines())[data.ref] || null;
+  setupPage(S.lineEntry || S.spanEntry);
   await renderLines();
   renderSources(data.ref);
   $('word-panel').classList.add('hidden');
@@ -481,11 +488,17 @@ function setView(v) {   // legacy toggle; the line view is the only view now
 }
 
 function setupPage(entry) {
-  const link = $('p-pagelink'), img = $('p-page-img'), url = entry && entry.page_url;
+  // The inline image is OUR cached scan (readable, and not subject to a filter
+  // blocking archive.org); the link points at archive.org for provenance.
+  const link = $('p-pagelink'), img = $('p-page-img');
+  const url = entry && entry.page_url;
+  const src = (entry && entry.source_url) || url;
   if (url) {
-    link.href = url; link.classList.remove('hidden');
+    link.href = src; link.classList.remove('hidden');
+    if ($('p-pagesrc')) $('p-pagesrc').href = src;
+    if ($('p-pagefull')) $('p-pagefull').href = url;   // full-size local scan
     img.dataset.src = url; img.removeAttribute('src');
-    img.alt = `Magil 1905 printed page for ${S.ref}`;
+    img.alt = `Magil's Linear School Bible (1905), the printed page for ${S.ref}`;
     $('vt-page').classList.remove('hidden');
   } else {
     link.classList.add('hidden'); $('vt-page').classList.add('hidden');
@@ -500,8 +513,10 @@ function togglePage() {
   if (showing) {
     fig.classList.add('hidden'); $('vt-page').setAttribute('aria-pressed', 'false');
   } else {
+    fig.classList.remove('hidden');            // unhide BEFORE setting src
     if (!img.getAttribute('src') && img.dataset.src) img.src = img.dataset.src;
-    fig.classList.remove('hidden'); $('vt-page').setAttribute('aria-pressed', 'true');
+    $('vt-page').setAttribute('aria-pressed', 'true');
+    fig.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
   }
 }
 
