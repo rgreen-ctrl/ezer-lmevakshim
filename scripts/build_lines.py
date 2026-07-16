@@ -8,14 +8,22 @@ Magil's flowing line English across the group.
 Output (committed):
   app/static/magil_lines.json   ref -> {leaf, page_url, lines:[{en, positions, footnotes}]}
 """
-import json, os, glob
+import json, os, glob, re
 from collections import defaultdict
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 STG = os.path.join(ROOT, "data", "staging")
 IA = "magilslinearscho00magirich"
+SUP = {"¹": "1", "²": "2", "³": "3", "⁴": "4", "⁵": "5",
+       "⁶": "6", "⁷": "7", "⁸": "8", "⁹": "9"}
 
 def L(p): return json.load(open(p, encoding="utf-8-sig"))
+
+def note_kind(text):
+    """Magil's page-bottom notes come in two kinds, and they do different jobs:
+    'Heb./H.' gives the LITERAL Hebrew behind his readable English (feeds the
+    literal layer); 'Or./As./i.e.' offers a variant reading (reference only)."""
+    return "literal" if re.match(r"\s*(Heb|H)\.", text or "") else "variant"
 
 lw = L(os.path.join(STG, "live_words.json"))
 pos_by_cv = defaultdict(list)
@@ -47,7 +55,9 @@ for cv, lines in merged.items():
         continue
     result, i = [], 0
     for en, n in lines:
-        result.append({"en": en, "positions": positions[i:i + n]})
+        marks = [SUP.get(ch) for ch in en if ch in SUP]
+        result.append({"en": en, "positions": positions[i:i + n],
+                       "marks": [m for m in marks if m]})
         i += n
     leaf = leaf_of.get(cv)
     # Served from our own origin (app/static/magil_pages), not hotlinked: the
@@ -58,7 +68,8 @@ for cv, lines in merged.items():
         "page_url": f"/magil_pages/n{leaf}.jpg" if leaf else None,
         "source_url": f"https://archive.org/details/{IA}/page/n{leaf}" if leaf else None,
         "lines": result,
-        "footnotes": foots.get(cv, {}),
+        "footnotes": {k: {"text": v, "kind": note_kind(v)}
+                      for k, v in sorted(foots.get(cv, {}).items())},
     }
 
 json.dump(out, open(os.path.join(ROOT, "app", "static", "magil_lines.json"), "w",

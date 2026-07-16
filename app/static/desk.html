@@ -17,6 +17,21 @@
   header .homelink:focus, header .homelink:focus-visible {
     outline:2px solid var(--accent); outline-offset:2px; border-radius:6px; }
   header .who { margin-left:auto; color:var(--soft); font-size:.9rem; }
+  /* View-as toggle: a preview mode only — never changes role, never writes. */
+  .viewas { margin-top:0; padding:.3rem .7rem; font-size:.85rem;
+            background:#e5e7eb; color:var(--ink); }
+  .viewas[aria-pressed="true"] { background:var(--warn); color:#fff; }
+  .learnerbar { background:#fffbeb; border:1px solid var(--warn); border-radius:8px;
+                padding:.5rem .7rem; margin-bottom:.75rem; font-size:.85rem; color:var(--warn); }
+  .lp { direction:rtl; text-align:right; }
+  .lp-word { display:inline-block; margin:.25rem .3rem; padding:.3rem .5rem;
+             border-radius:8px; cursor:pointer; text-align:center; border:1px solid transparent; }
+  .lp-word:hover { background:#eef2ff; }
+  .lp-word:focus, .lp-word:focus-visible { outline:2px solid var(--accent); outline-offset:2px; }
+  .lp-word .he { font-size:1.7rem; display:block; }
+  .lp-word .gl { font-size:.8rem; direction:ltr; display:block; color:var(--warn);
+                 font-family:Georgia,serif; min-height:1rem; }
+  .lp-locked { color:var(--soft); font-size:.9rem; padding:.5rem 0; }
   main { max-width:44rem; margin:0 auto; padding:1rem; }
   .card { background:#fff; border:1px solid var(--line); border-radius:12px;
           padding:1.25rem; margin-bottom:1rem; }
@@ -88,6 +103,16 @@
   .line-flow { direction:ltr; font-size:.95rem; color:var(--accent);
                font-family:Georgia,serif; margin-top:.15rem; }
   .line-flow .fn { font-size:.7rem; vertical-align:super; color:var(--warn); }
+  .fnmark { font-size:.7rem; vertical-align:super; color:var(--warn); background:none;
+            border:0; padding:0 .1rem; margin:0; cursor:pointer; font-family:inherit; }
+  .fnmark:hover { text-decoration:underline; }
+  .fnmark:focus, .fnmark:focus-visible { outline:2px solid var(--accent); outline-offset:1px; }
+  .fnlist { margin:.5rem 0 0; padding-top:.4rem; border-top:1px dotted var(--line);
+            font-size:.82rem; color:var(--ink); }
+  .fnlist .fnrow { padding:.12rem 0; }
+  .fnlist .fnnum { color:var(--warn); font-weight:bold; margin-inline-end:.3rem; }
+  .fnlist .fnkind { font-size:.68rem; text-transform:uppercase; letter-spacing:.03em;
+                    color:var(--soft); margin-inline-start:.35rem; }
   .iw { display:inline-block; margin:.3rem .25rem; padding:.35rem .5rem;
         border-radius:8px; cursor:pointer; text-align:center;
         border:1px solid transparent; }
@@ -137,6 +162,8 @@
 <header>
   <h1>The Certification Desk</h1>
   <a class="homelink" href="/" aria-label="Back to the learner home screen">← Home</a>
+  <button id="viewas-btn" class="viewas hidden" onclick="toggleViewAs()"
+          aria-pressed="false">View as: Admin</button>
   <span class="who" id="who"></span>
 </header>
 <main>
@@ -168,7 +195,7 @@
       <a id="p-back" role="button" tabindex="0"></a> › <span id="p-ref"></span></div>
     <p class="note">Read the pasuk through. Tap a word to approve, correct, or
     flag it. Certify-pasuk approves whatever remains — one pasuk, never more.</p>
-    <div class="viewtoggle" role="group" aria-label="Pasuk tools">
+    <div class="viewtoggle" id="p-tools" role="group" aria-label="Pasuk tools">
       <button id="vt-page" class="vt" onclick="togglePage()" aria-pressed="false" aria-controls="p-page">Show Magil page</button>
       <a id="p-pagelink" href="#" target="_blank" rel="noopener"
          aria-label="Open the Magil 1905 page for this pasuk in a new tab">Magil 1905 page ↗</a>
@@ -234,7 +261,36 @@
 <script>
 const $ = id => document.getElementById(id);
 const S = { staff:null, unit:null, unitName:'', pasuk:null, word:null,
-            view:'interlinear', ref:'', spanEntry:null };
+            view:'interlinear', ref:'', spanEntry:null, lineEntry:null,
+            viewAs:'admin' };   // 'admin' | 'learner' — PREVIEW ONLY
+
+// --- View-as (preview) -------------------------------------------------------
+// Renders the pasuk exactly as a talmid gets it: only certified words, and only
+// if the pasuk is servable. It is a rendering mode and nothing else — it never
+// changes the staff role, never writes, and records no learner activity. All of
+// it is drawn from data the Desk already holds (each word's `certified` flag and
+// the pasuk's `servable` status), so no learner endpoint is ever called.
+function toggleViewAs() {
+  S.viewAs = S.viewAs === 'admin' ? 'learner' : 'admin';
+  applyViewAs();
+  if (S.pasuk !== null && S.pwords) renderPasukBody();
+}
+function applyViewAs() {
+  const learner = S.viewAs === 'learner';
+  const btn = $('viewas-btn');
+  btn.textContent = 'View as: ' + (learner ? 'Learner' : 'Admin');
+  btn.setAttribute('aria-pressed', String(learner));
+  btn.setAttribute('aria-label',
+    learner ? 'Previewing as a learner. Activate to return to the Admin view.'
+            : 'Currently the Admin view. Activate to preview as a learner.');
+  // Hide every editorial affordance in learner preview.
+  for (const id of ['word-panel', 'p-sources', 'p-tools'])
+    if ($(id)) $(id).classList.toggle('hidden', learner);
+  const cert = document.querySelector('#pasuk .actions');
+  if (cert) cert.classList.toggle('hidden', learner);
+  const q = $('u-queue');
+  if (q) q.classList.toggle('hidden', learner);
+}
 
 // Magil spans + page image, keyed by ref. Loaded once, cached.
 let MAGIL_REF = null;
@@ -320,6 +376,8 @@ async function login() {
     S.staff = await api('/api/staff/login',
       { email:$('l-email').value, password:$('l-pass').value });
     $('who').textContent = `${S.staff.name} · ${S.staff.role}`;
+    $('viewas-btn').classList.remove('hidden');   // staff only
+    applyViewAs();
     loadHome();
   } catch (e) { $('l-msg').textContent = e.message; }
 }
@@ -392,21 +450,72 @@ async function loadPasuk(idx) {
   $('p-back').onclick = () => loadUnit(S.unit);
   const ref = await magilRef();
   S.spanEntry = ref[data.ref] || null;
+  S.servable = !!data.servable;
   S.lineEntry = (await magilLines())[data.ref] || null;
   setupPage(S.lineEntry || S.spanEntry);
-  await renderLines();
+  await renderPasukBody();
   renderSources(data.ref);
+  applyViewAs();
   $('word-panel').classList.add('hidden');
   show('pasuk');
 }
 
+// The per-word literal under each Hebrew word is the VOCABULARY layer, so it
+// renders Layer 1 (root_gloss — the cleaned single sense), not the old
+// `translation` column, which still holds Strong's KJV-usage dumps for 535
+// words ("cruel-ty, damage" for חמס). Falls back to translation only where no
+// root gloss exists (the 22 particles/names with no lexicon entry).
+const wordLit = w => w.root_gloss || w.gloss || '';
 function wordCellHTML(w, showCtx) {
+  const lit = wordLit(w);
   return `<span class="iw ${w.certified ? 'certified' : ''} ${w.open_flags ? 'flagged' : ''} ${w.contextual_flagged ? 'ctxflag' : ''}"
        id="iw${w.id}" role="button" tabindex="0" onclick="pickWord(${w.id})"
-       aria-label="${(w.hebrew || '')}, ${w.gloss || ''}${w.certified ? ', certified' : ''}${w.confidence ? ', ' + w.confidence + ' confidence' : ''}">
-       <span class="he">${w.hebrew}</span><span class="conf conf-${w.confidence || 'high'}"></span><span class="gl">${w.gloss}</span>`
+       aria-label="${(w.hebrew || '')}, ${lit}${w.certified ? ', certified' : ''}${w.confidence ? ', ' + w.confidence + ' confidence' : ''}">
+       <span class="he">${w.hebrew}</span><span class="conf conf-${w.confidence || 'high'}"></span><span class="gl">${esc(lit)}</span>`
     + (showCtx ? `<span class="ctx">${w.contextual || '&mdash;'}${w.contextual_flagged ? ' ⚑' : ''}</span>` : '')
     + `</span>`;
+}
+
+async function renderPasukBody() {
+  if (S.viewAs === 'learner') return renderLearnerPreview();
+  return renderLines();
+}
+
+// The learner preview. Deliberately NOT "admin with things hidden": it is built
+// from the same rule the learner side uses — a pasuk serves only when every one
+// of its words is certified, and only certified words are ever shown. So if the
+// pasuk isn't ready, this shows the nothing a talmid actually gets.
+function renderLearnerPreview() {
+  const words = (S.pwords || []);
+  const servable = !!S.servable;
+  const uncertified = words.filter(w => !w.certified).length;
+  let html = `<div class="learnerbar">Learner preview — read-only. `
+    + `Nothing here is saved, and no learner activity is recorded.</div>`;
+  if (!servable) {
+    html += `<div class="lp-locked"><strong>A learner sees nothing here yet.</strong><br>`
+      + `This pasuk isn't servable: ${uncertified} of ${words.length} word`
+      + `${uncertified === 1 ? '' : 's'} still uncertified. `
+      + `The learner side only serves a pasuk once every word in it is certified.</div>`;
+  } else {
+    html += `<p class="note">Tap a word to reveal it — this is what a talmid gets.</p>`
+      + `<div class="lp">` + words.map(w =>
+          `<span class="lp-word" role="button" tabindex="0" onclick="lpReveal(${w.id})"`
+          + ` id="lp${w.id}" aria-label="${(w.hebrew||'').replace(/"/g,'')}, tap to reveal">`
+          + `<span class="he">${esc(w.hebrew)}</span><span class="gl"></span></span>`).join('')
+      + `</div>`;
+  }
+  $('p-words').innerHTML = html;
+  $('p-words').classList.remove('hidden');
+  if ($('p-linear')) $('p-linear').classList.add('hidden');
+}
+// Local only: reveals the same text the learner endpoint would return
+// (Word.translation). No fetch, no attempt, no pool entry — a preview reveal
+// must never look like a learner revealing a word.
+function lpReveal(id) {
+  const w = (S.pwords || []).find(x => x.id === id);
+  const el = $('lp' + id);
+  if (!w || !el) return;
+  el.querySelector('.gl').textContent = w.gloss || '—';
 }
 
 // THE view: Magil's printed LINES. Each line = the Hebrew words it covers (each
@@ -418,17 +527,58 @@ async function renderLines() {
   const entry = (await magilLines())[S.ref];
   if (!entry || !entry.lines || !entry.lines.length) { renderInterlinear(); return; }
   const byPos = {}; words.forEach(w => { byPos[w.position] = w; });
+  const foots = entry.footnotes || {};
   let html = '';
   for (const ln of entry.lines) {
     const cells = (ln.positions || []).map(p => byPos[p]).filter(Boolean);
     if (!cells.length) continue;
     html += `<div class="line-group"><div class="line-words">`
           + cells.map(w => wordCellHTML(w, false)).join('')
-          + `</div><div class="line-flow">${esc(ln.en)}</div></div>`;
+          + `</div><div class="line-flow">${withFootnotes(ln.en, foots)}</div></div>`;
+  }
+  // Magil's page-bottom notes, reproduced under the pasuk as he sets them, so
+  // the marker is never a dead end. "Heb." = the literal behind his English;
+  // "Or." = a variant reading.
+  const keys = Object.keys(foots).sort();
+  if (keys.length) {
+    html += `<div class="fnlist" aria-label="Magil's footnotes for this pasuk">`
+      + keys.map(k => `<div class="fnrow" id="fnrow${k}"><span class="fnnum">${esc(k)})</span>`
+          + `${esc(foots[k].text)}`
+          + `<span class="fnkind">${foots[k].kind === 'literal' ? 'literal Hebrew' : 'variant reading'}</span>`
+          + `</div>`).join('')
+      + `</div>`;
   }
   $('p-words').innerHTML = html;
   $('p-linear').classList.add('hidden');
   $('p-words').classList.remove('hidden');
+}
+
+// Turn Magil's superscript markers into real, focusable buttons that speak
+// their note — the marker alone is useless if you can't read what it says.
+const SUPMAP = { '¹':'1','²':'2','³':'3','⁴':'4','⁵':'5','⁶':'6','⁷':'7','⁸':'8','⁹':'9' };
+function withFootnotes(text, foots) {
+  let out = '';
+  for (const ch of (text || '')) {
+    const n = SUPMAP[ch];
+    const fn = n && foots[n];
+    if (fn) {
+      out += `<button type="button" class="fnmark" onclick="showFootnote('${n}')" `
+           + `aria-label="Footnote ${n}: ${esc(fn.text).replace(/"/g,'&quot;')} — `
+           + `${fn.kind === 'literal' ? 'literal Hebrew' : 'variant reading'}">${ch}</button>`;
+    } else {
+      out += esc(ch);
+    }
+  }
+  return out;
+}
+function showFootnote(n) {
+  const row = $('fnrow' + n);
+  if (!row) return;
+  row.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+  const prev = row.style.background;
+  row.style.background = '#fef3c7';
+  $('wp-status').textContent = `Footnote ${n}: ${row.textContent.replace(/^\s*\d+\)\s*/, '')}`;
+  setTimeout(() => { row.style.background = prev; }, 1600);
 }
 
 // Interlinear: English under each Hebrew word; a grouped Magil phrase is shown
@@ -564,7 +714,10 @@ async function openWord(pasukIndex, id) {
 // Which layer a source chip belongs to.
 function chipTarget(label) {
   if (label.startsWith('Shoresh') || label.startsWith('Other sense')) return 'wp-root';
-  if (label.startsWith('Magil literal')) return 'wp-gloss';
+  // Magil's per-word offerings — his footnote literal, and his line split where
+  // the line covered exactly one word — belong to the LITERAL layer. Only his
+  // flowing line English belongs to Layer 3.
+  if (label.startsWith('Magil literal') || label.startsWith('Magil (split)')) return 'wp-gloss';
   if (label.startsWith('Magil') || label.startsWith('Plainer English')) return 'wp-contextual';
   return 'wp-gloss';   // Morphology, Binyan, Rashi, Root -> literal layer
 }
@@ -685,7 +838,10 @@ document.addEventListener('keydown', e => {
 
 // Resume an existing staff session on reload.
 api('/api/staff/me').then(s => { S.staff = s;
-  $('who').textContent = `${s.name} · ${s.role}`; loadHome();
+  $('who').textContent = `${s.name} · ${s.role}`;
+  $('viewas-btn').classList.remove('hidden');   // staff only
+  applyViewAs();
+  loadHome();
 }).catch(() => {});
 </script>
 </body>

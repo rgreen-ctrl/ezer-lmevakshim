@@ -220,6 +220,11 @@
    "supplied": false
   },
   {
+   "source_label": "Magil (split)",
+   "text": "in his generations",
+   "recast": false
+  },
+  {
    "source_label": "Shoresh (root)",
    "text": "generation",
    "recast": false
@@ -844,6 +849,11 @@
    "recast": false,
    "base": true,
    "supplied": true
+  },
+  {
+   "source_label": "Magil (split)",
+   "text": "violence",
+   "recast": false
   },
   {
    "source_label": "Shoresh (root)",
@@ -1636,6 +1646,11 @@
    "supplied": true
   },
   {
+   "source_label": "Magil (split)",
+   "text": "violence",
+   "recast": false
+  },
+  {
    "source_label": "Shoresh (root)",
    "text": "violence",
    "recast": false
@@ -1663,6 +1678,16 @@
    "recast": false,
    "base": true,
    "supplied": false
+  },
+  {
+   "source_label": "Magil (split)",
+   "text": "through them",
+   "recast": false
+  },
+  {
+   "source_label": "Magil literal (Heb.)",
+   "text": "from before them",
+   "recast": false
   },
   {
    "source_label": "Shoresh (root)",
@@ -2000,6 +2025,16 @@
    "supplied": true
   },
   {
+   "source_label": "Magil (split)",
+   "text": "rooms",
+   "recast": false
+  },
+  {
+   "source_label": "Magil literal (Heb.)",
+   "text": "nests",
+   "recast": false
+  },
+  {
    "source_label": "Shoresh (root)",
    "text": "nest",
    "recast": false
@@ -2305,6 +2340,11 @@
    "supplied": true
   },
   {
+   "source_label": "Magil (split)",
+   "text": "with pitch",
+   "recast": false
+  },
+  {
    "source_label": "Shoresh (root)",
    "text": "cover",
    "recast": false
@@ -2353,6 +2393,11 @@
    "recast": false,
    "base": true,
    "supplied": true
+  },
+  {
+   "source_label": "Magil (split)",
+   "text": "And this",
+   "recast": false
   },
   {
    "source_label": "Shoresh (root)",
@@ -2660,6 +2705,11 @@
    "supplied": false
   },
   {
+   "source_label": "Magil (split)",
+   "text": "its breadth",
+   "recast": false
+  },
+  {
    "source_label": "Shoresh (root)",
    "text": "width",
    "recast": false
@@ -2732,6 +2782,11 @@
    "supplied": false
   },
   {
+   "source_label": "Magil (split)",
+   "text": "its height",
+   "recast": false
+  },
+  {
    "source_label": "Shoresh (root)",
    "text": "height",
    "recast": false
@@ -2749,6 +2804,11 @@
    "recast": false,
    "base": true,
    "supplied": true
+  },
+  {
+   "source_label": "Magil (split)",
+   "text": "A window",
+   "recast": false
   },
   {
    "source_label": "Shoresh (root)",
@@ -2936,6 +2996,11 @@
    "supplied": true
   },
   {
+   "source_label": "Magil (split)",
+   "text": "shalt thou finish it",
+   "recast": false
+  },
+  {
    "source_label": "Shoresh (root)",
    "text": "end",
    "recast": false
@@ -2984,6 +3049,11 @@
    "recast": false,
    "base": true,
    "supplied": true
+  },
+  {
+   "source_label": "Magil (split)",
+   "text": "from above",
+   "recast": false
   },
   {
    "source_label": "Shoresh (root)",
@@ -3156,6 +3226,11 @@
    "supplied": true
   },
   {
+   "source_label": "Magil (split)",
+   "text": "lower",
+   "recast": false
+  },
+  {
    "source_label": "Shoresh (root)",
    "text": "lowermost",
    "recast": false
@@ -3201,6 +3276,11 @@
    "supplied": true
   },
   {
+   "source_label": "Magil (split)",
+   "text": "second",
+   "recast": false
+  },
+  {
    "source_label": "Shoresh (root)",
    "text": "double",
    "recast": false
@@ -3241,6 +3321,11 @@
    "supplied": true
   },
   {
+   "source_label": "Magil (split)",
+   "text": "and third",
+   "recast": false
+  },
+  {
    "source_label": "Shoresh (root)",
    "text": "third",
    "recast": false
@@ -3269,6 +3354,11 @@
    "recast": false,
    "base": true,
    "supplied": true
+  },
+  {
+   "source_label": "Magil (split)",
+   "text": "shalt thou make it",
+   "recast": false
   },
   {
    "source_label": "Shoresh (root)",
@@ -3952,6 +4042,11 @@
    "supplied": false
   },
   {
+   "source_label": "Magil (split)",
+   "text": "shall perish",
+   "recast": false
+  },
+  {
    "source_label": "Shoresh (root)",
    "text": "breathe out",
    "recast": false
@@ -3974,6 +4069,11 @@
    "recast": false,
    "base": true,
    "supplied": false
+  },
+  {
+   "source_label": "Magil (split)",
+   "text": "But I will establish",
+   "recast": false
   },
   {
    "source_label": "Shoresh (root)",
@@ -4089,6 +4189,11 @@
    "recast": false,
    "base": true,
    "supplied": false
+  },
+  {
+   "source_label": "Magil (split)",
+   "text": "with thee",
+   "recast": false
   },
   {
    "source_label": "Shoresh (root)",
@@ -4311,6 +4416,11 @@
    "supplied": false
   },
   {
+   "source_label": "Magil (split)",
+   "text": "and thy wife",
+   "recast": false
+  },
+  {
    "source_label": "Shoresh (root)",
    "text": "wife/woman",
    "recast": false
@@ -4399,6 +4509,11 @@
    "recast": false,
    "base": true,
    "supplied": false
+  },
+  {
+   "source_label": "Magil (split)",
+   "text": "with thee",
+   "recast": false
   },
   {
    "source_label": "Shoresh (root)",
@@ -5461,6 +5576,11 @@
    "supplied": true
   },
   {
+   "source_label": "Magil (split)",
+   "text": "to keep alive",
+   "recast": false
+  },
+  {
    "source_label": "Shoresh (root)",
    "text": "lived",
    "recast": false
@@ -5856,6 +5976,11 @@
    "recast": false,
    "base": true,
    "supplied": false
+  },
+  {
+   "source_label": "Magil (split)",
+   "text": "for food",
+   "recast": false
   },
   {
    "source_label": "Shoresh (root)",
@@ -7153,6 +7278,11 @@
    "supplied": true
   },
   {
+   "source_label": "Magil (split)",
+   "text": "two",
+   "recast": false
+  },
+  {
    "source_label": "Shoresh (root)",
    "text": "two",
    "recast": false
@@ -7665,6 +7795,11 @@
    "supplied": true
   },
   {
+   "source_label": "Magil (split)",
+   "text": "For",
+   "recast": false
+  },
+  {
    "source_label": "Shoresh (root)",
    "text": "relative conjunction",
    "recast": false
@@ -8011,6 +8146,11 @@
    "recast": false,
    "base": true,
    "supplied": true
+  },
+  {
+   "source_label": "Magil (split)",
+   "text": "and I will wipe off",
+   "recast": false
   },
   {
    "source_label": "Shoresh (root)",
@@ -8816,6 +8956,11 @@
    "supplied": false
   },
   {
+   "source_label": "Magil (split)",
+   "text": "and his sons",
+   "recast": false
+  },
+  {
    "source_label": "Shoresh (root)",
    "text": "son of",
    "recast": false
@@ -8843,6 +8988,11 @@
    "recast": false,
    "base": true,
    "supplied": false
+  },
+  {
+   "source_label": "Magil (split)",
+   "text": "and his wife",
+   "recast": false
   },
   {
    "source_label": "Shoresh (root)",
@@ -8915,6 +9065,11 @@
    "recast": false,
    "base": true,
    "supplied": false
+  },
+  {
+   "source_label": "Magil (split)",
+   "text": "with him",
+   "recast": false
   },
   {
    "source_label": "Shoresh (root)",
@@ -10016,6 +10171,11 @@
    "supplied": false
   },
   {
+   "source_label": "Magil (split)",
+   "text": "And it came to pass",
+   "recast": false
+  },
+  {
    "source_label": "Shoresh (root)",
    "text": "was",
    "recast": false
@@ -10577,6 +10737,11 @@
    "supplied": true
   },
   {
+   "source_label": "Magil (split)",
+   "text": "of the month",
+   "recast": false
+  },
+  {
    "source_label": "Shoresh (root)",
    "text": "new",
    "recast": false
@@ -10642,6 +10807,11 @@
    "recast": false,
    "base": true,
    "supplied": true
+  },
+  {
+   "source_label": "Magil (split)",
+   "text": "were broken up",
+   "recast": false
   },
   {
    "source_label": "Shoresh (root)",
@@ -10875,6 +11045,11 @@
    "recast": false,
    "base": true,
    "supplied": true
+  },
+  {
+   "source_label": "Magil (split)",
+   "text": "were opened",
+   "recast": false
   },
   {
    "source_label": "Shoresh (root)",
@@ -11518,6 +11693,11 @@
    "supplied": false
   },
   {
+   "source_label": "Magil (split)",
+   "text": "with them",
+   "recast": false
+  },
+  {
    "source_label": "Shoresh (root)",
    "text": "with",
    "recast": false
@@ -11710,6 +11890,11 @@
    "recast": false,
    "base": true,
    "supplied": false
+  },
+  {
+   "source_label": "Magil (split)",
+   "text": "after its kind",
+   "recast": false
   },
   {
    "source_label": "Shoresh (root)",
@@ -11986,6 +12171,11 @@
    "recast": false,
    "base": true,
    "supplied": false
+  },
+  {
+   "source_label": "Magil (split)",
+   "text": "after its kind",
+   "recast": false
   },
   {
    "source_label": "Shoresh (root)",
@@ -12653,6 +12843,11 @@
    "supplied": true
   },
   {
+   "source_label": "Magil (split)",
+   "text": "And those that went in",
+   "recast": false
+  },
+  {
    "source_label": "Shoresh (root)",
    "text": "came/brought",
    "recast": false
@@ -12806,6 +13001,11 @@
    "recast": false,
    "base": true,
    "supplied": true
+  },
+  {
+   "source_label": "Magil (split)",
+   "text": "went in",
+   "recast": false
   },
   {
    "source_label": "Shoresh (root)",
@@ -13800,6 +14000,11 @@
    "supplied": true
   },
   {
+   "source_label": "Magil (split)",
+   "text": "And the waters",
+   "recast": false
+  },
+  {
    "source_label": "Shoresh (root)",
    "text": "waters",
    "recast": false
@@ -13997,6 +14202,11 @@
    "recast": false,
    "base": true,
    "supplied": true
+  },
+  {
+   "source_label": "Magil (split)",
+   "text": "and were covered",
+   "recast": false
   },
   {
    "source_label": "Shoresh (root)",
@@ -14336,6 +14546,11 @@
    "recast": false,
    "base": true,
    "supplied": true
+  },
+  {
+   "source_label": "Magil (split)",
+   "text": "upwards",
+   "recast": false
   },
   {
    "source_label": "Shoresh (root)",
@@ -14702,6 +14917,11 @@
    "supplied": true
   },
   {
+   "source_label": "Magil (split)",
+   "text": "fowl",
+   "recast": false
+  },
+  {
    "source_label": "Shoresh (root)",
    "text": "bird",
    "recast": false
@@ -14719,6 +14939,11 @@
    "recast": false,
    "base": true,
    "supplied": true
+  },
+  {
+   "source_label": "Magil (split)",
+   "text": "and cattle",
+   "recast": false
   },
   {
    "source_label": "Shoresh (root)",
@@ -14748,6 +14973,11 @@
    "recast": false,
    "base": true,
    "supplied": true
+  },
+  {
+   "source_label": "Magil (split)",
+   "text": "and beast",
+   "recast": false
   },
   {
    "source_label": "Shoresh (root)",
@@ -15207,6 +15437,11 @@
    "supplied": true
   },
   {
+   "source_label": "Magil (split)",
+   "text": "in his nostrils",
+   "recast": false
+  },
+  {
    "source_label": "Shoresh (root)",
    "text": "nose",
    "recast": false
@@ -15343,6 +15578,11 @@
    "supplied": true
   },
   {
+   "source_label": "Magil (split)",
+   "text": "died",
+   "recast": false
+  },
+  {
    "source_label": "Shoresh (root)",
    "text": "died",
    "recast": false
@@ -15370,6 +15610,11 @@
    "recast": false,
    "base": true,
    "supplied": true
+  },
+  {
+   "source_label": "Magil (split)",
+   "text": "And he wiped off",
+   "recast": false
   },
   {
    "source_label": "Shoresh (root)",
@@ -15685,6 +15930,11 @@
    "recast": false,
    "base": true,
    "supplied": true
+  },
+  {
+   "source_label": "Magil (split)",
+   "text": "from man",
+   "recast": false
   },
   {
    "source_label": "Shoresh (root)",
@@ -16277,6 +16527,11 @@
    "recast": false,
    "base": true,
    "supplied": false
+  },
+  {
+   "source_label": "Magil (split)",
+   "text": "in the ark",
+   "recast": false
   },
   {
    "source_label": "Shoresh (root)",
@@ -16909,6 +17164,11 @@
    "supplied": true
   },
   {
+   "source_label": "Magil (split)",
+   "text": "in the ark",
+   "recast": false
+  },
+  {
    "source_label": "Shoresh (root)",
    "text": "ark.",
    "recast": false
@@ -17184,6 +17444,11 @@
    "recast": false,
    "base": true,
    "supplied": true
+  },
+  {
+   "source_label": "Magil (split)",
+   "text": "And were stopped",
+   "recast": false
   },
   {
    "source_label": "Shoresh (root)",
@@ -17714,6 +17979,11 @@
    "supplied": true
   },
   {
+   "source_label": "Magil (split)",
+   "text": "the end",
+   "recast": false
+  },
+  {
    "source_label": "Shoresh (root)",
    "text": "extremity",
    "recast": false
@@ -18013,6 +18283,16 @@
    "supplied": true
   },
   {
+   "source_label": "Magil (split)",
+   "text": "of the month",
+   "recast": false
+  },
+  {
+   "source_label": "Magil literal (Heb.)",
+   "text": "to",
+   "recast": false
+  },
+  {
    "source_label": "Shoresh (root)",
    "text": "new",
    "recast": false
@@ -18112,6 +18392,11 @@
    "recast": false,
    "base": true,
    "supplied": true
+  },
+  {
+   "source_label": "Magil (split)",
+   "text": "And the waters",
+   "recast": false
   },
   {
    "source_label": "Shoresh (root)",
@@ -18347,6 +18632,11 @@
    "supplied": true
   },
   {
+   "source_label": "Magil (split)",
+   "text": "in the tenth",
+   "recast": false
+  },
+  {
    "source_label": "Shoresh (root)",
    "text": "tenth part .",
    "recast": false
@@ -18434,6 +18724,11 @@
    "supplied": true
   },
   {
+   "source_label": "Magil (split)",
+   "text": "were seen",
+   "recast": false
+  },
+  {
    "source_label": "Shoresh (root)",
    "text": "saw",
    "recast": false
@@ -18504,6 +18799,11 @@
    "recast": false,
    "base": true,
    "supplied": false
+  },
+  {
+   "source_label": "Magil (split)",
+   "text": "And it came to pass",
+   "recast": false
   },
   {
    "source_label": "Shoresh (root)",
@@ -18886,6 +19186,11 @@
    "supplied": false
   },
   {
+   "source_label": "Magil (split)",
+   "text": "and it went out",
+   "recast": false
+  },
+  {
    "source_label": "Shoresh (root)",
    "text": "went out",
    "recast": false
@@ -19241,6 +19546,11 @@
    "supplied": false
   },
   {
+   "source_label": "Magil (split)",
+   "text": "from him",
+   "recast": false
+  },
+  {
    "source_label": "Shoresh (root)",
    "text": "with",
    "recast": false
@@ -19278,6 +19588,11 @@
    "recast": false,
    "base": true,
    "supplied": false
+  },
+  {
+   "source_label": "Magil (split)",
+   "text": "to see",
+   "recast": false
   },
   {
    "source_label": "Shoresh (root)",
@@ -19562,6 +19877,11 @@
    "recast": false,
    "base": true,
    "supplied": true
+  },
+  {
+   "source_label": "Magil (split)",
+   "text": "a resting-place",
+   "recast": false
   },
   {
    "source_label": "Shoresh (root)",
@@ -20117,6 +20437,11 @@
    "recast": false,
    "base": true,
    "supplied": true
+  },
+  {
+   "source_label": "Magil (split)",
+   "text": "and took her",
+   "recast": false
   },
   {
    "source_label": "Shoresh (root)",
@@ -20923,6 +21248,11 @@
    "supplied": true
   },
   {
+   "source_label": "Magil (split)",
+   "text": "in her mouth",
+   "recast": false
+  },
+  {
    "source_label": "Shoresh (root)",
    "text": "mouth",
    "recast": false
@@ -21714,6 +22044,11 @@
    "supplied": true
   },
   {
+   "source_label": "Magil (split)",
+   "text": "in the first",
+   "recast": false
+  },
+  {
    "source_label": "Shoresh (root)",
    "text": "first",
    "recast": false
@@ -22055,6 +22390,11 @@
    "supplied": false
   },
   {
+   "source_label": "Magil (split)",
+   "text": "and looked",
+   "recast": false
+  },
+  {
    "source_label": "Shoresh (root)",
    "text": "saw",
    "recast": false
@@ -22325,6 +22665,11 @@
    "supplied": true
   },
   {
+   "source_label": "Magil (split)",
+   "text": "of the month",
+   "recast": false
+  },
+  {
    "source_label": "Shoresh (root)",
    "text": "new",
    "recast": false
@@ -22549,6 +22894,11 @@
    "supplied": false
   },
   {
+   "source_label": "Magil (split)",
+   "text": "saying",
+   "recast": false
+  },
+  {
    "source_label": "Shoresh (root)",
    "text": "said",
    "recast": false
@@ -22740,6 +23090,11 @@
    "supplied": false
   },
   {
+   "source_label": "Magil (split)",
+   "text": "and thy sons",
+   "recast": false
+  },
+  {
    "source_label": "Shoresh (root)",
    "text": "son of",
    "recast": false
@@ -22822,6 +23177,11 @@
    "recast": false,
    "base": true,
    "supplied": false
+  },
+  {
+   "source_label": "Magil (split)",
+   "text": "with thee",
+   "recast": false
   },
   {
    "source_label": "Shoresh (root)",
@@ -23139,6 +23499,11 @@
    "supplied": true
   },
   {
+   "source_label": "Magil (split)",
+   "text": "fowl",
+   "recast": false
+  },
+  {
    "source_label": "Shoresh (root)",
    "text": "bird",
    "recast": false
@@ -23162,6 +23527,11 @@
    "recast": false,
    "base": true,
    "supplied": true
+  },
+  {
+   "source_label": "Magil (split)",
+   "text": "and cattle",
+   "recast": false
   },
   {
    "source_label": "Shoresh (root)",
@@ -23589,6 +23959,11 @@
    "supplied": true
   },
   {
+   "source_label": "Magil (split)",
+   "text": "and be fruitful",
+   "recast": false
+  },
+  {
    "source_label": "Shoresh (root)",
    "text": "bear fruit",
    "recast": false
@@ -23612,6 +23987,11 @@
    "recast": false,
    "base": true,
    "supplied": true
+  },
+  {
+   "source_label": "Magil (split)",
+   "text": "and multiply",
+   "recast": false
   },
   {
    "source_label": "Shoresh (root)",
@@ -23767,6 +24147,11 @@
    "supplied": false
   },
   {
+   "source_label": "Magil (split)",
+   "text": "and his sons",
+   "recast": false
+  },
+  {
    "source_label": "Shoresh (root)",
    "text": "son of",
    "recast": false
@@ -23789,6 +24174,11 @@
    "recast": false,
    "base": true,
    "supplied": false
+  },
+  {
+   "source_label": "Magil (split)",
+   "text": "and his wife",
+   "recast": false
   },
   {
    "source_label": "Shoresh (root)",
@@ -23861,6 +24251,11 @@
    "recast": false,
    "base": true,
    "supplied": false
+  },
+  {
+   "source_label": "Magil (split)",
+   "text": "with him",
+   "recast": false
   },
   {
    "source_label": "Shoresh (root)",
@@ -24237,6 +24632,11 @@
    "supplied": false
   },
   {
+   "source_label": "Magil (split)",
+   "text": "after their families",
+   "recast": false
+  },
+  {
    "source_label": "Shoresh (root)",
    "text": "family",
    "recast": false
@@ -24457,6 +24857,11 @@
    "recast": false,
    "base": true,
    "supplied": true
+  },
+  {
+   "source_label": "Magil (split)",
+   "text": "and he took",
+   "recast": false
   },
   {
    "source_label": "Shoresh (root)",
@@ -24713,6 +25118,11 @@
    "recast": false,
    "base": true,
    "supplied": true
+  },
+  {
+   "source_label": "Magil (split)",
+   "text": "on the altar",
+   "recast": false
   },
   {
    "source_label": "Shoresh (root)",
@@ -26511,6 +26921,11 @@
    "supplied": true
   },
   {
+   "source_label": "Magil (split)",
+   "text": "Be fruitful",
+   "recast": false
+  },
+  {
    "source_label": "Shoresh (root)",
    "text": "bear fruit",
    "recast": false
@@ -26528,6 +26943,11 @@
    "recast": false,
    "base": true,
    "supplied": true
+  },
+  {
+   "source_label": "Magil (split)",
+   "text": "and multiply",
+   "recast": false
   },
   {
    "source_label": "Shoresh (root)",
@@ -26636,6 +27056,11 @@
    "supplied": true
   },
   {
+   "source_label": "Magil (split)",
+   "text": "And the fear of you",
+   "recast": false
+  },
+  {
    "source_label": "Shoresh (root)",
    "text": "fear",
    "recast": false
@@ -26658,6 +27083,11 @@
    "recast": false,
    "base": true,
    "supplied": true
+  },
+  {
+   "source_label": "Magil (split)",
+   "text": "and the terror of you",
+   "recast": false
   },
   {
    "source_label": "Shoresh (root)",
@@ -26687,6 +27117,11 @@
    "recast": false,
    "base": true,
    "supplied": true
+  },
+  {
+   "source_label": "Magil (split)",
+   "text": "shall be",
+   "recast": false
   },
   {
    "source_label": "Shoresh (root)",
@@ -27534,6 +27969,11 @@
    "supplied": false
   },
   {
+   "source_label": "Magil (split)",
+   "text": "for food",
+   "recast": false
+  },
+  {
    "source_label": "Shoresh (root)",
    "text": "food",
    "recast": false
@@ -27834,6 +28274,11 @@
    "supplied": true
   },
   {
+   "source_label": "Magil (split)",
+   "text": "its blood",
+   "recast": false
+  },
+  {
    "source_label": "Shoresh (root)",
    "text": "blood",
    "recast": false
@@ -28003,6 +28448,11 @@
    "supplied": false
   },
   {
+   "source_label": "Magil (split)",
+   "text": "of your souls",
+   "recast": false
+  },
+  {
    "source_label": "Shoresh (root)",
    "text": "living-soul",
    "recast": false
@@ -28035,6 +28485,11 @@
    "recast": false,
    "base": true,
    "supplied": false
+  },
+  {
+   "source_label": "Magil (split)",
+   "text": "I will demand",
+   "recast": false
   },
   {
    "source_label": "Shoresh (root)",
@@ -28191,6 +28646,11 @@
    "recast": false,
    "base": true,
    "supplied": false
+  },
+  {
+   "source_label": "Magil (split)",
+   "text": "I will demand it",
+   "recast": false
   },
   {
    "source_label": "Shoresh (root)",
@@ -28358,6 +28818,11 @@
    "supplied": false
   },
   {
+   "source_label": "Magil (split)",
+   "text": "his brother",
+   "recast": false
+  },
+  {
    "source_label": "Shoresh (root)",
    "text": "brother",
    "recast": false
@@ -28375,6 +28840,11 @@
    "recast": false,
    "base": true,
    "supplied": false
+  },
+  {
+   "source_label": "Magil (split)",
+   "text": "will I demand",
+   "recast": false
   },
   {
    "source_label": "Shoresh (root)",
@@ -28513,6 +28983,11 @@
    "supplied": true
   },
   {
+   "source_label": "Magil (split)",
+   "text": "sheds",
+   "recast": false
+  },
+  {
    "source_label": "Shoresh (root)",
    "text": "spill forth",
    "recast": false
@@ -28598,6 +29073,11 @@
    "recast": false,
    "base": true,
    "supplied": false
+  },
+  {
+   "source_label": "Magil (split)",
+   "text": "by man",
+   "recast": false
   },
   {
    "source_label": "Shoresh (root)",
@@ -28915,6 +29395,11 @@
    "recast": false,
    "base": true,
    "supplied": false
+  },
+  {
+   "source_label": "Magil (split)",
+   "text": "and multiply",
+   "recast": false
   },
   {
    "source_label": "Shoresh (root)",
@@ -29272,6 +29757,11 @@
    "supplied": true
   },
   {
+   "source_label": "Magil (split)",
+   "text": "saying",
+   "recast": false
+  },
+  {
    "source_label": "Shoresh (root)",
    "text": "said",
    "recast": false
@@ -29300,6 +29790,11 @@
    "recast": false,
    "base": true,
    "supplied": false
+  },
+  {
+   "source_label": "Magil (split)",
+   "text": "And I",
+   "recast": false
   },
   {
    "source_label": "Shoresh (root)",
@@ -29427,6 +29922,11 @@
    "supplied": false
   },
   {
+   "source_label": "Magil (split)",
+   "text": "with you",
+   "recast": false
+  },
+  {
    "source_label": "Shoresh (root)",
    "text": "with",
    "recast": false
@@ -29542,6 +30042,11 @@
    "recast": false,
    "base": true,
    "supplied": false
+  },
+  {
+   "source_label": "Magil (split)",
+   "text": "after you",
+   "recast": false
   },
   {
    "source_label": "Shoresh (root)",
@@ -29797,6 +30302,11 @@
    "supplied": true
   },
   {
+   "source_label": "Magil (split)",
+   "text": "with the fowl",
+   "recast": false
+  },
+  {
    "source_label": "Shoresh (root)",
    "text": "bird",
    "recast": false
@@ -29814,6 +30324,11 @@
    "recast": false,
    "base": true,
    "supplied": true
+  },
+  {
+   "source_label": "Magil (split)",
+   "text": "with the cattle",
+   "recast": false
   },
   {
    "source_label": "Shoresh (root)",
@@ -29950,6 +30465,11 @@
    "recast": false,
    "base": true,
    "supplied": true
+  },
+  {
+   "source_label": "Magil (split)",
+   "text": "with you",
+   "recast": false
   },
   {
    "source_label": "Shoresh (root)",
@@ -30195,6 +30715,11 @@
    "supplied": true
   },
   {
+   "source_label": "Magil (split)",
+   "text": "And I will establish",
+   "recast": false
+  },
+  {
    "source_label": "Shoresh (root)",
    "text": "rise",
    "recast": false
@@ -30275,6 +30800,11 @@
    "recast": false,
    "base": true,
    "supplied": true
+  },
+  {
+   "source_label": "Magil (split)",
+   "text": "with you",
+   "recast": false
   },
   {
    "source_label": "Shoresh (root)",
@@ -31388,6 +31918,11 @@
    "supplied": true
   },
   {
+   "source_label": "Magil (split)",
+   "text": "have I set",
+   "recast": false
+  },
+  {
    "source_label": "Shoresh (root)",
    "text": "gave",
    "recast": false
@@ -31422,6 +31957,11 @@
    "supplied": true
   },
   {
+   "source_label": "Magil (split)",
+   "text": "in the cloud",
+   "recast": false
+  },
+  {
    "source_label": "Shoresh (root)",
    "text": "cloud -y .",
    "recast": false
@@ -31454,6 +31994,11 @@
    "recast": false,
    "base": true,
    "supplied": true
+  },
+  {
+   "source_label": "Magil (split)",
+   "text": "that it shall be",
+   "recast": false
   },
   {
    "source_label": "Shoresh (root)",
@@ -31643,6 +32188,11 @@
    "recast": false,
    "base": true,
    "supplied": false
+  },
+  {
+   "source_label": "Magil (split)",
+   "text": "And it shall be",
+   "recast": false
   },
   {
    "source_label": "Shoresh (root)",
@@ -31866,6 +32416,11 @@
    "recast": false,
    "base": true,
    "supplied": false
+  },
+  {
+   "source_label": "Magil (split)",
+   "text": "in the cloud",
+   "recast": false
   },
   {
    "source_label": "Shoresh (root)",
@@ -32451,6 +33006,11 @@
    "supplied": true
   },
   {
+   "source_label": "Magil (split)",
+   "text": "a flood",
+   "recast": false
+  },
+  {
    "source_label": "Shoresh (root)",
    "text": "flood.",
    "recast": false
@@ -32473,6 +33033,11 @@
    "recast": false,
    "base": true,
    "supplied": true
+  },
+  {
+   "source_label": "Magil (split)",
+   "text": "to destroy",
+   "recast": false
   },
   {
    "source_label": "Shoresh (root)",
@@ -32655,6 +33220,11 @@
    "supplied": true
   },
   {
+   "source_label": "Magil (split)",
+   "text": "in the cloud",
+   "recast": false
+  },
+  {
    "source_label": "Shoresh (root)",
    "text": "cloud -y .",
    "recast": false
@@ -32689,6 +33259,11 @@
    "supplied": true
   },
   {
+   "source_label": "Magil (split)",
+   "text": "then I will look upon it",
+   "recast": false
+  },
+  {
    "source_label": "Shoresh (root)",
    "text": "saw",
    "recast": false
@@ -32711,6 +33286,11 @@
    "recast": false,
    "base": true,
    "supplied": true
+  },
+  {
+   "source_label": "Magil (split)",
+   "text": "to remember",
+   "recast": false
   },
   {
    "source_label": "Shoresh (root)",
@@ -33494,6 +34074,11 @@
    "supplied": true
   },
   {
+   "source_label": "Magil (split)",
+   "text": "between me",
+   "recast": false
+  },
+  {
    "source_label": "Shoresh (root)",
    "text": "between",
    "recast": false
@@ -34207,6 +34792,11 @@
    "supplied": false
   },
   {
+   "source_label": "Magil (split)",
+   "text": "and of these",
+   "recast": false
+  },
+  {
    "source_label": "Shoresh (root)",
    "text": "these",
    "recast": false
@@ -34547,6 +35137,11 @@
    "supplied": false
   },
   {
+   "source_label": "Magil (split)",
+   "text": "and was drunken",
+   "recast": false
+  },
+  {
    "source_label": "Shoresh (root)",
    "text": "become tipsy",
    "recast": false
@@ -34574,6 +35169,11 @@
    "recast": false,
    "base": true,
    "supplied": false
+  },
+  {
+   "source_label": "Magil (split)",
+   "text": "and he uncovered himself",
+   "recast": false
   },
   {
    "source_label": "Shoresh (root)",
@@ -34804,6 +35404,11 @@
    "supplied": false
   },
   {
+   "source_label": "Magil (split)",
+   "text": "and told",
+   "recast": false
+  },
+  {
    "source_label": "Shoresh (root)",
    "text": "front",
    "recast": false
@@ -34889,6 +35494,11 @@
    "recast": false,
    "base": true,
    "supplied": false
+  },
+  {
+   "source_label": "Magil (split)",
+   "text": "outside",
+   "recast": false
   },
   {
    "source_label": "Shoresh (root)",
@@ -35045,6 +35655,11 @@
    "supplied": true
   },
   {
+   "source_label": "Magil (split)",
+   "text": "and put",
+   "recast": false
+  },
+  {
    "source_label": "Shoresh (root)",
    "text": "put",
    "recast": false
@@ -35187,6 +35802,11 @@
    "recast": false,
    "base": true,
    "supplied": true
+  },
+  {
+   "source_label": "Magil (split)",
+   "text": "and covered",
+   "recast": false
   },
   {
    "source_label": "Shoresh (root)",
@@ -35472,6 +36092,11 @@
    "supplied": true
   },
   {
+   "source_label": "Magil (split)",
+   "text": "from his wine",
+   "recast": false
+  },
+  {
    "source_label": "Shoresh (root)",
    "text": "wine",
    "recast": false
@@ -35494,6 +36119,11 @@
    "recast": false,
    "base": true,
    "supplied": true
+  },
+  {
+   "source_label": "Magil (split)",
+   "text": "and knew",
+   "recast": false
   },
   {
    "source_label": "Shoresh (root)",
@@ -35699,6 +36329,11 @@
    "supplied": false
   },
   {
+   "source_label": "Magil (split)",
+   "text": "And he said",
+   "recast": false
+  },
+  {
    "source_label": "Shoresh (root)",
    "text": "said",
    "recast": false
@@ -35860,6 +36495,11 @@
    "recast": false,
    "base": true,
    "supplied": true
+  },
+  {
+   "source_label": "Magil (split)",
+   "text": "And he said",
+   "recast": false
   },
   {
    "source_label": "Shoresh (root)",
@@ -36178,6 +36818,11 @@
    "recast": false,
    "base": true,
    "supplied": true
+  },
+  {
+   "source_label": "Magil (split)",
+   "text": "and he shall dwell",
+   "recast": false
   },
   {
    "source_label": "Shoresh (root)",
@@ -36768,6 +37413,11 @@
    "recast": false,
    "base": true,
    "supplied": false
+  },
+  {
+   "source_label": "Magil (split)",
+   "text": "and he died",
+   "recast": false
   },
   {
    "source_label": "Shoresh (root)",
@@ -37399,6 +38049,11 @@
    "supplied": false
   },
   {
+   "source_label": "Magil (split)",
+   "text": "and Togarmah",
+   "recast": false
+  },
+  {
    "source_label": "Shoresh (root)",
    "text": "Togarmah.",
    "recast": false
@@ -37688,6 +38343,11 @@
    "supplied": false
   },
   {
+   "source_label": "Magil (split)",
+   "text": "in their lands",
+   "recast": false
+  },
+  {
    "source_label": "Shoresh (root)",
    "text": "earth/land",
    "recast": false
@@ -37755,6 +38415,11 @@
    "supplied": false
   },
   {
+   "source_label": "Magil (split)",
+   "text": "after their families",
+   "recast": false
+  },
+  {
    "source_label": "Shoresh (root)",
    "text": "family",
    "recast": false
@@ -37792,6 +38457,11 @@
    "recast": false,
    "base": true,
    "supplied": false
+  },
+  {
+   "source_label": "Magil (split)",
+   "text": "in their nations",
+   "recast": false
   },
   {
    "source_label": "Shoresh (root)",
@@ -38812,6 +39482,11 @@
    "supplied": false
   },
   {
+   "source_label": "Magil (split)",
+   "text": "Like Nimrod",
+   "recast": false
+  },
+  {
    "source_label": "Shoresh (root)",
    "text": "Nimrod.",
    "recast": false
@@ -38960,6 +39635,11 @@
    "recast": false,
    "base": true,
    "supplied": true
+  },
+  {
+   "source_label": "Magil (split)",
+   "text": "And it was",
+   "recast": false
   },
   {
    "source_label": "Shoresh (root)",
@@ -41393,6 +42073,11 @@
    "supplied": false
   },
   {
+   "source_label": "Magil (split)",
+   "text": "from Zidon",
+   "recast": false
+  },
+  {
    "source_label": "Shoresh (root)",
    "text": "Tsidon",
    "recast": false
@@ -41817,6 +42502,11 @@
    "supplied": false
   },
   {
+   "source_label": "Magil (split)",
+   "text": "after their families",
+   "recast": false
+  },
+  {
    "source_label": "Shoresh (root)",
    "text": "family",
    "recast": false
@@ -41856,6 +42546,11 @@
    "supplied": false
   },
   {
+   "source_label": "Magil (split)",
+   "text": "after their tongues",
+   "recast": false
+  },
+  {
    "source_label": "Shoresh (root)",
    "text": "tongue",
    "recast": false
@@ -41878,6 +42573,11 @@
    "recast": false,
    "base": true,
    "supplied": false
+  },
+  {
+   "source_label": "Magil (split)",
+   "text": "in their lands",
+   "recast": false
   },
   {
    "source_label": "Shoresh (root)",
@@ -41912,6 +42612,11 @@
    "recast": false,
    "base": true,
    "supplied": false
+  },
+  {
+   "source_label": "Magil (split)",
+   "text": "in their nations",
+   "recast": false
   },
   {
    "source_label": "Shoresh (root)",
@@ -42351,6 +43056,11 @@
    "recast": false,
    "base": true,
    "supplied": false
+  },
+  {
+   "source_label": "Magil (split)",
+   "text": "and Arpachshad",
+   "recast": false
   },
   {
    "source_label": "Shoresh (root)",
@@ -44185,6 +44895,11 @@
    "supplied": false
   },
   {
+   "source_label": "Magil (split)",
+   "text": "from Mesha",
+   "recast": false
+  },
+  {
    "source_label": "Shoresh (root)",
    "text": "Mesha.",
    "recast": false
@@ -44398,6 +45113,11 @@
    "supplied": false
   },
   {
+   "source_label": "Magil (split)",
+   "text": "after their families",
+   "recast": false
+  },
+  {
    "source_label": "Shoresh (root)",
    "text": "family",
    "recast": false
@@ -44437,6 +45157,11 @@
    "supplied": false
   },
   {
+   "source_label": "Magil (split)",
+   "text": "after their tongues",
+   "recast": false
+  },
+  {
    "source_label": "Shoresh (root)",
    "text": "tongue",
    "recast": false
@@ -44454,6 +45179,11 @@
    "recast": false,
    "base": true,
    "supplied": false
+  },
+  {
+   "source_label": "Magil (split)",
+   "text": "in their lands",
+   "recast": false
   },
   {
    "source_label": "Shoresh (root)",
@@ -44483,6 +45213,11 @@
    "recast": false,
    "base": true,
    "supplied": false
+  },
+  {
+   "source_label": "Magil (split)",
+   "text": "after their nations",
+   "recast": false
   },
   {
    "source_label": "Shoresh (root)",
@@ -44625,6 +45360,11 @@
    "supplied": false
   },
   {
+   "source_label": "Magil (split)",
+   "text": "after their generations",
+   "recast": false
+  },
+  {
    "source_label": "Shoresh (root)",
    "text": "generations of",
    "recast": false
@@ -44659,6 +45399,11 @@
    "supplied": false
   },
   {
+   "source_label": "Magil (split)",
+   "text": "in their nations",
+   "recast": false
+  },
+  {
    "source_label": "Shoresh (root)",
    "text": "nation",
    "recast": false
@@ -44691,6 +45436,11 @@
    "recast": false,
    "base": true,
    "supplied": false
+  },
+  {
+   "source_label": "Magil (split)",
+   "text": "and of these",
+   "recast": false
   },
   {
    "source_label": "Shoresh (root)",
@@ -44783,6 +45533,11 @@
    "recast": false,
    "base": true,
    "supplied": false
+  },
+  {
+   "source_label": "Magil (split)",
+   "text": "on the earth",
+   "recast": false
   },
   {
    "source_label": "Shoresh (root)",
@@ -45115,6 +45870,11 @@
    "supplied": false
   },
   {
+   "source_label": "Magil (split)",
+   "text": "And it came to pass",
+   "recast": false
+  },
+  {
    "source_label": "Shoresh (root)",
    "text": "was",
    "recast": false
@@ -45404,6 +46164,11 @@
    "recast": false,
    "base": true,
    "supplied": true
+  },
+  {
+   "source_label": "Magil (split)",
+   "text": "And they said",
+   "recast": false
   },
   {
    "source_label": "Shoresh (root)",
@@ -45739,6 +46504,11 @@
    "supplied": true
   },
   {
+   "source_label": "Magil (split)",
+   "text": "for stone",
+   "recast": false
+  },
+  {
    "source_label": "Shoresh (root)",
    "text": "stone",
    "recast": false
@@ -45756,6 +46526,11 @@
    "recast": false,
    "base": true,
    "supplied": true
+  },
+  {
+   "source_label": "Magil (split)",
+   "text": "and slime",
+   "recast": false
   },
   {
    "source_label": "Shoresh (root)",
@@ -45877,6 +46652,11 @@
    "recast": false,
    "base": true,
    "supplied": true
+  },
+  {
+   "source_label": "Magil (split)",
+   "text": "And they said",
+   "recast": false
   },
   {
    "source_label": "Shoresh (root)",
@@ -46027,6 +46807,11 @@
    "recast": false,
    "base": true,
    "supplied": true
+  },
+  {
+   "source_label": "Magil (split)",
+   "text": "and a tower",
+   "recast": false
   },
   {
    "source_label": "Shoresh (root)",
@@ -47099,6 +47884,11 @@
    "supplied": true
   },
   {
+   "source_label": "Magil (split)",
+   "text": "to do",
+   "recast": false
+  },
+  {
    "source_label": "Shoresh (root)",
    "text": "made/did",
    "recast": false
@@ -47309,6 +48099,11 @@
    "recast": false,
    "base": true,
    "supplied": true
+  },
+  {
+   "source_label": "Magil (split)",
+   "text": "to do",
+   "recast": false
   },
   {
    "source_label": "Shoresh (root)",
@@ -47742,6 +48537,11 @@
  ],
  "1565": [
   {
+   "source_label": "Magil (split)",
+   "text": "from thence",
+   "recast": false
+  },
+  {
    "source_label": "Shoresh (root)",
    "text": "there",
    "recast": false
@@ -47911,6 +48711,11 @@
    "recast": false,
    "base": true,
    "supplied": false
+  },
+  {
+   "source_label": "Magil (split)",
+   "text": "and they ceased",
+   "recast": false
   },
   {
    "source_label": "Shoresh (root)",
@@ -48366,6 +49171,11 @@
    "recast": false,
    "base": true,
    "supplied": false
+  },
+  {
+   "source_label": "Magil (split)",
+   "text": "and from thence",
+   "recast": false
   },
   {
    "source_label": "Shoresh (root)",
@@ -54882,6 +55692,11 @@
    "supplied": false
   },
   {
+   "source_label": "Magil (split)",
+   "text": "barren",
+   "recast": false
+  },
+  {
    "source_label": "Shoresh (root)",
    "text": "male or female barren woman .",
    "recast": false
@@ -55513,6 +56328,11 @@
    "recast": false,
    "base": true,
    "supplied": false
+  },
+  {
+   "source_label": "Magil (split)",
+   "text": "to go",
+   "recast": false
   },
   {
    "source_label": "Shoresh (root)",

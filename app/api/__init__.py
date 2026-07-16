@@ -119,6 +119,29 @@ def reveal(learner_id):
     return jsonify({"translation": word.translation})
 
 
+@api.get("/learners/<int:learner_id>/read")
+def read_surface(learner_id):
+    """The reading surface: the whole parsha in order, Hebrew only.
+
+    No translation is ever sent here — a gloss arrives only through /reveal,
+    and /reveal is what records the tap into the drill pool. That keeps the
+    reveal the single gate: the client cannot show a learner a meaning it
+    didn't ask for, so a tap always means what we think it means.
+
+    Uncertified words ARE included, so the Torah text reads continuously, but
+    they carry certified=false and /reveal refuses them (403). The surface
+    shows that state plainly rather than dying silently on the tap.
+    """
+    db.get_or_404(Learner, learner_id)
+    unit_id = request.args.get("unit_id", type=int)
+    unit = db.get_or_404(Unit, unit_id)
+    words = Word.query.filter_by(unit_id=unit_id).order_by(Word.position).all()
+    return jsonify({
+        "unit": {"id": unit.id, "name": unit.name},
+        "words": [dict(word_json(w), certified=w.certified) for w in words],
+    })
+
+
 # --- Drill mode -------------------------------------------------------------
 
 @api.get("/learners/<int:learner_id>/drill")
