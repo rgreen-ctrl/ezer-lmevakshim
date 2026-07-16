@@ -82,12 +82,8 @@ class Word(db.Model):
     position = db.Column(db.Integer, nullable=False)  # ordinal word in unit
     aliyah = db.Column(db.Integer)  # milestone level within the parsha (1-7)
     hebrew = db.Column(db.String(120), nullable=False)
-    translation = db.Column(db.String(255), nullable=False)  # Layer 2: literal, as-it-appears
-    shoresh = db.Column(db.String(60))                       # Hebrew root spelling (דּוֹר)
-    # Layer 1 (Shoresh / root): the bare root meaning in English, a single
-    # primary sense (e.g. "generation"), clean vocabulary. Reseeded from
-    # Strong's primary <def>; alternate senses live in `suggestions` as chips.
-    root_gloss = db.Column(db.String(255))
+    translation = db.Column(db.String(255), nullable=False)  # literal/shoresh gloss
+    shoresh = db.Column(db.String(60))
     # Contextual translation: the word rendered in full with its prefix and
     # suffix folded in (e.g. "in his generations"), a DRAFT for editor review,
     # distinct from and never overwriting the literal `translation`. Flagged
