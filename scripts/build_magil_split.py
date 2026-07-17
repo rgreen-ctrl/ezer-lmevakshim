@@ -44,12 +44,39 @@ def tokens(en):
     en = "".join(ch for ch in en if ch not in SUPS)  # footnote markers aren't words
     return re.findall(r"[A-Za-z][A-Za-z'\-]*", en)
 
+LABEL_ELL = "Magil (ellipsis collapsed)"
+
+# verb positions from morphhb, for the one-word collapse rule
+sys_path_added = False
+import sys as _sys
+_sys.path.insert(0, os.path.join(ROOT, "scripts"))
+from build_contextual import parse_morphhb, ref_to_cv
+_morph = parse_morphhb()
+is_verb = {}
+for _ref_cv, _mws in _morph.items():
+    for _i, _mw in enumerate(_mws, start=1):
+        pass  # positions are unit-global; map via live words below
+
+# live positions are unit-global; morph is per-verse in order — align by verse
+from collections import defaultdict as _dd
+_byref = _dd(list)
+for _w in lw:
+    _byref[_w["ref"]].append(_w)
+for _ref, _ws in _byref.items():
+    _ws.sort(key=lambda w: w["pos"])
+    _mws = _morph.get(ref_to_cv(_ref), [])
+    if len(_mws) == len(_ws):
+        for _w, _mw in zip(_ws, _mws):
+            is_verb[(_ref, _w["pos"])] = bool(_mw.get("is_verb"))
+
 # idempotent
 for wid in sugg:
-    sugg[wid] = [c for c in sugg[wid] if c.get("source_label") != LABEL]
+    sugg[wid] = [c for c in sugg[wid]
+                 if c.get("source_label") not in (LABEL, LABEL_ELL)]
 
 why = Counter()
 proposed = {}
+collapsed = {}
 for ref, entry in lines.items():
     for ln in entry.get("lines", []):
         pos = ln.get("positions", [])
@@ -58,7 +85,25 @@ for ref, entry in lines.items():
         if not n:
             continue
         if ELLIPSIS.search(en):
-            why["skipped: ellipsis (split construction)"] += n
+            # THE ONE-WORD COLLAPSE RULE (confirmed by Rabbi Green): collapse an
+            # ellipsis only when, after accounting for the straddled material,
+            # exactly ONE Hebrew word remains to receive the literal. For a
+            # 2-word line where exactly one word is the verb and the other is
+            # the straddling subject ("and … was filled" over ותמלא הארץ), the
+            # collapsed English is the verb's literal. 6:9's "a … man" over
+            # THREE words stays refused — still a positional guess.
+            if n == 2:
+                verbs = [i for i, p in enumerate(pos) if is_verb.get((ref, p))]
+                if len(verbs) == 1:
+                    toks = tokens(en)
+                    if toks:
+                        wid = pos2id.get((ref, pos[verbs[0]]))
+                        if wid is not None:
+                            collapsed[wid] = " ".join(toks)
+                            why["PROPOSED: ellipsis collapsed (one word left to receive)"] += 1
+                            why["skipped: ellipsis-line partner word (straddled material)"] += n - 1
+                            continue
+            why["skipped: ellipsis (split construction, not collapsible)"] += n
             continue
         # A footnote mark only creates AMBIGUITY on a multi-word line (which
         # word does the note attach to?) — and those are refused anyway. On a
@@ -90,6 +135,10 @@ for wid, tok in proposed.items():
     chips = sugg.setdefault(str(wid), [])
     at = 1 if chips and chips[0].get("base") else 0
     chips.insert(at, {"source_label": LABEL, "text": tok, "recast": False})
+for wid, tok in collapsed.items():
+    chips = sugg.setdefault(str(wid), [])
+    at = 1 if chips and chips[0].get("base") else 0
+    chips.insert(at, {"source_label": LABEL_ELL, "text": tok, "recast": False})
 
 json.dump(sugg, open(sugg_path, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
 

@@ -727,7 +727,8 @@ function chipTarget(label) {
   // Magil's per-word offerings — his footnote literal, and his line split where
   // the line covered exactly one word — belong to the LITERAL layer. Only his
   // flowing line English belongs to Layer 3.
-  if (label.startsWith('Magil literal') || label.startsWith('Magil (split)')) return 'wp-gloss';
+  if (label.startsWith('Magil literal') || label.startsWith('Magil (split)')
+      || label.startsWith('Magil (ellipsis')) return 'wp-gloss';
   if (label.startsWith('Magil') || label.startsWith('Plainer English')) return 'wp-contextual';
   return 'wp-gloss';   // Morphology, Binyan, Rashi, Root -> literal layer
 }

@@ -38,6 +38,7 @@ for v in byverse.values():
     v.sort(key=lambda w: w["pos"])
 
 MORPH_LABEL = "Morphology (morphhb)"
+NEW_MORPH_LABEL = "Morphology (raw: prefix + root)"
 stats = {"morphology_recomposed": 0, "binyan_recomposed": 0,
          "skipped_no_root": 0, "skipped_unaligned": 0}
 samples = []
@@ -56,8 +57,15 @@ for cv, lwords in sorted(byverse.items()):
             continue
         mw = mwords[i]
         chips = sugg.get(wid, [])
-        # Morphology: the affix-folded draft, now from the clean root.
-        newm = compose(mw["prefixes"], mw["suffix"], root, mw["is_verb"], mw["is_np"])
+        # Morphology: VISIBLY RAW (Rabbi Green's call — no inflection engine).
+        # 'and + fill' announces it needs a human; 'and was filled' from a
+        # machine invites a rubber stamp. Crude drafts get read; fluent drafts
+        # get approved. Joined with ' + ' so it can never pass as English.
+        parts = list(mw["prefixes"])
+        if mw["suffix"] and not mw["is_verb"]:
+            parts.append(mw["suffix"])
+        parts.append(root)
+        newm = " + ".join(p for p in parts if p).strip()
         # Binyan: the non-qal nuance, now from the clean root.
         newb = None
         cm = mw.get("content_morph") or ""
@@ -68,10 +76,11 @@ for cv, lwords in sorted(byverse.items()):
         out = []
         for c in chips:
             lab = c.get("source_label", "")
-            if lab == MORPH_LABEL and newm:
+            if lab in (MORPH_LABEL, NEW_MORPH_LABEL) and newm:
                 if c["text"] != newm:
                     samples.append((lw["ref"], lw["he"], lab, c["text"], newm))
-                c = dict(c, text=newm); stats["morphology_recomposed"] += 1
+                c = dict(c, source_label=NEW_MORPH_LABEL, text=newm)
+                stats["morphology_recomposed"] += 1
             elif lab.startswith("Binyan:"):
                 if newb:
                     if c["text"] != newb[1]:
