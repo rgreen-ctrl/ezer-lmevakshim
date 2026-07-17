@@ -12,9 +12,14 @@ Desk, word by word.
   item's own OCR contains all five books — Bamidbar running heads incl.
   Balak). Genesis sits at the HIGH leaf numbers (RTL: Noach = 512–500);
   Shemos→Devarim continue at lower leaves. Map each sefer's leaf range from
-  the OCR before capturing. TRAP: archive.org's on-demand `_medium`
-  derivatives are flaky — a 1.6KB placeholder does NOT mean the leaf doesn't
-  exist; only uncached leaves fail. Download originals, don't probe derivatives.
+  the OCR before capturing. TRAP (corrected 2026-07-17): the ~1.6KB
+  "placeholder" responses were NOT archive.org — `file` showed them to be
+  HTML titled **"GenTech BlockPage"**. The office network's GenTech filter
+  intercepts archive.org downloads and returns its block page with HTTP 200,
+  so failures look like flaky derivatives. Check the BYTES of any suspicious
+  small download (`file`/`head`) before blaming the source. UNBLOCK: Rabbi
+  Green whitelists archive.org in GenTech; page capture is impossible until
+  then (Noach's originals predate the block).
 - **Sefaria licenses are PER VERSION.** Always `GET /api/texts/versions/<index>`
   and check `license` in-body on EVERY fetch. The forbidden CC-BY-NC
   Metsudah/Sifsei Chachomim sit under the same slugs as the PD versions.
