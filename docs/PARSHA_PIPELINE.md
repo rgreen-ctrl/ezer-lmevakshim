@@ -7,11 +7,14 @@ Desk, word by word.
 
 ## Step 0 — Verify the sources exist and are kosher (BEFORE any work)
 
-- **Magil**: confirm the Linear School Bible actually covers the target sefer.
-  The scanned item `magilslinearscho00magirich` (archive.org) is **Genesis**.
-  Other volumes must be located and PD-verified before promising Magil for
-  Shemos onward. If no Magil exists for the sefer, STOP — the base-translation
-  slot is an open decision for Rabbi Green, not a substitution you make.
+- **Magil**: RESOLVED (2026-07-17) — `magilslinearscho00magirich` is the
+  **complete 5-in-1 Chumash** (HathiTrust 102776770: "5 volumes in 1"; the
+  item's own OCR contains all five books — Bamidbar running heads incl.
+  Balak). Genesis sits at the HIGH leaf numbers (RTL: Noach = 512–500);
+  Shemos→Devarim continue at lower leaves. Map each sefer's leaf range from
+  the OCR before capturing. TRAP: archive.org's on-demand `_medium`
+  derivatives are flaky — a 1.6KB placeholder does NOT mean the leaf doesn't
+  exist; only uncached leaves fail. Download originals, don't probe derivatives.
 - **Sefaria licenses are PER VERSION.** Always `GET /api/texts/versions/<index>`
   and check `license` in-body on EVERY fetch. The forbidden CC-BY-NC
   Metsudah/Sifsei Chachomim sit under the same slugs as the PD versions.
