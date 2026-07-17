@@ -751,9 +751,12 @@ async function saveContextual() {
       { contextual_translation: $('wp-contextual').value });
     const w = (S.pwords || []).find(x => x.id === S.word);
     if (w) { w.contextual = data.contextual_translation; w.contextual_flagged = data.contextual_flagged; }
+    // Line-model cells have no .ctx span (the flowing English lives on the
+    // line, not under each word) — guard so the save never dies mid-flight.
     const el = document.getElementById('iw' + S.word);
-    if (el) el.querySelector('.ctx').textContent = data.contextual_translation || '—';
-    $('wp-status').textContent = 'Saved ✓ contextual translation.';
+    const ctxEl = el && el.querySelector('.ctx');
+    if (ctxEl) ctxEl.textContent = data.contextual_translation || '—';
+    $('wp-status').textContent = 'Saved ✓ flowing (Layer 3).';
   } catch (e) { $('wp-status').textContent = 'Not saved: ' + e.message; }
 }
 
@@ -800,7 +803,8 @@ async function saveGloss() {
     const w = (S.pwords || []).find(x => x.id === S.word);
     if (w) w.gloss = data.gloss;
     const el = document.getElementById('iw' + S.word);
-    if (el) el.querySelector('.gl').textContent = data.gloss;
+    const glEl = el && el.querySelector('.gl');
+    if (glEl) glEl.textContent = data.gloss;
     $('wp-status').textContent = 'Saved ✓ literal gloss.';
   } catch (e) { $('wp-status').textContent = 'Not saved: ' + e.message; }
 }
