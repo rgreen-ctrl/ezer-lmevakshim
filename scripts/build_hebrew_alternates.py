@@ -26,13 +26,27 @@ morph = parse_morphhb()
 
 PRON = {"1cs":"I","2ms":"you","2fs":"you","3ms":"he","3fs":"she",
         "1cp":"we","2mp":"you","3mp":"they","3fp":"they","3cp":"they"}
+# INFLECT OR PROPOSE NOTHING (Rabbi Green's ruling): a template may only be
+# emitted when the root's needed English forms are in this curated table.
+# {root_gloss: (past, participle)} — extend as combos get decided.
+INFLECT = {
+    "bore (child)": ("fathered", "born"), "was": ("was", "been"),
+    "lived": ("lived", "lived"), "made/did": ("made", "made"),
+    "said": ("said", "said"), "came/brought": ("came", "brought"),
+    "took": ("took", "taken"), "went out": ("went out", "gone out"),
+    "fill": ("filled", "filled"), "corrupted": ("corrupted", "corrupted"),
+    "saw": ("saw", "seen"), "walked": ("walked", "walked"),
+    "died": ("died", "died"), "went": ("went", "gone"),
+    "blessed": ("blessed", "blessed"), "built": ("built", "built"),
+    "sent": ("sent", "sent"), "returned": ("returned", "returned"),
+}
 # binyan -> templates over (pron, root). Mechanical composition only.
 TPL = {
     "q": ["{p} {r}"],
     "N": ["{p} was {r}", "there was {r} to {p2}"],
     "p": ["{p} {r} (intensive)"],
     "P": ["{p} was {r} (intensive)"],
-    "h": ["{p} caused to {r}", "there were {r} to {p2}", "{p} had {r}"],
+    "h": ["{p} caused to be {r}", "there were {r} to {p2}", "{p} had {r}"],
     "H": ["{p} was caused to {r}"],
     "t": ["{p} {r} (oneself)"],
 }
@@ -63,13 +77,18 @@ for ref, ws in byref.items():
         biny = cm[1]
         tpls = TPL.get(biny)
         if not tpls: continue
+        forms = INFLECT.get(root)
+        if not forms:
+            continue                     # no known inflection -> SILENCE
+        past, part = forms
         vav = "and " if "and" in (mw.get("prefixes") or []) else ""
-        shoresh = w.get("sh") or ""
         combos[(root, biny)] += 1
         chips = sugg.setdefault(str(w["id"]), [])
         names = {"q":"kal","N":"nifal","p":"piel","P":"pual","h":"hifil","H":"hofal","t":"hitpael"}
         for t in tpls:
-            txt = vav + t.format(p=pron, r=root, p2=OBJ.get(pron, pron))
+            # past form in active frames, participle in passive/there-were frames
+            r = part if ("was" in t or "were" in t or "caused" in t) else past
+            txt = vav + t.format(p=pron, r=r, p2=OBJ.get(pron, pron))
             chips.append({"source_label": f"{LABEL_PRE}{names[biny]}, {m.group(1)}",
                           "text": txt, "recast": False})
         covered += 1

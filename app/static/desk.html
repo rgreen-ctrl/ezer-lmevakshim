@@ -530,14 +530,18 @@ async function loadPasuk(idx) {
 // `translation` column, which still holds Strong's KJV-usage dumps for 535
 // words ("cruel-ty, damage" for חמס). Falls back to translation only where no
 // root gloss exists (the 22 particles/names with no lexicon entry).
+// ALL THREE LAYERS visible per word: L1 shoresh (grey) and L2 literal (blue)
+// under each Hebrew word; L3 flowing is Magil's line beneath the group.
 const wordLit = w => w.root_gloss || w.gloss || '';
 function wordCellHTML(w, showCtx) {
-  const lit = wordLit(w);
+  const l1 = w.root_gloss || '';
+  const l2 = w.gloss || '';
   return `<span class="iw ${w.certified ? 'certified' : ''} ${w.open_flags ? 'flagged' : ''} ${w.contextual_flagged ? 'ctxflag' : ''}"
        id="iw${w.id}" role="button" tabindex="0" onclick="pickWord(${w.id})"
-       aria-label="${(w.hebrew || '')}, ${lit}${w.certified ? ', certified' : ''}${w.confidence ? ', ' + w.confidence + ' confidence' : ''}">
-       <span class="he">${w.hebrew}</span><span class="conf conf-${w.confidence || 'high'}"></span><span class="gl">${esc(lit)}</span>`
-    + (showCtx ? `<span class="ctx">${w.contextual || '&mdash;'}${w.contextual_flagged ? ' ⚑' : ''}</span>` : '')
+       aria-label="${(w.hebrew || '')}, root ${l1 || 'none'}, literal ${l2 || 'none'}${w.certified ? ', certified' : ''}">
+       <span class="he">${w.hebrew}</span><span class="conf conf-${w.confidence || 'high'}"></span>`
+    + `<span class="gl">${esc(l1) || '·'}</span>`
+    + `<span class="ctx">${esc(l2) || '·'}${w.contextual_flagged ? ' ⚑' : ''}</span>`
     + `</span>`;
 }
 
