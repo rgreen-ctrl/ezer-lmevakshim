@@ -364,41 +364,25 @@ async function renderSources(ref) {
 // as-is and attributed. No morphology exists for Onkelos's Aramaic, so we
 // query the surface form plus obvious prefix-stripped variants and present
 // every Jastrow candidate; if none match, we say so plainly. Fills nothing.
+// Served from OUR origin (app/static/jastrow_noach.json) — swept once from the
+// PD 1903 edition with every 'v. X' cross-reference resolved at build time.
+// No live round-trip: no dead links, no filter in the path, instant.
+let JASTROW_CACHE = null;
 async function jastrow(word) {
   const out = $('jastrow-out');
   out.innerHTML = `<em>Looking up ${esc(word)} in Jastrow…</em>`;
-  const variants = [word];
-  if (/^[ובדלכמש]/.test(word) && word.length > 2) variants.push(word.slice(1));
-  if (/^[וב][דלכמש]/.test(word) && word.length > 3) variants.push(word.slice(2));
-  const seen = new Set(); const hits = [];
-  async function collect(form, viaLabel, depth) {
-    let r;
-    try { r = await fetch('https://www.sefaria.org/api/words/' + encodeURIComponent(form)); }
-    catch (err) { return; }
-    if (!r.ok) return;
-    for (const e of await r.json()) {
-      if (!(e.parent_lexicon || '').includes('Jastrow') || seen.has(e.headword)) continue;
-      seen.add(e.headword);
-      const senses = ((e.content || {}).senses || [])
-        .map(s => (s.definition || '')).join(' ');
-      hits.push({ hw: e.headword, def: senses, via: viaLabel });
-      // A cross-reference ("v. X") is a signpost, not a definition — follow it
-      // once and show the TARGET entry too, labeled as reached via the pointer.
-      if (depth < 2) {
-        const plain = senses.replace(/<[^>]+>/g, ' ');
-        const xref = plain.match(/(?:^|[\s(])(?:v\.|cmp\.)\s+([֐-׿][֐-׿ְ-ׇ]*)/);
-        if (xref && plain.replace(/\s+/g, ' ').trim().length < 120) {
-          await collect(xref[1].replace(/[ְ-ׇ]/g, ''),
-                        `cross-reference from ${e.headword}`, depth + 1);
-        }
-      }
-    }
+  if (JASTROW_CACHE === null) {
+    try { JASTROW_CACHE = await (await fetch('/jastrow_noach.json')).json(); }
+    catch (e) { JASTROW_CACHE = {}; }
   }
-  for (const v of variants) await collect(v, v === word ? word : v, 1);
+  const hits = (JASTROW_CACHE[word] || []).map(h => ({
+    hw: h.hw, def: h.def,
+    via: h.via ? (h.via.startsWith('xref:')
+                  ? 'cross-reference from ' + h.via.slice(5) : h.via) : word }));
   if (!hits.length) {
-    out.innerHTML = `No Jastrow entry found for ${esc(word)}`
-      + (variants.length > 1 ? ` (also tried ${variants.slice(1).map(esc).join(', ')})` : '')
-      + `. Root identification is yours — this lookup only matches surface forms.`;
+    out.innerHTML = `No Jastrow entry found for ${esc(word)} (surface form and `
+      + `prefix-stripped variants were swept at build time). Root identification `
+      + `is yours — the cache only matches surface forms.`;
     return;
   }
   out.innerHTML = `<p class="note">Jastrow candidates for ${esc(word)} — `
