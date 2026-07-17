@@ -232,7 +232,8 @@
       <p class="note" id="wp-shoresh-he"></p>
       <div class="layer">
         <label for="wp-root"><b>Layer 1 — Shoresh (root meaning)</b> · the bare root, vocabulary (e.g. “generation”)</label>
-        <div class="layer-row"><input id="wp-root"><button onclick="saveRoot()">Save shoresh</button></div>
+        <div class="layer-row"><input id="wp-root"><button onclick="saveRoot('one')">Save shoresh</button></div>
+        <button id="wp-root-global" class="quiet hidden" onclick="saveRoot('root')"></button>
       </div>
       <div class="layer">
         <label for="wp-gloss"><b>Layer 2 — Literal</b> · the word as it appears, affixes included (e.g. “in his generations”)</label>
@@ -686,6 +687,7 @@ function pickWord(id) {
   $('wp-title').textContent = w.hebrew || '';
   $('wp-shoresh-he').textContent = w.shoresh ? ('Hebrew root: ' + w.shoresh) : '';
   $('wp-root').value = w.root_gloss || '';
+  $('wp-root-global').classList.add('hidden');   // offer is per-save, per-word
   $('wp-gloss').value = w.gloss || '';
   $('wp-contextual').value = w.contextual || '';
   $('wp-note').textContent = w.contextual_note ? ('⚑ ' + w.contextual_note) : '';
@@ -766,12 +768,30 @@ async function approveWord() {
     $('wp-status').textContent = 'Approved ✓ certified. You can Reopen it later to change it.';
   } catch (e) { $('wp-status').textContent = 'Not approved: ' + e.message; }
 }
-async function saveRoot() {
+// Shoresh saves are single-word by DEFAULT; after each save, if other words
+// share the root, a separate button offers the global pass — the editor
+// chooses every time. Certified words are never touched globally; the server
+// reports them back to reopen deliberately. (No global exists for Layer 2:
+// the same root inflects differently, so a global literal is usually wrong.)
+async function saveRoot(scope) {
   try {
-    const data = await api(`/desk/words/${S.word}/root`, { root_gloss: $('wp-root').value });
+    const data = await api(`/desk/words/${S.word}/root`,
+      { root_gloss: $('wp-root').value, scope: scope || 'one' });
     const w = (S.pwords || []).find(x => x.id === S.word);
     if (w) w.root_gloss = data.root_gloss;
-    $('wp-status').textContent = 'Saved ✓ shoresh (root meaning).';
+    let msg = scope === 'root'
+      ? `Saved ✓ shoresh on ${data.changed} words with this root.`
+      : 'Saved ✓ shoresh (this word only).';
+    if (data.certified_skipped.length)
+      msg += ` ${data.certified_skipped.length} certified untouched — reopen to change: ${data.certified_skipped.join(', ')}.`;
+    $('wp-status').textContent = msg;
+    const g = $('wp-root-global');
+    if (scope !== 'root' && data.same_root_others > 0) {
+      g.textContent = `Apply to all ${data.same_root_others} other words with this shoresh`;
+      g.setAttribute('aria-label',
+        `Apply this root meaning to all ${data.same_root_others} other words sharing this shoresh. Certified words are never changed.`);
+      g.classList.remove('hidden');
+    } else { g.classList.add('hidden'); }
   } catch (e) { $('wp-status').textContent = 'Not saved: ' + e.message; }
 }
 async function saveGloss() {

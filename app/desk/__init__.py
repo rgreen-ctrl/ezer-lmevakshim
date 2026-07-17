@@ -194,15 +194,45 @@ def contextual(word_id):
 
 @desk.post("/words/<int:word_id>/root")
 def root_gloss(word_id):
-    """Edit the DRAFT Layer-1 root meaning (shoresh). Draft-only, like the
-    contextual field: never touches the literal `translation` or certified
-    state. Certification is still the pasuk/word action."""
+    """Edit the DRAFT Layer-1 root meaning (shoresh).
+
+    scope='one' (default): this word only. scope='root': every word sharing
+    this Hebrew shoresh — global is NEVER the default; the editor chooses each
+    time. Certified words are never touched by a global pass: they are
+    reported back for the editor to reopen deliberately. Every change writes a
+    GlossRevision row (audit; rows are never deleted). Layer 2 has no global —
+    the same root inflects differently, so a global literal is usually wrong."""
     word = db.get_or_404(Word, word_id)
     data = request.get_json(force=True)
-    val = (data.get("root_gloss") or "").strip()
-    word.root_gloss = val or None
+    val = (data.get("root_gloss") or "").strip() or None
+    scope = data.get("scope", "one")
+    changed, skipped_certified = [], []
+    targets = [word]
+    siblings = []
+    if word.shoresh:
+        siblings = (Word.query.filter(Word.shoresh == word.shoresh,
+                                      Word.id != word.id).all())
+    if scope == "root":
+        targets += siblings
+    for w in targets:
+        if w.certified and w.id != word.id:
+            skipped_certified.append(w.ref)
+            continue
+        if (w.root_gloss or None) != val:
+            db.session.add(GlossRevision(
+                word_id=w.id, editor_id=g.staff.id,
+                old_gloss=f"[shoresh] {w.root_gloss or ''}",
+                new_gloss=f"[shoresh] {val or ''}"))
+            w.root_gloss = val
+            changed.append(w.id)
     db.session.commit()
-    return jsonify({"root_gloss": word.root_gloss})
+    return jsonify({
+        "root_gloss": word.root_gloss,
+        "scope": scope,
+        "changed": len(changed),
+        "same_root_others": len(siblings),
+        "certified_skipped": skipped_certified,   # reopen these deliberately
+    })
 
 
 @desk.post("/words/<int:word_id>/flag")
