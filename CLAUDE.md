@@ -114,6 +114,25 @@ Each entry states: what was done, what changed on live (never secrets), and
 what's next. Logging any step that touches the live database or `main` is
 mandatory. Never ask permission to log — it is automatic.
 
+## Runbook protocol (mandatory, automatic — same discipline as Craft)
+
+`docs/PARSHA_PIPELINE.md` is a LIVING document. Update it DURING the work,
+the moment anything changes — never batched to session end, where it dies
+with the context. Update it when:
+
+- Rabbi Green makes a ruling (ketiv → qere only; place names transliterated;
+  Magil overrides Strong's on conflict; silence beats a guess)
+- A trap is hit (per-version Sefaria licenses; Metsudah under the same slug;
+  archive.org's cross-origin redirect; relative links 404ing on our domain;
+  a DOM change orphaning a selector)
+- A source's status changes (R-S PD dates by book; Magil volume coverage)
+- A rule is narrowed or widened (the ellipsis one-word rule)
+- Something fails and gets fixed — record WHAT BROKE AND WHY, not just the fix
+
+If a step isn't in the runbook, the next session redoes the mistake. Rules
+that live only in a session's memory die with the session. Both records —
+Craft and the runbook — live, both updated during the work.
+
 ## Live-command boundary
 
 - Commands against the live environment use `railway ssh` ONLY (runs inside

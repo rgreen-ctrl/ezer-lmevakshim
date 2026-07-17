@@ -117,6 +117,35 @@ rendered production page** — DB reads and served-file checks all passed while
 the Desk was broken (filter block, cached redirect, lazy-load, .ctx crash).
 The Desk never fails silently; every error path prints what happened.
 
+## Trap log (what broke and WHY — append as it happens)
+
+- **Verified-while-broken, three times (2026-07-16).** DB reads, served-file
+  checks, and local replicas all passed while the user's Desk was broken: a
+  content filter categorized the domain "Religion" mid-day (triggered by the
+  Torah content itself going live); a cached redirect survived hard-refresh;
+  `loading="lazy"` deferred a below-the-fold image forever. WHY it stuck:
+  every check ran on the server side of the user's network. RULE: only a
+  human reading the rendered production page verifies a Desk change.
+- **archive.org hotlinks:** `/download/` 302s to a different origin — filters
+  kill it silently, and `_medium` is unreadable anyway. Cache scans locally.
+- **Sefaria per-tap fetches:** cross-refs are signposts ("v. X"), internal
+  links are relative (404 on our domain). Sweep + resolve at build time,
+  serve from our origin (`jastrow_noach.json`).
+- **DOM refactors orphan selectors:** the line-model rewrite removed `.ctx`
+  spans; `saveContextual` crashed mid-save, which also suppressed follow-up
+  UI (the global-shoresh offer). Guard every querySelector in save paths.
+- **Count parity ≠ alignment:** "a just man" over נח איש צדיק is 3-for-3 and
+  still wrong (English fronts the adjective). Only a one-word line proves a
+  per-word mapping.
+- **Composers must be re-run after their inputs change:** Binyan/Morphology
+  chips kept "was accomplish, confirm" because they were built before the
+  root reseed. A derived artifact is stale the moment its source improves.
+- **Grouped spans assign a whole phrase to every covered word** — collapsing
+  them puts a sentence under one word. Cap per-word offers (4 English words).
+- **Craft/connector outages:** bank every unpostable log entry to a file
+  immediately (`scratchpad/craft_pending_deploy_log.md` pattern); a record
+  that waits for the connector dies with the session.
+
 ## What stays human
 
 Vision capture (Step 2) is careful reading, not OCR — budget ~13 pages/parsha.
