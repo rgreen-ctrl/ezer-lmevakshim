@@ -214,7 +214,7 @@
     </figure>
     <div class="sources" id="p-sources">
       <button class="vt" id="src-toggle" onclick="toggleSources()"
-              aria-expanded="false" aria-controls="src-body">Sources for this pasuk</button>
+              aria-expanded="false" aria-controls="src-body">Targum &amp; Meforshim</button>
       <div id="src-body" class="hidden">
         <span class="src-label">Targum Onkelos — Aramaic (public domain)</span>
         <div id="src-onkelos"></div>
@@ -330,7 +330,7 @@ async function renderSources(ref) {
   const d = (await sourcesData())[ref] || { onkelos: null, rashi: [] };
   const nR = (d.rashi || []).length;
   $('src-toggle').textContent =
-    `Sources for this pasuk — Onkelos${d.onkelos ? '' : ' (none)'} · Rashi (${nR} comment${nR === 1 ? '' : 's'})`;
+    `Targum & Meforshim — Onkelos${d.onkelos ? '' : ' (none)'} · Rashi (${nR} comment${nR === 1 ? '' : 's'})`;
   $('src-onkelos').innerHTML = d.onkelos
     ? `<div class="src-onk" lang="arc" dir="rtl">${esc(d.onkelos)}</div>`
     : `<div class="src-none">No Targum Onkelos for this pasuk.</div>`;
