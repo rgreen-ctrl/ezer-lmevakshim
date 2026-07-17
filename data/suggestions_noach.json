@@ -214,6 +214,11 @@
    "source_label": "Other sense (Strong's)",
    "text": "come to pass",
    "recast": false
+  },
+  {
+   "source_label": "Hebrew: kal, 3ms",
+   "text": "he was",
+   "recast": false
   }
  ],
  "9": [
@@ -365,6 +370,11 @@
    "source_label": "Other sense (Strong's)",
    "text": "walk",
    "recast": false
+  },
+  {
+   "source_label": "Hebrew: hitpael, 3ms",
+   "text": "he walked (oneself)",
+   "recast": false
   }
  ],
  "13": [
@@ -433,6 +443,21 @@
   {
    "source_label": "Other sense (Strong's)",
    "text": "show lineage",
+   "recast": false
+  },
+  {
+   "source_label": "Hebrew: hifil, 3ms",
+   "text": "and he caused to bore (child)",
+   "recast": false
+  },
+  {
+   "source_label": "Hebrew: hifil, 3ms",
+   "text": "and there were bore (child) to him",
+   "recast": false
+  },
+  {
+   "source_label": "Hebrew: hifil, 3ms",
+   "text": "and he had bore (child)",
    "recast": false
   }
  ],
@@ -705,6 +730,16 @@
    "source_label": "Other sense (Strong's)",
    "text": "ruin",
    "recast": false
+  },
+  {
+   "source_label": "Hebrew: nifal, 3fs",
+   "text": "and she was corrupted",
+   "recast": false
+  },
+  {
+   "source_label": "Hebrew: nifal, 3fs",
+   "text": "and there was corrupted to her",
+   "recast": false
   }
  ],
  "25": [
@@ -826,6 +861,16 @@
    "source_label": "Other sense (Strong's)",
    "text": "be full of",
    "recast": false
+  },
+  {
+   "source_label": "Hebrew: nifal, 3fs",
+   "text": "and she was fill",
+   "recast": false
+  },
+  {
+   "source_label": "Hebrew: nifal, 3fs",
+   "text": "and there was fill to her",
+   "recast": false
   }
  ],
  "29": [
@@ -917,6 +962,11 @@
   {
    "source_label": "Other sense (Strong's)",
    "text": "see",
+   "recast": false
+  },
+  {
+   "source_label": "Hebrew: kal, 3ms",
+   "text": "and he saw",
    "recast": false
   }
  ],
@@ -1061,6 +1111,16 @@
    "source_label": "Other sense (Strong's)",
    "text": "ruin",
    "recast": false
+  },
+  {
+   "source_label": "Hebrew: nifal, 3fs",
+   "text": "she was corrupted",
+   "recast": false
+  },
+  {
+   "source_label": "Hebrew: nifal, 3fs",
+   "text": "there was corrupted to her",
+   "recast": false
   }
  ],
  "37": [
@@ -1123,6 +1183,21 @@
   {
    "source_label": "Other sense (Strong's)",
    "text": "ruin",
+   "recast": false
+  },
+  {
+   "source_label": "Hebrew: hifil, 3ms",
+   "text": "he caused to corrupted",
+   "recast": false
+  },
+  {
+   "source_label": "Hebrew: hifil, 3ms",
+   "text": "there were corrupted to him",
+   "recast": false
+  },
+  {
+   "source_label": "Hebrew: hifil, 3ms",
+   "text": "he had corrupted",
    "recast": false
   }
  ],
@@ -1365,6 +1440,11 @@
    "source_label": "Other sense (Strong's)",
    "text": "say",
    "recast": false
+  },
+  {
+   "source_label": "Hebrew: kal, 3ms",
+   "text": "and he said",
+   "recast": false
   }
  ],
  "46": [
@@ -1559,6 +1639,11 @@
    "source_label": "Other sense (Strong's)",
    "text": "come",
    "recast": false
+  },
+  {
+   "source_label": "Hebrew: kal, 3ms",
+   "text": "he came/brought",
+   "recast": false
   }
  ],
  "52": [
@@ -1630,6 +1715,11 @@
   {
    "source_label": "Other sense (Strong's)",
    "text": "be full of",
+   "recast": false
+  },
+  {
+   "source_label": "Hebrew: kal, 3fs",
+   "text": "she fill",
    "recast": false
   }
  ],
@@ -1904,6 +1994,11 @@
    "source_label": "Other sense (Strong's)",
    "text": "make",
    "recast": false
+  },
+  {
+   "source_label": "Hebrew: kal, 2ms",
+   "text": "you made/did",
+   "recast": false
   }
  ],
  "63": [
@@ -2129,6 +2224,11 @@
    "source_label": "Other sense (Strong's)",
    "text": "make",
    "recast": false
+  },
+  {
+   "source_label": "Hebrew: kal, 2ms",
+   "text": "you made/did",
+   "recast": false
   }
  ],
  "69": [
@@ -2248,6 +2348,11 @@
   {
    "source_label": "Other sense (Strong's)",
    "text": "cancel",
+   "recast": false
+  },
+  {
+   "source_label": "Hebrew: kal, 2ms",
+   "text": "and you cover",
    "recast": false
   }
  ],
@@ -2511,6 +2616,11 @@
   {
    "source_label": "Other sense (Strong's)",
    "text": "make",
+   "recast": false
+  },
+  {
+   "source_label": "Hebrew: kal, 2ms",
+   "text": "you made/did",
    "recast": false
   }
  ],
@@ -2905,6 +3015,11 @@
    "source_label": "Other sense (Strong's)",
    "text": "make",
    "recast": false
+  },
+  {
+   "source_label": "Hebrew: kal, 2ms",
+   "text": "you made/did",
+   "recast": false
   }
  ],
  "93": [
@@ -3064,6 +3179,11 @@
   {
    "source_label": "Other sense (Strong's)",
    "text": "complete",
+   "recast": false
+  },
+  {
+   "source_label": "Hebrew: piel, 2ms",
+   "text": "you end (intensive)",
    "recast": false
   }
  ],
@@ -3240,6 +3360,11 @@
    "text": "put",
    "source_label": "Morphology (raw: prefix + root)",
    "recast": false
+  },
+  {
+   "source_label": "Hebrew: kal, 2ms",
+   "text": "you put",
+   "recast": false
   }
  ],
  "102": [
@@ -3409,6 +3534,11 @@
   {
    "source_label": "Other sense (Strong's)",
    "text": "make",
+   "recast": false
+  },
+  {
+   "source_label": "Hebrew: kal, 2ms",
+   "text": "you made/did",
    "recast": false
   }
  ],
@@ -4085,6 +4215,11 @@
    "source_label": "Other sense (Strong's)",
    "text": "expire",
    "recast": false
+  },
+  {
+   "source_label": "Hebrew: kal, 3ms",
+   "text": "he breathe out",
+   "recast": false
   }
  ],
  "127": [
@@ -4124,6 +4259,21 @@
   {
    "text": "and + rise",
    "source_label": "Morphology (raw: prefix + root)",
+   "recast": false
+  },
+  {
+   "source_label": "Hebrew: hifil, 1cs",
+   "text": "and I caused to rise",
+   "recast": false
+  },
+  {
+   "source_label": "Hebrew: hifil, 1cs",
+   "text": "and there were rise to me",
+   "recast": false
+  },
+  {
+   "source_label": "Hebrew: hifil, 1cs",
+   "text": "and I had rise",
    "recast": false
   }
  ],
@@ -4289,6 +4439,11 @@
   {
    "source_label": "Other sense (Strong's)",
    "text": "come",
+   "recast": false
+  },
+  {
+   "source_label": "Hebrew: kal, 2ms",
+   "text": "and you came/brought",
    "recast": false
   }
  ],
@@ -4895,6 +5050,21 @@
    "source_label": "Other sense (Strong's)",
    "text": "come",
    "recast": false
+  },
+  {
+   "source_label": "Hebrew: hifil, 2ms",
+   "text": "you caused to came/brought",
+   "recast": false
+  },
+  {
+   "source_label": "Hebrew: hifil, 2ms",
+   "text": "there were came/brought to you",
+   "recast": false
+  },
+  {
+   "source_label": "Hebrew: hifil, 2ms",
+   "text": "you had came/brought",
+   "recast": false
   }
  ],
  "147": [
@@ -5154,6 +5324,11 @@
   {
    "source_label": "Other sense (Strong's)",
    "text": "come to pass",
+   "recast": false
+  },
+  {
+   "source_label": "Hebrew: kal, 3mp",
+   "text": "they was",
    "recast": false
   }
  ],
@@ -5550,6 +5725,11 @@
    "source_label": "Other sense (Strong's)",
    "text": "come",
    "recast": false
+  },
+  {
+   "source_label": "Hebrew: kal, 3mp",
+   "text": "they came/brought",
+   "recast": false
   }
  ],
  "166": [
@@ -5699,6 +5879,11 @@
    "source_label": "Other sense (Strong's)",
    "text": "take",
    "recast": false
+  },
+  {
+   "source_label": "Hebrew: kal, 2ms",
+   "text": "you took",
+   "recast": false
   }
  ],
  "170": [
@@ -5839,6 +6024,16 @@
    "source_label": "Other sense (Strong's)",
    "text": "eat",
    "recast": false
+  },
+  {
+   "source_label": "Hebrew: nifal, 3ms",
+   "text": "he was ate",
+   "recast": false
+  },
+  {
+   "source_label": "Hebrew: nifal, 3ms",
+   "text": "there was ate to him",
+   "recast": false
   }
  ],
  "175": [
@@ -5878,6 +6073,11 @@
   {
    "source_label": "Other sense (Strong's)",
    "text": "remove",
+   "recast": false
+  },
+  {
+   "source_label": "Hebrew: kal, 2ms",
+   "text": "and you gather",
    "recast": false
   }
  ],
@@ -5957,6 +6157,11 @@
   {
    "source_label": "Other sense (Strong's)",
    "text": "come to pass",
+   "recast": false
+  },
+  {
+   "source_label": "Hebrew: kal, 3ms",
+   "text": "and he was",
    "recast": false
   }
  ],
@@ -6049,6 +6254,11 @@
   {
    "source_label": "Other sense (Strong's)",
    "text": "make",
+   "recast": false
+  },
+  {
+   "source_label": "Hebrew: kal, 3ms",
+   "text": "and he made/did",
    "recast": false
   }
  ],
@@ -6176,6 +6386,11 @@
    "source_label": "Other sense (Strong's)",
    "text": "enjoin",
    "recast": false
+  },
+  {
+   "source_label": "Hebrew: piel, 3ms",
+   "text": "he constitute (intensive)",
+   "recast": false
   }
  ],
  "186": [
@@ -6302,6 +6517,11 @@
    "source_label": "Other sense (Strong's)",
    "text": "make",
    "recast": false
+  },
+  {
+   "source_label": "Hebrew: kal, 3ms",
+   "text": "he made/did",
+   "recast": false
   }
  ],
  "190": [
@@ -6330,6 +6550,11 @@
   {
    "source_label": "Other sense (Strong's)",
    "text": "say",
+   "recast": false
+  },
+  {
+   "source_label": "Hebrew: kal, 3ms",
+   "text": "and he said",
    "recast": false
   }
  ],
@@ -6407,6 +6632,11 @@
   {
    "source_label": "Other sense (Strong's)",
    "text": "come",
+   "recast": false
+  },
+  {
+   "source_label": "Hebrew: kal, 2ms",
+   "text": "you came/brought",
    "recast": false
   }
  ],
@@ -6655,6 +6885,11 @@
   {
    "source_label": "Other sense (Strong's)",
    "text": "see",
+   "recast": false
+  },
+  {
+   "source_label": "Hebrew: kal, 1cs",
+   "text": "I saw",
    "recast": false
   }
  ],
@@ -6906,6 +7141,11 @@
   {
    "source_label": "Other sense (Strong's)",
    "text": "take",
+   "recast": false
+  },
+  {
+   "source_label": "Hebrew: kal, 2ms",
+   "text": "you took",
    "recast": false
   }
  ],
@@ -8211,6 +8451,11 @@
    "source_label": "Other sense (Strong's)",
    "text": "grease",
    "recast": false
+  },
+  {
+   "source_label": "Hebrew: kal, 1cs",
+   "text": "and I stroke",
+   "recast": false
   }
  ],
  "250": [
@@ -8381,6 +8626,11 @@
    "source_label": "Other sense (Strong's)",
    "text": "make",
    "recast": false
+  },
+  {
+   "source_label": "Hebrew: kal, 1cs",
+   "text": "I made/did",
+   "recast": false
   }
  ],
  "255": [
@@ -8501,6 +8751,11 @@
   {
    "source_label": "Other sense (Strong's)",
    "text": "make",
+   "recast": false
+  },
+  {
+   "source_label": "Hebrew: kal, 3ms",
+   "text": "and he made/did",
    "recast": false
   }
  ],
@@ -8627,6 +8882,11 @@
   {
    "source_label": "Other sense (Strong's)",
    "text": "enjoin",
+   "recast": false
+  },
+  {
+   "source_label": "Hebrew: piel, 3ms",
+   "text": "he constitute (intensive)",
    "recast": false
   }
  ],
@@ -8830,6 +9090,11 @@
    "source_label": "Other sense (Strong's)",
    "text": "come to pass",
    "recast": false
+  },
+  {
+   "source_label": "Hebrew: kal, 3ms",
+   "text": "he was",
+   "recast": false
   }
  ],
  "271": [
@@ -8965,6 +9230,11 @@
   {
    "source_label": "Other sense (Strong's)",
    "text": "come",
+   "recast": false
+  },
+  {
+   "source_label": "Hebrew: kal, 3ms",
+   "text": "and he came/brought",
    "recast": false
   }
  ],
@@ -9815,6 +10085,11 @@
    "source_label": "Other sense (Strong's)",
    "text": "come",
    "recast": false
+  },
+  {
+   "source_label": "Hebrew: kal, 3cp",
+   "text": "they came/brought",
+   "recast": false
   }
  ],
  "304": [
@@ -10100,6 +10375,11 @@
    "source_label": "Other sense (Strong's)",
    "text": "enjoin",
    "recast": false
+  },
+  {
+   "source_label": "Hebrew: piel, 3ms",
+   "text": "he constitute (intensive)",
+   "recast": false
   }
  ],
  "312": [
@@ -10243,6 +10523,11 @@
   {
    "source_label": "Other sense (Strong's)",
    "text": "come to pass",
+   "recast": false
+  },
+  {
+   "source_label": "Hebrew: kal, 3ms",
+   "text": "and he was",
    "recast": false
   }
  ],
@@ -10403,6 +10688,11 @@
   {
    "source_label": "Other sense (Strong's)",
    "text": "come to pass",
+   "recast": false
+  },
+  {
+   "source_label": "Hebrew: kal, 3cp",
+   "text": "they was",
    "recast": false
   }
  ],
@@ -10892,6 +11182,16 @@
    "source_label": "Other sense (Strong's)",
    "text": "open",
    "recast": false
+  },
+  {
+   "source_label": "Hebrew: nifal, 3cp",
+   "text": "they was cleave",
+   "recast": false
+  },
+  {
+   "source_label": "Hebrew: nifal, 3cp",
+   "text": "there was cleave to them",
+   "recast": false
   }
  ],
  "338": [
@@ -11125,6 +11425,16 @@
    "source_label": "Other sense (Strong's)",
    "text": "carve",
    "recast": false
+  },
+  {
+   "source_label": "Hebrew: nifal, 3cp",
+   "text": "they was open wide",
+   "recast": false
+  },
+  {
+   "source_label": "Hebrew: nifal, 3cp",
+   "text": "there was open wide to them",
+   "recast": false
   }
  ],
  "345": [
@@ -11163,6 +11473,11 @@
   {
    "source_label": "Other sense (Strong's)",
    "text": "come to pass",
+   "recast": false
+  },
+  {
+   "source_label": "Hebrew: kal, 3ms",
+   "text": "and he was",
    "recast": false
   }
  ],
@@ -11472,6 +11787,11 @@
   {
    "source_label": "Other sense (Strong's)",
    "text": "come",
+   "recast": false
+  },
+  {
+   "source_label": "Hebrew: kal, 3ms",
+   "text": "he came/brought",
    "recast": false
   }
  ],
@@ -12498,6 +12818,11 @@
    "source_label": "Other sense (Strong's)",
    "text": "come",
    "recast": false
+  },
+  {
+   "source_label": "Hebrew: kal, 3mp",
+   "text": "and they came/brought",
+   "recast": false
   }
  ],
  "392": [
@@ -13066,6 +13391,11 @@
    "source_label": "Other sense (Strong's)",
    "text": "come",
    "recast": false
+  },
+  {
+   "source_label": "Hebrew: kal, 3cp",
+   "text": "they came/brought",
+   "recast": false
   }
  ],
  "410": [
@@ -13133,6 +13463,11 @@
   {
    "source_label": "Other sense (Strong's)",
    "text": "enjoin",
+   "recast": false
+  },
+  {
+   "source_label": "Hebrew: piel, 3ms",
+   "text": "he constitute (intensive)",
    "recast": false
   }
  ],
@@ -13220,6 +13555,11 @@
   {
    "source_label": "Other sense (Strong's)",
    "text": "surrender",
+   "recast": false
+  },
+  {
+   "source_label": "Hebrew: kal, 3ms",
+   "text": "and he shut",
    "recast": false
   }
  ],
@@ -13332,6 +13672,11 @@
   {
    "source_label": "Other sense (Strong's)",
    "text": "come to pass",
+   "recast": false
+  },
+  {
+   "source_label": "Hebrew: kal, 3ms",
+   "text": "and he was",
    "recast": false
   }
  ],
@@ -13477,6 +13822,11 @@
    "text": "and + increase",
    "source_label": "Morphology (raw: prefix + root)",
    "recast": false
+  },
+  {
+   "source_label": "Hebrew: kal, 3mp",
+   "text": "and they increase",
+   "recast": false
   }
  ],
  "424": [
@@ -13539,6 +13889,11 @@
   {
    "source_label": "Other sense (Strong's)",
    "text": "lift",
+   "recast": false
+  },
+  {
+   "source_label": "Hebrew: kal, 3mp",
+   "text": "and they bore/lifted",
    "recast": false
   }
  ],
@@ -13626,6 +13981,11 @@
   {
    "source_label": "Other sense (Strong's)",
    "text": "raise",
+   "recast": false
+  },
+  {
+   "source_label": "Hebrew: kal, 3fs",
+   "text": "and she be high",
    "recast": false
   }
  ],
@@ -13724,6 +14084,11 @@
    "source_label": "Other sense (Strong's)",
    "text": "act insolently",
    "recast": false
+  },
+  {
+   "source_label": "Hebrew: kal, 3mp",
+   "text": "and they be strong",
+   "recast": false
   }
  ],
  "432": [
@@ -13781,6 +14146,11 @@
   {
    "text": "and + increase",
    "source_label": "Morphology (raw: prefix + root)",
+   "recast": false
+  },
+  {
+   "source_label": "Hebrew: kal, 3mp",
+   "text": "and they increase",
    "recast": false
   }
  ],
@@ -13902,6 +14272,11 @@
   {
    "source_label": "Other sense (Strong's)",
    "text": "carry",
+   "recast": false
+  },
+  {
+   "source_label": "Hebrew: kal, 3fs",
+   "text": "and she walk",
    "recast": false
   }
  ],
@@ -14102,6 +14477,11 @@
    "source_label": "Other sense (Strong's)",
    "text": "act insolently",
    "recast": false
+  },
+  {
+   "source_label": "Hebrew: kal, 3cp",
+   "text": "they be strong",
+   "recast": false
   }
  ],
  "444": [
@@ -14271,6 +14651,11 @@
   {
    "source_label": "Other sense (Strong's)",
    "text": "cover",
+   "recast": false
+  },
+  {
+   "source_label": "Hebrew: pual, 3mp",
+   "text": "and they was plump (intensive)",
    "recast": false
   }
  ],
@@ -14650,6 +15035,11 @@
    "source_label": "Other sense (Strong's)",
    "text": "act insolently",
    "recast": false
+  },
+  {
+   "source_label": "Hebrew: kal, 3cp",
+   "text": "they be strong",
+   "recast": false
   }
  ],
  "461": [
@@ -14723,6 +15113,11 @@
    "source_label": "Other sense (Strong's)",
    "text": "cover",
    "recast": false
+  },
+  {
+   "source_label": "Hebrew: pual, 3mp",
+   "text": "and they was plump (intensive)",
+   "recast": false
   }
  ],
  "463": [
@@ -14770,6 +15165,11 @@
   {
    "source_label": "Other sense (Strong's)",
    "text": "expire",
+   "recast": false
+  },
+  {
+   "source_label": "Hebrew: kal, 3ms",
+   "text": "and he breathe out",
    "recast": false
   }
  ],
@@ -15641,6 +16041,11 @@
    "source_label": "Other sense (Strong's)",
    "text": "kill",
    "recast": false
+  },
+  {
+   "source_label": "Hebrew: kal, 3cp",
+   "text": "they died",
+   "recast": false
   }
  ],
  "490": [
@@ -15695,6 +16100,11 @@
   {
    "source_label": "Other sense (Strong's)",
    "text": "grease",
+   "recast": false
+  },
+  {
+   "source_label": "Hebrew: kal, 3ms",
+   "text": "and he stroke",
    "recast": false
   }
  ],
@@ -16311,6 +16721,16 @@
    "source_label": "Other sense (Strong's)",
    "text": "grease",
    "recast": false
+  },
+  {
+   "source_label": "Hebrew: nifal, 3mp",
+   "text": "and they was stroke",
+   "recast": false
+  },
+  {
+   "source_label": "Hebrew: nifal, 3mp",
+   "text": "and there was stroke to them",
+   "recast": false
   }
  ],
  "507": [
@@ -16425,6 +16845,16 @@
   {
    "source_label": "Other sense (Strong's)",
    "text": "redundant",
+   "recast": false
+  },
+  {
+   "source_label": "Hebrew: nifal, 3ms",
+   "text": "and he was swell",
+   "recast": false
+  },
+  {
+   "source_label": "Hebrew: nifal, 3ms",
+   "text": "and there was swell to him",
    "recast": false
   }
  ],
@@ -16621,6 +17051,11 @@
    "source_label": "Other sense (Strong's)",
    "text": "act insolently",
    "recast": false
+  },
+  {
+   "source_label": "Hebrew: kal, 3mp",
+   "text": "and they be strong",
+   "recast": false
   }
  ],
  "516": [
@@ -16813,6 +17248,11 @@
   {
    "source_label": "Other sense (Strong's)",
    "text": "be male",
+   "recast": false
+  },
+  {
+   "source_label": "Hebrew: kal, 3ms",
+   "text": "and he mark",
    "recast": false
   }
  ],
@@ -17261,6 +17701,21 @@
    "source_label": "Other sense (Strong's)",
    "text": "cover",
    "recast": false
+  },
+  {
+   "source_label": "Hebrew: hifil, 3ms",
+   "text": "and he caused to cross",
+   "recast": false
+  },
+  {
+   "source_label": "Hebrew: hifil, 3ms",
+   "text": "and there were cross to him",
+   "recast": false
+  },
+  {
+   "source_label": "Hebrew: hifil, 3ms",
+   "text": "and he had cross",
+   "recast": false
   }
  ],
  "536": [
@@ -17441,6 +17896,11 @@
    "source_label": "Other sense (Strong's)",
    "text": "allay",
    "recast": false
+  },
+  {
+   "source_label": "Hebrew: kal, 3mp",
+   "text": "and they weave",
+   "recast": false
   }
  ],
  "541": [
@@ -17513,6 +17973,16 @@
   {
    "source_label": "Other sense (Strong's)",
    "text": "surrender",
+   "recast": false
+  },
+  {
+   "source_label": "Hebrew: nifal, 3mp",
+   "text": "and they was shut up",
+   "recast": false
+  },
+  {
+   "source_label": "Hebrew: nifal, 3mp",
+   "text": "and there was shut up to them",
    "recast": false
   }
  ],
@@ -17674,6 +18144,16 @@
    "source_label": "Other sense (Strong's)",
    "text": "prohibit",
    "recast": false
+  },
+  {
+   "source_label": "Hebrew: nifal, 3ms",
+   "text": "and he was restrict",
+   "recast": false
+  },
+  {
+   "source_label": "Hebrew: nifal, 3ms",
+   "text": "and there was restrict to him",
+   "recast": false
   }
  ],
  "548": [
@@ -17784,6 +18264,11 @@
   {
    "source_label": "Other sense (Strong's)",
    "text": "again",
+   "recast": false
+  },
+  {
+   "source_label": "Hebrew: kal, 3mp",
+   "text": "and they turn",
    "recast": false
   }
  ],
@@ -17979,6 +18464,11 @@
    "source_label": "Other sense (Strong's)",
    "text": "lessen",
    "recast": false
+  },
+  {
+   "source_label": "Hebrew: kal, 3mp",
+   "text": "and they lack",
+   "recast": false
   }
  ],
  "558": [
@@ -18137,6 +18627,11 @@
   {
    "source_label": "Other sense (Strong's)",
    "text": "let fall",
+   "recast": false
+  },
+  {
+   "source_label": "Hebrew: kal, 3fs",
+   "text": "and she rest",
    "recast": false
   }
  ],
@@ -18516,6 +19011,11 @@
    "source_label": "Other sense (Strong's)",
    "text": "come to pass",
    "recast": false
+  },
+  {
+   "source_label": "Hebrew: kal, 3cp",
+   "text": "they was",
+   "recast": false
   }
  ],
  "576": [
@@ -18797,6 +19297,16 @@
    "source_label": "Other sense (Strong's)",
    "text": "see",
    "recast": false
+  },
+  {
+   "source_label": "Hebrew: nifal, 3cp",
+   "text": "they was saw",
+   "recast": false
+  },
+  {
+   "source_label": "Hebrew: nifal, 3cp",
+   "text": "there was saw to them",
+   "recast": false
   }
  ],
  "585": [
@@ -18883,6 +19393,11 @@
   {
    "source_label": "Other sense (Strong's)",
    "text": "come to pass",
+   "recast": false
+  },
+  {
+   "source_label": "Hebrew: kal, 3ms",
+   "text": "and he was",
    "recast": false
   }
  ],
@@ -18994,6 +19509,11 @@
   {
    "source_label": "Other sense (Strong's)",
    "text": "carve",
+   "recast": false
+  },
+  {
+   "source_label": "Hebrew: kal, 3ms",
+   "text": "and he open wide",
    "recast": false
   }
  ],
@@ -19150,6 +19670,11 @@
    "source_label": "Other sense (Strong's)",
    "text": "make",
    "recast": false
+  },
+  {
+   "source_label": "Hebrew: kal, 3ms",
+   "text": "he made/did",
+   "recast": false
   }
  ],
  "598": [
@@ -19173,6 +19698,11 @@
   {
    "text": "and + send",
    "source_label": "Morphology (raw: prefix + root)",
+   "recast": false
+  },
+  {
+   "source_label": "Hebrew: piel, 3ms",
+   "text": "and he send (intensive)",
    "recast": false
   }
  ],
@@ -19268,6 +19798,11 @@
   {
    "source_label": "Other sense (Strong's)",
    "text": "out",
+   "recast": false
+  },
+  {
+   "source_label": "Hebrew: kal, 3ms",
+   "text": "and he went out",
    "recast": false
   }
  ],
@@ -19550,6 +20085,11 @@
   {
    "text": "and + send",
    "source_label": "Morphology (raw: prefix + root)",
+   "recast": false
+  },
+  {
+   "source_label": "Hebrew: piel, 3ms",
+   "text": "and he send (intensive)",
    "recast": false
   }
  ],
@@ -19903,6 +20443,11 @@
    "source_label": "Other sense (Strong's)",
    "text": "find",
    "recast": false
+  },
+  {
+   "source_label": "Hebrew: kal, 3fs",
+   "text": "she come",
+   "recast": false
   }
  ],
  "621": [
@@ -20082,6 +20627,11 @@
   {
    "source_label": "Other sense (Strong's)",
    "text": "again",
+   "recast": false
+  },
+  {
+   "source_label": "Hebrew: kal, 3fs",
+   "text": "and she turn",
    "recast": false
   }
  ],
@@ -20443,6 +20993,11 @@
    "text": "and + send",
    "source_label": "Morphology (raw: prefix + root)",
    "recast": false
+  },
+  {
+   "source_label": "Hebrew: kal, 3ms",
+   "text": "and he send",
+   "recast": false
   }
  ],
  "636": [
@@ -20523,6 +21078,11 @@
    "source_label": "Other sense (Strong's)",
    "text": "take",
    "recast": false
+  },
+  {
+   "source_label": "Hebrew: kal, 3ms",
+   "text": "and he took",
+   "recast": false
   }
  ],
  "638": [
@@ -20562,6 +21122,21 @@
   {
    "source_label": "Other sense (Strong's)",
    "text": "come",
+   "recast": false
+  },
+  {
+   "source_label": "Hebrew: hifil, 3ms",
+   "text": "and he caused to came/brought",
+   "recast": false
+  },
+  {
+   "source_label": "Hebrew: hifil, 3ms",
+   "text": "and there were came/brought to him",
+   "recast": false
+  },
+  {
+   "source_label": "Hebrew: hifil, 3ms",
+   "text": "and he had came/brought",
    "recast": false
   }
  ],
@@ -20762,6 +21337,11 @@
    "source_label": "Other sense (Strong's)",
    "text": "fear",
    "recast": false
+  },
+  {
+   "source_label": "Hebrew: piel, 3ms",
+   "text": "and he twist (intensive)",
+   "recast": false
   }
  ],
  "644": [
@@ -20922,6 +21502,21 @@
    "source_label": "Other sense (Strong's)",
    "text": "continue",
    "recast": false
+  },
+  {
+   "source_label": "Hebrew: hifil, 3ms",
+   "text": "and he caused to add",
+   "recast": false
+  },
+  {
+   "source_label": "Hebrew: hifil, 3ms",
+   "text": "and there were add to him",
+   "recast": false
+  },
+  {
+   "source_label": "Hebrew: hifil, 3ms",
+   "text": "and he had add",
+   "recast": false
   }
  ],
  "649": [
@@ -21078,6 +21673,11 @@
   {
    "source_label": "Other sense (Strong's)",
    "text": "come",
+   "recast": false
+  },
+  {
+   "source_label": "Hebrew: kal, 3fs",
+   "text": "and she came/brought",
    "recast": false
   }
  ],
@@ -21395,6 +21995,11 @@
    "source_label": "Other sense (Strong's)",
    "text": "care",
    "recast": false
+  },
+  {
+   "source_label": "Hebrew: kal, 3ms",
+   "text": "and he knew",
+   "recast": false
   }
  ],
  "665": [
@@ -21471,6 +22076,11 @@
   {
    "source_label": "Other sense (Strong's)",
    "text": "small",
+   "recast": false
+  },
+  {
+   "source_label": "Hebrew: kal, 3cp",
+   "text": "they be",
    "recast": false
   }
  ],
@@ -21612,6 +22222,16 @@
   {
    "source_label": "Other sense (Strong's)",
    "text": "hope",
+   "recast": false
+  },
+  {
+   "source_label": "Hebrew: nifal, 3ms",
+   "text": "and he was wait",
+   "recast": false
+  },
+  {
+   "source_label": "Hebrew: nifal, 3ms",
+   "text": "and there was wait to him",
    "recast": false
   }
  ],
@@ -21763,6 +22383,11 @@
    "text": "and + send",
    "source_label": "Morphology (raw: prefix + root)",
    "recast": false
+  },
+  {
+   "source_label": "Hebrew: piel, 3ms",
+   "text": "and he send (intensive)",
+   "recast": false
   }
  ],
  "677": [
@@ -21854,6 +22479,11 @@
   {
    "source_label": "Other sense (Strong's)",
    "text": "continue",
+   "recast": false
+  },
+  {
+   "source_label": "Hebrew: kal, 3fs",
+   "text": "she add",
    "recast": false
   }
  ],
@@ -22006,6 +22636,11 @@
   {
    "source_label": "Other sense (Strong's)",
    "text": "come to pass",
+   "recast": false
+  },
+  {
+   "source_label": "Hebrew: kal, 3ms",
+   "text": "and he was",
    "recast": false
   }
  ],
@@ -22224,6 +22859,11 @@
    "source_label": "Other sense (Strong's)",
    "text": "kill",
    "recast": false
+  },
+  {
+   "source_label": "Hebrew: kal, 3cp",
+   "text": "they parch",
+   "recast": false
   }
  ],
  "693": [
@@ -22349,6 +22989,21 @@
   {
    "text": "and + turn",
    "source_label": "Morphology (raw: prefix + root)",
+   "recast": false
+  },
+  {
+   "source_label": "Hebrew: hifil, 3ms",
+   "text": "and he caused to turn",
+   "recast": false
+  },
+  {
+   "source_label": "Hebrew: hifil, 3ms",
+   "text": "and there were turn to him",
+   "recast": false
+  },
+  {
+   "source_label": "Hebrew: hifil, 3ms",
+   "text": "and he had turn",
    "recast": false
   }
  ],
@@ -22478,6 +23133,11 @@
    "source_label": "Other sense (Strong's)",
    "text": "see",
    "recast": false
+  },
+  {
+   "source_label": "Hebrew: kal, 3ms",
+   "text": "and he saw",
+   "recast": false
   }
  ],
  "702": [
@@ -22540,6 +23200,11 @@
   {
    "source_label": "Other sense (Strong's)",
    "text": "kill",
+   "recast": false
+  },
+  {
+   "source_label": "Hebrew: kal, 3cp",
+   "text": "they parch",
    "recast": false
   }
  ],
@@ -22797,6 +23462,11 @@
    "source_label": "Other sense (Strong's)",
    "text": "wither",
    "recast": false
+  },
+  {
+   "source_label": "Hebrew: kal, 3fs",
+   "text": "she be ashamed",
+   "recast": false
   }
  ],
  "713": [
@@ -22869,6 +23539,11 @@
   {
    "source_label": "Other sense (Strong's)",
    "text": "subdue",
+   "recast": false
+  },
+  {
+   "source_label": "Hebrew: piel, 3ms",
+   "text": "and he spoke (intensive)",
    "recast": false
   }
  ],
@@ -23020,6 +23695,11 @@
   {
    "source_label": "Other sense (Strong's)",
    "text": "out",
+   "recast": false
+  },
+  {
+   "source_label": "Hebrew: kal, 2ms",
+   "text": "you went out",
    "recast": false
   }
  ],
@@ -24197,6 +24877,11 @@
    "source_label": "Other sense (Strong's)",
    "text": "out",
    "recast": false
+  },
+  {
+   "source_label": "Hebrew: kal, 3ms",
+   "text": "and he went out",
+   "recast": false
   }
  ],
  "751": [
@@ -24784,6 +25469,11 @@
    "source_label": "Other sense (Strong's)",
    "text": "out",
    "recast": false
+  },
+  {
+   "source_label": "Hebrew: kal, 3cp",
+   "text": "they went out",
+   "recast": false
   }
  ],
  "769": [
@@ -24860,6 +25550,11 @@
   {
    "text": "and + build",
    "source_label": "Morphology (raw: prefix + root)",
+   "recast": false
+  },
+  {
+   "source_label": "Hebrew: kal, 3ms",
+   "text": "and he build",
    "recast": false
   }
  ],
@@ -24961,6 +25656,11 @@
   {
    "source_label": "Other sense (Strong's)",
    "text": "take",
+   "recast": false
+  },
+  {
+   "source_label": "Hebrew: kal, 3ms",
+   "text": "and he took",
    "recast": false
   }
  ],
@@ -25170,6 +25870,21 @@
    "source_label": "Other sense (Strong's)",
    "text": "mount",
    "recast": false
+  },
+  {
+   "source_label": "Hebrew: hifil, 3ms",
+   "text": "and he caused to ascend",
+   "recast": false
+  },
+  {
+   "source_label": "Hebrew: hifil, 3ms",
+   "text": "and there were ascend to him",
+   "recast": false
+  },
+  {
+   "source_label": "Hebrew: hifil, 3ms",
+   "text": "and he had ascend",
+   "recast": false
   }
  ],
  "783": [
@@ -25261,6 +25976,21 @@
   {
    "source_label": "Other sense (Strong's)",
    "text": "smell",
+   "recast": false
+  },
+  {
+   "source_label": "Hebrew: hifil, 3ms",
+   "text": "and he caused to blow",
+   "recast": false
+  },
+  {
+   "source_label": "Hebrew: hifil, 3ms",
+   "text": "and there were blow to him",
+   "recast": false
+  },
+  {
+   "source_label": "Hebrew: hifil, 3ms",
+   "text": "and he had blow",
    "recast": false
   }
  ],
@@ -25392,6 +26122,11 @@
   {
    "source_label": "Other sense (Strong's)",
    "text": "say",
+   "recast": false
+  },
+  {
+   "source_label": "Hebrew: kal, 3ms",
+   "text": "and he said",
    "recast": false
   }
  ],
@@ -25576,6 +26311,21 @@
   {
    "source_label": "Other sense (Strong's)",
    "text": "continue",
+   "recast": false
+  },
+  {
+   "source_label": "Hebrew: hifil, 1cs",
+   "text": "I caused to add",
+   "recast": false
+  },
+  {
+   "source_label": "Hebrew: hifil, 1cs",
+   "text": "there were add to me",
+   "recast": false
+  },
+  {
+   "source_label": "Hebrew: hifil, 1cs",
+   "text": "I had add",
    "recast": false
   }
  ],
@@ -26087,6 +26837,21 @@
    "source_label": "Other sense (Strong's)",
    "text": "continue",
    "recast": false
+  },
+  {
+   "source_label": "Hebrew: hifil, 1cs",
+   "text": "I caused to add",
+   "recast": false
+  },
+  {
+   "source_label": "Hebrew: hifil, 1cs",
+   "text": "there were add to me",
+   "recast": false
+  },
+  {
+   "source_label": "Hebrew: hifil, 1cs",
+   "text": "I had add",
+   "recast": false
   }
  ],
  "810": [
@@ -26371,6 +27136,11 @@
   {
    "source_label": "Other sense (Strong's)",
    "text": "make",
+   "recast": false
+  },
+  {
+   "source_label": "Hebrew: kal, 1cs",
+   "text": "I made/did",
    "recast": false
   }
  ],
@@ -26793,6 +27563,11 @@
    "source_label": "Other sense (Strong's)",
    "text": "desist from exertion",
    "recast": false
+  },
+  {
+   "source_label": "Hebrew: kal, 3mp",
+   "text": "they repose",
+   "recast": false
   }
  ],
  "831": [
@@ -26826,6 +27601,11 @@
   {
    "source_label": "Other sense (Strong's)",
    "text": "curse",
+   "recast": false
+  },
+  {
+   "source_label": "Hebrew: piel, 3ms",
+   "text": "and he kneel (intensive)",
    "recast": false
   }
  ],
@@ -26991,6 +27771,11 @@
    "source_label": "Other sense (Strong's)",
    "text": "say",
    "recast": false
+  },
+  {
+   "source_label": "Hebrew: kal, 3ms",
+   "text": "and he said",
+   "recast": false
   }
  ],
  "838": [
@@ -27029,6 +27814,11 @@
    "text": "bear fruit",
    "source_label": "Morphology (raw: prefix + root)",
    "recast": false
+  },
+  {
+   "source_label": "Hebrew: kal, 2mp",
+   "text": "you bear fruit",
+   "recast": false
   }
  ],
  "840": [
@@ -27053,6 +27843,11 @@
    "text": "and + increase",
    "source_label": "Morphology (raw: prefix + root)",
    "recast": false
+  },
+  {
+   "source_label": "Hebrew: kal, 2mp",
+   "text": "and you increase",
+   "recast": false
   }
  ],
  "841": [
@@ -27076,6 +27871,11 @@
   {
    "source_label": "Other sense (Strong's)",
    "text": "be full of",
+   "recast": false
+  },
+  {
+   "source_label": "Hebrew: kal, 2mp",
+   "text": "and you fill",
    "recast": false
   }
  ],
@@ -27246,6 +28046,11 @@
   {
    "source_label": "Other sense (Strong's)",
    "text": "come to pass",
+   "recast": false
+  },
+  {
+   "source_label": "Hebrew: kal, 3ms",
+   "text": "he was",
    "recast": false
   }
  ],
@@ -27621,6 +28426,11 @@
    "source_label": "Other sense (Strong's)",
    "text": "swarm",
    "recast": false
+  },
+  {
+   "source_label": "Hebrew: kal, 3fs",
+   "text": "she glide swiftly",
+   "recast": false
   }
  ],
  "858": [
@@ -27819,6 +28629,16 @@
   {
    "source_label": "Other sense (Strong's)",
    "text": "make",
+   "recast": false
+  },
+  {
+   "source_label": "Hebrew: nifal, 3cp",
+   "text": "they was gave",
+   "recast": false
+  },
+  {
+   "source_label": "Hebrew: nifal, 3cp",
+   "text": "there was gave to them",
    "recast": false
   }
  ],
@@ -28053,6 +28873,11 @@
    "source_label": "Other sense (Strong's)",
    "text": "come to pass",
    "recast": false
+  },
+  {
+   "source_label": "Hebrew: kal, 3ms",
+   "text": "he was",
+   "recast": false
   }
  ],
  "871": [
@@ -28168,6 +28993,11 @@
   {
    "source_label": "Other sense (Strong's)",
    "text": "make",
+   "recast": false
+  },
+  {
+   "source_label": "Hebrew: kal, 1cs",
+   "text": "I gave",
    "recast": false
   }
  ],
@@ -28440,6 +29270,11 @@
    "source_label": "Other sense (Strong's)",
    "text": "eat",
    "recast": false
+  },
+  {
+   "source_label": "Hebrew: kal, 2mp",
+   "text": "you ate",
+   "recast": false
   }
  ],
  "884": [
@@ -28615,6 +29450,11 @@
    "source_label": "Other sense (Strong's)",
    "text": "ask",
    "recast": false
+  },
+  {
+   "source_label": "Hebrew: kal, 1cs",
+   "text": "I tread",
+   "recast": false
   }
  ],
  "889": [
@@ -28775,6 +29615,11 @@
   {
    "source_label": "Other sense (Strong's)",
    "text": "ask",
+   "recast": false
+  },
+  {
+   "source_label": "Hebrew: kal, 1cs",
+   "text": "I tread",
    "recast": false
   }
  ],
@@ -28969,6 +29814,11 @@
   {
    "source_label": "Other sense (Strong's)",
    "text": "ask",
+   "recast": false
+  },
+  {
+   "source_label": "Hebrew: kal, 1cs",
+   "text": "I tread",
    "recast": false
   }
  ],
@@ -29261,6 +30111,16 @@
    "source_label": "Other sense (Strong's)",
    "text": "sprawl out",
    "recast": false
+  },
+  {
+   "source_label": "Hebrew: nifal, 3ms",
+   "text": "he was spill forth",
+   "recast": false
+  },
+  {
+   "source_label": "Hebrew: nifal, 3ms",
+   "text": "there was spill forth to him",
+   "recast": false
   }
  ],
  "908": [
@@ -29377,6 +30237,11 @@
    "source_label": "Other sense (Strong's)",
    "text": "make",
    "recast": false
+  },
+  {
+   "source_label": "Hebrew: kal, 3ms",
+   "text": "he made/did",
+   "recast": false
   }
  ],
  "912": [
@@ -29486,6 +30351,11 @@
    "text": "bear fruit",
    "source_label": "Morphology (raw: prefix + root)",
    "recast": false
+  },
+  {
+   "source_label": "Hebrew: kal, 2mp",
+   "text": "you bear fruit",
+   "recast": false
   }
  ],
  "916": [
@@ -29509,6 +30379,11 @@
   {
    "text": "and + increase",
    "source_label": "Morphology (raw: prefix + root)",
+   "recast": false
+  },
+  {
+   "source_label": "Hebrew: kal, 2mp",
+   "text": "and you increase",
    "recast": false
   }
  ],
@@ -29538,6 +30413,11 @@
   {
    "source_label": "Other sense (Strong's)",
    "text": "abound",
+   "recast": false
+  },
+  {
+   "source_label": "Hebrew: kal, 2mp",
+   "text": "you wriggle",
    "recast": false
   }
  ],
@@ -29587,6 +30467,11 @@
    "text": "and + increase",
    "source_label": "Morphology (raw: prefix + root)",
    "recast": false
+  },
+  {
+   "source_label": "Hebrew: kal, 2mp",
+   "text": "and you increase",
+   "recast": false
   }
  ],
  "920": [
@@ -29630,6 +30515,11 @@
   {
    "source_label": "Other sense (Strong's)",
    "text": "say",
+   "recast": false
+  },
+  {
+   "source_label": "Hebrew: kal, 3ms",
+   "text": "and he said",
    "recast": false
   }
  ],
@@ -30833,6 +31723,21 @@
    "text": "and + rise",
    "source_label": "Morphology (raw: prefix + root)",
    "recast": false
+  },
+  {
+   "source_label": "Hebrew: hifil, 1cs",
+   "text": "and I caused to rise",
+   "recast": false
+  },
+  {
+   "source_label": "Hebrew: hifil, 1cs",
+   "text": "and there were rise to me",
+   "recast": false
+  },
+  {
+   "source_label": "Hebrew: hifil, 1cs",
+   "text": "and I had rise",
+   "recast": false
   }
  ],
  "957": [
@@ -30997,6 +31902,16 @@
   {
    "source_label": "Other sense (Strong's)",
    "text": "covenant",
+   "recast": false
+  },
+  {
+   "source_label": "Hebrew: nifal, 3ms",
+   "text": "he was cut",
+   "recast": false
+  },
+  {
+   "source_label": "Hebrew: nifal, 3ms",
+   "text": "there was cut to him",
    "recast": false
   }
  ],
@@ -31241,6 +32156,11 @@
    "source_label": "Other sense (Strong's)",
    "text": "come to pass",
    "recast": false
+  },
+  {
+   "source_label": "Hebrew: kal, 3ms",
+   "text": "he was",
+   "recast": false
   }
  ],
  "969": [
@@ -31390,6 +32310,11 @@
   {
    "source_label": "Other sense (Strong's)",
    "text": "say",
+   "recast": false
+  },
+  {
+   "source_label": "Hebrew: kal, 3ms",
+   "text": "and he said",
    "recast": false
   }
  ],
@@ -32046,6 +32971,11 @@
    "source_label": "Other sense (Strong's)",
    "text": "make",
    "recast": false
+  },
+  {
+   "source_label": "Hebrew: kal, 1cs",
+   "text": "I gave",
+   "recast": false
   }
  ],
  "994": [
@@ -32128,6 +33058,11 @@
   {
    "source_label": "Other sense (Strong's)",
    "text": "come to pass",
+   "recast": false
+  },
+  {
+   "source_label": "Hebrew: kal, 3fs",
+   "text": "and she was",
    "recast": false
   }
  ],
@@ -32323,6 +33258,11 @@
    "source_label": "Other sense (Strong's)",
    "text": "come to pass",
    "recast": false
+  },
+  {
+   "source_label": "Hebrew: kal, 3ms",
+   "text": "and he was",
+   "recast": false
   }
  ],
  "1002": [
@@ -32483,6 +33423,16 @@
    "source_label": "Other sense (Strong's)",
    "text": "see",
    "recast": false
+  },
+  {
+   "source_label": "Hebrew: nifal, 3fs",
+   "text": "and she was saw",
+   "recast": false
+  },
+  {
+   "source_label": "Hebrew: nifal, 3fs",
+   "text": "and there was saw to her",
+   "recast": false
   }
  ],
  "1007": [
@@ -32584,6 +33534,11 @@
   {
    "source_label": "Other sense (Strong's)",
    "text": "be male",
+   "recast": false
+  },
+  {
+   "source_label": "Hebrew: kal, 1cs",
+   "text": "and I mark",
    "recast": false
   }
  ],
@@ -33022,6 +33977,11 @@
    "source_label": "Other sense (Strong's)",
    "text": "come to pass",
    "recast": false
+  },
+  {
+   "source_label": "Hebrew: kal, 3ms",
+   "text": "he was",
+   "recast": false
   }
  ],
  "1023": [
@@ -33285,6 +34245,11 @@
    "source_label": "Other sense (Strong's)",
    "text": "come to pass",
    "recast": false
+  },
+  {
+   "source_label": "Hebrew: kal, 3fs",
+   "text": "and she was",
+   "recast": false
   }
  ],
  "1030": [
@@ -33381,6 +34346,11 @@
   {
    "source_label": "Other sense (Strong's)",
    "text": "see",
+   "recast": false
+  },
+  {
+   "source_label": "Hebrew: kal, 1cs",
+   "text": "and I saw",
    "recast": false
   }
  ],
@@ -33893,6 +34863,11 @@
    "source_label": "Other sense (Strong's)",
    "text": "say",
    "recast": false
+  },
+  {
+   "source_label": "Hebrew: kal, 3ms",
+   "text": "and he said",
+   "recast": false
   }
  ],
  "1048": [
@@ -34167,6 +35142,21 @@
   {
    "text": "rise",
    "source_label": "Morphology (raw: prefix + root)",
+   "recast": false
+  },
+  {
+   "source_label": "Hebrew: hifil, 1cs",
+   "text": "I caused to rise",
+   "recast": false
+  },
+  {
+   "source_label": "Hebrew: hifil, 1cs",
+   "text": "there were rise to me",
+   "recast": false
+  },
+  {
+   "source_label": "Hebrew: hifil, 1cs",
+   "text": "I had rise",
    "recast": false
   }
  ],
@@ -34496,6 +35486,11 @@
   {
    "source_label": "Other sense (Strong's)",
    "text": "come to pass",
+   "recast": false
+  },
+  {
+   "source_label": "Hebrew: kal, 3mp",
+   "text": "and they was",
    "recast": false
   }
  ],
@@ -34949,6 +35944,11 @@
    "source_label": "Other sense (Strong's)",
    "text": "scatter",
    "recast": false
+  },
+  {
+   "source_label": "Hebrew: kal, 3fs",
+   "text": "she dash",
+   "recast": false
   }
  ],
  "1082": [
@@ -35066,6 +36066,21 @@
    "source_label": "Other sense (Strong's)",
    "text": "break",
    "recast": false
+  },
+  {
+   "source_label": "Hebrew: hifil, 3ms",
+   "text": "and he caused to bore",
+   "recast": false
+  },
+  {
+   "source_label": "Hebrew: hifil, 3ms",
+   "text": "and there were bore to him",
+   "recast": false
+  },
+  {
+   "source_label": "Hebrew: hifil, 3ms",
+   "text": "and he had bore",
+   "recast": false
   }
  ],
  "1085": [
@@ -35150,6 +36165,11 @@
    "source_label": "Other sense (Strong's)",
    "text": "plant",
    "recast": false
+  },
+  {
+   "source_label": "Hebrew: kal, 3ms",
+   "text": "and he strike",
+   "recast": false
   }
  ],
  "1089": [
@@ -35192,6 +36212,11 @@
   {
    "text": "and + imbibe",
    "source_label": "Morphology (raw: prefix + root)",
+   "recast": false
+  },
+  {
+   "source_label": "Hebrew: kal, 3ms",
+   "text": "and he imbibe",
    "recast": false
   }
  ],
@@ -35280,6 +36305,11 @@
    "source_label": "Other sense (Strong's)",
    "text": "influence",
    "recast": false
+  },
+  {
+   "source_label": "Hebrew: kal, 3ms",
+   "text": "and he become tipsy",
+   "recast": false
   }
  ],
  "1094": [
@@ -35318,6 +36348,11 @@
   {
    "source_label": "Other sense (Strong's)",
    "text": "reveal",
+   "recast": false
+  },
+  {
+   "source_label": "Hebrew: hitpael, 3ms",
+   "text": "and he denude (oneself)",
    "recast": false
   }
  ],
@@ -35390,6 +36425,11 @@
   {
    "source_label": "Other sense (Strong's)",
    "text": "see",
+   "recast": false
+  },
+  {
+   "source_label": "Hebrew: kal, 3ms",
+   "text": "and he saw",
    "recast": false
   }
  ],
@@ -35567,6 +36607,21 @@
    "source_label": "Other sense (Strong's)",
    "text": "predict",
    "recast": false
+  },
+  {
+   "source_label": "Hebrew: hifil, 3ms",
+   "text": "and he caused to front",
+   "recast": false
+  },
+  {
+   "source_label": "Hebrew: hifil, 3ms",
+   "text": "and there were front to him",
+   "recast": false
+  },
+  {
+   "source_label": "Hebrew: hifil, 3ms",
+   "text": "and he had front",
+   "recast": false
   }
  ],
  "1105": [
@@ -35672,6 +36727,11 @@
   {
    "source_label": "Other sense (Strong's)",
    "text": "take",
+   "recast": false
+  },
+  {
+   "source_label": "Hebrew: kal, 3ms",
+   "text": "and he took",
    "recast": false
   }
  ],
@@ -35798,6 +36858,11 @@
    "text": "and + put",
    "source_label": "Morphology (raw: prefix + root)",
    "recast": false
+  },
+  {
+   "source_label": "Hebrew: kal, 3mp",
+   "text": "and they put",
+   "recast": false
   }
  ],
  "1114": [
@@ -35904,6 +36969,11 @@
    "source_label": "Other sense (Strong's)",
    "text": "carry",
    "recast": false
+  },
+  {
+   "source_label": "Hebrew: kal, 3mp",
+   "text": "and they walk",
+   "recast": false
   }
  ],
  "1118": [
@@ -35961,6 +37031,11 @@
   {
    "source_label": "Other sense (Strong's)",
    "text": "cover",
+   "recast": false
+  },
+  {
+   "source_label": "Hebrew: piel, 3mp",
+   "text": "and they plump (intensive)",
    "recast": false
   }
  ],
@@ -36168,6 +37243,11 @@
    "source_label": "Other sense (Strong's)",
    "text": "see",
    "recast": false
+  },
+  {
+   "source_label": "Hebrew: kal, 3cp",
+   "text": "they saw",
+   "recast": false
   }
  ],
  "1129": [
@@ -36196,6 +37276,11 @@
   {
    "source_label": "Other sense (Strong's)",
    "text": "awake",
+   "recast": false
+  },
+  {
+   "source_label": "Hebrew: kal, 3ms",
+   "text": "and he be awake -d .",
    "recast": false
   }
  ],
@@ -36288,6 +37373,11 @@
   {
    "source_label": "Other sense (Strong's)",
    "text": "care",
+   "recast": false
+  },
+  {
+   "source_label": "Hebrew: kal, 3ms",
+   "text": "and he knew",
    "recast": false
   }
  ],
@@ -36391,6 +37481,11 @@
    "source_label": "Other sense (Strong's)",
    "text": "make",
    "recast": false
+  },
+  {
+   "source_label": "Hebrew: kal, 3ms",
+   "text": "he made/did",
+   "recast": false
   }
  ],
  "1136": [
@@ -36481,6 +37576,11 @@
   {
    "source_label": "Other sense (Strong's)",
    "text": "say",
+   "recast": false
+  },
+  {
+   "source_label": "Hebrew: kal, 3ms",
+   "text": "and he said",
    "recast": false
   }
  ],
@@ -36602,6 +37702,11 @@
    "source_label": "Other sense (Strong's)",
    "text": "come to pass",
    "recast": false
+  },
+  {
+   "source_label": "Hebrew: kal, 3ms",
+   "text": "he was",
+   "recast": false
   }
  ],
  "1145": [
@@ -36649,6 +37754,11 @@
   {
    "source_label": "Other sense (Strong's)",
    "text": "say",
+   "recast": false
+  },
+  {
+   "source_label": "Hebrew: kal, 3ms",
+   "text": "and he said",
    "recast": false
   }
  ],
@@ -36795,6 +37905,11 @@
    "source_label": "Other sense (Strong's)",
    "text": "come to pass",
    "recast": false
+  },
+  {
+   "source_label": "Hebrew: kal, 3ms",
+   "text": "and he was",
+   "recast": false
   }
  ],
  "1152": [
@@ -36891,6 +38006,21 @@
    "source_label": "Other sense (Strong's)",
    "text": "be",
    "recast": false
+  },
+  {
+   "source_label": "Hebrew: hifil, 3ms",
+   "text": "he caused to open",
+   "recast": false
+  },
+  {
+   "source_label": "Hebrew: hifil, 3ms",
+   "text": "there were open to him",
+   "recast": false
+  },
+  {
+   "source_label": "Hebrew: hifil, 3ms",
+   "text": "he had open",
+   "recast": false
   }
  ],
  "1156": [
@@ -36973,6 +38103,11 @@
    "source_label": "Other sense (Strong's)",
    "text": "permanently stay",
    "recast": false
+  },
+  {
+   "source_label": "Hebrew: kal, 3ms",
+   "text": "and he reside",
+   "recast": false
   }
  ],
  "1159": [
@@ -37049,6 +38184,11 @@
   {
    "source_label": "Other sense (Strong's)",
    "text": "come to pass",
+   "recast": false
+  },
+  {
+   "source_label": "Hebrew: kal, 3ms",
+   "text": "and he was",
    "recast": false
   }
  ],
@@ -37135,6 +38275,11 @@
   {
    "source_label": "Other sense (Strong's)",
    "text": "revive",
+   "recast": false
+  },
+  {
+   "source_label": "Hebrew: kal, 3ms",
+   "text": "and he lived",
    "recast": false
   }
  ],
@@ -37362,6 +38507,11 @@
    "source_label": "Other sense (Strong's)",
    "text": "come to pass",
    "recast": false
+  },
+  {
+   "source_label": "Hebrew: kal, 3mp",
+   "text": "and they was",
+   "recast": false
   }
  ],
  "1175": [
@@ -37583,6 +38733,11 @@
    "source_label": "Other sense (Strong's)",
    "text": "kill",
    "recast": false
+  },
+  {
+   "source_label": "Hebrew: kal, 3ms",
+   "text": "and he died",
+   "recast": false
   }
  ],
  "1184": [
@@ -37799,6 +38954,16 @@
   {
    "source_label": "Other sense (Strong's)",
    "text": "show lineage",
+   "recast": false
+  },
+  {
+   "source_label": "Hebrew: nifal, 3mp",
+   "text": "and they was bore (child)",
+   "recast": false
+  },
+  {
+   "source_label": "Hebrew: nifal, 3mp",
+   "text": "and there was bore (child) to them",
    "recast": false
   }
  ],
@@ -38413,6 +39578,16 @@
   {
    "source_label": "Other sense (Strong's)",
    "text": "separate",
+   "recast": false
+  },
+  {
+   "source_label": "Hebrew: nifal, 3cp",
+   "text": "they was break through",
+   "recast": false
+  },
+  {
+   "source_label": "Hebrew: nifal, 3cp",
+   "text": "there was break through to them",
    "recast": false
   }
  ],
@@ -39074,6 +40249,11 @@
    "source_label": "Other sense (Strong's)",
    "text": "show lineage",
    "recast": false
+  },
+  {
+   "source_label": "Hebrew: kal, 3ms",
+   "text": "he bore (child)",
+   "recast": false
   }
  ],
  "1244": [
@@ -39207,6 +40387,21 @@
   {
    "source_label": "Other sense (Strong's)",
    "text": "break",
+   "recast": false
+  },
+  {
+   "source_label": "Hebrew: hifil, 3ms",
+   "text": "he caused to bore",
+   "recast": false
+  },
+  {
+   "source_label": "Hebrew: hifil, 3ms",
+   "text": "there were bore to him",
+   "recast": false
+  },
+  {
+   "source_label": "Hebrew: hifil, 3ms",
+   "text": "he had bore",
    "recast": false
   }
  ],
@@ -39387,6 +40582,11 @@
   {
    "source_label": "Other sense (Strong's)",
    "text": "come to pass",
+   "recast": false
+  },
+  {
+   "source_label": "Hebrew: kal, 3ms",
+   "text": "he was",
    "recast": false
   }
  ],
@@ -39621,6 +40821,16 @@
    "source_label": "Other sense (Strong's)",
    "text": "say",
    "recast": false
+  },
+  {
+   "source_label": "Hebrew: nifal, 3ms",
+   "text": "he was said",
+   "recast": false
+  },
+  {
+   "source_label": "Hebrew: nifal, 3ms",
+   "text": "there was said to him",
+   "recast": false
   }
  ],
  "1260": [
@@ -39824,6 +41034,11 @@
   {
    "source_label": "Other sense (Strong's)",
    "text": "come to pass",
+   "recast": false
+  },
+  {
+   "source_label": "Hebrew: kal, 3fs",
+   "text": "and she was",
    "recast": false
   }
  ],
@@ -40163,6 +41378,11 @@
    "source_label": "Other sense (Strong's)",
    "text": "out",
    "recast": false
+  },
+  {
+   "source_label": "Hebrew: kal, 3ms",
+   "text": "he went out",
+   "recast": false
   }
  ],
  "1278": [
@@ -40200,6 +41420,11 @@
   {
    "text": "and + build",
    "source_label": "Morphology (raw: prefix + root)",
+   "recast": false
+  },
+  {
+   "source_label": "Hebrew: kal, 3ms",
+   "text": "and he build",
    "recast": false
   }
  ],
@@ -40754,6 +41979,11 @@
    "source_label": "Other sense (Strong's)",
    "text": "show lineage",
    "recast": false
+  },
+  {
+   "source_label": "Hebrew: kal, 3ms",
+   "text": "he bore (child)",
+   "recast": false
   }
  ],
  "1298": [
@@ -41179,6 +42409,11 @@
    "source_label": "Other sense (Strong's)",
    "text": "out",
    "recast": false
+  },
+  {
+   "source_label": "Hebrew: kal, 3cp",
+   "text": "they went out",
+   "recast": false
   }
  ],
  "1312": [
@@ -41353,6 +42588,11 @@
   {
    "source_label": "Other sense (Strong's)",
    "text": "show lineage",
+   "recast": false
+  },
+  {
+   "source_label": "Hebrew: kal, 3ms",
+   "text": "he bore (child)",
    "recast": false
   }
  ],
@@ -42062,6 +43302,16 @@
    "source_label": "Other sense (Strong's)",
    "text": "disperse",
    "recast": false
+  },
+  {
+   "source_label": "Hebrew: nifal, 3cp",
+   "text": "they was dash",
+   "recast": false
+  },
+  {
+   "source_label": "Hebrew: nifal, 3cp",
+   "text": "there was dash to them",
+   "recast": false
   }
  ],
  "1343": [
@@ -42168,6 +43418,11 @@
   {
    "source_label": "Other sense (Strong's)",
    "text": "come to pass",
+   "recast": false
+  },
+  {
+   "source_label": "Hebrew: kal, 3ms",
+   "text": "and he was",
    "recast": false
   }
  ],
@@ -42870,6 +44125,11 @@
    "source_label": "Other sense (Strong's)",
    "text": "show lineage",
    "recast": false
+  },
+  {
+   "source_label": "Hebrew: pual, 3ms",
+   "text": "he was bore (child) (intensive)",
+   "recast": false
   }
  ],
  "1369": [
@@ -43507,6 +44767,11 @@
    "source_label": "Other sense (Strong's)",
    "text": "show lineage",
    "recast": false
+  },
+  {
+   "source_label": "Hebrew: kal, 3ms",
+   "text": "he bore (child)",
+   "recast": false
   }
  ],
  "1393": [
@@ -43617,6 +44882,11 @@
    "source_label": "Other sense (Strong's)",
    "text": "show lineage",
    "recast": false
+  },
+  {
+   "source_label": "Hebrew: kal, 3ms",
+   "text": "he bore (child)",
+   "recast": false
   }
  ],
  "1397": [
@@ -43725,6 +44995,11 @@
   {
    "source_label": "Other sense (Strong's)",
    "text": "show lineage",
+   "recast": false
+  },
+  {
+   "source_label": "Hebrew: pual, 3ms",
+   "text": "he was bore (child) (intensive)",
    "recast": false
   }
  ],
@@ -43943,6 +45218,16 @@
    "source_label": "Other sense (Strong's)",
    "text": "split",
    "recast": false
+  },
+  {
+   "source_label": "Hebrew: nifal, 3fs",
+   "text": "she was divide.",
+   "recast": false
+  },
+  {
+   "source_label": "Hebrew: nifal, 3fs",
+   "text": "there was divide. to her",
+   "recast": false
   }
  ],
  "1409": [
@@ -44127,6 +45412,11 @@
   {
    "source_label": "Other sense (Strong's)",
    "text": "show lineage",
+   "recast": false
+  },
+  {
+   "source_label": "Hebrew: kal, 3ms",
+   "text": "he bore (child)",
    "recast": false
   }
  ],
@@ -45025,6 +46315,11 @@
    "source_label": "Other sense (Strong's)",
    "text": "come to pass",
    "recast": false
+  },
+  {
+   "source_label": "Hebrew: kal, 3ms",
+   "text": "and he was",
+   "recast": false
   }
  ],
  "1446": [
@@ -45675,6 +46970,16 @@
    "source_label": "Other sense (Strong's)",
    "text": "separate",
    "recast": false
+  },
+  {
+   "source_label": "Hebrew: nifal, 3cp",
+   "text": "they was break through",
+   "recast": false
+  },
+  {
+   "source_label": "Hebrew: nifal, 3cp",
+   "text": "there was break through to them",
+   "recast": false
   }
  ],
  "1467": [
@@ -45834,6 +47139,11 @@
   {
    "source_label": "Other sense (Strong's)",
    "text": "come to pass",
+   "recast": false
+  },
+  {
+   "source_label": "Hebrew: kal, 3ms",
+   "text": "and he was",
    "recast": false
   }
  ],
@@ -46093,6 +47403,11 @@
    "source_label": "Other sense (Strong's)",
    "text": "come to pass",
    "recast": false
+  },
+  {
+   "source_label": "Hebrew: kal, 3ms",
+   "text": "and he was",
+   "recast": false
   }
  ],
  "1479": [
@@ -46199,6 +47514,11 @@
   {
    "source_label": "Other sense (Strong's)",
    "text": "find",
+   "recast": false
+  },
+  {
+   "source_label": "Hebrew: kal, 3mp",
+   "text": "and they come",
    "recast": false
   }
  ],
@@ -46311,6 +47631,11 @@
    "source_label": "Other sense (Strong's)",
    "text": "settle",
    "recast": false
+  },
+  {
+   "source_label": "Hebrew: kal, 3mp",
+   "text": "and they dwelt",
+   "recast": false
   }
  ],
  "1486": [
@@ -46373,6 +47698,11 @@
   {
    "source_label": "Other sense (Strong's)",
    "text": "say",
+   "recast": false
+  },
+  {
+   "source_label": "Hebrew: kal, 3mp",
+   "text": "and they said",
    "recast": false
   }
  ],
@@ -46490,6 +47820,11 @@
    "source_label": "Other sense (Strong's)",
    "text": "come",
    "recast": false
+  },
+  {
+   "source_label": "Hebrew: kal, 2ms",
+   "text": "you give",
+   "recast": false
   }
  ],
  "1492": [
@@ -46523,6 +47858,11 @@
   {
    "source_label": "Other sense (Strong's)",
    "text": "make bricks",
+   "recast": false
+  },
+  {
+   "source_label": "Hebrew: kal, 1cp",
+   "text": "we be",
    "recast": false
   }
  ],
@@ -46581,6 +47921,11 @@
   {
    "source_label": "Other sense (Strong's)",
    "text": "on fire",
+   "recast": false
+  },
+  {
+   "source_label": "Hebrew: kal, 1cp",
+   "text": "and we be",
    "recast": false
   }
  ],
@@ -46649,6 +47994,11 @@
   {
    "source_label": "Other sense (Strong's)",
    "text": "come to pass",
+   "recast": false
+  },
+  {
+   "source_label": "Hebrew: kal, 3fs",
+   "text": "and she was",
    "recast": false
   }
  ],
@@ -46775,6 +48125,11 @@
    "source_label": "Other sense (Strong's)",
    "text": "come to pass",
    "recast": false
+  },
+  {
+   "source_label": "Hebrew: kal, 3ms",
+   "text": "he was",
+   "recast": false
   }
  ],
  "1502": [
@@ -46868,6 +48223,11 @@
    "source_label": "Other sense (Strong's)",
    "text": "say",
    "recast": false
+  },
+  {
+   "source_label": "Hebrew: kal, 3mp",
+   "text": "and they said",
+   "recast": false
   }
  ],
  "1505": [
@@ -46903,6 +48263,11 @@
    "source_label": "Other sense (Strong's)",
    "text": "come",
    "recast": false
+  },
+  {
+   "source_label": "Hebrew: kal, 2ms",
+   "text": "you give",
+   "recast": false
   }
  ],
  "1506": [
@@ -46927,6 +48292,11 @@
   {
    "text": "build",
    "source_label": "Morphology (raw: prefix + root)",
+   "recast": false
+  },
+  {
+   "source_label": "Hebrew: kal, 1cp",
+   "text": "we build",
    "recast": false
   }
  ],
@@ -47123,6 +48493,11 @@
    "source_label": "Other sense (Strong's)",
    "text": "make",
    "recast": false
+  },
+  {
+   "source_label": "Hebrew: kal, 1cp",
+   "text": "and we made/did",
+   "recast": false
   }
  ],
  "1513": [
@@ -47257,6 +48632,11 @@
   {
    "source_label": "Other sense (Strong's)",
    "text": "disperse",
+   "recast": false
+  },
+  {
+   "source_label": "Hebrew: kal, 1cp",
+   "text": "we dash",
    "recast": false
   }
  ],
@@ -47451,6 +48831,11 @@
   {
    "source_label": "Other sense (Strong's)",
    "text": "bring down",
+   "recast": false
+  },
+  {
+   "source_label": "Hebrew: kal, 3ms",
+   "text": "and he descend",
    "recast": false
   }
  ],
@@ -47680,6 +49065,11 @@
    "text": "build",
    "source_label": "Morphology (raw: prefix + root)",
    "recast": false
+  },
+  {
+   "source_label": "Hebrew: kal, 3cp",
+   "text": "they build",
+   "recast": false
   }
  ],
  "1530": [
@@ -47771,6 +49161,11 @@
   {
    "source_label": "Other sense (Strong's)",
    "text": "say",
+   "recast": false
+  },
+  {
+   "source_label": "Hebrew: kal, 3ms",
+   "text": "and he said",
    "recast": false
   }
  ],
@@ -48179,6 +49574,16 @@
    "source_label": "Other sense (Strong's)",
    "text": "be isolated",
    "recast": false
+  },
+  {
+   "source_label": "Hebrew: nifal, 3ms",
+   "text": "he was gather grapes",
+   "recast": false
+  },
+  {
+   "source_label": "Hebrew: nifal, 3ms",
+   "text": "there was gather grapes to him",
+   "recast": false
   }
  ],
  "1546": [
@@ -48290,6 +49695,11 @@
    "text": "plan",
    "source_label": "Morphology (raw: prefix + root)",
    "recast": false
+  },
+  {
+   "source_label": "Hebrew: kal, 3mp",
+   "text": "they plan",
+   "recast": false
   }
  ],
  "1550": [
@@ -48358,6 +49768,11 @@
    "source_label": "Other sense (Strong's)",
    "text": "come",
    "recast": false
+  },
+  {
+   "source_label": "Hebrew: kal, 2ms",
+   "text": "you give",
+   "recast": false
   }
  ],
  "1552": [
@@ -48397,6 +49812,11 @@
    "source_label": "Other sense (Strong's)",
    "text": "bring down",
    "recast": false
+  },
+  {
+   "source_label": "Hebrew: kal, 1cp",
+   "text": "we descend",
+   "recast": false
   }
  ],
  "1553": [
@@ -48425,6 +49845,11 @@
   {
    "source_label": "Other sense (Strong's)",
    "text": "fodder",
+   "recast": false
+  },
+  {
+   "source_label": "Hebrew: kal, 1cp",
+   "text": "and we overflow",
    "recast": false
   }
  ],
@@ -48581,6 +50006,11 @@
    "source_label": "Other sense (Strong's)",
    "text": "tell",
    "recast": false
+  },
+  {
+   "source_label": "Hebrew: kal, 3mp",
+   "text": "they heard",
+   "recast": false
   }
  ],
  "1559": [
@@ -48681,6 +50111,21 @@
   {
    "source_label": "Other sense (Strong's)",
    "text": "disperse",
+   "recast": false
+  },
+  {
+   "source_label": "Hebrew: hifil, 3ms",
+   "text": "and he caused to dash",
+   "recast": false
+  },
+  {
+   "source_label": "Hebrew: hifil, 3ms",
+   "text": "and there were dash to him",
+   "recast": false
+  },
+  {
+   "source_label": "Hebrew: hifil, 3ms",
+   "text": "and he had dash",
    "recast": false
   }
  ],
@@ -48946,6 +50391,11 @@
    "source_label": "Other sense (Strong's)",
    "text": "idle",
    "recast": false
+  },
+  {
+   "source_label": "Hebrew: kal, 3mp",
+   "text": "and they be flabby",
+   "recast": false
   }
  ],
  "1571": [
@@ -49096,6 +50546,11 @@
    "source_label": "Other sense (Strong's)",
    "text": "call out to",
    "recast": false
+  },
+  {
+   "source_label": "Hebrew: kal, 3ms",
+   "text": "he called",
+   "recast": false
   }
  ],
  "1576": [
@@ -49245,6 +50700,11 @@
   {
    "source_label": "Other sense (Strong's)",
    "text": "fodder",
+   "recast": false
+  },
+  {
+   "source_label": "Hebrew: kal, 3ms",
+   "text": "he overflow",
    "recast": false
   }
  ],
@@ -49445,6 +50905,21 @@
   {
    "source_label": "Other sense (Strong's)",
    "text": "disperse",
+   "recast": false
+  },
+  {
+   "source_label": "Hebrew: hifil, 3ms",
+   "text": "he caused to dash",
+   "recast": false
+  },
+  {
+   "source_label": "Hebrew: hifil, 3ms",
+   "text": "there were dash to him",
+   "recast": false
+  },
+  {
+   "source_label": "Hebrew: hifil, 3ms",
+   "text": "he had dash",
    "recast": false
   }
  ],
@@ -49819,6 +51294,21 @@
    "source_label": "Other sense (Strong's)",
    "text": "show lineage",
    "recast": false
+  },
+  {
+   "source_label": "Hebrew: hifil, 3ms",
+   "text": "and he caused to bore (child)",
+   "recast": false
+  },
+  {
+   "source_label": "Hebrew: hifil, 3ms",
+   "text": "and there were bore (child) to him",
+   "recast": false
+  },
+  {
+   "source_label": "Hebrew: hifil, 3ms",
+   "text": "and he had bore (child)",
+   "recast": false
   }
  ],
  "1600": [
@@ -49975,6 +51465,11 @@
   {
    "source_label": "Other sense (Strong's)",
    "text": "revive",
+   "recast": false
+  },
+  {
+   "source_label": "Hebrew: kal, 3ms",
+   "text": "and he lived",
    "recast": false
   }
  ],
@@ -50225,6 +51720,21 @@
    "source_label": "Other sense (Strong's)",
    "text": "show lineage",
    "recast": false
+  },
+  {
+   "source_label": "Hebrew: hifil, 3ms",
+   "text": "and he caused to bore (child)",
+   "recast": false
+  },
+  {
+   "source_label": "Hebrew: hifil, 3ms",
+   "text": "and there were bore (child) to him",
+   "recast": false
+  },
+  {
+   "source_label": "Hebrew: hifil, 3ms",
+   "text": "and he had bore (child)",
+   "recast": false
   }
  ],
  "1615": [
@@ -50325,6 +51835,11 @@
   {
    "source_label": "Other sense (Strong's)",
    "text": "revive",
+   "recast": false
+  },
+  {
+   "source_label": "Hebrew: kal, 3ms",
+   "text": "he lived",
    "recast": false
   }
  ],
@@ -50443,6 +51958,21 @@
    "source_label": "Other sense (Strong's)",
    "text": "show lineage",
    "recast": false
+  },
+  {
+   "source_label": "Hebrew: hifil, 3ms",
+   "text": "and he caused to bore (child)",
+   "recast": false
+  },
+  {
+   "source_label": "Hebrew: hifil, 3ms",
+   "text": "and there were bore (child) to him",
+   "recast": false
+  },
+  {
+   "source_label": "Hebrew: hifil, 3ms",
+   "text": "and he had bore (child)",
+   "recast": false
   }
  ],
  "1623": [
@@ -50522,6 +52052,11 @@
   {
    "source_label": "Other sense (Strong's)",
    "text": "revive",
+   "recast": false
+  },
+  {
+   "source_label": "Hebrew: kal, 3ms",
+   "text": "and he lived",
    "recast": false
   }
  ],
@@ -50825,6 +52360,21 @@
    "source_label": "Other sense (Strong's)",
    "text": "show lineage",
    "recast": false
+  },
+  {
+   "source_label": "Hebrew: hifil, 3ms",
+   "text": "and he caused to bore (child)",
+   "recast": false
+  },
+  {
+   "source_label": "Hebrew: hifil, 3ms",
+   "text": "and there were bore (child) to him",
+   "recast": false
+  },
+  {
+   "source_label": "Hebrew: hifil, 3ms",
+   "text": "and he had bore (child)",
+   "recast": false
   }
  ],
  "1637": [
@@ -50921,6 +52471,11 @@
    "source_label": "Other sense (Strong's)",
    "text": "revive",
    "recast": false
+  },
+  {
+   "source_label": "Hebrew: kal, 3ms",
+   "text": "he lived",
+   "recast": false
   }
  ],
  "1641": [
@@ -51013,6 +52568,21 @@
    "source_label": "Other sense (Strong's)",
    "text": "show lineage",
    "recast": false
+  },
+  {
+   "source_label": "Hebrew: hifil, 3ms",
+   "text": "and he caused to bore (child)",
+   "recast": false
+  },
+  {
+   "source_label": "Hebrew: hifil, 3ms",
+   "text": "and there were bore (child) to him",
+   "recast": false
+  },
+  {
+   "source_label": "Hebrew: hifil, 3ms",
+   "text": "and he had bore (child)",
+   "recast": false
   }
  ],
  "1644": [
@@ -51099,6 +52669,11 @@
   {
    "source_label": "Other sense (Strong's)",
    "text": "revive",
+   "recast": false
+  },
+  {
+   "source_label": "Hebrew: kal, 3ms",
+   "text": "and he lived",
    "recast": false
   }
  ],
@@ -51397,6 +52972,21 @@
    "source_label": "Other sense (Strong's)",
    "text": "show lineage",
    "recast": false
+  },
+  {
+   "source_label": "Hebrew: hifil, 3ms",
+   "text": "and he caused to bore (child)",
+   "recast": false
+  },
+  {
+   "source_label": "Hebrew: hifil, 3ms",
+   "text": "and there were bore (child) to him",
+   "recast": false
+  },
+  {
+   "source_label": "Hebrew: hifil, 3ms",
+   "text": "and he had bore (child)",
+   "recast": false
   }
  ],
  "1658": [
@@ -51478,6 +53068,11 @@
   {
    "source_label": "Other sense (Strong's)",
    "text": "revive",
+   "recast": false
+  },
+  {
+   "source_label": "Hebrew: kal, 3ms",
+   "text": "and he lived",
    "recast": false
   }
  ],
@@ -51615,6 +53210,21 @@
    "source_label": "Other sense (Strong's)",
    "text": "show lineage",
    "recast": false
+  },
+  {
+   "source_label": "Hebrew: hifil, 3ms",
+   "text": "and he caused to bore (child)",
+   "recast": false
+  },
+  {
+   "source_label": "Hebrew: hifil, 3ms",
+   "text": "and there were bore (child) to him",
+   "recast": false
+  },
+  {
+   "source_label": "Hebrew: hifil, 3ms",
+   "text": "and he had bore (child)",
+   "recast": false
   }
  ],
  "1666": [
@@ -51699,6 +53309,11 @@
   {
    "source_label": "Other sense (Strong's)",
    "text": "revive",
+   "recast": false
+  },
+  {
+   "source_label": "Hebrew: kal, 3ms",
+   "text": "and he lived",
    "recast": false
   }
  ],
@@ -51997,6 +53612,21 @@
    "source_label": "Other sense (Strong's)",
    "text": "show lineage",
    "recast": false
+  },
+  {
+   "source_label": "Hebrew: hifil, 3ms",
+   "text": "and he caused to bore (child)",
+   "recast": false
+  },
+  {
+   "source_label": "Hebrew: hifil, 3ms",
+   "text": "and there were bore (child) to him",
+   "recast": false
+  },
+  {
+   "source_label": "Hebrew: hifil, 3ms",
+   "text": "and he had bore (child)",
+   "recast": false
   }
  ],
  "1680": [
@@ -52078,6 +53708,11 @@
   {
    "source_label": "Other sense (Strong's)",
    "text": "revive",
+   "recast": false
+  },
+  {
+   "source_label": "Hebrew: kal, 3ms",
+   "text": "and he lived",
    "recast": false
   }
  ],
@@ -52201,6 +53836,21 @@
    "source_label": "Other sense (Strong's)",
    "text": "show lineage",
    "recast": false
+  },
+  {
+   "source_label": "Hebrew: hifil, 3ms",
+   "text": "and he caused to bore (child)",
+   "recast": false
+  },
+  {
+   "source_label": "Hebrew: hifil, 3ms",
+   "text": "and there were bore (child) to him",
+   "recast": false
+  },
+  {
+   "source_label": "Hebrew: hifil, 3ms",
+   "text": "and he had bore (child)",
+   "recast": false
   }
  ],
  "1687": [
@@ -52285,6 +53935,11 @@
   {
    "source_label": "Other sense (Strong's)",
    "text": "revive",
+   "recast": false
+  },
+  {
+   "source_label": "Hebrew: kal, 3ms",
+   "text": "and he lived",
    "recast": false
   }
  ],
@@ -52576,6 +54231,21 @@
    "source_label": "Other sense (Strong's)",
    "text": "show lineage",
    "recast": false
+  },
+  {
+   "source_label": "Hebrew: hifil, 3ms",
+   "text": "and he caused to bore (child)",
+   "recast": false
+  },
+  {
+   "source_label": "Hebrew: hifil, 3ms",
+   "text": "and there were bore (child) to him",
+   "recast": false
+  },
+  {
+   "source_label": "Hebrew: hifil, 3ms",
+   "text": "and he had bore (child)",
+   "recast": false
   }
  ],
  "1700": [
@@ -52657,6 +54327,11 @@
   {
    "source_label": "Other sense (Strong's)",
    "text": "revive",
+   "recast": false
+  },
+  {
+   "source_label": "Hebrew: kal, 3ms",
+   "text": "and he lived",
    "recast": false
   }
  ],
@@ -52804,6 +54479,21 @@
    "source_label": "Other sense (Strong's)",
    "text": "show lineage",
    "recast": false
+  },
+  {
+   "source_label": "Hebrew: hifil, 3ms",
+   "text": "and he caused to bore (child)",
+   "recast": false
+  },
+  {
+   "source_label": "Hebrew: hifil, 3ms",
+   "text": "and there were bore (child) to him",
+   "recast": false
+  },
+  {
+   "source_label": "Hebrew: hifil, 3ms",
+   "text": "and he had bore (child)",
+   "recast": false
   }
  ],
  "1708": [
@@ -52888,6 +54578,11 @@
   {
    "source_label": "Other sense (Strong's)",
    "text": "revive",
+   "recast": false
+  },
+  {
+   "source_label": "Hebrew: kal, 3ms",
+   "text": "and he lived",
    "recast": false
   }
  ],
@@ -53194,6 +54889,21 @@
    "source_label": "Other sense (Strong's)",
    "text": "show lineage",
    "recast": false
+  },
+  {
+   "source_label": "Hebrew: hifil, 3ms",
+   "text": "and he caused to bore (child)",
+   "recast": false
+  },
+  {
+   "source_label": "Hebrew: hifil, 3ms",
+   "text": "and there were bore (child) to him",
+   "recast": false
+  },
+  {
+   "source_label": "Hebrew: hifil, 3ms",
+   "text": "and he had bore (child)",
+   "recast": false
   }
  ],
  "1721": [
@@ -53275,6 +54985,11 @@
   {
    "source_label": "Other sense (Strong's)",
    "text": "revive",
+   "recast": false
+  },
+  {
+   "source_label": "Hebrew: kal, 3ms",
+   "text": "and he lived",
    "recast": false
   }
  ],
@@ -53398,6 +55113,21 @@
    "source_label": "Other sense (Strong's)",
    "text": "show lineage",
    "recast": false
+  },
+  {
+   "source_label": "Hebrew: hifil, 3ms",
+   "text": "and he caused to bore (child)",
+   "recast": false
+  },
+  {
+   "source_label": "Hebrew: hifil, 3ms",
+   "text": "and there were bore (child) to him",
+   "recast": false
+  },
+  {
+   "source_label": "Hebrew: hifil, 3ms",
+   "text": "and he had bore (child)",
+   "recast": false
   }
  ],
  "1728": [
@@ -53482,6 +55212,11 @@
   {
    "source_label": "Other sense (Strong's)",
    "text": "revive",
+   "recast": false
+  },
+  {
+   "source_label": "Hebrew: kal, 3ms",
+   "text": "and he lived",
    "recast": false
   }
  ],
@@ -53725,6 +55460,21 @@
    "source_label": "Other sense (Strong's)",
    "text": "show lineage",
    "recast": false
+  },
+  {
+   "source_label": "Hebrew: hifil, 3ms",
+   "text": "and he caused to bore (child)",
+   "recast": false
+  },
+  {
+   "source_label": "Hebrew: hifil, 3ms",
+   "text": "and there were bore (child) to him",
+   "recast": false
+  },
+  {
+   "source_label": "Hebrew: hifil, 3ms",
+   "text": "and he had bore (child)",
+   "recast": false
   }
  ],
  "1739": [
@@ -53806,6 +55556,11 @@
   {
    "source_label": "Other sense (Strong's)",
    "text": "revive",
+   "recast": false
+  },
+  {
+   "source_label": "Hebrew: kal, 3ms",
+   "text": "and he lived",
    "recast": false
   }
  ],
@@ -53953,6 +55708,21 @@
    "source_label": "Other sense (Strong's)",
    "text": "show lineage",
    "recast": false
+  },
+  {
+   "source_label": "Hebrew: hifil, 3ms",
+   "text": "and he caused to bore (child)",
+   "recast": false
+  },
+  {
+   "source_label": "Hebrew: hifil, 3ms",
+   "text": "and there were bore (child) to him",
+   "recast": false
+  },
+  {
+   "source_label": "Hebrew: hifil, 3ms",
+   "text": "and he had bore (child)",
+   "recast": false
   }
  ],
  "1747": [
@@ -54032,6 +55802,11 @@
   {
    "source_label": "Other sense (Strong's)",
    "text": "revive",
+   "recast": false
+  },
+  {
+   "source_label": "Hebrew: kal, 3ms",
+   "text": "and he lived",
    "recast": false
   }
  ],
@@ -54370,6 +56145,21 @@
    "source_label": "Other sense (Strong's)",
    "text": "show lineage",
    "recast": false
+  },
+  {
+   "source_label": "Hebrew: hifil, 3ms",
+   "text": "and he caused to bore (child)",
+   "recast": false
+  },
+  {
+   "source_label": "Hebrew: hifil, 3ms",
+   "text": "and there were bore (child) to him",
+   "recast": false
+  },
+  {
+   "source_label": "Hebrew: hifil, 3ms",
+   "text": "and he had bore (child)",
+   "recast": false
   }
  ],
  "1761": [
@@ -54463,6 +56253,11 @@
   {
    "source_label": "Other sense (Strong's)",
    "text": "revive",
+   "recast": false
+  },
+  {
+   "source_label": "Hebrew: kal, 3ms",
+   "text": "and he lived",
    "recast": false
   }
  ],
@@ -54575,6 +56370,21 @@
   {
    "source_label": "Other sense (Strong's)",
    "text": "show lineage",
+   "recast": false
+  },
+  {
+   "source_label": "Hebrew: hifil, 3ms",
+   "text": "and he caused to bore (child)",
+   "recast": false
+  },
+  {
+   "source_label": "Hebrew: hifil, 3ms",
+   "text": "and there were bore (child) to him",
+   "recast": false
+  },
+  {
+   "source_label": "Hebrew: hifil, 3ms",
+   "text": "and he had bore (child)",
    "recast": false
   }
  ],
@@ -54882,6 +56692,21 @@
    "source_label": "Other sense (Strong's)",
    "text": "show lineage",
    "recast": false
+  },
+  {
+   "source_label": "Hebrew: hifil, 3ms",
+   "text": "he caused to bore (child)",
+   "recast": false
+  },
+  {
+   "source_label": "Hebrew: hifil, 3ms",
+   "text": "there were bore (child) to him",
+   "recast": false
+  },
+  {
+   "source_label": "Hebrew: hifil, 3ms",
+   "text": "he had bore (child)",
+   "recast": false
   }
  ],
  "1779": [
@@ -55116,6 +56941,21 @@
    "source_label": "Other sense (Strong's)",
    "text": "show lineage",
    "recast": false
+  },
+  {
+   "source_label": "Hebrew: hifil, 3ms",
+   "text": "he caused to bore (child)",
+   "recast": false
+  },
+  {
+   "source_label": "Hebrew: hifil, 3ms",
+   "text": "there were bore (child) to him",
+   "recast": false
+  },
+  {
+   "source_label": "Hebrew: hifil, 3ms",
+   "text": "he had bore (child)",
+   "recast": false
   }
  ],
  "1787": [
@@ -55200,6 +57040,11 @@
   {
    "source_label": "Other sense (Strong's)",
    "text": "kill",
+   "recast": false
+  },
+  {
+   "source_label": "Hebrew: kal, 3ms",
+   "text": "and he died",
    "recast": false
   }
  ],
@@ -55460,6 +57305,11 @@
   {
    "source_label": "Other sense (Strong's)",
    "text": "take",
+   "recast": false
+  },
+  {
+   "source_label": "Hebrew: kal, 3ms",
+   "text": "and he took",
    "recast": false
   }
  ],
@@ -55947,6 +57797,11 @@
    "source_label": "Other sense (Strong's)",
    "text": "come to pass",
    "recast": false
+  },
+  {
+   "source_label": "Hebrew: kal, 3fs",
+   "text": "and she was",
+   "recast": false
   }
  ],
  "1819": [
@@ -56085,6 +57940,11 @@
   {
    "source_label": "Other sense (Strong's)",
    "text": "take",
+   "recast": false
+  },
+  {
+   "source_label": "Hebrew: kal, 3ms",
+   "text": "and he took",
    "recast": false
   }
  ],
@@ -56527,6 +58387,11 @@
    "source_label": "Other sense (Strong's)",
    "text": "out",
    "recast": false
+  },
+  {
+   "source_label": "Hebrew: kal, 3mp",
+   "text": "and they went out",
+   "recast": false
   }
  ],
  "1842": [
@@ -56720,6 +58585,11 @@
    "source_label": "Other sense (Strong's)",
    "text": "come",
    "recast": false
+  },
+  {
+   "source_label": "Hebrew: kal, 3mp",
+   "text": "and they came/brought",
+   "recast": false
   }
  ],
  "1849": [
@@ -56828,6 +58698,11 @@
    "source_label": "Other sense (Strong's)",
    "text": "settle",
    "recast": false
+  },
+  {
+   "source_label": "Hebrew: kal, 3mp",
+   "text": "and they dwelt",
+   "recast": false
   }
  ],
  "1852": [
@@ -56905,6 +58780,11 @@
   {
    "source_label": "Other sense (Strong's)",
    "text": "come to pass",
+   "recast": false
+  },
+  {
+   "source_label": "Hebrew: kal, 3mp",
+   "text": "and they was",
    "recast": false
   }
  ],
@@ -57063,6 +58943,11 @@
   {
    "source_label": "Other sense (Strong's)",
    "text": "kill",
+   "recast": false
+  },
+  {
+   "source_label": "Hebrew: kal, 3ms",
+   "text": "and he died",
    "recast": false
   }
  ],
