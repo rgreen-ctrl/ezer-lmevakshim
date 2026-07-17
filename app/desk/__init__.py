@@ -235,6 +235,45 @@ def root_gloss(word_id):
     })
 
 
+import re as _re
+
+@desk.post("/words/<int:word_id>/plainer")
+def plainer_global(word_id):
+    """Global plainer-English swap across Magil's English (contextual field
+    ONLY — never Hebrew/Aramaic/Rashi/R-S). Two-step like the shoresh global:
+    scope='count' reports how many uncertified/certified words contain the
+    archaic term; scope='all' applies, GlossRevision-audited '[plainer]',
+    certified reported back to reopen — never written."""
+    db.get_or_404(Word, word_id)
+    data = request.get_json(force=True)
+    old = (data.get("archaic") or "").strip()
+    new = (data.get("replacement") or "").strip()
+    scope = data.get("scope", "count")
+    if not old or not new:
+        return jsonify({"error": "archaic and replacement required"}), 400
+    pat = _re.compile(r"\b" + _re.escape(old) + r"\b")
+    hits = [w for w in Word.query.filter(
+        Word.contextual_translation.isnot(None)).all()
+        if pat.search(w.contextual_translation or "")]
+    cert = [w.ref for w in hits if w.certified]
+    live = [w for w in hits if not w.certified]
+    if scope == "count":
+        return jsonify({"instances": len(live), "certified": cert,
+                        "sample_refs": [w.ref for w in live[:8]]})
+    changed = 0
+    for w in live:
+        val = pat.sub(new, w.contextual_translation)
+        if val != w.contextual_translation:
+            db.session.add(GlossRevision(
+                word_id=w.id, editor_id=g.staff.id,
+                old_gloss=f"[plainer] {w.contextual_translation}",
+                new_gloss=f"[plainer] {val}"))
+            w.contextual_translation = val
+            changed += 1
+    db.session.commit()
+    return jsonify({"changed": changed, "certified_skipped": cert})
+
+
 @desk.post("/words/<int:word_id>/flag")
 def flag(word_id):
     word = db.get_or_404(Word, word_id)

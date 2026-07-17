@@ -234,6 +234,7 @@
         <label for="wp-root"><b>Layer 1 — Shoresh (root meaning)</b> · the bare root, vocabulary (e.g. “generation”)</label>
         <div class="layer-row"><input id="wp-root"><button onclick="saveRoot('one')">Save shoresh</button></div>
         <button id="wp-root-global" class="quiet hidden" onclick="saveRoot('root')"></button>
+        <button id="wp-plainer-global" class="quiet hidden"></button>
       </div>
       <div class="layer">
         <label for="wp-gloss"><b>Layer 2 — Literal</b> · the word as it appears, affixes included (e.g. “in his generations”)</label>
@@ -688,6 +689,7 @@ function pickWord(id) {
   $('wp-shoresh-he').textContent = w.shoresh ? ('Hebrew root: ' + w.shoresh) : '';
   $('wp-root').value = w.root_gloss || '';
   $('wp-root-global').classList.add('hidden');   // offer is per-save, per-word
+  $('wp-plainer-global').classList.add('hidden');
   $('wp-gloss').value = w.gloss || '';
   $('wp-contextual').value = w.contextual || '';
   $('wp-note').textContent = w.contextual_note ? ('⚑ ' + w.contextual_note) : '';
@@ -734,10 +736,41 @@ function chipTarget(label) {
   if (label.startsWith('Magil') || label.startsWith('Plainer English')) return 'wp-contextual';
   return 'wp-gloss';   // Morphology, Binyan, Rashi, Root -> literal layer
 }
-function fillLayer(el) {
+// The curated archaic->plain pairs (meaning-preserving by construction).
+const PLAINER = { "unto":"to","thou":"you","thee":"you","thy":"your","thine":"your",
+  "ye":"you","shalt":"shall","hast":"have","hath":"has","doth":"does","dost":"do",
+  "art":"are","wast":"were","wilt":"will","begat":"fathered","goest":"go" };
+async function fillLayer(el) {
   const t = $(el.dataset.target);
+  const before = t.value;
   t.value = el.dataset.text;
   t.focus();
+  // Plainer chip picked -> detect which archaic word it replaced, then offer
+  // the global with the count. Never global by default; certified reported,
+  // never written; every change audited '[plainer]'.
+  const lab = el.querySelector('.sugg-src');
+  if (lab && lab.textContent.startsWith('Plainer English')) {
+    for (const [arc, rep] of Object.entries(PLAINER)) {
+      if (new RegExp('\\b'+arc+'\\b').test(before) && el.dataset.text.includes(rep)) {
+        try {
+          const c = await api(`/desk/words/${S.word}/plainer`, {archaic: arc, replacement: rep, scope: 'count'});
+          const g = $('wp-plainer-global');
+          if (c.instances > 0) {
+            g.textContent = `Apply “${arc} → ${rep}” to all ${c.instances} instances`;
+            g.setAttribute('aria-label', `Apply ${arc} to ${rep} across all ${c.instances} uncertified instances in Magil's English. ${c.certified.length} certified words untouched.`);
+            g.onclick = async () => {
+              const r = await api(`/desk/words/${S.word}/plainer`, {archaic: arc, replacement: rep, scope: 'all'});
+              $('wp-status').textContent = `Applied “${arc} → ${rep}” to ${r.changed} words.`
+                + (r.certified_skipped.length ? ` Certified untouched: ${r.certified_skipped.join(', ')}.` : '');
+              g.classList.add('hidden');
+            };
+            g.classList.remove('hidden');
+          }
+        } catch (e) { $('wp-status').textContent = 'Global check failed: ' + e.message; }
+        break;
+      }
+    }
+  }
 }
 
 function fillFix(el) {
