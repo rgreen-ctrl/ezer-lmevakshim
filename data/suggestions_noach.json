@@ -544,7 +544,7 @@
    "recast": false
   },
   {
-   "text": "Sem, Shem.",
+   "text": "Shem",
    "source_label": "Morphology (morphhb)",
    "recast": false
   }
@@ -798,12 +798,12 @@
    "recast": false
   },
   {
-   "text": "was accomplish, confirm / accomplish, confirm itself",
+   "text": "was fill / fill itself",
    "source_label": "Binyan: Nifal",
    "recast": false
   },
   {
-   "text": "and accomplish, confirm",
+   "text": "and fill",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -861,7 +861,7 @@
    "recast": false
   },
   {
-   "text": "cruel -ty, damage",
+   "text": "violence",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -1062,7 +1062,7 @@
    "recast": false
   },
   {
-   "text": "and and, forasmuch",
+   "text": "and relative conjunction",
    "source_label": "Morphology (morphhb)",
    "recast": false
   }
@@ -1169,7 +1169,7 @@
    "recast": false
   },
   {
-   "text": "body, fat",
+   "text": "flesh",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -1235,7 +1235,7 @@
    "recast": false
   },
   {
-   "text": "his along, away",
+   "text": "his road",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -1409,7 +1409,7 @@
    "recast": false
   },
   {
-   "text": "after, utmost border",
+   "text": "extremity",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -1482,7 +1482,7 @@
    "recast": false
   },
   {
-   "text": "body, fat",
+   "text": "flesh",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -1579,7 +1579,7 @@
    "recast": false
   },
   {
-   "text": "and and, forasmuch",
+   "text": "and relative conjunction",
    "source_label": "Morphology (morphhb)",
    "recast": false
   }
@@ -1598,7 +1598,7 @@
    "recast": false
   },
   {
-   "text": "accomplish, confirm",
+   "text": "fill",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -1656,7 +1656,7 @@
    "recast": false
   },
   {
-   "text": "cruel -ty, damage",
+   "text": "violence",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -1729,7 +1729,7 @@
    "recast": false
   },
   {
-   "text": "and my behold, if",
+   "text": "and my lo!",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -1966,7 +1966,7 @@
    "recast": false
   },
   {
-   "text": "carpenter, gallows",
+   "text": "tree",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -2051,7 +2051,7 @@
    "recast": false
   },
   {
-   "text": "nest, room.",
+   "text": "nest",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -2201,7 +2201,7 @@
    "readability": true
   },
   {
-   "text": "and appease, make an atonement",
+   "text": "and cover",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -2316,7 +2316,7 @@
    "readability": true
   },
   {
-   "text": "and from abroad, field",
+   "text": "and from separate by a wall",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -2361,7 +2361,7 @@
    "recast": false
   },
   {
-   "text": "in bribe, camphire",
+   "text": "in cover",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -2405,7 +2405,7 @@
    "recast": false
   },
   {
-   "text": "and he, hence",
+   "text": "and this",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -2590,7 +2590,7 @@
    "recast": false
   },
   {
-   "text": "cubit, + hundred by exchange for 3967",
+   "text": "a mother",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -2619,7 +2619,7 @@
    "recast": false
   },
   {
-   "text": "forever, length",
+   "text": "length",
    "source_label": "Morphology (morphhb)",
    "recast": false
   }
@@ -2681,7 +2681,7 @@
    "recast": false
   },
   {
-   "text": "cubit, + hundred by exchange for 3967",
+   "text": "a mother",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -2715,7 +2715,7 @@
    "recast": false
   },
   {
-   "text": "her breadth, broad",
+   "text": "her width",
    "source_label": "Morphology (morphhb)",
    "recast": false
   }
@@ -2758,7 +2758,7 @@
    "recast": false
   },
   {
-   "text": "cubit, + hundred by exchange for 3967",
+   "text": "a mother",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -2792,7 +2792,7 @@
    "recast": false
   },
   {
-   "text": "her along, height",
+   "text": "her height",
    "source_label": "Morphology (morphhb)",
    "recast": false
   }
@@ -2827,7 +2827,7 @@
    "recast": false
   },
   {
-   "text": "midday, noon -day",
+   "text": "light",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -2972,7 +2972,7 @@
    "readability": true
   },
   {
-   "text": "cubit, + hundred by exchange for 3967",
+   "text": "a mother",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -3012,12 +3012,12 @@
    "readability": true
   },
   {
-   "text": "accomplish, cease (intensive)",
+   "text": "end (intensive)",
    "source_label": "Binyan: Piel",
    "recast": false
   },
   {
-   "text": "accomplish, cease",
+   "text": "end",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -3067,7 +3067,7 @@
    "readability": true
   },
   {
-   "text": "from to above, exceeding -ly",
+   "text": "from to upper part",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -3112,7 +3112,7 @@
    "readability": true
   },
   {
-   "text": "and door, entering in",
+   "text": "and opening",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -3212,7 +3212,7 @@
    "readability": true
   },
   {
-   "text": "any wise, appoint",
+   "text": "put",
    "source_label": "Morphology (morphhb)",
    "recast": false
   }
@@ -3247,7 +3247,7 @@
    "recast": false
   },
   {
-   "text": "low parts, -er",
+   "text": "lowermost",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -3297,7 +3297,7 @@
    "recast": false
   },
   {
-   "text": "again, either of them",
+   "text": "double",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -3337,7 +3337,7 @@
    "readability": true
   },
   {
-   "text": "and third part, rank",
+   "text": "and third",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -3406,7 +3406,7 @@
    "recast": false
   },
   {
-   "text": "and I, as for me",
+   "text": "and I",
    "source_label": "Morphology (morphhb)",
    "recast": false
   }
@@ -3712,7 +3712,7 @@
    "recast": false
   },
   {
-   "text": "body, fat",
+   "text": "flesh",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -3882,7 +3882,7 @@
    "recast": false
   },
   {
-   "text": "from as, beneath",
+   "text": "from bottom",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -4052,7 +4052,7 @@
    "recast": false
   },
   {
-   "text": "die, be dead",
+   "text": "breathe out",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -4087,7 +4087,7 @@
    "readability": true
   },
   {
-   "text": "caused to abide, accomplish",
+   "text": "caused to rise",
    "source_label": "Binyan: Hifil",
    "recast": false
   },
@@ -4097,7 +4097,7 @@
    "recast": false
   },
   {
-   "text": "and abide, accomplish",
+   "text": "and rise",
    "source_label": "Morphology (morphhb)",
    "recast": false
   }
@@ -4357,7 +4357,7 @@
    "readability": true
   },
   {
-   "text": "thee, thou",
+   "text": "thou",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -4722,7 +4722,7 @@
    "readability": true
   },
   {
-   "text": "body, fat",
+   "text": "flesh",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -5047,7 +5047,7 @@
    "readability": true
   },
   {
-   "text": "him, male",
+   "text": "remembered",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -5177,7 +5177,7 @@
    "readability": true
   },
   {
-   "text": "to his kind. Compare 4480.",
+   "text": "to his sort",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -5277,7 +5277,7 @@
    "readability": true
   },
   {
-   "text": "to her kind. Compare 4480.",
+   "text": "to her sort",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -5382,7 +5382,7 @@
    "readability": true
   },
   {
-   "text": "the country, earth",
+   "text": "the soil",
    "source_label": "Morphology (morphhb)",
    "recast": false
   }
@@ -5407,7 +5407,7 @@
    "readability": true
   },
   {
-   "text": "to his kind. Compare 4480.",
+   "text": "to his sort",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -5632,7 +5632,7 @@
    "readability": true
   },
   {
-   "text": "and thee, thou",
+   "text": "and thou",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -5743,7 +5743,7 @@
    "recast": false
   },
   {
-   "text": "food, fruit",
+   "text": "eatable",
    "source_label": "Morphology (morphhb)",
    "recast": false
   }
@@ -5836,7 +5836,7 @@
    "readability": true
   },
   {
-   "text": "and assemble, bring",
+   "text": "and gather",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -5988,7 +5988,7 @@
    "recast": false
   },
   {
-   "text": "to consume, devour",
+   "text": "to food",
    "source_label": "Morphology (morphhb)",
    "recast": false
   }
@@ -6138,12 +6138,12 @@
    "recast": false
   },
   {
-   "text": "appoint, for- bid (intensive)",
+   "text": "constitute (intensive)",
    "source_label": "Binyan: Piel",
    "recast": false
   },
   {
-   "text": "appoint, for- bid",
+   "text": "constitute",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -6400,7 +6400,7 @@
    "readability": true
   },
   {
-   "text": "thee, thou",
+   "text": "thou",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -6561,7 +6561,7 @@
    "recast": false
   },
   {
-   "text": "and and, forasmuch",
+   "text": "and relative conjunction",
    "source_label": "Morphology (morphhb)",
    "recast": false
   }
@@ -6734,7 +6734,7 @@
    "recast": false
   },
   {
-   "text": "the he, hence",
+   "text": "the this",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -6844,7 +6844,7 @@
    "readability": true
   },
   {
-   "text": "the clean, fair",
+   "text": "the pure",
    "source_label": "Morphology (morphhb)",
    "recast": false
   }
@@ -7189,7 +7189,7 @@
    "readability": true
   },
   {
-   "text": "before, or else",
+   "text": "not",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -7219,7 +7219,7 @@
    "readability": true
   },
   {
-   "text": "clean, fair",
+   "text": "pure",
    "source_label": "Morphology (morphhb)",
    "recast": false
   }
@@ -7244,7 +7244,7 @@
    "readability": true
   },
   {
-   "text": "he, as for her",
+   "text": "he",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -7373,7 +7373,7 @@
    "recast": false
   },
   {
-   "text": "again, alike",
+   "text": "assemblage",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -7548,7 +7548,7 @@
    "recast": false
   },
   {
-   "text": "him, male",
+   "text": "remembered",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -7810,7 +7810,7 @@
    "recast": false
   },
   {
-   "text": "and and, forasmuch",
+   "text": "and relative conjunction",
    "source_label": "Morphology (morphhb)",
    "recast": false
   }
@@ -7858,7 +7858,7 @@
    "recast": false
   },
   {
-   "text": "again, all life long",
+   "text": "iteration",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -7941,7 +7941,7 @@
    "recast": false
   },
   {
-   "text": "I, me",
+   "text": "I",
    "source_label": "Morphology (morphhb)",
    "recast": false
   }
@@ -8158,7 +8158,7 @@
    "recast": false
   },
   {
-   "text": "and abolish, blot out",
+   "text": "and stroke",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -8430,7 +8430,7 @@
    "recast": false
   },
   {
-   "text": "the country, earth",
+   "text": "the soil",
    "source_label": "Morphology (morphhb)",
    "recast": false
   }
@@ -8580,12 +8580,12 @@
    "recast": false
   },
   {
-   "text": "appoint, for- bid (intensive)",
+   "text": "constitute (intensive)",
    "source_label": "Binyan: Piel",
    "recast": false
   },
   {
-   "text": "appoint, for- bid",
+   "text": "constitute",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -9324,7 +9324,7 @@
    "recast": false
   },
   {
-   "text": "the clean, fair",
+   "text": "the pure",
    "source_label": "Morphology (morphhb)",
    "recast": false
   }
@@ -9440,7 +9440,7 @@
    "recast": false
   },
   {
-   "text": "her else, except",
+   "text": "her nonentity",
    "source_label": "Morphology (morphhb)",
    "recast": false
   }
@@ -9459,7 +9459,7 @@
    "recast": false
   },
   {
-   "text": "clean, fair",
+   "text": "pure",
    "source_label": "Morphology (morphhb)",
    "recast": false
   }
@@ -9604,7 +9604,7 @@
    "recast": false
   },
   {
-   "text": "creep, move.",
+   "text": "glide swiftly",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -9672,7 +9672,7 @@
    "recast": false
   },
   {
-   "text": "the country, earth",
+   "text": "the soil",
    "source_label": "Morphology (morphhb)",
    "recast": false
   }
@@ -9942,7 +9942,7 @@
    "readability": true
   },
   {
-   "text": "him, male",
+   "text": "remembered",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -10047,12 +10047,12 @@
    "readability": true
   },
   {
-   "text": "appoint, for- bid (intensive)",
+   "text": "constitute (intensive)",
    "source_label": "Binyan: Piel",
    "recast": false
   },
   {
-   "text": "appoint, for- bid",
+   "text": "constitute",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -10597,7 +10597,7 @@
    "recast": false
   },
   {
-   "text": "in month -ly, new moon.",
+   "text": "in new",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -10626,7 +10626,7 @@
    "recast": false
   },
   {
-   "text": "the again, either of them",
+   "text": "the double",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -10694,7 +10694,7 @@
    "recast": false
   },
   {
-   "text": "eigh-, fif-",
+   "text": "ten",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -10747,7 +10747,7 @@
    "recast": false
   },
   {
-   "text": "to month -ly, new moon.",
+   "text": "to new",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -10790,7 +10790,7 @@
    "recast": false
   },
   {
-   "text": "the he, hence",
+   "text": "the this",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -10819,7 +10819,7 @@
    "recast": false
   },
   {
-   "text": "was make a breach, break forth into / make a breach, break forth into itself",
+   "text": "was cleave / cleave itself",
    "source_label": "Binyan: Nifal",
    "recast": false
   },
@@ -10829,7 +10829,7 @@
    "recast": false
   },
   {
-   "text": "make a breach, break forth into",
+   "text": "cleave",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -10907,7 +10907,7 @@
    "recast": false
   },
   {
-   "text": "fountain, spring",
+   "text": "fountain",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -10936,7 +10936,7 @@
    "recast": false
   },
   {
-   "text": "deep place, depth.",
+   "text": "abyss",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -10965,7 +10965,7 @@
    "recast": false
   },
   {
-   "text": "in abound -undance, -ant",
+   "text": "abundant",
    "source_label": "Morphology (morphhb)",
    "recast": false
   }
@@ -10984,7 +10984,7 @@
    "recast": false
   },
   {
-   "text": "and chimney, window.",
+   "text": "and lattice",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -11057,12 +11057,12 @@
    "recast": false
   },
   {
-   "text": "was appear, break forth / appear, break forth itself",
+   "text": "was open wide / open wide itself",
    "source_label": "Binyan: Nifal",
    "recast": false
   },
   {
-   "text": "appear, break forth",
+   "text": "open wide",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -11140,7 +11140,7 @@
    "recast": false
   },
   {
-   "text": "the rain, shower.",
+   "text": "the shower",
    "source_label": "Morphology (morphhb)",
    "recast": false
   }
@@ -11328,7 +11328,7 @@
    "recast": false
   },
   {
-   "text": "in body, bone",
+   "text": "in bone",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -11396,7 +11396,7 @@
    "recast": false
   },
   {
-   "text": "the he, hence",
+   "text": "the this",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -11468,7 +11468,7 @@
    "recast": false
   },
   {
-   "text": "and Sem, Shem.",
+   "text": "and Shem",
    "source_label": "Morphology (morphhb)",
    "recast": false
   }
@@ -11800,7 +11800,7 @@
    "recast": false
   },
   {
-   "text": "it, like",
+   "text": "they",
    "source_label": "Morphology (morphhb)",
    "recast": false
   }
@@ -11902,7 +11902,7 @@
    "recast": false
   },
   {
-   "text": "to her kind. Compare 4480.",
+   "text": "to her sort",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -11994,7 +11994,7 @@
    "recast": false
   },
   {
-   "text": "to their kind. Compare 4480.",
+   "text": "to their sort",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -12081,7 +12081,7 @@
    "recast": false
   },
   {
-   "text": "the creep, move.",
+   "text": "the glide swiftly",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -12183,7 +12183,7 @@
    "recast": false
   },
   {
-   "text": "to his kind. Compare 4480.",
+   "text": "to his sort",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -12265,7 +12265,7 @@
    "recast": false
   },
   {
-   "text": "to his kind. Compare 4480.",
+   "text": "to his sort",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -12338,7 +12338,7 @@
    "recast": false
   },
   {
-   "text": "bird, fowl",
+   "text": "little bird",
    "source_label": "Morphology (morphhb)",
    "recast": false
   }
@@ -12406,7 +12406,7 @@
    "recast": false
   },
   {
-   "text": "bird, border",
+   "text": "edge",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -12678,7 +12678,7 @@
    "recast": false
   },
   {
-   "text": "the body, fat",
+   "text": "the flesh",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -12882,7 +12882,7 @@
    "recast": false
   },
   {
-   "text": "him, male",
+   "text": "remembered",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -12969,7 +12969,7 @@
    "recast": false
   },
   {
-   "text": "body, fat",
+   "text": "flesh",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -13081,12 +13081,12 @@
    "recast": false
   },
   {
-   "text": "appoint, for- bid (intensive)",
+   "text": "constitute (intensive)",
    "source_label": "Binyan: Piel",
    "recast": false
   },
   {
-   "text": "appoint, for- bid",
+   "text": "constitute",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -13173,7 +13173,7 @@
    "recast": false
   },
   {
-   "text": "and close up, deliver up",
+   "text": "and shut",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -13231,7 +13231,7 @@
    "recast": false
   },
   {
-   "text": "his about, at by means of",
+   "text": "his in up to",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -13434,7 +13434,7 @@
    "recast": false
   },
   {
-   "text": "and bring in abundance -antly, archer by mistake for 7232",
+   "text": "and increase",
    "source_label": "Morphology (morphhb)",
    "recast": false
   }
@@ -13574,7 +13574,7 @@
    "recast": false
   },
   {
-   "text": "and bring up, exalt self",
+   "text": "and be high",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -13671,7 +13671,7 @@
    "recast": false
   },
   {
-   "text": "and exceed, confirm",
+   "text": "and be strong",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -13739,7 +13739,7 @@
    "recast": false
   },
   {
-   "text": "and bring in abundance -antly, archer by mistake for 7232",
+   "text": "and increase",
    "source_label": "Morphology (morphhb)",
    "recast": false
   }
@@ -13758,7 +13758,7 @@
    "recast": false
   },
   {
-   "text": "diligently, especially",
+   "text": "vehemence",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -13855,7 +13855,7 @@
    "recast": false
   },
   {
-   "text": "and again, away",
+   "text": "and walk",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -14049,7 +14049,7 @@
    "recast": false
   },
   {
-   "text": "exceed, confirm",
+   "text": "be strong",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -14078,7 +14078,7 @@
    "recast": false
   },
   {
-   "text": "diligently, especially",
+   "text": "vehemence",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -14112,7 +14112,7 @@
    "recast": false
   },
   {
-   "text": "diligently, especially",
+   "text": "vehemence",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -14214,12 +14214,12 @@
    "recast": false
   },
   {
-   "text": "was clad self, close (intensive passive)",
+   "text": "was plump (intensive passive)",
    "source_label": "Binyan: Pual",
    "recast": false
   },
   {
-   "text": "and clad self, close",
+   "text": "and plump",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -14287,7 +14287,7 @@
    "recast": false
   },
   {
-   "text": "the hill country, mount -ain",
+   "text": "the mountain",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -14311,7 +14311,7 @@
    "recast": false
   },
   {
-   "text": "the haughty, height",
+   "text": "the elevated",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -14379,7 +14379,7 @@
    "recast": false
   },
   {
-   "text": "as, beneath",
+   "text": "bottom",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -14495,7 +14495,7 @@
    "recast": false
   },
   {
-   "text": "eigh-, fif-",
+   "text": "ten",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -14524,7 +14524,7 @@
    "recast": false
   },
   {
-   "text": "cubit, + hundred by exchange for 3967",
+   "text": "a mother",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -14558,7 +14558,7 @@
    "recast": false
   },
   {
-   "text": "from to above, exceeding -ly",
+   "text": "from to upper part",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -14597,7 +14597,7 @@
    "recast": false
   },
   {
-   "text": "exceed, confirm",
+   "text": "be strong",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -14665,12 +14665,12 @@
    "recast": false
   },
   {
-   "text": "was clad self, close (intensive passive)",
+   "text": "was plump (intensive passive)",
    "source_label": "Binyan: Pual",
    "recast": false
   },
   {
-   "text": "and clad self, close",
+   "text": "and plump",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -14699,7 +14699,7 @@
    "recast": false
   },
   {
-   "text": "the hill country, mount -ain",
+   "text": "the mountain",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -14723,7 +14723,7 @@
    "recast": false
   },
   {
-   "text": "and die, be dead",
+   "text": "and breathe out",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -14786,7 +14786,7 @@
    "recast": false
   },
   {
-   "text": "body, fat",
+   "text": "flesh",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -14825,7 +14825,7 @@
    "recast": false
   },
   {
-   "text": "the creep, move.",
+   "text": "the glide swiftly",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -15063,7 +15063,7 @@
    "recast": false
   },
   {
-   "text": "the creep -ing thing, move -ing creature .",
+   "text": "the swarm",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -15087,7 +15087,7 @@
    "recast": false
   },
   {
-   "text": "the breed bring forth, increase abundantly in abundance",
+   "text": "the wriggle",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -15218,7 +15218,7 @@
    "recast": false
   },
   {
-   "text": "the another, hypocrite",
+   "text": "the ruddy",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -15325,7 +15325,7 @@
    "recast": false
   },
   {
-   "text": "blast, that breath -eth",
+   "text": "puff",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -15447,7 +15447,7 @@
    "recast": false
   },
   {
-   "text": "in his anger -gry, before",
+   "text": "in his nose",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -15564,7 +15564,7 @@
    "recast": false
   },
   {
-   "text": "in dry ground, land .",
+   "text": "in desert",
    "source_label": "Morphology (morphhb)",
    "recast": false
   }
@@ -15633,7 +15633,7 @@
    "recast": false
   },
   {
-   "text": "and abolish, blot out",
+   "text": "and stroke",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -15918,7 +15918,7 @@
    "readability": true
   },
   {
-   "text": "the country, earth",
+   "text": "the soil",
    "source_label": "Morphology (morphhb)",
    "recast": false
   }
@@ -15948,7 +15948,7 @@
    "readability": true
   },
   {
-   "text": "from another, hypocrite",
+   "text": "from ruddy",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -16243,12 +16243,12 @@
    "readability": true
   },
   {
-   "text": "was abolish, blot out / abolish, blot out itself",
+   "text": "was stroke / stroke itself",
    "source_label": "Binyan: Nifal",
    "recast": false
   },
   {
-   "text": "and abolish, blot out",
+   "text": "and stroke",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -16363,12 +16363,12 @@
    "readability": true
   },
   {
-   "text": "was leave, be left / leave, be left itself",
+   "text": "was swell / swell itself",
    "source_label": "Binyan: Nifal",
    "recast": false
   },
   {
-   "text": "and leave, be left",
+   "text": "and swell",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -16408,7 +16408,7 @@
    "readability": true
   },
   {
-   "text": "also, in any wise",
+   "text": "affirmation",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -16563,7 +16563,7 @@
    "recast": false
   },
   {
-   "text": "and exceed, confirm",
+   "text": "and be strong",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -16751,7 +16751,7 @@
    "recast": false
   },
   {
-   "text": "and burn incense, earnestly",
+   "text": "and mark",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -17198,12 +17198,12 @@
    "recast": false
   },
   {
-   "text": "caused to alienate, alter",
+   "text": "caused to cross",
    "source_label": "Binyan: Hifil",
    "recast": false
   },
   {
-   "text": "and alienate, alter",
+   "text": "and cross",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -17383,7 +17383,7 @@
    "recast": false
   },
   {
-   "text": "and appease, assuage",
+   "text": "and weave",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -17456,12 +17456,12 @@
    "recast": false
   },
   {
-   "text": "was stop, give over. See also 5462 / stop, give over. See also 5462 itself",
+   "text": "was shut up / shut up itself",
    "source_label": "Binyan: Nifal",
    "recast": false
   },
   {
-   "text": "and stop, give over. See also 5462",
+   "text": "and shut up",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -17485,7 +17485,7 @@
    "recast": false
   },
   {
-   "text": "fountain, spring",
+   "text": "fountain",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -17509,7 +17509,7 @@
    "recast": false
   },
   {
-   "text": "deep place, depth.",
+   "text": "abyss",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -17533,7 +17533,7 @@
    "recast": false
   },
   {
-   "text": "and chimney, window.",
+   "text": "and lattice",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -17601,12 +17601,12 @@
    "recast": false
   },
   {
-   "text": "was finish, forbid / finish, forbid itself",
+   "text": "was restrict / restrict itself",
    "source_label": "Binyan: Nifal",
    "recast": false
   },
   {
-   "text": "and finish, forbid",
+   "text": "and restrict",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -17640,7 +17640,7 @@
    "recast": false
   },
   {
-   "text": "the rain, shower.",
+   "text": "the shower",
    "source_label": "Morphology (morphhb)",
    "recast": false
   }
@@ -17717,7 +17717,7 @@
    "recast": false
   },
   {
-   "text": "and break, build",
+   "text": "and turn",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -17877,7 +17877,7 @@
    "recast": false
   },
   {
-   "text": "and break, build",
+   "text": "and turn",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -17911,7 +17911,7 @@
    "recast": false
   },
   {
-   "text": "and be abated, bereave",
+   "text": "and lack",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -17989,7 +17989,7 @@
    "recast": false
   },
   {
-   "text": "from after, border",
+   "text": "from extremity",
    "source_label": "Morphology (morphhb)",
    "recast": false
   }
@@ -18065,7 +18065,7 @@
    "recast": false
   },
   {
-   "text": "and cease, be confederate",
+   "text": "and rest",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -18133,7 +18133,7 @@
    "recast": false
   },
   {
-   "text": "in month -ly, new moon.",
+   "text": "in new",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -18235,7 +18235,7 @@
    "recast": false
   },
   {
-   "text": "eigh-, fif-",
+   "text": "ten",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -18298,7 +18298,7 @@
    "recast": false
   },
   {
-   "text": "to month -ly, new moon.",
+   "text": "to new",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -18356,7 +18356,7 @@
    "recast": false
   },
   {
-   "text": "hill country, mount -ain",
+   "text": "mountain",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -18380,7 +18380,7 @@
    "recast": false
   },
   {
-   "text": "Ararat, Armenia.",
+   "text": "Ararat",
    "source_label": "Morphology (morphhb)",
    "recast": false
   }
@@ -18506,7 +18506,7 @@
    "recast": false
   },
   {
-   "text": "and be abated, bereave",
+   "text": "and lack",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -18579,7 +18579,7 @@
    "recast": false
   },
   {
-   "text": "the month -ly, new moon.",
+   "text": "the new",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -18705,7 +18705,7 @@
    "recast": false
   },
   {
-   "text": "to month -ly, new moon.",
+   "text": "to new",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -18763,7 +18763,7 @@
    "recast": false
   },
   {
-   "text": "band, beginning",
+   "text": "head",
    "source_label": "Morphology (morphhb)",
    "recast": false
   }
@@ -18782,7 +18782,7 @@
    "recast": false
   },
   {
-   "text": "the hill country, mount -ain",
+   "text": "the mountain",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -18855,7 +18855,7 @@
    "recast": false
   },
   {
-   "text": "from after, utmost border",
+   "text": "from extremity",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -18917,7 +18917,7 @@
    "recast": false
   },
   {
-   "text": "and appear, break forth",
+   "text": "and open wide",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -19111,12 +19111,12 @@
    "recast": false
   },
   {
-   "text": "any wise, appoint (intensive)",
+   "text": "send (intensive)",
    "source_label": "Binyan: Piel",
    "recast": false
   },
   {
-   "text": "and any wise, appoint",
+   "text": "and send",
    "source_label": "Morphology (morphhb)",
    "recast": false
   }
@@ -19269,7 +19269,7 @@
    "recast": false
   },
   {
-   "text": "and break, build",
+   "text": "and turn",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -19342,7 +19342,7 @@
    "recast": false
   },
   {
-   "text": "be ashamed, clean",
+   "text": "be ashamed",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -19483,7 +19483,7 @@
    "recast": false
   },
   {
-   "text": "any wise, appoint (intensive)",
+   "text": "send (intensive)",
    "source_label": "Binyan: Piel",
    "recast": false
   },
@@ -19493,7 +19493,7 @@
    "recast": false
   },
   {
-   "text": "and any wise, appoint",
+   "text": "and send",
    "source_label": "Morphology (morphhb)",
    "recast": false
   }
@@ -19532,7 +19532,7 @@
    "recast": false
   },
   {
-   "text": "the dove, pigeon.",
+   "text": "the dove",
    "source_label": "Morphology (morphhb)",
    "recast": false
   }
@@ -19624,7 +19624,7 @@
    "recast": false
   },
   {
-   "text": "abate, make bright",
+   "text": "be",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -19765,7 +19765,7 @@
    "recast": false
   },
   {
-   "text": "the country, earth",
+   "text": "the soil",
    "source_label": "Morphology (morphhb)",
    "recast": false
   }
@@ -19790,7 +19790,7 @@
    "readability": true
   },
   {
-   "text": "and before, or else",
+   "text": "and not",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -19820,7 +19820,7 @@
    "readability": true
   },
   {
-   "text": "be able, befall",
+   "text": "come",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -19865,7 +19865,7 @@
    "readability": true
   },
   {
-   "text": "the dove, pigeon.",
+   "text": "the dove",
    "source_label": "Morphology (morphhb)",
    "recast": false
   }
@@ -19935,7 +19935,7 @@
    "readability": true
   },
   {
-   "text": "to branch, foot",
+   "text": "to hollow hand",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -19970,7 +19970,7 @@
    "readability": true
   },
   {
-   "text": "her be able to endure, according as",
+   "text": "her foot",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -20005,7 +20005,7 @@
    "readability": true
   },
   {
-   "text": "and break, build",
+   "text": "and turn",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -20155,7 +20155,7 @@
    "readability": true
   },
   {
-   "text": "and and, forasmuch",
+   "text": "and relative conjunction",
    "source_label": "Morphology (morphhb)",
    "recast": false
   }
@@ -20380,7 +20380,7 @@
    "readability": true
   },
   {
-   "text": "and any wise, appoint",
+   "text": "and send",
    "source_label": "Morphology (morphhb)",
    "recast": false
   }
@@ -20669,7 +20669,7 @@
    "recast": false
   },
   {
-   "text": "bear, make to bring forth (intensive)",
+   "text": "twist (intensive)",
    "source_label": "Binyan: Piel",
    "recast": false
   },
@@ -20679,7 +20679,7 @@
    "recast": false
   },
   {
-   "text": "and bear, make to bring forth",
+   "text": "and twist",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -20718,7 +20718,7 @@
    "recast": false
   },
   {
-   "text": "again, all life long",
+   "text": "iteration",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -20815,7 +20815,7 @@
    "recast": false
   },
   {
-   "text": "an- other man, following",
+   "text": "hinder",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -20844,12 +20844,12 @@
    "recast": false
   },
   {
-   "text": "caused to add, again",
+   "text": "caused to add",
    "source_label": "Binyan: Hifil",
    "recast": false
   },
   {
-   "text": "and add, again",
+   "text": "and add",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -20878,12 +20878,12 @@
    "recast": false
   },
   {
-   "text": "any wise, appoint (intensive)",
+   "text": "send (intensive)",
    "source_label": "Binyan: Piel",
    "recast": false
   },
   {
-   "text": "any wise, appoint",
+   "text": "send",
    "source_label": "Morphology (morphhb)",
    "recast": false
   }
@@ -20929,7 +20929,7 @@
    "recast": false
   },
   {
-   "text": "the dove, pigeon.",
+   "text": "the dove",
    "source_label": "Morphology (morphhb)",
    "recast": false
   }
@@ -21070,7 +21070,7 @@
    "recast": false
   },
   {
-   "text": "the dove, pigeon.",
+   "text": "the dove",
    "source_label": "Morphology (morphhb)",
    "recast": false
   }
@@ -21089,7 +21089,7 @@
    "recast": false
   },
   {
-   "text": "to after, al- ways",
+   "text": "to time",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -21118,7 +21118,7 @@
    "recast": false
   },
   {
-   "text": "day, even -ing",
+   "text": "dusk",
    "source_label": "Morphology (morphhb)",
    "recast": false
   }
@@ -21161,7 +21161,7 @@
    "recast": false
   },
   {
-   "text": "branch, leaf.",
+   "text": "leaf",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -21185,7 +21185,7 @@
    "recast": false
   },
   {
-   "text": "olive tree, -yard",
+   "text": "olive",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -21263,7 +21263,7 @@
    "recast": false
   },
   {
-   "text": "in her accord -ing as, -ing to",
+   "text": "in her mouth",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -21360,7 +21360,7 @@
    "recast": false
   },
   {
-   "text": "and and, forasmuch",
+   "text": "and relative conjunction",
    "source_label": "Morphology (morphhb)",
    "recast": false
   }
@@ -21379,7 +21379,7 @@
    "recast": false
   },
   {
-   "text": "abate, make bright",
+   "text": "be",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -21520,7 +21520,7 @@
    "recast": false
   },
   {
-   "text": "was cause to, have / cause to, have itself",
+   "text": "was wait / wait itself",
    "source_label": "Binyan: Nifal",
    "recast": false
   },
@@ -21530,7 +21530,7 @@
    "recast": false
   },
   {
-   "text": "and cause to, have",
+   "text": "and wait",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -21559,7 +21559,7 @@
    "recast": false
   },
   {
-   "text": "again, all life long",
+   "text": "iteration",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -21656,7 +21656,7 @@
    "recast": false
   },
   {
-   "text": "an- other man, following",
+   "text": "hinder",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -21685,12 +21685,12 @@
    "recast": false
   },
   {
-   "text": "any wise, appoint (intensive)",
+   "text": "send (intensive)",
    "source_label": "Binyan: Piel",
    "recast": false
   },
   {
-   "text": "and any wise, appoint",
+   "text": "and send",
    "source_label": "Morphology (morphhb)",
    "recast": false
   }
@@ -21729,7 +21729,7 @@
    "recast": false
   },
   {
-   "text": "the dove, pigeon.",
+   "text": "the dove",
    "source_label": "Morphology (morphhb)",
    "recast": false
   }
@@ -21748,7 +21748,7 @@
    "recast": false
   },
   {
-   "text": "and before, or else",
+   "text": "and not",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -21772,7 +21772,7 @@
    "recast": false
   },
   {
-   "text": "add, again",
+   "text": "add",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -21801,7 +21801,7 @@
    "recast": false
   },
   {
-   "text": "break, build",
+   "text": "turn",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -21875,7 +21875,7 @@
    "recast": false
   },
   {
-   "text": "again, all life long",
+   "text": "iteration",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -22059,7 +22059,7 @@
    "recast": false
   },
   {
-   "text": "in ancestor, that were before -time",
+   "text": "in first",
    "source_label": "Morphology (morphhb)",
    "recast": false
   }
@@ -22107,7 +22107,7 @@
    "recast": false
   },
   {
-   "text": "to month -ly, new moon.",
+   "text": "to new",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -22136,7 +22136,7 @@
    "recast": false
   },
   {
-   "text": "decay, be desolate",
+   "text": "parch",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -22272,12 +22272,12 @@
    "recast": false
   },
   {
-   "text": "caused to be -head, bring",
+   "text": "caused to turn",
    "source_label": "Binyan: Hifil",
    "recast": false
   },
   {
-   "text": "and be -head, bring",
+   "text": "and turn",
    "source_label": "Morphology (morphhb)",
    "recast": false
   }
@@ -22453,7 +22453,7 @@
    "recast": false
   },
   {
-   "text": "decay, be desolate",
+   "text": "parch",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -22516,7 +22516,7 @@
    "recast": false
   },
   {
-   "text": "the country, earth",
+   "text": "the soil",
    "source_label": "Morphology (morphhb)",
    "recast": false
   }
@@ -22535,7 +22535,7 @@
    "recast": false
   },
   {
-   "text": "and in month -ly, new moon.",
+   "text": "and in new",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -22559,7 +22559,7 @@
    "recast": false
   },
   {
-   "text": "the again, either of them",
+   "text": "the double",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -22675,7 +22675,7 @@
    "recast": false
   },
   {
-   "text": "to month -ly, new moon.",
+   "text": "to new",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -22704,7 +22704,7 @@
    "recast": false
   },
   {
-   "text": "be ashamed, clean",
+   "text": "be ashamed",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -23026,7 +23026,7 @@
    "recast": false
   },
   {
-   "text": "thee, thou",
+   "text": "thou",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -24540,7 +24540,7 @@
    "recast": false
   },
   {
-   "text": "creep, move.",
+   "text": "glide swiftly",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -24647,7 +24647,7 @@
    "recast": false
   },
   {
-   "text": "to their family, kind -red .",
+   "text": "to their family",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -24773,7 +24773,7 @@
    "recast": false
   },
   {
-   "text": "and begin to build -er, obtain children",
+   "text": "and build",
    "source_label": "Morphology (morphhb)",
    "recast": false
   }
@@ -24971,7 +24971,7 @@
    "recast": false
   },
   {
-   "text": "the clean, fair",
+   "text": "the pure",
    "source_label": "Morphology (morphhb)",
    "recast": false
   }
@@ -25048,7 +25048,7 @@
    "recast": false
   },
   {
-   "text": "the clean, fair",
+   "text": "the pure",
    "source_label": "Morphology (morphhb)",
    "recast": false
   }
@@ -25067,12 +25067,12 @@
    "recast": false
   },
   {
-   "text": "caused to arise up, cause to ascend up",
+   "text": "caused to ascend",
    "source_label": "Binyan: Hifil",
    "recast": false
   },
   {
-   "text": "and arise up, cause to ascend up",
+   "text": "and ascend",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -25101,7 +25101,7 @@
    "recast": false
   },
   {
-   "text": "ascent, burnt offering sacrifice",
+   "text": "step",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -25154,12 +25154,12 @@
    "recast": false
   },
   {
-   "text": "caused to accept, smell",
+   "text": "caused to blow",
    "source_label": "Binyan: Hifil",
    "recast": false
   },
   {
-   "text": "and accept, smell",
+   "text": "and blow",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -25237,7 +25237,7 @@
    "recast": false
   },
   {
-   "text": "savour, scent",
+   "text": "odor",
    "source_label": "Morphology (morphhb)",
    "recast": false
   }
@@ -25389,7 +25389,7 @@
    "readability": true
   },
   {
-   "text": "his care for, comfortably",
+   "text": "his heart",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -25434,7 +25434,7 @@
    "readability": true
   },
   {
-   "text": "before, or else",
+   "text": "not",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -25464,12 +25464,12 @@
    "readability": true
   },
   {
-   "text": "caused to add, again",
+   "text": "caused to add",
    "source_label": "Binyan: Hifil",
    "recast": false
   },
   {
-   "text": "add, again",
+   "text": "add",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -25504,12 +25504,12 @@
    "readability": true
   },
   {
-   "text": "abate, make bright (intensive)",
+   "text": "be (intensive)",
    "source_label": "Binyan: Piel",
    "recast": false
   },
   {
-   "text": "to abate, make bright",
+   "text": "to be",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -25554,7 +25554,7 @@
    "readability": true
   },
   {
-   "text": "again, all life long",
+   "text": "iteration",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -25639,7 +25639,7 @@
    "readability": true
   },
   {
-   "text": "the country, earth",
+   "text": "the soil",
    "source_label": "Morphology (morphhb)",
    "recast": false
   }
@@ -25664,7 +25664,7 @@
    "readability": true
   },
   {
-   "text": "in because of, for ...'s sake",
+   "text": "in crossed",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -25704,7 +25704,7 @@
    "readability": true
   },
   {
-   "text": "the another, hypocrite",
+   "text": "the ruddy",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -25739,7 +25739,7 @@
    "readability": true
   },
   {
-   "text": "and and, forasmuch",
+   "text": "and relative conjunction",
    "source_label": "Morphology (morphhb)",
    "recast": false
   }
@@ -25764,7 +25764,7 @@
    "readability": true
   },
   {
-   "text": "frame, thing framed",
+   "text": "form",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -25794,7 +25794,7 @@
    "readability": true
   },
   {
-   "text": "care for, comfortably",
+   "text": "heart",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -25839,7 +25839,7 @@
    "readability": true
   },
   {
-   "text": "the another, hypocrite",
+   "text": "the ruddy",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -25874,7 +25874,7 @@
    "readability": true
   },
   {
-   "text": "adversity, affliction",
+   "text": "bad",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -25909,7 +25909,7 @@
    "recast": false
   },
   {
-   "text": "from his childhood, youth.",
+   "text": "from his youth",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -25944,7 +25944,7 @@
    "readability": true
   },
   {
-   "text": "and before, or else",
+   "text": "and not",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -25974,12 +25974,12 @@
    "readability": true
   },
   {
-   "text": "caused to add, again",
+   "text": "caused to add",
    "source_label": "Binyan: Hifil",
    "recast": false
   },
   {
-   "text": "add, again",
+   "text": "add",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -26014,7 +26014,7 @@
    "readability": true
   },
   {
-   "text": "again, all life long",
+   "text": "iteration",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -26059,12 +26059,12 @@
    "readability": true
   },
   {
-   "text": "caused to beat, cast forth",
+   "text": "caused to strike",
    "source_label": "Binyan: Hifil",
    "recast": false
   },
   {
-   "text": "to beat, cast forth",
+   "text": "to strike",
    "source_label": "Morphology (morphhb)",
    "recast": false
   }
@@ -26293,7 +26293,7 @@
    "recast": false
   },
   {
-   "text": "again, all life long",
+   "text": "iteration",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -26458,7 +26458,7 @@
    "recast": false
   },
   {
-   "text": "and bough, branch",
+   "text": "and severed",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -26521,7 +26521,7 @@
    "recast": false
   },
   {
-   "text": "and heat, to be hot warm .",
+   "text": "and heat",
    "source_label": "Morphology (morphhb)",
    "recast": false
   }
@@ -26540,7 +26540,7 @@
    "recast": false
   },
   {
-   "text": "and summer fruit, house .",
+   "text": "and harvest",
    "source_label": "Morphology (morphhb)",
    "recast": false
   }
@@ -26559,7 +26559,7 @@
    "recast": false
   },
   {
-   "text": "and cold, winter -house",
+   "text": "and crop gathered",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -26661,7 +26661,7 @@
    "recast": false
   },
   {
-   "text": "before, or else",
+   "text": "not",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -26690,7 +26690,7 @@
    "recast": false
   },
   {
-   "text": "cause to, let",
+   "text": "repose",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -26714,12 +26714,12 @@
    "recast": false
   },
   {
-   "text": "abundantly, altogether (intensive)",
+   "text": "kneel (intensive)",
    "source_label": "Binyan: Piel",
    "recast": false
   },
   {
-   "text": "and abundantly, altogether",
+   "text": "and kneel",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -26931,7 +26931,7 @@
    "recast": false
   },
   {
-   "text": "bear, bring forth fruit",
+   "text": "bear fruit",
    "source_label": "Morphology (morphhb)",
    "recast": false
   }
@@ -26955,7 +26955,7 @@
    "recast": false
   },
   {
-   "text": "and bring in abundance -antly, archer by mistake for 7232",
+   "text": "and increase",
    "source_label": "Morphology (morphhb)",
    "recast": false
   }
@@ -26974,7 +26974,7 @@
    "recast": false
   },
   {
-   "text": "and accomplish, confirm",
+   "text": "and fill",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -27066,7 +27066,7 @@
    "recast": false
   },
   {
-   "text": "and your dread, that ought to be fear -ed",
+   "text": "and your fear",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -27095,7 +27095,7 @@
    "recast": false
   },
   {
-   "text": "and your broken, dismayed",
+   "text": "and your crushed",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -27508,7 +27508,7 @@
    "recast": false
   },
   {
-   "text": "creep, move.",
+   "text": "glide swiftly",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -27542,7 +27542,7 @@
    "recast": false
   },
   {
-   "text": "the country, earth",
+   "text": "the soil",
    "source_label": "Morphology (morphhb)",
    "recast": false
   }
@@ -27843,7 +27843,7 @@
    "recast": false
   },
   {
-   "text": "he, as for her",
+   "text": "he",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -27979,7 +27979,7 @@
    "recast": false
   },
   {
-   "text": "to consume, devour",
+   "text": "to food",
    "source_label": "Morphology (morphhb)",
    "recast": false
   }
@@ -27998,7 +27998,7 @@
    "recast": false
   },
   {
-   "text": "like grass, green thing .",
+   "text": "like pallor",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -28037,7 +28037,7 @@
    "recast": false
   },
   {
-   "text": "grass, herb.",
+   "text": "grass",
    "source_label": "Morphology (morphhb)",
    "recast": false
   }
@@ -28177,7 +28177,7 @@
    "recast": false
   },
   {
-   "text": "also, in any wise",
+   "text": "affirmation",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -28206,7 +28206,7 @@
    "recast": false
   },
   {
-   "text": "body, fat",
+   "text": "flesh",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -28284,7 +28284,7 @@
    "recast": false
   },
   {
-   "text": "his blood -y, -guiltiness",
+   "text": "his blood",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -28313,7 +28313,7 @@
    "recast": false
   },
   {
-   "text": "before, or else",
+   "text": "not",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -28361,7 +28361,7 @@
    "recast": false
   },
   {
-   "text": "and also, in any wise",
+   "text": "and affirmation",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -28424,7 +28424,7 @@
    "recast": false
   },
   {
-   "text": "your blood -y, -guiltiness",
+   "text": "your blood",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -28497,7 +28497,7 @@
    "recast": false
   },
   {
-   "text": "ask, at all",
+   "text": "tread",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -28658,7 +28658,7 @@
    "recast": false
   },
   {
-   "text": "ask, at all",
+   "text": "tread",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -28736,7 +28736,7 @@
    "recast": false
   },
   {
-   "text": "the another, hypocrite",
+   "text": "the ruddy",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -28828,7 +28828,7 @@
    "recast": false
   },
   {
-   "text": "his another, brother -ly",
+   "text": "his brother",
    "source_label": "Morphology (morphhb)",
    "recast": false
   }
@@ -28852,7 +28852,7 @@
    "recast": false
   },
   {
-   "text": "ask, at all",
+   "text": "tread",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -28959,7 +28959,7 @@
    "recast": false
   },
   {
-   "text": "the another, hypocrite",
+   "text": "the ruddy",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -28993,7 +28993,7 @@
    "recast": false
   },
   {
-   "text": "cast up, gush out",
+   "text": "spill forth",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -29022,7 +29022,7 @@
    "recast": false
   },
   {
-   "text": "blood -y, -guiltiness",
+   "text": "blood",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -29051,7 +29051,7 @@
    "recast": false
   },
   {
-   "text": "the another, hypocrite",
+   "text": "the ruddy",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -29085,7 +29085,7 @@
    "recast": false
   },
   {
-   "text": "in another, hypocrite",
+   "text": "in ruddy",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -29114,7 +29114,7 @@
    "recast": false
   },
   {
-   "text": "his blood -y, -guiltiness",
+   "text": "his blood",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -29143,12 +29143,12 @@
    "recast": false
   },
   {
-   "text": "was cast up, gush out / cast up, gush out itself",
+   "text": "was spill forth / spill forth itself",
    "source_label": "Binyan: Nifal",
    "recast": false
   },
   {
-   "text": "cast up, gush out",
+   "text": "spill forth",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -29177,7 +29177,7 @@
    "recast": false
   },
   {
-   "text": "and and, forasmuch",
+   "text": "and relative conjunction",
    "source_label": "Morphology (morphhb)",
    "recast": false
   }
@@ -29196,7 +29196,7 @@
    "recast": false
   },
   {
-   "text": "in image, vain shew.",
+   "text": "in phantom",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -29320,7 +29320,7 @@
    "recast": false
   },
   {
-   "text": "the another, hypocrite",
+   "text": "the ruddy",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -29349,7 +29349,7 @@
    "recast": false
   },
   {
-   "text": "and thee, thou",
+   "text": "and thou",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -29383,7 +29383,7 @@
    "recast": false
   },
   {
-   "text": "bear, bring forth fruit",
+   "text": "bear fruit",
    "source_label": "Morphology (morphhb)",
    "recast": false
   }
@@ -29407,7 +29407,7 @@
    "recast": false
   },
   {
-   "text": "and bring in abundance -antly, archer by mistake for 7232",
+   "text": "and increase",
    "source_label": "Morphology (morphhb)",
    "recast": false
   }
@@ -29426,7 +29426,7 @@
    "recast": false
   },
   {
-   "text": "breed bring forth, increase abundantly in abundance",
+   "text": "wriggle",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -29484,7 +29484,7 @@
    "recast": false
   },
   {
-   "text": "and bring in abundance -antly, archer by mistake for 7232",
+   "text": "and increase",
    "source_label": "Morphology (morphhb)",
    "recast": false
   }
@@ -29802,7 +29802,7 @@
    "recast": false
   },
   {
-   "text": "and I, as for me",
+   "text": "and I",
    "source_label": "Morphology (morphhb)",
    "recast": false
   }
@@ -29821,7 +29821,7 @@
    "recast": false
   },
   {
-   "text": "my behold, if",
+   "text": "my lo!",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -29845,12 +29845,12 @@
    "recast": false
   },
   {
-   "text": "caused to abide, accomplish",
+   "text": "caused to rise",
    "source_label": "Binyan: Hifil",
    "recast": false
   },
   {
-   "text": "abide, accomplish",
+   "text": "rise",
    "source_label": "Morphology (morphhb)",
    "recast": false
   }
@@ -30725,12 +30725,12 @@
    "recast": false
   },
   {
-   "text": "caused to abide, accomplish",
+   "text": "caused to rise",
    "source_label": "Binyan: Hifil",
    "recast": false
   },
   {
-   "text": "and abide, accomplish",
+   "text": "and rise",
    "source_label": "Morphology (morphhb)",
    "recast": false
   }
@@ -30851,7 +30851,7 @@
    "recast": false
   },
   {
-   "text": "and before, or else",
+   "text": "and not",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -30875,12 +30875,12 @@
    "recast": false
   },
   {
-   "text": "was be chewed, be con- feder- ate / be chewed, be con- feder- ate itself",
+   "text": "was cut / cut itself",
    "source_label": "Binyan: Nifal",
    "recast": false
   },
   {
-   "text": "be chewed, be con- feder- ate",
+   "text": "cut",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -30953,7 +30953,7 @@
    "recast": false
   },
   {
-   "text": "body, fat",
+   "text": "flesh",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -30992,7 +30992,7 @@
    "recast": false
   },
   {
-   "text": "again, all life long",
+   "text": "iteration",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -31094,7 +31094,7 @@
    "recast": false
   },
   {
-   "text": "and before, or else",
+   "text": "and not",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -31157,7 +31157,7 @@
    "recast": false
   },
   {
-   "text": "again, all life long",
+   "text": "iteration",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -31336,7 +31336,7 @@
    "recast": false
   },
   {
-   "text": "hereby -in, -with",
+   "text": "this",
    "source_label": "Morphology (morphhb)",
    "recast": false
   }
@@ -31355,7 +31355,7 @@
    "recast": false
   },
   {
-   "text": "mark, miracle",
+   "text": "signal",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -31457,7 +31457,7 @@
    "recast": false
   },
   {
-   "text": "I, as for me",
+   "text": "I",
    "source_label": "Morphology (morphhb)",
    "recast": false
   }
@@ -31821,7 +31821,7 @@
    "recast": false
   },
   {
-   "text": "alway -s, ancient time",
+   "text": "concealed",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -31894,7 +31894,7 @@
    "recast": false
   },
   {
-   "text": "my arch -er, arrow",
+   "text": "my bow",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -32045,7 +32045,7 @@
    "recast": false
   },
   {
-   "text": "to mark, miracle",
+   "text": "to signal",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -32239,12 +32239,12 @@
    "recast": false
   },
   {
-   "text": "bring, enchanter (intensive)",
+   "text": "act covertly (intensive)",
    "source_label": "Binyan: Piel",
    "recast": false
   },
   {
-   "text": "in bring, enchanter",
+   "text": "in act covertly",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -32394,7 +32394,7 @@
    "recast": false
   },
   {
-   "text": "the arch -er, arrow",
+   "text": "the bow",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -32462,7 +32462,7 @@
    "recast": false
   },
   {
-   "text": "and burn incense, earnestly",
+   "text": "and mark",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -32831,7 +32831,7 @@
    "recast": false
   },
   {
-   "text": "body, fat",
+   "text": "flesh",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -32870,7 +32870,7 @@
    "recast": false
   },
   {
-   "text": "and before, or else",
+   "text": "and not",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -32933,7 +32933,7 @@
    "recast": false
   },
   {
-   "text": "again, all life long",
+   "text": "iteration",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -33118,7 +33118,7 @@
    "recast": false
   },
   {
-   "text": "body, fat",
+   "text": "flesh",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -33196,7 +33196,7 @@
    "recast": false
   },
   {
-   "text": "the arch -er, arrow",
+   "text": "the bow",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -33298,7 +33298,7 @@
    "recast": false
   },
   {
-   "text": "to burn incense, earnestly",
+   "text": "to mark",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -33356,7 +33356,7 @@
    "recast": false
   },
   {
-   "text": "alway -s, ancient time",
+   "text": "concealed",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -33633,7 +33633,7 @@
    "recast": false
   },
   {
-   "text": "body, fat",
+   "text": "flesh",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -33910,7 +33910,7 @@
    "readability": true
   },
   {
-   "text": "hereby -in, -with",
+   "text": "this",
    "source_label": "Morphology (morphhb)",
    "recast": false
   }
@@ -33935,7 +33935,7 @@
    "readability": true
   },
   {
-   "text": "mark, miracle",
+   "text": "signal",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -34055,12 +34055,12 @@
    "readability": true
   },
   {
-   "text": "caused to abide, accomplish",
+   "text": "caused to rise",
    "source_label": "Binyan: Hifil",
    "recast": false
   },
   {
-   "text": "abide, accomplish",
+   "text": "rise",
    "source_label": "Morphology (morphhb)",
    "recast": false
   }
@@ -34205,7 +34205,7 @@
    "readability": true
   },
   {
-   "text": "body, fat",
+   "text": "flesh",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -34533,7 +34533,7 @@
    "recast": false
   },
   {
-   "text": "Sem, Shem.",
+   "text": "Shem",
    "source_label": "Morphology (morphhb)",
    "recast": false
   }
@@ -34624,7 +34624,7 @@
    "recast": false
   },
   {
-   "text": "he, as for her",
+   "text": "he",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -34682,7 +34682,7 @@
    "recast": false
   },
   {
-   "text": "Canaan, merchant",
+   "text": "Kenaan",
    "source_label": "Morphology (morphhb)",
    "recast": false
   }
@@ -34826,7 +34826,7 @@
    "recast": false
   },
   {
-   "text": "be beaten in sunder, break in pieces",
+   "text": "dash",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -34918,12 +34918,12 @@
    "recast": false
   },
   {
-   "text": "caused to begin men began, defile",
+   "text": "caused to bore",
    "source_label": "Binyan: Hifil",
    "recast": false
   },
   {
-   "text": "and begin men began, defile",
+   "text": "and bore",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -34998,7 +34998,7 @@
    "recast": false
   },
   {
-   "text": "the country, earth",
+   "text": "the soil",
    "source_label": "Morphology (morphhb)",
    "recast": false
   }
@@ -35017,7 +35017,7 @@
    "recast": false
   },
   {
-   "text": "and fastened, plant -er .",
+   "text": "and strike",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -35046,7 +35046,7 @@
    "recast": false
   },
   {
-   "text": "vines, increase of the vineyard -s",
+   "text": "garden",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -35070,7 +35070,7 @@
    "recast": false
   },
   {
-   "text": "and assuredly, banquet",
+   "text": "and imbibe",
    "source_label": "Morphology (morphhb)",
    "recast": false
   }
@@ -35118,7 +35118,7 @@
    "recast": false
   },
   {
-   "text": "the banqueting, wine",
+   "text": "the wine",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -35147,7 +35147,7 @@
    "recast": false
   },
   {
-   "text": "and be filled with drink abundantly, be",
+   "text": "and become tipsy",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -35181,12 +35181,12 @@
    "recast": false
   },
   {
-   "text": "advertise, appear about / conducted (oneself)",
+   "text": "denude about / conducted (oneself)",
    "source_label": "Binyan: Hitpael",
    "recast": false
   },
   {
-   "text": "and advertise, appear",
+   "text": "and denude",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -35215,7 +35215,7 @@
    "recast": false
   },
   {
-   "text": "in among -st, between",
+   "text": "in bisection",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -35239,7 +35239,7 @@
    "recast": false
   },
   {
-   "text": "his covering, dwelling place",
+   "text": "his tent",
    "source_label": "Morphology (morphhb)",
    "recast": false
   }
@@ -35325,7 +35325,7 @@
    "recast": false
   },
   {
-   "text": "Canaan, merchant",
+   "text": "Kenaan",
    "source_label": "Morphology (morphhb)",
    "recast": false
   }
@@ -35371,7 +35371,7 @@
    "recast": false
   },
   {
-   "text": "nakedness, shame",
+   "text": "nudity",
    "source_label": "Morphology (morphhb)",
    "recast": false
   }
@@ -35414,12 +35414,12 @@
    "recast": false
   },
   {
-   "text": "caused to bewray, certainly",
+   "text": "caused to front",
    "source_label": "Binyan: Hifil",
    "recast": false
   },
   {
-   "text": "and bewray, certainly",
+   "text": "and front",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -35482,7 +35482,7 @@
    "recast": false
   },
   {
-   "text": "his another, brother -ly",
+   "text": "his brother",
    "source_label": "Morphology (morphhb)",
    "recast": false
   }
@@ -35506,7 +35506,7 @@
    "recast": false
   },
   {
-   "text": "in abroad, field",
+   "text": "in separate by a wall",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -35559,7 +35559,7 @@
    "recast": false
   },
   {
-   "text": "Sem, Shem.",
+   "text": "Shem",
    "source_label": "Morphology (morphhb)",
    "recast": false
   }
@@ -35636,7 +35636,7 @@
    "recast": false
   },
   {
-   "text": "the apparel, cloth -es",
+   "text": "the dress",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -35665,7 +35665,7 @@
    "recast": false
   },
   {
-   "text": "and any wise, appoint",
+   "text": "and put",
    "source_label": "Morphology (morphhb)",
    "recast": false
   }
@@ -35718,7 +35718,7 @@
    "recast": false
   },
   {
-   "text": "back, consent",
+   "text": "neck",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -35766,7 +35766,7 @@
    "recast": false
   },
   {
-   "text": "and again, away",
+   "text": "and walk",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -35790,7 +35790,7 @@
    "recast": false
   },
   {
-   "text": "back -ward, again .",
+   "text": "backwards",
    "source_label": "Morphology (morphhb)",
    "recast": false
   }
@@ -35814,12 +35814,12 @@
    "recast": false
   },
   {
-   "text": "clad self, close (intensive)",
+   "text": "plump (intensive)",
    "source_label": "Binyan: Piel",
    "recast": false
   },
   {
-   "text": "and clad self, close",
+   "text": "and plump",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -35882,7 +35882,7 @@
    "recast": false
   },
   {
-   "text": "nakedness, shame",
+   "text": "nudity",
    "source_label": "Morphology (morphhb)",
    "recast": false
   }
@@ -35949,7 +35949,7 @@
    "recast": false
   },
   {
-   "text": "back -ward, again .",
+   "text": "backwards",
    "source_label": "Morphology (morphhb)",
    "recast": false
   }
@@ -35968,7 +35968,7 @@
    "recast": false
   },
   {
-   "text": "and nakedness, shame",
+   "text": "and nudity",
    "source_label": "Morphology (morphhb)",
    "recast": false
   }
@@ -36006,7 +36006,7 @@
    "recast": false
   },
   {
-   "text": "before, or else",
+   "text": "not",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -36102,7 +36102,7 @@
    "recast": false
   },
   {
-   "text": "from his banqueting, wine",
+   "text": "from his wine",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -36310,7 +36310,7 @@
    "recast": false
   },
   {
-   "text": "the least, less -er",
+   "text": "the abbreviated",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -36387,7 +36387,7 @@
    "recast": false
   },
   {
-   "text": "Canaan, merchant",
+   "text": "Kenaan",
    "source_label": "Morphology (morphhb)",
    "recast": false
   }
@@ -36406,7 +36406,7 @@
    "recast": false
   },
   {
-   "text": "bondage, bondman",
+   "text": "servant",
    "source_label": "Morphology (morphhb)",
    "recast": false
   }
@@ -36425,7 +36425,7 @@
    "recast": false
   },
   {
-   "text": "bondage, bondman",
+   "text": "servant",
    "source_label": "Morphology (morphhb)",
    "recast": false
   }
@@ -36483,7 +36483,7 @@
    "recast": false
   },
   {
-   "text": "to his another, brother -ly",
+   "text": "to his brother",
    "source_label": "Morphology (morphhb)",
    "recast": false
   }
@@ -36531,7 +36531,7 @@
    "recast": false
   },
   {
-   "text": "abundantly, altogether",
+   "text": "kneel",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -36618,7 +36618,7 @@
    "recast": false
   },
   {
-   "text": "Sem, Shem.",
+   "text": "Shem",
    "source_label": "Morphology (morphhb)",
    "recast": false
   }
@@ -36676,7 +36676,7 @@
    "recast": false
   },
   {
-   "text": "Canaan, merchant",
+   "text": "Kenaan",
    "source_label": "Morphology (morphhb)",
    "recast": false
   }
@@ -36695,7 +36695,7 @@
    "recast": false
   },
   {
-   "text": "bondage, bondman",
+   "text": "servant",
    "source_label": "Morphology (morphhb)",
    "recast": false
   }
@@ -36728,12 +36728,12 @@
    "recast": false
   },
   {
-   "text": "caused to allure, deceive",
+   "text": "caused to open",
    "source_label": "Binyan: Hifil",
    "recast": false
   },
   {
-   "text": "allure, deceive",
+   "text": "open",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -36830,7 +36830,7 @@
    "recast": false
   },
   {
-   "text": "and abide, continue",
+   "text": "and reside",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -36854,7 +36854,7 @@
    "recast": false
   },
   {
-   "text": "in covering, dwelling place",
+   "text": "in tent",
    "source_label": "Morphology (morphhb)",
    "recast": false
   }
@@ -36873,7 +36873,7 @@
    "recast": false
   },
   {
-   "text": "Sem, Shem.",
+   "text": "Shem",
    "source_label": "Morphology (morphhb)",
    "recast": false
   }
@@ -36931,7 +36931,7 @@
    "recast": false
   },
   {
-   "text": "Canaan, merchant",
+   "text": "Kenaan",
    "source_label": "Morphology (morphhb)",
    "recast": false
   }
@@ -36950,7 +36950,7 @@
    "recast": false
   },
   {
-   "text": "bondage, bondman",
+   "text": "servant",
    "source_label": "Morphology (morphhb)",
    "recast": false
   }
@@ -37555,7 +37555,7 @@
    "recast": false
   },
   {
-   "text": "Sem, Shem.",
+   "text": "Shem",
    "source_label": "Morphology (morphhb)",
    "recast": false
   }
@@ -37848,7 +37848,7 @@
    "recast": false
   },
   {
-   "text": "and Madai, Medes",
+   "text": "and Madai",
    "source_label": "Morphology (morphhb)",
    "recast": false
   }
@@ -37915,7 +37915,7 @@
    "recast": false
   },
   {
-   "text": "and Mesech, Meshech.",
+   "text": "and Meshek",
    "source_label": "Morphology (morphhb)",
    "recast": false
   }
@@ -38155,7 +38155,7 @@
    "recast": false
   },
   {
-   "text": "and Tarshish, Tharshish.",
+   "text": "and Tarshish",
    "source_label": "Morphology (morphhb)",
    "recast": false
   }
@@ -38174,7 +38174,7 @@
    "recast": false
   },
   {
-   "text": "Chittim, Kittim.",
+   "text": "Kittite",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -38246,12 +38246,12 @@
    "recast": false
   },
   {
-   "text": "was disperse, divide / disperse, divide itself",
+   "text": "was break through / break through itself",
    "source_label": "Binyan: Nifal",
    "recast": false
   },
   {
-   "text": "disperse, divide",
+   "text": "break through",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -38280,7 +38280,7 @@
    "recast": false
   },
   {
-   "text": "country, isle",
+   "text": "habitable spot",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -38314,7 +38314,7 @@
    "recast": false
   },
   {
-   "text": "the Gentile, heathen",
+   "text": "the nation",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -38401,7 +38401,7 @@
    "recast": false
   },
   {
-   "text": "to his babbler, bay",
+   "text": "to his tongue",
    "source_label": "Morphology (morphhb)",
    "recast": false
   }
@@ -38425,7 +38425,7 @@
    "recast": false
   },
   {
-   "text": "to their family, kind -red .",
+   "text": "to their family",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -38469,7 +38469,7 @@
    "recast": false
   },
   {
-   "text": "in their Gentile, heathen",
+   "text": "in their nation",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -38551,7 +38551,7 @@
    "recast": false
   },
   {
-   "text": "Chush, Cush",
+   "text": "Cush",
    "source_label": "Morphology (morphhb)",
    "recast": false
   }
@@ -38570,7 +38570,7 @@
    "recast": false
   },
   {
-   "text": "and Egypt, Egyptians",
+   "text": "and Mitsrajim",
    "source_label": "Morphology (morphhb)",
    "recast": false
   }
@@ -38589,7 +38589,7 @@
    "recast": false
   },
   {
-   "text": "and Phut, Put.",
+   "text": "and Put",
    "source_label": "Morphology (morphhb)",
    "recast": false
   }
@@ -38608,7 +38608,7 @@
    "recast": false
   },
   {
-   "text": "and Canaan, merchant",
+   "text": "and Kenaan",
    "source_label": "Morphology (morphhb)",
    "recast": false
   }
@@ -38651,7 +38651,7 @@
    "recast": false
   },
   {
-   "text": "Chush, Cush",
+   "text": "Cush",
    "source_label": "Morphology (morphhb)",
    "recast": false
   }
@@ -38718,7 +38718,7 @@
    "recast": false
   },
   {
-   "text": "and Sabta, Sabtah.",
+   "text": "and Sabta",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -38766,7 +38766,7 @@
    "recast": false
   },
   {
-   "text": "and Sabtecha, Sabtechah.",
+   "text": "and Sabteca",
    "source_label": "Morphology (morphhb)",
    "recast": false
   }
@@ -38833,7 +38833,7 @@
    "recast": false
   },
   {
-   "text": "Sheba, Sabeans.",
+   "text": "Sheba",
    "source_label": "Morphology (morphhb)",
    "recast": false
   }
@@ -38876,7 +38876,7 @@
    "recast": false
   },
   {
-   "text": "and Chush, Cush",
+   "text": "and Cush",
    "source_label": "Morphology (morphhb)",
    "recast": false
   }
@@ -38991,7 +38991,7 @@
    "recast": false
   },
   {
-   "text": "he, as for her",
+   "text": "he",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -39030,12 +39030,12 @@
    "recast": false
   },
   {
-   "text": "caused to begin men began, defile",
+   "text": "caused to bore",
    "source_label": "Binyan: Hifil",
    "recast": false
   },
   {
-   "text": "begin men began, defile",
+   "text": "bore",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -39118,7 +39118,7 @@
    "recast": false
   },
   {
-   "text": "champion, chief",
+   "text": "powerful",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -39176,7 +39176,7 @@
    "recast": false
   },
   {
-   "text": "he, as for her",
+   "text": "he",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -39254,7 +39254,7 @@
    "recast": false
   },
   {
-   "text": "champion, chief",
+   "text": "powerful",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -39288,7 +39288,7 @@
    "recast": false
   },
   {
-   "text": "catcheth, food",
+   "text": "chase",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -39521,7 +39521,7 @@
    "recast": false
   },
   {
-   "text": "champion, chief",
+   "text": "powerful",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -39555,7 +39555,7 @@
    "recast": false
   },
   {
-   "text": "catcheth, food",
+   "text": "chase",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -39686,7 +39686,7 @@
    "recast": false
   },
   {
-   "text": "beginning, chief -est",
+   "text": "first",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -39710,7 +39710,7 @@
    "recast": false
   },
   {
-   "text": "his kingdom, king's",
+   "text": "his dominion",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -39739,7 +39739,7 @@
    "recast": false
   },
   {
-   "text": "Babel, Babylon.",
+   "text": "Babel",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -39816,7 +39816,7 @@
    "recast": false
   },
   {
-   "text": "and Calneh, Calno. Compare 3656.",
+   "text": "and Calneh",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -39951,7 +39951,7 @@
    "recast": false
   },
   {
-   "text": "the he, as for her",
+   "text": "the he",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -40024,7 +40024,7 @@
    "recast": false
   },
   {
-   "text": "Asshur, Assur",
+   "text": "Ashshur",
    "source_label": "Morphology (morphhb)",
    "recast": false
   }
@@ -40043,7 +40043,7 @@
    "recast": false
   },
   {
-   "text": "and begin to build -er, obtain children",
+   "text": "and build",
    "source_label": "Morphology (morphhb)",
    "recast": false
   }
@@ -40178,7 +40178,7 @@
    "recast": false
   },
   {
-   "text": "Ai from margin, city",
+   "text": "city",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -40434,7 +40434,7 @@
    "recast": false
   },
   {
-   "text": "he, as for her",
+   "text": "he",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -40478,7 +40478,7 @@
    "recast": false
   },
   {
-   "text": "the Ai from margin, city",
+   "text": "the city",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -40517,7 +40517,7 @@
    "recast": false
   },
   {
-   "text": "the aloud, elder -est",
+   "text": "the great",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -40546,7 +40546,7 @@
    "recast": false
   },
   {
-   "text": "and Egypt, Egyptians",
+   "text": "and Mitsrajim",
    "source_label": "Morphology (morphhb)",
    "recast": false
   }
@@ -41035,7 +41035,7 @@
    "recast": false
   },
   {
-   "text": "from in it, thence",
+   "text": "from there",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -41127,7 +41127,7 @@
    "recast": false
   },
   {
-   "text": "Caphthorim, Caphtorim -s .",
+   "text": "Caphtorite",
    "source_label": "Morphology (morphhb)",
    "recast": false
   }
@@ -41146,7 +41146,7 @@
    "recast": false
   },
   {
-   "text": "and Canaan, merchant",
+   "text": "and Kenaan",
    "source_label": "Morphology (morphhb)",
    "recast": false
   }
@@ -41237,7 +41237,7 @@
    "recast": false
   },
   {
-   "text": "Sidon, Zidon.",
+   "text": "Tsidon",
    "source_label": "Morphology (morphhb)",
    "recast": false
   }
@@ -41256,7 +41256,7 @@
    "recast": false
   },
   {
-   "text": "his eldest son, firstborn -ling .",
+   "text": "his first-born",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -41488,7 +41488,7 @@
    "recast": false
   },
   {
-   "text": "the Girgashite, Girgasite.",
+   "text": "the Girgashite",
    "source_label": "Morphology (morphhb)",
    "recast": false
   }
@@ -41889,12 +41889,12 @@
    "recast": false
   },
   {
-   "text": "was break dash, shake in to pieces / break dash, shake in to pieces itself",
+   "text": "was dash / dash itself",
    "source_label": "Binyan: Nifal",
    "recast": false
   },
   {
-   "text": "break dash, shake in to pieces",
+   "text": "dash",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -41918,7 +41918,7 @@
    "recast": false
   },
   {
-   "text": "family, kind -red .",
+   "text": "family",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -41957,7 +41957,7 @@
    "recast": false
   },
   {
-   "text": "the Canaanite, merchant",
+   "text": "the Kenaanite",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -42020,7 +42020,7 @@
    "recast": false
   },
   {
-   "text": "border, bound",
+   "text": "cord",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -42054,7 +42054,7 @@
    "recast": false
   },
   {
-   "text": "the Canaanite, merchant",
+   "text": "the Kenaanite",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -42083,7 +42083,7 @@
    "recast": false
   },
   {
-   "text": "from Sidon, Zidon.",
+   "text": "from Tsidon",
    "source_label": "Morphology (morphhb)",
    "recast": false
   }
@@ -42211,7 +42211,7 @@
    "recast": false
   },
   {
-   "text": "Azzah, Gaza.",
+   "text": "Azzah",
    "source_label": "Morphology (morphhb)",
    "recast": false
   }
@@ -42342,7 +42342,7 @@
    "recast": false
   },
   {
-   "text": "and Zeboiim, Zeboim.",
+   "text": "and Tseboim",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -42512,7 +42512,7 @@
    "recast": false
   },
   {
-   "text": "to their family, kind -red .",
+   "text": "to their family",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -42561,7 +42561,7 @@
    "recast": false
   },
   {
-   "text": "to their babbler, bay",
+   "text": "to their tongue",
    "source_label": "Morphology (morphhb)",
    "recast": false
   }
@@ -42624,7 +42624,7 @@
    "recast": false
   },
   {
-   "text": "in their Gentile, heathen",
+   "text": "in their nation",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -42658,7 +42658,7 @@
    "recast": false
   },
   {
-   "text": "and to Sem, Shem.",
+   "text": "and to Shem",
    "source_label": "Morphology (morphhb)",
    "recast": false
   }
@@ -42721,7 +42721,7 @@
    "recast": false
   },
   {
-   "text": "again, alike",
+   "text": "assemblage",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -42760,7 +42760,7 @@
    "recast": false
   },
   {
-   "text": "he, as for her",
+   "text": "he",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -42881,7 +42881,7 @@
    "recast": false
   },
   {
-   "text": "Eber, Heber.",
+   "text": "Eber",
    "source_label": "Morphology (morphhb)",
    "recast": false
   }
@@ -42905,7 +42905,7 @@
    "recast": false
   },
   {
-   "text": "another, brother -ly",
+   "text": "brother",
    "source_label": "Morphology (morphhb)",
    "recast": false
   }
@@ -42948,7 +42948,7 @@
    "recast": false
   },
   {
-   "text": "the aloud, elder -est",
+   "text": "the great",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -43001,7 +43001,7 @@
    "recast": false
   },
   {
-   "text": "Sem, Shem.",
+   "text": "Shem",
    "source_label": "Morphology (morphhb)",
    "recast": false
   }
@@ -43044,7 +43044,7 @@
    "recast": false
   },
   {
-   "text": "and Asshur, Assur",
+   "text": "and Ashshur",
    "source_label": "Morphology (morphhb)",
    "recast": false
   }
@@ -43092,7 +43092,7 @@
    "recast": false
   },
   {
-   "text": "and Lud, Lydia.",
+   "text": "and Lud",
    "source_label": "Morphology (morphhb)",
    "recast": false
   }
@@ -43111,7 +43111,7 @@
    "recast": false
   },
   {
-   "text": "and Aram, Mesopotamia",
+   "text": "and Aram",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -43159,7 +43159,7 @@
    "recast": false
   },
   {
-   "text": "Aram, Mesopotamia",
+   "text": "Aram",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -43380,7 +43380,7 @@
    "recast": false
   },
   {
-   "text": "Salah, Shelah. Compare 7975.",
+   "text": "Shelach",
    "source_label": "Morphology (morphhb)",
    "recast": false
   }
@@ -43399,7 +43399,7 @@
    "recast": false
   },
   {
-   "text": "and Salah, Shelah. Compare 7975.",
+   "text": "and Shelach",
    "source_label": "Morphology (morphhb)",
    "recast": false
   }
@@ -43490,7 +43490,7 @@
    "recast": false
   },
   {
-   "text": "Eber, Heber.",
+   "text": "Eber",
    "source_label": "Morphology (morphhb)",
    "recast": false
   }
@@ -43509,7 +43509,7 @@
    "recast": false
   },
   {
-   "text": "and to Eber, Heber.",
+   "text": "and to Eber",
    "source_label": "Morphology (morphhb)",
    "recast": false
   }
@@ -43712,7 +43712,7 @@
    "recast": false
   },
   {
-   "text": "and and, forasmuch",
+   "text": "and relative conjunction",
    "source_label": "Morphology (morphhb)",
    "recast": false
   }
@@ -43852,7 +43852,7 @@
    "recast": false
   },
   {
-   "text": "his another, brother -ly",
+   "text": "his brother",
    "source_label": "Morphology (morphhb)",
    "recast": false
   }
@@ -44518,7 +44518,7 @@
    "recast": false
   },
   {
-   "text": "Sheba, Sabeans.",
+   "text": "Sheba",
    "source_label": "Morphology (morphhb)",
    "recast": false
   }
@@ -44861,7 +44861,7 @@
    "recast": false
   },
   {
-   "text": "their assembly, dwell in",
+   "text": "their seat",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -44988,7 +44988,7 @@
    "recast": false
   },
   {
-   "text": "hill country, mount -ain",
+   "text": "mountain",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -45012,7 +45012,7 @@
    "recast": false
   },
   {
-   "text": "the aforetime, ancient time",
+   "text": "the front",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -45099,7 +45099,7 @@
    "recast": false
   },
   {
-   "text": "Sem, Shem.",
+   "text": "Shem",
    "source_label": "Morphology (morphhb)",
    "recast": false
   }
@@ -45123,7 +45123,7 @@
    "recast": false
   },
   {
-   "text": "to their family, kind -red .",
+   "text": "to their family",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -45167,7 +45167,7 @@
    "recast": false
   },
   {
-   "text": "to their babbler, bay",
+   "text": "to their tongue",
    "source_label": "Morphology (morphhb)",
    "recast": false
   }
@@ -45225,7 +45225,7 @@
    "recast": false
   },
   {
-   "text": "to their Gentile, heathen",
+   "text": "to their nation",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -45283,7 +45283,7 @@
    "recast": false
   },
   {
-   "text": "family, kind -red .",
+   "text": "family",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -45409,7 +45409,7 @@
    "recast": false
   },
   {
-   "text": "in their Gentile, heathen",
+   "text": "in their nation",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -45472,12 +45472,12 @@
    "recast": false
   },
   {
-   "text": "was disperse, divide / disperse, divide itself",
+   "text": "was break through / break through itself",
    "source_label": "Binyan: Nifal",
    "recast": false
   },
   {
-   "text": "disperse, divide",
+   "text": "break through",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -45506,7 +45506,7 @@
    "recast": false
   },
   {
-   "text": "the Gentile, heathen",
+   "text": "the nation",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -45734,7 +45734,7 @@
    "recast": false
   },
   {
-   "text": "band, bank",
+   "text": "lip",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -45919,7 +45919,7 @@
    "recast": false
   },
   {
-   "text": "in cause to blow, bring",
+   "text": "in pull",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -45948,7 +45948,7 @@
    "recast": false
   },
   {
-   "text": "from aforetime, ancient time",
+   "text": "from front",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -45987,7 +45987,7 @@
    "recast": false
   },
   {
-   "text": "and be able, befall",
+   "text": "and come",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -46026,7 +46026,7 @@
    "recast": false
   },
   {
-   "text": "plain, valley.",
+   "text": "split",
    "source_label": "Morphology (morphhb)",
    "recast": false
   }
@@ -46137,7 +46137,7 @@
    "recast": false
   },
   {
-   "text": "in it, thence",
+   "text": "there",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -46268,7 +46268,7 @@
    "recast": false
   },
   {
-   "text": "his brother, companion",
+   "text": "his associate",
    "source_label": "Morphology (morphhb)",
    "recast": false
   }
@@ -46287,7 +46287,7 @@
    "recast": false
   },
   {
-   "text": "ascribe, bring",
+   "text": "give",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -46316,7 +46316,7 @@
    "recast": false
   },
   {
-   "text": "make brick, be made",
+   "text": "be",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -46355,7 +46355,7 @@
    "recast": false
   },
   {
-   "text": "altar of brick, tile.",
+   "text": "brick",
    "source_label": "Morphology (morphhb)",
    "recast": false
   }
@@ -46379,7 +46379,7 @@
    "recast": false
   },
   {
-   "text": "and cause to, make a burn -ing",
+   "text": "and be",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -46490,7 +46490,7 @@
    "recast": false
   },
   {
-   "text": "the altar of brick, tile.",
+   "text": "the brick",
    "source_label": "Morphology (morphhb)",
    "recast": false
   }
@@ -46514,7 +46514,7 @@
    "recast": false
   },
   {
-   "text": "to carbuncle, mason",
+   "text": "to stone",
    "source_label": "Morphology (morphhb)",
    "recast": false
   }
@@ -46620,7 +46620,7 @@
    "recast": false
   },
   {
-   "text": "to clay, heap",
+   "text": "to bubbling",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -46700,7 +46700,7 @@
    "readability": true
   },
   {
-   "text": "ascribe, bring",
+   "text": "give",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -46735,7 +46735,7 @@
    "readability": true
   },
   {
-   "text": "begin to build -er, obtain children",
+   "text": "build",
    "source_label": "Morphology (morphhb)",
    "recast": false
   }
@@ -46780,7 +46780,7 @@
    "readability": true
   },
   {
-   "text": "Ai from margin, city",
+   "text": "city",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -46825,7 +46825,7 @@
    "readability": true
   },
   {
-   "text": "and castle, flower",
+   "text": "and tower",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -46860,7 +46860,7 @@
    "readability": true
   },
   {
-   "text": "and his band, beginning",
+   "text": "and his head",
    "source_label": "Morphology (morphhb)",
    "recast": false
   }
@@ -47025,7 +47025,7 @@
    "recast": false
   },
   {
-   "text": "and lest peradventure, that...not.",
+   "text": "and removal",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -47060,7 +47060,7 @@
    "recast": false
   },
   {
-   "text": "break dash, shake in to pieces",
+   "text": "dash",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -47239,7 +47239,7 @@
    "recast": false
   },
   {
-   "text": "and abundantly, bring down",
+   "text": "and descend",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -47346,7 +47346,7 @@
    "recast": false
   },
   {
-   "text": "the Ai from margin, city",
+   "text": "the city",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -47414,7 +47414,7 @@
    "recast": false
   },
   {
-   "text": "the castle, flower",
+   "text": "the tower",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -47482,7 +47482,7 @@
    "recast": false
   },
   {
-   "text": "begin to build -er, obtain children",
+   "text": "build",
    "source_label": "Morphology (morphhb)",
    "recast": false
   }
@@ -47535,7 +47535,7 @@
    "recast": false
   },
   {
-   "text": "the another, hypocrite",
+   "text": "the ruddy",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -47622,7 +47622,7 @@
    "recast": false
   },
   {
-   "text": "behold, if",
+   "text": "lo!",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -47651,7 +47651,7 @@
    "recast": false
   },
   {
-   "text": "folk, men",
+   "text": "people",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -47724,7 +47724,7 @@
    "recast": false
   },
   {
-   "text": "and band, bank",
+   "text": "and lip",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -47821,7 +47821,7 @@
    "recast": false
   },
   {
-   "text": "and he, hence",
+   "text": "and this",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -47845,12 +47845,12 @@
    "recast": false
   },
   {
-   "text": "caused to begin men began, defile",
+   "text": "caused to bore",
    "source_label": "Binyan: Hifil",
    "recast": false
   },
   {
-   "text": "begin men began, defile",
+   "text": "bore",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -47923,7 +47923,7 @@
    "recast": false
   },
   {
-   "text": "and henceforth, now",
+   "text": "and at this time",
    "source_label": "Morphology (morphhb)",
    "recast": false
   }
@@ -47942,7 +47942,7 @@
    "recast": false
   },
   {
-   "text": "before, or else",
+   "text": "not",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -47966,12 +47966,12 @@
    "recast": false
   },
   {
-   "text": "was cut off, de- fenced / cut off, de- fenced itself",
+   "text": "was gather grapes / gather grapes itself",
    "source_label": "Binyan: Nifal",
    "recast": false
   },
   {
-   "text": "cut off, de- fenced",
+   "text": "gather grapes",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -48087,7 +48087,7 @@
    "recast": false
   },
   {
-   "text": "consider, devise",
+   "text": "plan",
    "source_label": "Morphology (morphhb)",
    "recast": false
   }
@@ -48145,7 +48145,7 @@
    "recast": false
   },
   {
-   "text": "ascribe, bring",
+   "text": "give",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -48179,7 +48179,7 @@
    "recast": false
   },
   {
-   "text": "abundantly, bring down",
+   "text": "descend",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -48213,7 +48213,7 @@
    "recast": false
   },
   {
-   "text": "and anoint, confound",
+   "text": "and overflow",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -48242,7 +48242,7 @@
    "recast": false
   },
   {
-   "text": "in it, thence",
+   "text": "there",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -48276,7 +48276,7 @@
    "recast": false
   },
   {
-   "text": "their band, bank",
+   "text": "their lip",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -48344,7 +48344,7 @@
    "recast": false
   },
   {
-   "text": "before, or else",
+   "text": "not",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -48416,7 +48416,7 @@
    "recast": false
   },
   {
-   "text": "band, bank",
+   "text": "lip",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -48445,7 +48445,7 @@
    "recast": false
   },
   {
-   "text": "his brother, companion",
+   "text": "his associate",
    "source_label": "Morphology (morphhb)",
    "recast": false
   }
@@ -48464,12 +48464,12 @@
    "recast": false
   },
   {
-   "text": "caused to break dash, shake in to pieces",
+   "text": "caused to dash",
    "source_label": "Binyan: Hifil",
    "recast": false
   },
   {
-   "text": "and break dash, shake in to pieces",
+   "text": "and dash",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -48547,7 +48547,7 @@
    "recast": false
   },
   {
-   "text": "from in it, thence",
+   "text": "from there",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -48723,7 +48723,7 @@
    "recast": false
   },
   {
-   "text": "and cease, end",
+   "text": "and be flabby",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -48757,7 +48757,7 @@
    "recast": false
   },
   {
-   "text": "to begin to build -er, obtain children",
+   "text": "to build",
    "source_label": "Morphology (morphhb)",
    "recast": false
   }
@@ -48776,7 +48776,7 @@
    "recast": false
   },
   {
-   "text": "the Ai from margin, city",
+   "text": "the city",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -48941,7 +48941,7 @@
    "recast": false
   },
   {
-   "text": "Babel, Babylon.",
+   "text": "Babel",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -48970,7 +48970,7 @@
    "recast": false
   },
   {
-   "text": "and and, forasmuch",
+   "text": "and relative conjunction",
    "source_label": "Morphology (morphhb)",
    "recast": false
   }
@@ -48989,7 +48989,7 @@
    "recast": false
   },
   {
-   "text": "in it, thence",
+   "text": "there",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -49023,7 +49023,7 @@
    "recast": false
   },
   {
-   "text": "anoint, confound",
+   "text": "overflow",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -49081,7 +49081,7 @@
    "recast": false
   },
   {
-   "text": "band, bank",
+   "text": "lip",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -49189,7 +49189,7 @@
    "readability": true
   },
   {
-   "text": "and from in it, thence",
+   "text": "and from there",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -49223,12 +49223,12 @@
    "recast": false
   },
   {
-   "text": "caused to break dash, shake in to pieces",
+   "text": "caused to dash",
    "source_label": "Binyan: Hifil",
    "recast": false
   },
   {
-   "text": "break dash, shake in to pieces",
+   "text": "dash",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -49470,7 +49470,7 @@
    "recast": false
   },
   {
-   "text": "Sem, Shem.",
+   "text": "Shem",
    "source_label": "Morphology (morphhb)",
    "recast": false
   }
@@ -49489,7 +49489,7 @@
    "recast": false
   },
   {
-   "text": "Sem, Shem.",
+   "text": "Shem",
    "source_label": "Morphology (morphhb)",
    "recast": false
   }
@@ -49777,7 +49777,7 @@
    "recast": false
   },
   {
-   "text": "Sem, Shem.",
+   "text": "Shem",
    "source_label": "Morphology (morphhb)",
    "recast": false
   }
@@ -50271,7 +50271,7 @@
    "recast": false
   },
   {
-   "text": "Salah, Shelah. Compare 7975.",
+   "text": "Shelach",
    "source_label": "Morphology (morphhb)",
    "recast": false
   }
@@ -50437,7 +50437,7 @@
    "recast": false
   },
   {
-   "text": "Salah, Shelah. Compare 7975.",
+   "text": "Shelach",
    "source_label": "Morphology (morphhb)",
    "recast": false
   }
@@ -50669,7 +50669,7 @@
    "recast": false
   },
   {
-   "text": "and Salah, Shelah. Compare 7975.",
+   "text": "and Shelach",
    "source_label": "Morphology (morphhb)",
    "recast": false
   }
@@ -50843,7 +50843,7 @@
    "recast": false
   },
   {
-   "text": "Eber, Heber.",
+   "text": "Eber",
    "source_label": "Morphology (morphhb)",
    "recast": false
   }
@@ -50891,7 +50891,7 @@
    "recast": false
   },
   {
-   "text": "Salah, Shelah. Compare 7975.",
+   "text": "Shelach",
    "source_label": "Morphology (morphhb)",
    "recast": false
   }
@@ -51004,7 +51004,7 @@
    "recast": false
   },
   {
-   "text": "Eber, Heber.",
+   "text": "Eber",
    "source_label": "Morphology (morphhb)",
    "recast": false
   }
@@ -51265,7 +51265,7 @@
    "recast": false
   },
   {
-   "text": "Eber, Heber.",
+   "text": "Eber",
    "source_label": "Morphology (morphhb)",
    "recast": false
   }
@@ -51481,7 +51481,7 @@
    "recast": false
   },
   {
-   "text": "Eber, Heber.",
+   "text": "Eber",
    "source_label": "Morphology (morphhb)",
    "recast": false
   }
@@ -53726,7 +53726,7 @@
    "recast": false
   },
   {
-   "text": "Tarah, Terah.",
+   "text": "Terach",
    "source_label": "Morphology (morphhb)",
    "recast": false
   }
@@ -53892,7 +53892,7 @@
    "recast": false
   },
   {
-   "text": "Tarah, Terah.",
+   "text": "Terach",
    "source_label": "Morphology (morphhb)",
    "recast": false
   }
@@ -53947,7 +53947,7 @@
    "readability": true
   },
   {
-   "text": "eigh-, fif-",
+   "text": "ten",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -54200,7 +54200,7 @@
    "recast": false
   },
   {
-   "text": "Tarah, Terah.",
+   "text": "Terach",
    "source_label": "Morphology (morphhb)",
    "recast": false
   }
@@ -54530,7 +54530,7 @@
    "recast": false
   },
   {
-   "text": "Tarah, Terah.",
+   "text": "Terach",
    "source_label": "Morphology (morphhb)",
    "recast": false
   }
@@ -54549,7 +54549,7 @@
    "recast": false
   },
   {
-   "text": "Tarah, Terah.",
+   "text": "Terach",
    "source_label": "Morphology (morphhb)",
    "recast": false
   }
@@ -55019,7 +55019,7 @@
    "recast": false
   },
   {
-   "text": "Tarah, Terah.",
+   "text": "Terach",
    "source_label": "Morphology (morphhb)",
    "recast": false
   }
@@ -55086,7 +55086,7 @@
    "recast": false
   },
   {
-   "text": "his begotten, born",
+   "text": "his nativity",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -55149,7 +55149,7 @@
    "recast": false
   },
   {
-   "text": "Chaldeans, Chaldees",
+   "text": "Kasdite",
    "source_label": "Morphology (morphhb)",
    "recast": false
   }
@@ -55726,7 +55726,7 @@
    "recast": false
   },
   {
-   "text": "else, except",
+   "text": "nonentity",
    "source_label": "Morphology (morphhb)",
    "recast": false
   }
@@ -55807,7 +55807,7 @@
    "recast": false
   },
   {
-   "text": "Tarah, Terah.",
+   "text": "Terach",
    "source_label": "Morphology (morphhb)",
    "recast": false
   }
@@ -56113,7 +56113,7 @@
    "recast": false
   },
   {
-   "text": "his bride, daughter-in-law",
+   "text": "his bride",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -56316,7 +56316,7 @@
    "recast": false
   },
   {
-   "text": "Chaldeans, Chaldees",
+   "text": "Kasdite",
    "source_label": "Morphology (morphhb)",
    "recast": false
   }
@@ -56340,7 +56340,7 @@
    "recast": false
   },
   {
-   "text": "to again, away",
+   "text": "to walk",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -56393,7 +56393,7 @@
    "recast": false
   },
   {
-   "text": "Canaan, merchant",
+   "text": "Kenaan",
    "source_label": "Morphology (morphhb)",
    "recast": false
   }
@@ -56549,7 +56549,7 @@
    "recast": false
   },
   {
-   "text": "in it, thence",
+   "text": "there",
    "source_label": "Morphology (morphhb)",
    "recast": false
   },
@@ -56641,7 +56641,7 @@
    "recast": false
   },
   {
-   "text": "Tarah, Terah.",
+   "text": "Terach",
    "source_label": "Morphology (morphhb)",
    "recast": false
   }
@@ -56775,7 +56775,7 @@
    "recast": false
   },
   {
-   "text": "Tarah, Terah.",
+   "text": "Terach",
    "source_label": "Morphology (morphhb)",
    "recast": false
   }

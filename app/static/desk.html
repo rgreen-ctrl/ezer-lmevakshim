@@ -222,8 +222,10 @@
         <div id="src-rashi"></div>
       </div>
     </div>
-    <div class="actions">
-      <button class="good" onclick="certifyPasuk()">Certify pasuk</button>
+    <div class="actions" id="p-nav">
+      <button class="quiet" id="p-prev" onclick="gotoPasuk(-1)">← Previous</button>
+      <button class="good" id="p-certify" onclick="certifyPasuk()">Certify pasuk &amp; next</button>
+      <button id="p-next" onclick="gotoPasuk(1)">Next pasuk →</button>
     </div>
     <div id="word-panel" class="hidden">
       <h2 id="wp-title"></h2>
@@ -401,6 +403,7 @@ async function loadHome() {
 async function loadUnit(id, name) {
   S.unit = id; S.unitName = name || S.unitName;
   const data = await api(`/desk/units/${id}`);
+  S.pesukim = data.pesukim || [];      // for Next/Previous labels
   const p = data.progress;
   $('u-name').textContent = data.unit.name;
   $('u-progress').innerHTML =
@@ -451,6 +454,13 @@ async function loadPasuk(idx) {
   const ref = await magilRef();
   S.spanEntry = ref[data.ref] || null;
   S.servable = !!data.servable;
+  // Entering straight from the review queue skips loadUnit, so make sure the
+  // pasuk list is here before Next/Previous try to name their destination.
+  if (!(S.pesukim || []).length) {
+    try { S.pesukim = (await api(`/desk/units/${S.unit}`)).pesukim || []; }
+    catch (e) { S.pesukim = []; }
+  }
+  updateNav();
   S.lineEntry = (await magilLines())[data.ref] || null;
   setupPage(S.lineEntry || S.spanEntry);
   await renderPasukBody();
@@ -791,9 +801,40 @@ async function decertifyWord() {
     $('wp-status').textContent = 'Reopened ✓ now editable; its suggestions are available again.';
   } catch (e) { $('wp-status').textContent = 'Not reopened: ' + e.message; }
 }
+// --- Pasuk navigation --------------------------------------------------------
+// The loop is read -> certify -> next. The list stays for jumping around, but it
+// is never the only way to move.
+function pasukRef(idx) {
+  const p = (S.pesukim || []).find(x => x.pasuk_index === idx);
+  return p ? p.ref : null;
+}
+function updateNav() {
+  const prevRef = pasukRef(S.pasuk - 1), nextRef = pasukRef(S.pasuk + 1);
+  const prev = $('p-prev'), next = $('p-next');
+  prev.disabled = !prevRef;
+  next.disabled = !nextRef;
+  prev.setAttribute('aria-label', prevRef ? `Previous pasuk, ${prevRef}` : 'No previous pasuk');
+  next.setAttribute('aria-label', nextRef ? `Next pasuk, ${nextRef}` : 'No next pasuk');
+  $('p-certify').setAttribute('aria-label', nextRef
+    ? `Certify this pasuk and go to ${nextRef}` : 'Certify this pasuk');
+  $('p-certify').textContent = nextRef ? 'Certify pasuk & next' : 'Certify pasuk';
+}
+async function gotoPasuk(delta) {
+  const idx = S.pasuk + delta;
+  if (!pasukRef(idx)) return;
+  await loadPasuk(idx);
+  $('p-ref').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+}
 async function certifyPasuk() {
-  await api(`/desk/units/${S.unit}/pasuk/${S.pasuk}/certify`, {});
-  loadPasuk(S.pasuk);
+  try {
+    await api(`/desk/units/${S.unit}/pasuk/${S.pasuk}/certify`, {});
+  } catch (e) {
+    $('wp-status').textContent = 'Not certified: ' + e.message;
+    return;                                  // a refusal must not skip you past it
+  }
+  const nextRef = pasukRef(S.pasuk + 1);
+  if (nextRef) { await gotoPasuk(1); }
+  else { await loadPasuk(S.pasuk); }
 }
 
 async function showFlags() {
