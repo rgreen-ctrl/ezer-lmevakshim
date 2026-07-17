@@ -142,6 +142,11 @@ The Desk never fails silently; every error path prints what happened.
   root reseed. A derived artifact is stale the moment its source improves.
 - **Grouped spans assign a whole phrase to every covered word** — collapsing
   them puts a sentence under one word. Cap per-word offers (4 English words).
+- **Never push before reading the test line.** A transient Postgres-container
+  readiness race showed "56 passed, 1 error" AFTER a push had already gone
+  out (2026-07-17). Rerun distinguishes transient from real — but the order
+  is: read results, then push. Chaining `test && push` in one command invites
+  exactly this.
 - **Craft/connector outages:** bank every unpostable log entry to a file
   immediately (`scratchpad/craft_pending_deploy_log.md` pattern); a record
   that waits for the connector dies with the session.

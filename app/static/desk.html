@@ -511,6 +511,7 @@ async function loadPasuk(idx) {
   const ref = await magilRef();
   S.spanEntry = ref[data.ref] || null;
   S.servable = !!data.servable;
+  S.lineEdits = data.line_edits || {};
   // Entering straight from the review queue skips loadUnit, so make sure the
   // pasuk list is here before Next/Previous try to name their destination.
   if (!(S.pesukim || []).length) {
@@ -600,13 +601,20 @@ async function renderLines() {
   const byPos = {}; words.forEach(w => { byPos[w.position] = w; });
   const foots = entry.footnotes || {};
   let html = '';
-  for (const ln of entry.lines) {
+  entry.lines.forEach((ln, li) => {
     const cells = (ln.positions || []).map(p => byPos[p]).filter(Boolean);
-    if (!cells.length) continue;
+    if (!cells.length) return;
+    // Rabbi Green's latest line edit overrides Magil's printed line; the
+    // static file stays the unedited source, the edit rows are the audit.
+    const edited = (S.lineEdits || {})[String(li)];
+    const shown = edited !== undefined ? esc(edited) : withFootnotes(ln.en, foots);
     html += `<div class="line-group"><div class="line-words">`
           + cells.map(w => wordCellHTML(w, false)).join('')
-          + `</div><div class="line-flow">${withFootnotes(ln.en, foots)}</div></div>`;
-  }
+          + `</div><div class="line-flow">${shown}`
+          + (edited !== undefined ? ` <span class="note">(edited)</span>` : '')
+          + ` <button type="button" class="fnmark" onclick="editLine(${li})"`
+          + ` aria-label="Edit this line of Magil's English">✎</button></div></div>`;
+  });
   // Magil's page-bottom notes, reproduced under the pasuk as he sets them, so
   // the marker is never a dead end. "Heb." = the literal behind his English;
   // "Or." = a variant reading.
@@ -699,6 +707,24 @@ function renderLinear() {
     en = words.map(w => w.contextual || '').filter(Boolean).join(' ');
   }
   $('p-linear').innerHTML = `<div class="lheb">${heb}</div><div class="len">${en || '—'}</div>`;
+}
+
+// Edit Magil's flowing line — the whole phrase, not per-word fields. Prompt
+// pre-filled with the current text (edit or printed); saved append-only via
+// /desk/lines, then re-rendered. Never touches words, never certifies.
+async function editLine(li) {
+  const entry = S.lineEntry;
+  if (!entry || !entry.lines[li]) return;
+  const current = (S.lineEdits || {})[String(li)] !== undefined
+    ? S.lineEdits[String(li)] : entry.lines[li].en;
+  const en = prompt(`Edit Magil's line (${S.ref}):`, current);
+  if (en === null || !en.trim() || en.trim() === current) return;
+  try {
+    const r = await api('/desk/lines', { ref: S.ref, line_index: li, en: en.trim() });
+    S.lineEdits[String(li)] = r.en;
+    await renderPasukBody();
+    $('wp-status').textContent = `Saved ✓ line ${li + 1} of ${S.ref}.`;
+  } catch (e) { $('wp-status').textContent = 'Line not saved: ' + e.message; }
 }
 
 function setView(v) {   // legacy toggle; the line view is the only view now

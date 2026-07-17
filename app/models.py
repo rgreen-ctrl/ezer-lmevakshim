@@ -187,6 +187,25 @@ class GlossRevision(db.Model):
     editor = db.relationship("Staff")
 
 
+class LineEdit(db.Model):
+    """Rabbi Green's edits to Magil's printed lines (the flowing English shown
+    across a line-group). APPEND-ONLY: every edit is a new row; the latest row
+    per (ref, line_index) is what renders, and the full history IS the audit.
+    Rows are never deleted. The static magil_lines.json stays the unedited
+    source; these rows override it at render time."""
+
+    __tablename__ = "line_edits"
+
+    id = db.Column(db.Integer, primary_key=True)
+    ref = db.Column(db.String(60), nullable=False)      # "Bereishis 6:9"
+    line_index = db.Column(db.Integer, nullable=False)  # 0-based line in pasuk
+    en = db.Column(db.String(500), nullable=False)
+    editor_id = db.Column(db.Integer, db.ForeignKey("staff.id"), nullable=False)
+    created_at = db.Column(db.DateTime, nullable=False, default=utcnow)
+
+    editor = db.relationship("Staff")
+
+
 class WordFlag(db.Model):
     """The reader-flag healing loop: a questioned gloss awaiting a second
     opinion. Rows are never deleted — resolution is a status change."""

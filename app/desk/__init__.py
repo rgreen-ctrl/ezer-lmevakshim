@@ -13,7 +13,7 @@ from flask import Blueprint, g, jsonify, request
 
 from app import db
 from app.auth import require_staff
-from app.models import GlossRevision, Track, Unit, Word, WordFlag
+from app.models import GlossRevision, LineEdit, Track, Unit, Word, WordFlag
 from app.services import certify
 from app.services.frontier import servable_pasuk_indexes, unit_progress
 
@@ -146,12 +146,35 @@ def pasuk_view(unit_id, pasuk_index):
     if not words:
         return jsonify({"error": "no such pasuk"}), 404
     flags = _open_flag_counts([w.id for w in words])
+    # Latest line edit per line_index overrides the printed Magil line.
+    edits = {}
+    for e in (LineEdit.query.filter_by(ref=words[0].ref)
+              .order_by(LineEdit.created_at, LineEdit.id).all()):
+        edits[str(e.line_index)] = e.en          # later rows win
     return jsonify({
         "ref": words[0].ref,
         "pasuk_index": pasuk_index,
         "servable": pasuk_index in servable_pasuk_indexes(unit_id),
+        "line_edits": edits,
         "words": [_word_json(w, flags) for w in words],
     })
+
+
+@desk.post("/lines")
+def edit_line():
+    """Edit Magil's flowing line for a pasuk. Append-only: each save is a new
+    row (the history is the audit); the latest renders. Never touches words,
+    never certifies."""
+    data = request.get_json(force=True)
+    ref = (data.get("ref") or "").strip()
+    idx = data.get("line_index")
+    en = (data.get("en") or "").strip()
+    if not ref or idx is None or not en:
+        return jsonify({"error": "ref, line_index and en are required"}), 400
+    e = LineEdit(ref=ref, line_index=int(idx), en=en, editor_id=g.staff.id)
+    db.session.add(e)
+    db.session.commit()
+    return jsonify({"ref": ref, "line_index": e.line_index, "en": e.en}), 201
 
 
 # --- Word actions ------------------------------------------------------------
